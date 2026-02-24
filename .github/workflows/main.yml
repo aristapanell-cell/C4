@@ -41,7 +41,7 @@ jobs:
     - name: Clean old config files
       run: |
         rm -rf configs/
-        mkdir -p configs/telegram configs/github configs/combined configs/clashmeta/telegram configs/clashmeta/github configs/singbox
+        mkdir -p configs/telegram configs/github configs/combined configs/clashmeta configs/singbox configs/proxies
         
     - name: Run Telegram Config Extractor
       run: python telegram_extractor.py
@@ -50,6 +50,10 @@ jobs:
     - name: Run GitHub Config Extractor
       run: python github_extractor.py
       timeout-minutes: 15
+    
+    - name: Run Proxy Collector
+      run: python proxy_collector.py
+      timeout-minutes: 10
         
     - name: Combine and Post Configs
       run: python combine_configs.py
@@ -80,7 +84,7 @@ jobs:
     - name: Commit changes
       if: steps.check_changes.outputs.changes == 'true'
       run: |
-        git commit -m "🔄 Configs update $(date -u '+%Y-%m-%d %H:%M UTC')"
+        git commit -m "🔄 Configs and Proxies update $(date -u '+%Y-%m-%d %H:%M UTC')"
         
     - name: Push changes
       if: steps.check_changes.outputs.changes == 'true'
