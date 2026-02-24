@@ -20,7 +20,7 @@ class ProxyCollector:
             'Connection': 'keep-alive',
         })
 
-        self.channels = [
+        self.proxy_sources = [
             "https://t.me/s/iSeqaro",
             "https://t.me/s/SOSkeyNET", 
             "https://t.me/s/irancpi_vpn",
@@ -779,10 +779,10 @@ class ProxyCollector:
         dead_skipped = 0
         skipped_inactive = 0
 
-        print(f"Processing {len(self.sources)} sources...\n")
+        print(f"Processing {len(self.proxy_sources)} sources...\n")
 
-        for i, url in enumerate(self.sources, 1):
-            print(f"[{i}/{len(self.sources)}] {url}")
+        for i, url in enumerate(self.proxy_sources, 1):
+            print(f"[{i}/{len(self.proxy_sources)}] {url}")
             
             if self.should_skip_source(url):
                 dead_skipped += 1
