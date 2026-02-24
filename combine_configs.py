@@ -20,6 +20,8 @@ class ConfigCombiner:
             'wireguard', 'other'
         ]
         
+        self.proxy_categories = ['http', 'https', 'socks4', 'socks5', 'mtproto', 'other']
+        
         self.os_list = [
             {'name': 'اندروید', 'emoji': '🤖', 'id': 'android'},
             {'name': 'آی‌اواس', 'emoji': '🍏', 'id': 'ios'},
@@ -202,7 +204,7 @@ class ConfigCombiner:
 '🔹 <a href="https://github.com/MatsuriDayo/nekoray/releases">Nekoray</a>\n🔹 <a href="https://github.com/zzzgydi/clash-verge/releases">ClashVerge</a>\n🔹 <a href="https://github.com/MetaCubeX/Clash.Meta/releases">ClashMeta</a>\n🔹 <a href="https://github.com/SagerNet/sing-box/releases">SingBox</a>\n🔹 <a href="https://github.com/hiddify/hiddify-next/releases">Hiddify</a>'
             }
         }
-       
+        
         self.protocol_names_fa = {
             'vmess': ' (VMess)',
             'vless': ' (VLess)',
@@ -213,6 +215,20 @@ class ConfigCombiner:
             'tuic': ' (TUIC)',
             'wireguard': ' (WireGuard)',
             'other': 'سایر پروتکل‌ها'
+        }
+        
+        self.proxy_names_fa = {
+            'http': 'HTTP',
+            'https': 'HTTPS',
+            'socks4': 'SOCKS4',
+            'socks5': 'SOCKS5',
+            'mtproto': 'MTProto',
+            'other': 'سایر'
+        }
+        
+        self.proxy_emojis = {
+            'http': '🌐', 'https': '🔒', 'socks4': '🧦',
+            'socks5': '🧦', 'mtproto': '📱', 'other': '📦'
         }
         
         self.protocol_emojis = {
@@ -229,7 +245,7 @@ class ConfigCombiner:
             requests.get(url)
             time.sleep(1)
             
-            webhook_url = "https://your-domain.com/webhook"  
+            webhook_url = "https://your-domain.com/webhook"
             url = f"https://api.telegram.org/bot{BOT_TOKEN}/setWebhook"
             data = {'url': webhook_url}
             requests.post(url, data=data)
@@ -921,7 +937,7 @@ class ConfigCombiner:
         clients_linux = self.client_info.get(category, {}).get('linux', 'Nekoray, ClashVerge, SingBox')
         
         caption = f"""
-{protocol_emoji} <b>کانفیگ‌های اختصاصی {protocol_name} ({source_persian})</b> {protocol_emoji}
+{protocol_emoji} <b>{protocol_name}</b> {protocol_emoji}
 
 <blockquote expandable>
 📊 <b>آمار:</b>
@@ -960,6 +976,71 @@ class ConfigCombiner:
 """
         return caption
     
+    def create_proxy_caption(self, category, count, timestamp):
+        proxy_name = self.proxy_names_fa.get(category, category.upper())
+        proxy_emoji = self.proxy_emojis.get(category, '🔌')
+        
+        caption = f"""
+{proxy_emoji} <b>پروکسی‌های {proxy_name}</b> {proxy_emoji}
+
+<blockquote expandable>
+📊 <b>آمار:</b>
+• تعداد پروکسی‌ها: <code>{count}</code>
+• به‌روزرسانی: <code>{timestamp}</code>
+
+📱 <b>نرم‌افزارهای سازگار:</b>
+
+🤖 <b>اندروید:</b>
+🔹 <a href="https://play.google.com/store/apps/details?id=org.telegram.plus">Telegram Plus</a>
+🔹 <a href="https://play.google.com/store/apps/details?id=org.telegram.plus">Nagram</a>
+🔹 <a href="https://play.google.com/store/apps/details?id=org.telegram.messenger">Telegram Official</a>
+
+🍏 <b>آی‌اواس:</b>
+🔹 <a href="https://apps.apple.com/app/telegram-messenger/id686449807">Telegram</a>
+🔹 <a href="https://apps.apple.com/app/nicegram/id1608870673">Nicegram</a>
+
+💻 <b>ویندوز:</b>
+🔹 <a href="https://desktop.telegram.org">Telegram Desktop</a>
+🔹 <a href="https://github.com/komeilkma/Telegram-G-Client">Telegram G Client</a>
+
+📥 <b>روش استفاده:</b>
+👈 پروکسی مورد نظر را کپی کنید
+👈 در تنظیمات تلگرام وارد کنید
+👈 متصل شوید و لذت ببرید!
+
+==============================
+🔗 <b>https://t.me/aristapnel</b>
+==============================
+</blockquote>
+
+#arista #proxy #{category} #telegramproxy #mtproto #socks5 #http #https #پروکسی #پروکسی_تلگرام #پنل_آریستا
+"""
+        return caption
+    
+    def create_proxy_text_post(self, category, proxies):
+        proxy_name = self.proxy_names_fa.get(category, category.upper())
+        proxy_emoji = self.proxy_emojis.get(category, '🔌')
+        
+        text = f"{proxy_emoji} <b>پروکسی‌های {proxy_name} ({len(proxies)})</b> {proxy_emoji}\n\n"
+        text += "<blockquote expandable>\n"
+        
+        masked_proxies = []
+        for proxy in proxies:
+            masked_proxies.append(f'<a href="{proxy}">پروکسی‌تلگرام</a>')
+        
+        columns = 3
+        for i in range(0, len(masked_proxies), columns):
+            row = masked_proxies[i:i+columns]
+            text += "    ".join(row) + "\n"
+        
+        if len(proxies) > 50:
+            text += f"\n... و {len(proxies) - 50} پروکسی دیگر در فایل ضمیمه"
+        
+        text += "\n</blockquote>\n\n"
+        text += "#arista #proxy #telegramproxy #پروکسی #پروکسی_تلگرام"
+        
+        return text
+    
     def create_clashmeta_caption(self, protocol, count, timestamp, source_type):
         protocol_emoji = self.protocol_emojis.get(protocol, '🔥')
         protocol_name = self.protocol_names_fa.get(protocol, protocol.upper())
@@ -967,7 +1048,7 @@ class ConfigCombiner:
         source_persian = "تلگرام" if source_type == "telegram" else "گیت‌هاب"
         
         caption = f"""
-{protocol_emoji} <b>کانفیگ‌های اختصاصی ClashMeta - {protocol_name} ({source_persian})</b> {protocol_emoji}
+{protocol_emoji} <b>کانفیگ اختصاصی ClashMeta - {protocol_name} ({source_persian})</b> {protocol_emoji}
 
 <blockquote expandable>
 📊 <b>آمار:</b>
@@ -1029,6 +1110,92 @@ class ConfigCombiner:
                 unique_configs.append(config)
         
         return unique_configs
+    
+    def post_proxy_files(self):
+        if not os.path.exists('configs/proxies'):
+            print("\n⚠️ پوشه proxies یافت نشد")
+            return
+        
+        timestamp = datetime.now().strftime('%Y/%m/%d - %H:%M UTC')
+        
+        posted_files = []
+        
+        print("\n" + "=" * 60)
+        print("📤 ارسال فایل‌های پروکسی به کانال")
+        print("=" * 60)
+        
+        all_proxies = []
+        text_posts = {}
+        
+        for category in self.proxy_categories:
+            proxies = self.read_configs(f'configs/proxies/{category}.txt')
+            
+            if proxies:
+                unique_proxies = self.deduplicate(proxies)
+                all_proxies.extend(unique_proxies)
+                
+                filename = f"configs/proxies/{category}.txt"
+                
+                caption = self.create_proxy_caption(category, len(unique_proxies), timestamp)
+                self.send_to_telegram(filename, caption)
+                posted_files.append(filename)
+                time.sleep(1)
+                
+                text_posts[category] = unique_proxies
+        
+        for category, proxies in text_posts.items():
+            max_length = 3500
+            current_text = ""
+            
+            for i in range(0, len(proxies), 50):
+                chunk = proxies[i:i+50]
+                post_text = self.create_proxy_text_post(category, chunk)
+                
+                if len(post_text) <= max_length:
+                    try:
+                        url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+                        data = {
+                            'chat_id': CHANNEL_ID,
+                            'text': post_text,
+                            'parse_mode': 'HTML'
+                        }
+                        response = requests.post(url, data=data, timeout=30)
+                        if response.status_code == 200:
+                            print(f"  ✅ متن پروکسی {category} (بخش {i//50 + 1}) ارسال شد")
+                        time.sleep(2)
+                    except Exception as e:
+                        print(f"  ❌ خطا در ارسال متن: {e}")
+        
+        if all_proxies:
+            unique_all = self.deduplicate(all_proxies)
+            filename = "configs/proxies/all.txt"
+            
+            caption = f"""
+📦 <b>همه پروکسی‌ها</b> 📦
+
+<blockquote expandable>
+📊 <b>آمار:</b>
+• تعداد کل پروکسی‌ها: <code>{len(unique_all)}</code>
+• به‌روزرسانی: <code>{timestamp}</code>
+
+🔹 HTTP: {len(self.read_configs('configs/proxies/http.txt'))}
+🔹 HTTPS: {len(self.read_configs('configs/proxies/https.txt'))}
+🔹 SOCKS4: {len(self.read_configs('configs/proxies/socks4.txt'))}
+🔹 SOCKS5: {len(self.read_configs('configs/proxies/socks5.txt'))}
+🔹 MTProto: {len(self.read_configs('configs/proxies/mtproto.txt'))}
+🔹 سایر: {len(self.read_configs('configs/proxies/other.txt'))}
+
+==============================
+🔗 <b>https://t.me/aristapnel</b>
+==============================
+</blockquote>
+
+#arista #proxy #allproxies #telegramproxy #پروکسی #پنل_آریستا
+"""
+            self.send_to_telegram(filename, caption)
+            posted_files.append(filename)
+        
+        return len(posted_files)
     
     def post_telegram_files(self):
         os.makedirs('configs/telegram', exist_ok=True)
@@ -1168,13 +1335,17 @@ class ConfigCombiner:
         
         self.post_clashmeta_files()
         
+        self.post_proxy_files()
+        
         all_telegram = self.read_configs('configs/telegram/all.txt')
         all_github = self.read_configs('configs/github/all.txt')
         all_combined = self.read_configs('configs/combined/all.txt')
+        all_proxies = self.read_configs('configs/proxies/all.txt') if os.path.exists('configs/proxies/all.txt') else []
         
         total_telegram = len(all_telegram)
         total_github = len(all_github)
         total_combined = len(all_combined)
+        total_proxies = len(all_proxies)
         
         print("\n" + "=" * 60)
         print("✅ گزارش نهایی")
@@ -1182,6 +1353,7 @@ class ConfigCombiner:
         print(f"📊 کانفیگ‌های تلگرام: {total_telegram}")
         print(f"📊 کانفیگ‌های گیت‌هاب: {total_github}")
         print(f"📊 کانفیگ‌های ترکیبی یکتا: {total_combined}")
+        print(f"🔌 پروکسی‌ها: {total_proxies}")
         print("\n📁 فایل‌های ایجاد شده در پوشه configs/:")
         
         for category in self.categories:
@@ -1189,6 +1361,12 @@ class ConfigCombiner:
                 with open(f'configs/combined/{category}.txt', 'r', encoding='utf-8') as f:
                     lines = [line for line in f if line.strip() and not line.startswith('#')]
                 print(f"  {self.protocol_emojis.get(category, '📄')} combined/{category}.txt: {len(lines)} کانفیگ")
+        
+        for proxy_cat in self.proxy_categories:
+            if os.path.exists(f'configs/proxies/{proxy_cat}.txt'):
+                with open(f'configs/proxies/{proxy_cat}.txt', 'r', encoding='utf-8') as f:
+                    lines = [line for line in f if line.strip() and not line.startswith('#')]
+                print(f"  {self.proxy_emojis.get(proxy_cat, '🔌')} proxies/{proxy_cat}.txt: {len(lines)} پروکسی")
         
         supported_protocols = ['vmess', 'vless', 'trojan', 'ss', 'hysteria2']
         for protocol in supported_protocols:
@@ -1198,6 +1376,7 @@ class ConfigCombiner:
                 print(f"  🔥 clashmeta/github/{protocol}.yaml: فایل ClashMeta از گیت‌هاب")
         
         print(f"  📦 combined/all.txt: {total_combined} کانفیگ")
+        print(f"  📦 proxies/all.txt: {total_proxies} پروکسی")
         print("=" * 60)
 
 def main():
