@@ -1205,4 +1205,4 @@ def main():
     combiner.combine_and_post()
 
 if __name__ == "__main__":
-    main()2
+    main()
