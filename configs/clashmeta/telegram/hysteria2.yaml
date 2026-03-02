@@ -78,14 +78,36 @@ sniffer:
 proxies:
 - name: 'Hysteria2 #1'
   type: hysteria2
-  server: 4ec4fca5-t6r5s0-tc2sod-1tizo.hk1.hyhuawei.com
-  port: 443
-  password: bf36227c-0191-11f0-aee1-f23c91cfbbc9
-  sni: 4ec4fca5-t6r5s0-tc2sod-1tizo.hk1.hyhuawei.com
+  server: 181.214.99.162
+  port: 35000
+  password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
+  sni: api.kermanshahi.org
   skip-cert-verify: false
   fast-open: true
   client-fingerprint: chrome
+  obfs: salamander
+  obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
 - name: 'Hysteria2 #2'
+  type: hysteria2
+  server: 2a0c:4ac1:8::121
+  port: 35000
+  password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
+  sni: api.kermanshahi.org
+  skip-cert-verify: false
+  fast-open: true
+  client-fingerprint: chrome
+  obfs: salamander
+  obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
+- name: 'Hysteria2 #3'
+  type: hysteria2
+  server: 152.70.176.68
+  port: 1
+  password: e22d2366-ac58-47e0-8362-89df9aa6349f
+  sni: www.bing.com
+  skip-cert-verify: false
+  fast-open: true
+  client-fingerprint: chrome
+- name: 'Hysteria2 #4'
   type: hysteria2
   server: 5.175.249.174
   port: 35000
@@ -103,12 +125,16 @@ proxy-groups:
   - Auto Select
   - 'Hysteria2 #1'
   - 'Hysteria2 #2'
+  - 'Hysteria2 #3'
+  - 'Hysteria2 #4'
   - DIRECT
 - name: Auto Select
   type: url-test
   proxies:
   - 'Hysteria2 #1'
   - 'Hysteria2 #2'
+  - 'Hysteria2 #3'
+  - 'Hysteria2 #4'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
