@@ -76,122 +76,28 @@ sniffer:
       - 2087
       - 2096
 proxies:
-- name: 'Trojan #1'
-  type: trojan
-  server: 13.39.97.14
-  port: 22223
-  password: telegram-id-directvpn
-  network: tcp
-  udp: true
+- name: 'Hysteria2 #1'
+  type: hysteria2
+  server: 5.175.249.174
+  port: 35000
+  password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
+  sni: api.kermanshahi.org
   skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
+  fast-open: true
   client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #2'
-  type: trojan
-  server: 13.39.97.14
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #3'
-  type: trojan
-  server: 15.188.31.240
-  port: 22223
-  password: telegram-id-directvpn
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #4'
-  type: trojan
-  server: 15.236.135.208
-  port: 22223
-  password: telegram-id-directvpn
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #5'
-  type: trojan
-  server: 52.28.154.195
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #6'
-  type: trojan
-  server: 13.37.88.196
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #7'
-  type: trojan
-  server: www.gossipglove.com
-  port: 443
-  password: humanity
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: www.gossipglove.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.gossipglove.com
+  obfs: salamander
+  obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
 proxy-groups:
 - name: Proxy Select
   type: select
   proxies:
   - Auto Select
-  - 'Trojan #1'
-  - 'Trojan #2'
-  - 'Trojan #3'
-  - 'Trojan #4'
-  - 'Trojan #5'
-  - 'Trojan #6'
-  - 'Trojan #7'
+  - 'Hysteria2 #1'
   - DIRECT
 - name: Auto Select
   type: url-test
   proxies:
-  - 'Trojan #1'
-  - 'Trojan #2'
-  - 'Trojan #3'
-  - 'Trojan #4'
-  - 'Trojan #5'
-  - 'Trojan #6'
-  - 'Trojan #7'
+  - 'Hysteria2 #1'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
