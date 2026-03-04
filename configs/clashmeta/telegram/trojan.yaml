@@ -78,7 +78,7 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: 15.236.135.208
+  server: 15.188.31.240
   port: 22223
   password: telegram-id-directvpn
   network: tcp
@@ -91,61 +91,7 @@ proxies:
   - http/1.1
 - name: 'Trojan #2'
   type: trojan
-  server: 15.188.31.240
-  port: 22223
-  password: telegram-id-directvpn
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #3'
-  type: trojan
-  server: 172.64.152.23
-  port: 443
-  password: humanity
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: www.multiplydose.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.multiplydose.com
-- name: 'Trojan #4'
-  type: trojan
-  server: www.calmlunch.com
-  port: 443
-  password: humanity
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: www.calmlunch.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: 'Trojan #5'
-  type: trojan
-  server: 37.235.49.209
-  port: 28099
-  password: qmBSKnAl6LYi9=z23Rs.Z
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: celestialcorset.crystalhamster.click
-  client-fingerprint: chrome
-- name: 'Trojan #6'
-  type: trojan
-  server: www.gossipglove.com
+  server: 188.114.98.0
   port: 443
   password: humanity
   network: ws
@@ -158,22 +104,9 @@ proxies:
     path: /assignment
     headers:
       Host: www.gossipglove.com
-- name: 'Trojan #7'
+- name: 'Trojan #3'
   type: trojan
-  server: 5.255.102.28
-  port: 32973
-  password: xxGRBpKO95
-  network: grpc
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 5.255.102.28
-  client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: GunService
-- name: 'Trojan #8'
-  type: trojan
-  server: 188.114.98.0
+  server: www.gossipglove.com
   port: 443
   password: humanity
   network: ws
@@ -194,11 +127,6 @@ proxy-groups:
   - 'Trojan #1'
   - 'Trojan #2'
   - 'Trojan #3'
-  - 'Trojan #4'
-  - 'Trojan #5'
-  - 'Trojan #6'
-  - 'Trojan #7'
-  - 'Trojan #8'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -206,11 +134,6 @@ proxy-groups:
   - 'Trojan #1'
   - 'Trojan #2'
   - 'Trojan #3'
-  - 'Trojan #4'
-  - 'Trojan #5'
-  - 'Trojan #6'
-  - 'Trojan #7'
-  - 'Trojan #8'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
