@@ -93,19 +93,19 @@ proxies:
       Host: www.gossipglove.com
 - name: 'Trojan #2'
   type: trojan
-  server: 188.114.98.0
+  server: www.multiplydose.com
   port: 443
   password: humanity
   network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: www.gossipglove.com
+  servername: www.multiplydose.com
   client-fingerprint: chrome
   ws-opts:
     path: /assignment
     headers:
-      Host: www.gossipglove.com
+      Host: www.multiplydose.com
 - name: 'Trojan #3'
   type: trojan
   server: 188.114.96.3
@@ -123,35 +123,46 @@ proxies:
       Host: www.gossipglove.com
 - name: 'Trojan #4'
   type: trojan
-  server: www.multiplydose.com
-  port: 443
-  password: humanity
-  network: ws
+  server: 15.236.135.208
+  port: 22222
+  password: telegram-id-privatevpns
+  network: tcp
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: www.multiplydose.com
+  servername: trojan.burgerip.co.uk
   client-fingerprint: chrome
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.multiplydose.com
+  alpn:
+  - http/1.1
 - name: 'Trojan #5'
   type: trojan
-  server: 188.114.96.3
-  port: 443
-  password: humanity
+  server: 15.236.135.208
+  port: 22223
+  password: telegram-id-directvpn
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #6'
+  type: trojan
+  server: 141.101.113.223
+  port: 8443
+  password: Nova-Proxy
   network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: www.gossipglove.com
+  servername: small-morning-2668.drusavm.workers.dev
   client-fingerprint: chrome
   ws-opts:
-    path: /assignment
+    path: /?ed
     headers:
-      Host: www.gossipglove.com
-- name: 'Trojan #6'
+      Host: small-morning-2668.drusavm.workers.dev
+- name: 'Trojan #7'
   type: trojan
   server: www.gossipglove.com
   port: 443
@@ -166,19 +177,6 @@ proxies:
     path: /assignment
     headers:
       Host: www.gossipglove.com
-- name: 'Trojan #7'
-  type: trojan
-  server: 15.236.135.208
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
 - name: 'Trojan #8'
   type: trojan
   server: www.gossipglove.com
@@ -194,6 +192,49 @@ proxies:
     path: /assignment?TELEGRAM--KANAL--JKVPN--JKVPN--JKVPN--JKVPN--JKVPN--JKVPN
     headers:
       Host: www.gossipglove.com
+- name: 'Trojan #9'
+  type: trojan
+  server: 15.236.44.47
+  port: 22222
+  password: telegram-id-privatevpns
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #10'
+  type: trojan
+  server: www.gossipglove.com
+  port: 443
+  password: humanity
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.gossipglove.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.gossipglove.com
+- name: 'Trojan #11'
+  type: trojan
+  server: 188.114.96.3
+  port: 443
+  password: humanity
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.gossipglove.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.gossipglove.com
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -207,6 +248,9 @@ proxy-groups:
   - 'Trojan #6'
   - 'Trojan #7'
   - 'Trojan #8'
+  - 'Trojan #9'
+  - 'Trojan #10'
+  - 'Trojan #11'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -219,6 +263,9 @@ proxy-groups:
   - 'Trojan #6'
   - 'Trojan #7'
   - 'Trojan #8'
+  - 'Trojan #9'
+  - 'Trojan #10'
+  - 'Trojan #11'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
