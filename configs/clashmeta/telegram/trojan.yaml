@@ -78,9 +78,35 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: 35.180.7.142
-  port: 22222
-  password: telegram-id-privatevpns
+  server: www.shopify.com
+  port: 2053
+  password: 22367c45-f6c4-4ca8-8d52-d9787d7bbe91
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: cm22-bgphhh.pages.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: cm22-bgphhh.pages.dev
+- name: 'Trojan #2'
+  type: trojan
+  server: 8443.golden-cards.me
+  port: 443
+  password: q2GRUM1-odJBWq_KV6xv2fuNvu8ed-
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 8443.golden-cards.me
+  client-fingerprint: chrome
+- name: 'Trojan #3'
+  type: trojan
+  server: 3.124.229.240
+  port: 22223
+  password: telegram-id-directvpn
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -89,7 +115,33 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #2'
+- name: 'Trojan #4'
+  type: trojan
+  server: 8443.golden-cards.me
+  port: 443
+  password: q2GRUM1-odJBWq_KV6xv2fuNvu8ed-
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 8443.golden-cards.me
+  client-fingerprint: chrome
+- name: 'Trojan #5'
+  type: trojan
+  server: chatgpt.com
+  port: 443
+  password: humanity
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.gossipglove.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.gossipglove.com
+- name: 'Trojan #6'
   type: trojan
   server: 52.29.115.99
   port: 22222
@@ -102,11 +154,11 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #3'
+- name: 'Trojan #7'
   type: trojan
-  server: 3.124.229.240
-  port: 22223
-  password: telegram-id-directvpn
+  server: 15.188.101.85
+  port: 22222
+  password: telegram-id-privatevpns
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -123,6 +175,10 @@ proxy-groups:
   - 'Trojan #1'
   - 'Trojan #2'
   - 'Trojan #3'
+  - 'Trojan #4'
+  - 'Trojan #5'
+  - 'Trojan #6'
+  - 'Trojan #7'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -130,6 +186,10 @@ proxy-groups:
   - 'Trojan #1'
   - 'Trojan #2'
   - 'Trojan #3'
+  - 'Trojan #4'
+  - 'Trojan #5'
+  - 'Trojan #6'
+  - 'Trojan #7'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
