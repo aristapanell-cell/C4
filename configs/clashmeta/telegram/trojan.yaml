@@ -78,18 +78,19 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: my.amadelaziz.shop
-  port: 9443
-  password: aBbys5SAo0
-  network: tcp
+  server: 141.101.113.223
+  port: 8443
+  password: Nova-Proxy
+  network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: api.amdelaziz.ir
+  servername: small-morning-2668.drusavm.workers.dev
   client-fingerprint: chrome
-  alpn:
-  - h2
-  - http/1.1
+  ws-opts:
+    path: /?ed
+    headers:
+      Host: small-morning-2668.drusavm.workers.dev
 - name: 'Trojan #2'
   type: trojan
   server: www.gossipglove.com
@@ -120,24 +121,9 @@ proxies:
   - http/1.1
 - name: 'Trojan #4'
   type: trojan
-  server: 141.101.113.223
-  port: 8443
-  password: Nova-Proxy
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: small-morning-2668.drusavm.workers.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /?ed
-    headers:
-      Host: small-morning-2668.drusavm.workers.dev
-- name: 'Trojan #5'
-  type: trojan
-  server: 3.124.229.240
-  port: 22223
-  password: telegram-id-directvpn
+  server: 51.44.109.231
+  port: 22222
+  password: telegram-id-privatevpns
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -146,6 +132,21 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
+- name: 'Trojan #5'
+  type: trojan
+  server: www.multiplydose.com
+  port: 443
+  password: humanity
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.multiplydose.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.multiplydose.com
 - name: 'Trojan #6'
   type: trojan
   server: 3.124.229.240
@@ -161,137 +162,19 @@ proxies:
   - http/1.1
 - name: 'Trojan #7'
   type: trojan
-  server: 51.44.109.231
-  port: 22222
-  password: telegram-id-privatevpns
+  server: my.amadelaziz.shop
+  port: 9443
+  password: aBbys5SAo0
   network: tcp
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
+  servername: api.amdelaziz.ir
   client-fingerprint: chrome
   alpn:
+  - h2
   - http/1.1
 - name: 'Trojan #8'
-  type: trojan
-  server: www.multiplydose.com
-  port: 443
-  password: humanity
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: www.multiplydose.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.multiplydose.com
-- name: 'Trojan #9'
-  type: trojan
-  server: 63.180.53.233
-  port: 22223
-  password: telegram-id-v2rayvpnchannel
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #10'
-  type: trojan
-  server: 15.236.44.47
-  port: 22223
-  password: telegram-id-v2rayvpnchannel
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #11'
-  type: trojan
-  server: 13.39.61.161
-  port: 22223
-  password: telegram-id-v2rayvpnchannel
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #12'
-  type: trojan
-  server: 63.183.63.206
-  port: 22223
-  password: telegram-id-v2rayvpnchannel
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #13'
-  type: trojan
-  server: 13.39.41.207
-  port: 22223
-  password: telegram-id-v2rayvpnchannel
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #14'
-  type: trojan
-  server: 15.188.164.131
-  port: 22223
-  password: telegram-id-v2rayvpnchannel
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #15'
-  type: trojan
-  server: 3.124.229.240
-  port: 22223
-  password: telegram-id-v2rayvpnchannel
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #16'
-  type: trojan
-  server: 51.44.109.231
-  port: 22223
-  password: telegram-id-v2rayvpnchannel
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #17'
   type: trojan
   server: 141.101.113.223
   port: 8443
@@ -306,6 +189,123 @@ proxies:
     path: /?ed
     headers:
       Host: small-morning-2668.drusavm.workers.dev
+- name: 'Trojan #9'
+  type: trojan
+  server: 3.124.229.240
+  port: 22223
+  password: telegram-id-directvpn
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #10'
+  type: trojan
+  server: 63.180.53.233
+  port: 22223
+  password: telegram-id-v2rayvpnchannel
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #11'
+  type: trojan
+  server: 15.236.44.47
+  port: 22223
+  password: telegram-id-v2rayvpnchannel
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #12'
+  type: trojan
+  server: 13.39.61.161
+  port: 22223
+  password: telegram-id-v2rayvpnchannel
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #13'
+  type: trojan
+  server: 63.183.63.206
+  port: 22223
+  password: telegram-id-v2rayvpnchannel
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #14'
+  type: trojan
+  server: 13.39.41.207
+  port: 22223
+  password: telegram-id-v2rayvpnchannel
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #15'
+  type: trojan
+  server: 15.188.164.131
+  port: 22223
+  password: telegram-id-v2rayvpnchannel
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #16'
+  type: trojan
+  server: 3.124.229.240
+  port: 22223
+  password: telegram-id-v2rayvpnchannel
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #17'
+  type: trojan
+  server: 51.44.109.231
+  port: 22223
+  password: telegram-id-v2rayvpnchannel
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
 proxy-groups:
 - name: Proxy Select
   type: select
