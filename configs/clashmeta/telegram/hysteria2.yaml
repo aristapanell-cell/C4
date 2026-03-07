@@ -76,105 +76,26 @@ sniffer:
       - 2087
       - 2096
 proxies:
-- name: 'Trojan #1'
-  type: trojan
-  server: 3.124.229.240
-  port: 22223
-  password: telegram-id-directvpn
-  network: tcp
-  udp: true
+- name: 'Hysteria2 #1'
+  type: hysteria2
+  server: hk.xn--ehqa22b.site
+  port: 21412
+  password: 862dc140-a973-4ed2-b5fe-c1831f62a086
+  sni: hk.xn--ehqa22b.site
   skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
+  fast-open: true
   client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #2'
-  type: trojan
-  server: 52.29.115.99
-  port: 22223
-  password: telegram-id-directvpn
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #3'
-  type: trojan
-  server: 3.124.229.240
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: troja.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #4'
-  type: trojan
-  server: 35.180.7.142
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #5'
-  type: trojan
-  server: 52.29.115.99
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #6'
-  type: trojan
-  server: 3.124.229.240
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
 proxy-groups:
 - name: Proxy Select
   type: select
   proxies:
   - Auto Select
-  - 'Trojan #1'
-  - 'Trojan #2'
-  - 'Trojan #3'
-  - 'Trojan #4'
-  - 'Trojan #5'
-  - 'Trojan #6'
+  - 'Hysteria2 #1'
   - DIRECT
 - name: Auto Select
   type: url-test
   proxies:
-  - 'Trojan #1'
-  - 'Trojan #2'
-  - 'Trojan #3'
-  - 'Trojan #4'
-  - 'Trojan #5'
-  - 'Trojan #6'
+  - 'Hysteria2 #1'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
