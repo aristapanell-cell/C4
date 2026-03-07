@@ -78,7 +78,7 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: 3.124.229.240
+  server: 15.224.0.245
   port: 22222
   password: telegram-id-privatevpns
   network: tcp
@@ -91,16 +91,31 @@ proxies:
   - http/1.1
 - name: 'Trojan #2'
   type: trojan
-  server: green2.cdntencentmusic.com
-  port: 35502
-  password: cda93db2-4dbc-4a1e-8dc1-ddc302eb3e22
+  server: 3.124.229.240
+  port: 22222
+  password: telegram-id-privatevpns
   network: tcp
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: green2.cdntencentmusic.com
+  servername: trojan.burgerip.co.uk
   client-fingerprint: chrome
+  alpn:
+  - http/1.1
 - name: 'Trojan #3'
+  type: trojan
+  server: 15.224.0.245
+  port: 22223
+  password: telegram-id-directvpn
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #4'
   type: trojan
   server: 141.101.113.223
   port: 8443
@@ -115,21 +130,6 @@ proxies:
     path: /?ed
     headers:
       Host: small-morning-2668.drusavm.workers.dev
-- name: 'Trojan #4'
-  type: trojan
-  server: www.shopify.com
-  port: 2053
-  password: 22367c45-f6c4-4ca8-8d52-d9787d7bbe91
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: cm22-bgphhh.pages.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: cm22-bgphhh.pages.dev
 - name: 'Trojan #5'
   type: trojan
   server: 13.39.61.161
@@ -247,6 +247,19 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
+- name: 'Trojan #14'
+  type: trojan
+  server: 3.124.229.240
+  port: 22222
+  password: telegram-id-privatevpns
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: troja.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -265,6 +278,7 @@ proxy-groups:
   - 'Trojan #11'
   - 'Trojan #12'
   - 'Trojan #13'
+  - 'Trojan #14'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -282,6 +296,7 @@ proxy-groups:
   - 'Trojan #11'
   - 'Trojan #12'
   - 'Trojan #13'
+  - 'Trojan #14'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
