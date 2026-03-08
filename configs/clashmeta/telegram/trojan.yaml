@@ -78,6 +78,17 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
+  server: 8443.golden-cards.me
+  port: 443
+  password: q2GRUM1-odJBWq_KV6xv2fuNvu8ed-
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 8443.golden-cards.me
+  client-fingerprint: chrome
+- name: 'Trojan #2'
+  type: trojan
   server: chatgpt.com
   port: 443
   password: humanity
@@ -91,7 +102,20 @@ proxies:
     path: /assignment
     headers:
       Host: www.gossipglove.com
-- name: 'Trojan #2'
+- name: 'Trojan #3'
+  type: trojan
+  server: 13.39.61.161
+  port: 22222
+  password: telegram-id-privatevpns
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 13.39.61.161
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #4'
   type: trojan
   server: www.shopify.com
   port: 2053
@@ -106,72 +130,22 @@ proxies:
     path: /
     headers:
       Host: cm22-bgphhh.pages.dev
-- name: 'Trojan #3'
-  type: trojan
-  server: 8443.golden-cards.me
-  port: 443
-  password: q2GRUM1-odJBWq_KV6xv2fuNvu8ed-
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 8443.golden-cards.me
-  client-fingerprint: chrome
-- name: 'Trojan #4'
-  type: trojan
-  server: 8443.golden-cards.me
-  port: 443
-  password: q2GRUM1-odJBWq_KV6xv2fuNvu8ed-
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 8443.golden-cards.me
-  client-fingerprint: chrome
 - name: 'Trojan #5'
   type: trojan
-  server: 18.199.232.208
-  port: 22222
-  password: telegram-id-privatevpns
+  server: 8443.golden-cards.me
+  port: 443
+  password: q2GRUM1-odJBWq_KV6xv2fuNvu8ed-
   network: tcp
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
+  servername: 8443.golden-cards.me
   client-fingerprint: chrome
-  alpn:
-  - http/1.1
 - name: 'Trojan #6'
   type: trojan
-  server: 13.39.61.161
+  server: 18.199.232.208
   port: 22222
   password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 13.39.61.161
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #7'
-  type: trojan
-  server: 18.199.232.208
-  port: 22223
-  password: telegram-id-directvpn
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #8'
-  type: trojan
-  server: 15.224.0.245
-  port: 22223
-  password: telegram-id-directvpn
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -191,8 +165,6 @@ proxy-groups:
   - 'Trojan #4'
   - 'Trojan #5'
   - 'Trojan #6'
-  - 'Trojan #7'
-  - 'Trojan #8'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -203,8 +175,6 @@ proxy-groups:
   - 'Trojan #4'
   - 'Trojan #5'
   - 'Trojan #6'
-  - 'Trojan #7'
-  - 'Trojan #8'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
