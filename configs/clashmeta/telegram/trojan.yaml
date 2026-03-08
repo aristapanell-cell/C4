@@ -78,20 +78,20 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: 13.39.61.161
-  port: 22222
-  password: telegram-id-privatevpns
+  server: 35.181.15.224
+  port: 22223
+  password: telegram-id-directvpn
   network: tcp
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 13.39.61.161
+  servername: trojan.burgerip.co.uk
   client-fingerprint: chrome
   alpn:
   - http/1.1
 - name: 'Trojan #2'
   type: trojan
-  server: 3.79.165.50
+  server: 13.36.46.152
   port: 22222
   password: telegram-id-privatevpns
   network: tcp
@@ -117,24 +117,27 @@ proxies:
   - http/1.1
 - name: 'Trojan #4'
   type: trojan
-  server: chatgpt.com
+  server: chat.openai.com
   port: 443
   password: humanity
   network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: www.gossipglove.com
+  servername: www.calmlunch.com
   client-fingerprint: chrome
+  alpn:
+  - h2
+  - http/1.1
   ws-opts:
     path: /assignment
     headers:
-      Host: www.gossipglove.com
+      Host: www.calmlunch.com
 - name: 'Trojan #5'
   type: trojan
-  server: 35.181.15.224
-  port: 22223
-  password: telegram-id-directvpn
+  server: 13.37.140.33
+  port: 22222
+  password: telegram-id-privatevpns
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -145,30 +148,33 @@ proxies:
   - http/1.1
 - name: 'Trojan #6'
   type: trojan
-  server: 13.36.46.152
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
+  server: chat.openai.com
+  port: 443
+  password: humanity
+  network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
+  servername: www.calmlunch.com
   client-fingerprint: chrome
   alpn:
+  - h2
   - http/1.1
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
 - name: 'Trojan #7'
   type: trojan
-  server: 35.181.15.224
-  port: 22222
-  password: telegram-id-privatevpns
+  server: 8443.golden-cards.me
+  port: 443
+  password: q2GRUM1-odJBWq_KV6xv2fuNvu8ed-
   network: tcp
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
+  servername: 8443.golden-cards.me
   client-fingerprint: chrome
-  alpn:
-  - http/1.1
 - name: 'Trojan #8'
   type: trojan
   server: 8443.golden-cards.me
@@ -182,15 +188,32 @@ proxies:
   client-fingerprint: chrome
 - name: 'Trojan #9'
   type: trojan
-  server: 8443.golden-cards.me
-  port: 443
-  password: q2GRUM1-odJBWq_KV6xv2fuNvu8ed-
+  server: 3.79.165.50
+  port: 22222
+  password: telegram-id-privatevpns
   network: tcp
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 8443.golden-cards.me
+  servername: trojan.burgerip.co.uk
   client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #10'
+  type: trojan
+  server: chatgpt.com
+  port: 443
+  password: humanity
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.gossipglove.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.gossipglove.com
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -205,6 +228,7 @@ proxy-groups:
   - 'Trojan #7'
   - 'Trojan #8'
   - 'Trojan #9'
+  - 'Trojan #10'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -218,6 +242,7 @@ proxy-groups:
   - 'Trojan #7'
   - 'Trojan #8'
   - 'Trojan #9'
+  - 'Trojan #10'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
