@@ -91,15 +91,17 @@ proxies:
   - http/1.1
 - name: 'Trojan #2'
   type: trojan
-  server: 8443.golden-cards.me
-  port: 443
-  password: q2GRUM1-odJBWq_KV6xv2fuNvu8ed-
+  server: 35.181.15.224
+  port: 22222
+  password: telegram-id-privatevpns
   network: tcp
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 8443.golden-cards.me
+  servername: trojan.burgerip.co.uk
   client-fingerprint: chrome
+  alpn:
+  - http/1.1
 - name: 'Trojan #3'
   type: trojan
   server: chatgpt.com
@@ -117,6 +119,17 @@ proxies:
       Host: www.gossipglove.com
 - name: 'Trojan #4'
   type: trojan
+  server: 8443.golden-cards.me
+  port: 443
+  password: q2GRUM1-odJBWq_KV6xv2fuNvu8ed-
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 8443.golden-cards.me
+  client-fingerprint: chrome
+- name: 'Trojan #5'
+  type: trojan
   server: www.shopify.com
   port: 2053
   password: 22367c45-f6c4-4ca8-8d52-d9787d7bbe91
@@ -130,7 +143,7 @@ proxies:
     path: /
     headers:
       Host: cm22-bgphhh.pages.dev
-- name: 'Trojan #5'
+- name: 'Trojan #6'
   type: trojan
   server: 8443.golden-cards.me
   port: 443
@@ -141,7 +154,7 @@ proxies:
   tcp-fast-open: true
   servername: 8443.golden-cards.me
   client-fingerprint: chrome
-- name: 'Trojan #6'
+- name: 'Trojan #7'
   type: trojan
   server: 13.39.61.161
   port: 22222
@@ -165,6 +178,7 @@ proxy-groups:
   - 'Trojan #4'
   - 'Trojan #5'
   - 'Trojan #6'
+  - 'Trojan #7'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -175,6 +189,7 @@ proxy-groups:
   - 'Trojan #4'
   - 'Trojan #5'
   - 'Trojan #6'
+  - 'Trojan #7'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
