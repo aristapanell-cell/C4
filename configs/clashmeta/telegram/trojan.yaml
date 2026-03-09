@@ -96,7 +96,40 @@ proxies:
       Host: www.calmlunch.com
 - name: 'Trojan #2'
   type: trojan
-  server: 3.79.165.50
+  server: chat.openai.com
+  port: 443
+  password: humanity
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.calmlunch.com
+  client-fingerprint: chrome
+  alpn:
+  - h2
+  - http/1.1
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: 'Trojan #3'
+  type: trojan
+  server: www.shopify.com
+  port: 2053
+  password: 22367c45-f6c4-4ca8-8d52-d9787d7bbe91
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: cm22-bgphhh.pages.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: cm22-bgphhh.pages.dev
+- name: 'Trojan #4'
+  type: trojan
+  server: 15.188.68.172
   port: 22222
   password: telegram-id-privatevpns
   network: tcp
@@ -107,20 +140,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #3'
-  type: trojan
-  server: 3.79.165.50
-  port: 22223
-  password: telegram-id-directvpn
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #4'
+- name: 'Trojan #5'
   type: trojan
   server: chat.openai.com
   port: 443
@@ -138,19 +158,6 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: 'Trojan #5'
-  type: trojan
-  server: 15.224.33.171
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
 proxy-groups:
 - name: Proxy Select
   type: select
