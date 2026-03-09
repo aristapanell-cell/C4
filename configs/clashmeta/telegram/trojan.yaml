@@ -78,22 +78,19 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: chat.openai.com
-  port: 443
-  password: humanity
+  server: www.shopify.com
+  port: 2053
+  password: 22367c45-f6c4-4ca8-8d52-d9787d7bbe91
   network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: www.calmlunch.com
+  servername: cm22-bgphhh.pages.dev
   client-fingerprint: chrome
-  alpn:
-  - h2
-  - http/1.1
   ws-opts:
-    path: /assignment
+    path: /
     headers:
-      Host: www.calmlunch.com
+      Host: cm22-bgphhh.pages.dev
 - name: 'Trojan #2'
   type: trojan
   server: chat.openai.com
@@ -114,34 +111,6 @@ proxies:
       Host: www.calmlunch.com
 - name: 'Trojan #3'
   type: trojan
-  server: www.shopify.com
-  port: 2053
-  password: 22367c45-f6c4-4ca8-8d52-d9787d7bbe91
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: cm22-bgphhh.pages.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: cm22-bgphhh.pages.dev
-- name: 'Trojan #4'
-  type: trojan
-  server: 15.188.68.172
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #5'
-  type: trojan
   server: chat.openai.com
   port: 443
   password: humanity
@@ -158,6 +127,19 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
+- name: 'Trojan #4'
+  type: trojan
+  server: 63.183.124.201
+  port: 22222
+  password: telegram-id-privatevpns
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -167,7 +149,6 @@ proxy-groups:
   - 'Trojan #2'
   - 'Trojan #3'
   - 'Trojan #4'
-  - 'Trojan #5'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -176,7 +157,6 @@ proxy-groups:
   - 'Trojan #2'
   - 'Trojan #3'
   - 'Trojan #4'
-  - 'Trojan #5'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
