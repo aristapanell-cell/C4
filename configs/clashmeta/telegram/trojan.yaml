@@ -109,8 +109,8 @@ proxies:
 - name: 'Trojan #3'
   type: trojan
   server: 3.127.171.45
-  port: 22222
-  password: telegram-id-privatevpns
+  port: 22223
+  password: telegram-id-directvpn
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -121,7 +121,7 @@ proxies:
   - http/1.1
 - name: 'Trojan #4'
   type: trojan
-  server: 51.44.98.27
+  server: 51.44.200.241
   port: 22222
   password: telegram-id-privatevpns
   network: tcp
@@ -135,21 +135,8 @@ proxies:
 - name: 'Trojan #5'
   type: trojan
   server: 51.44.98.27
-  port: 22223
-  password: telegram-id-directvpn
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #6'
-  type: trojan
-  server: 3.127.171.45
-  port: 22223
-  password: telegram-id-directvpn
+  port: 22222
+  password: telegram-id-privatevpns
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -168,7 +155,6 @@ proxy-groups:
   - 'Trojan #3'
   - 'Trojan #4'
   - 'Trojan #5'
-  - 'Trojan #6'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -178,7 +164,6 @@ proxy-groups:
   - 'Trojan #3'
   - 'Trojan #4'
   - 'Trojan #5'
-  - 'Trojan #6'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
