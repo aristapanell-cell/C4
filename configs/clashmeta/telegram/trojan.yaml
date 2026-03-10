@@ -78,30 +78,30 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: www.multiplydose.com
-  port: 443
-  password: humanity
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: www.multiplydose.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: '%252Fassignment'
-    headers:
-      Host: www.multiplydose.com
-- name: 'Trojan #2'
-  type: trojan
-  server: 15.204.9.172
-  port: 443
-  password: opentunnel.net-usa30day
+  server: 3.127.171.45
+  port: 22223
+  password: telegram-id-directvpn
   network: tcp
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: uplod.ir
+  servername: trojan.burgerip.co.uk
   client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #2'
+  type: trojan
+  server: 3.127.171.45
+  port: 22222
+  password: telegram-id-privatevpns
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
 - name: 'Trojan #3'
   type: trojan
   server: www.shopify.com
@@ -117,6 +117,71 @@ proxies:
     path: /
     headers:
       Host: cm22-bgphhh.pages.dev
+- name: 'Trojan #4'
+  type: trojan
+  server: www.multiplydose.com
+  port: 443
+  password: humanity
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.multiplydose.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.multiplydose.com
+- name: 'Trojan #5'
+  type: trojan
+  server: 3.127.171.45
+  port: 22223
+  password: telegram-id-directvpn
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #6'
+  type: trojan
+  server: www.multiplydose.com
+  port: 443
+  password: humanity
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.multiplydose.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: '%252Fassignment'
+    headers:
+      Host: www.multiplydose.com
+- name: 'Trojan #7'
+  type: trojan
+  server: 15.204.9.172
+  port: 443
+  password: opentunnel.net-usa30day
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: uplod.ir
+  client-fingerprint: chrome
+- name: 'Trojan #8'
+  type: trojan
+  server: 54.37.18.204
+  port: 443
+  password: opentunnel.net-english30day
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: uplod.ir
+  client-fingerprint: chrome
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -125,6 +190,11 @@ proxy-groups:
   - 'Trojan #1'
   - 'Trojan #2'
   - 'Trojan #3'
+  - 'Trojan #4'
+  - 'Trojan #5'
+  - 'Trojan #6'
+  - 'Trojan #7'
+  - 'Trojan #8'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -132,6 +202,11 @@ proxy-groups:
   - 'Trojan #1'
   - 'Trojan #2'
   - 'Trojan #3'
+  - 'Trojan #4'
+  - 'Trojan #5'
+  - 'Trojan #6'
+  - 'Trojan #7'
+  - 'Trojan #8'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
