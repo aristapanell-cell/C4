@@ -78,71 +78,6 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: 78.159.131.12
-  port: 28259
-  password: MeaDiUmPlkWbZJ2BON8tz
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: ads.x5.ru
-  client-fingerprint: chrome
-- name: 'Trojan #2'
-  type: trojan
-  server: 190.93.244.43
-  port: 8443
-  password: Nova-Proxy
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: small-morning-2668.drusavm.workers.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /?ed
-    headers:
-      Host: small-morning-2668.drusavm.workers.dev
-- name: 'Trojan #3'
-  type: trojan
-  server: 13.36.100.6
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #4'
-  type: trojan
-  server: 18.170.53.62
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trj.rollingnext.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #5'
-  type: trojan
-  server: 51.44.98.27
-  port: 22223
-  password: telegram-id-v2rayvpnchannel
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #6'
-  type: trojan
   server: 13.38.214.118
   port: 22223
   password: telegram-id-v2rayvpnchannel
@@ -154,7 +89,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #7'
+- name: 'Trojan #2'
   type: trojan
   server: 3.69.235.19
   port: 22223
@@ -167,7 +102,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #8'
+- name: 'Trojan #3'
   type: trojan
   server: 13.36.29.172
   port: 22223
@@ -180,7 +115,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #9'
+- name: 'Trojan #4'
   type: trojan
   server: 13.36.100.6
   port: 22223
@@ -193,7 +128,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #10'
+- name: 'Trojan #5'
   type: trojan
   server: 13.39.53.66
   port: 22223
@@ -206,7 +141,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #11'
+- name: 'Trojan #6'
   type: trojan
   server: 3.127.99.68
   port: 22223
@@ -219,9 +154,59 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #12'
+- name: 'Trojan #7'
+  type: trojan
+  server: 13.36.204.100
+  port: 22223
+  password: telegram-id-v2rayvpnchannel
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #8'
+  type: trojan
+  server: 78.159.131.12
+  port: 28259
+  password: MeaDiUmPlkWbZJ2BON8tz
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: ads.x5.ru
+  client-fingerprint: chrome
+- name: 'Trojan #9'
   type: trojan
   server: 3.127.99.68
+  port: 22222
+  password: telegram-id-privatevpns
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #10'
+  type: trojan
+  server: 13.36.204.100
+  port: 22222
+  password: telegram-id-privatevpns
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #11'
+  type: trojan
+  server: 13.36.100.6
   port: 22222
   password: telegram-id-privatevpns
   network: tcp
@@ -248,7 +233,6 @@ proxy-groups:
   - 'Trojan #9'
   - 'Trojan #10'
   - 'Trojan #11'
-  - 'Trojan #12'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -264,7 +248,6 @@ proxy-groups:
   - 'Trojan #9'
   - 'Trojan #10'
   - 'Trojan #11'
-  - 'Trojan #12'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
