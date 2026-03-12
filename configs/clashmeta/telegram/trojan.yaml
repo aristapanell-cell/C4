@@ -78,22 +78,24 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: 13.38.214.118
-  port: 22223
-  password: telegram-id-v2rayvpnchannel
-  network: tcp
+  server: 104.21.40.34
+  port: 443
+  password: humanity
+  network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
+  servername: www.gossipglove.com
   client-fingerprint: chrome
-  alpn:
-  - http/1.1
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.gossipglove.com
 - name: 'Trojan #2'
   type: trojan
-  server: 3.69.235.19
-  port: 22223
-  password: telegram-id-v2rayvpnchannel
+  server: 13.36.100.6
+  port: 22222
+  password: telegram-id-privatevpns
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -104,7 +106,7 @@ proxies:
   - http/1.1
 - name: 'Trojan #3'
   type: trojan
-  server: 13.36.29.172
+  server: 13.38.214.118
   port: 22223
   password: telegram-id-v2rayvpnchannel
   network: tcp
@@ -117,7 +119,7 @@ proxies:
   - http/1.1
 - name: 'Trojan #4'
   type: trojan
-  server: 13.36.100.6
+  server: 3.69.235.19
   port: 22223
   password: telegram-id-v2rayvpnchannel
   network: tcp
@@ -130,7 +132,7 @@ proxies:
   - http/1.1
 - name: 'Trojan #5'
   type: trojan
-  server: 13.39.53.66
+  server: 13.36.29.172
   port: 22223
   password: telegram-id-v2rayvpnchannel
   network: tcp
@@ -143,7 +145,7 @@ proxies:
   - http/1.1
 - name: 'Trojan #6'
   type: trojan
-  server: 3.127.99.68
+  server: 13.36.100.6
   port: 22223
   password: telegram-id-v2rayvpnchannel
   network: tcp
@@ -156,7 +158,7 @@ proxies:
   - http/1.1
 - name: 'Trojan #7'
   type: trojan
-  server: 13.36.204.100
+  server: 13.39.53.66
   port: 22223
   password: telegram-id-v2rayvpnchannel
   network: tcp
@@ -169,20 +171,22 @@ proxies:
   - http/1.1
 - name: 'Trojan #8'
   type: trojan
-  server: 78.159.131.12
-  port: 28259
-  password: MeaDiUmPlkWbZJ2BON8tz
+  server: 3.127.99.68
+  port: 22223
+  password: telegram-id-v2rayvpnchannel
   network: tcp
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: ads.x5.ru
+  servername: trojan.burgerip.co.uk
   client-fingerprint: chrome
+  alpn:
+  - http/1.1
 - name: 'Trojan #9'
   type: trojan
-  server: 3.127.99.68
-  port: 22222
-  password: telegram-id-privatevpns
+  server: 13.36.204.100
+  port: 22223
+  password: telegram-id-v2rayvpnchannel
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -193,9 +197,9 @@ proxies:
   - http/1.1
 - name: 'Trojan #10'
   type: trojan
-  server: 13.36.204.100
-  port: 22222
-  password: telegram-id-privatevpns
+  server: 15.237.89.75
+  port: 22223
+  password: telegram-id-v2rayvpnchannel
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -206,7 +210,37 @@ proxies:
   - http/1.1
 - name: 'Trojan #11'
   type: trojan
-  server: 13.36.100.6
+  server: 190.93.244.43
+  port: 8443
+  password: Nova-Proxy
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: small-morning-2668.drusavm.workers.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed
+    headers:
+      Host: small-morning-2668.drusavm.workers.dev
+- name: 'Trojan #12'
+  type: trojan
+  server: cf.877774.xyz
+  port: 2087
+  password: 22367c45-f6c4-4ca8-8d52-d9787d7bbe91
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: cm22-bgphhh.pages.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: cm22-bgphhh.pages.dev
+- name: 'Trojan #13'
+  type: trojan
+  server: 15.237.89.75
   port: 22222
   password: telegram-id-privatevpns
   network: tcp
@@ -233,6 +267,8 @@ proxy-groups:
   - 'Trojan #9'
   - 'Trojan #10'
   - 'Trojan #11'
+  - 'Trojan #12'
+  - 'Trojan #13'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -248,6 +284,8 @@ proxy-groups:
   - 'Trojan #9'
   - 'Trojan #10'
   - 'Trojan #11'
+  - 'Trojan #12'
+  - 'Trojan #13'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
