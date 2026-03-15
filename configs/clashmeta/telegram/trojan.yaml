@@ -78,49 +78,6 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: 104.21.40.34
-  port: 443
-  password: humanity
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 104.21.40.34
-  client-fingerprint: chrome
-- name: 'Trojan #2'
-  type: trojan
-  server: irancell.buzzmuzzpanel.online
-  port: 443
-  password: '%295%2C9FW.Kk166'
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 028.eLECtRocEllco-Cf-028.worKErS.dev
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-  ws-opts:
-    path: /eyJqdW5rIjoiU2oxczB0b0tSIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ
-    headers:
-      Host: 028.eLECtRocEllco-Cf-028.worKErS.dev
-- name: 'Trojan #3'
-  type: trojan
-  server: masterserver1-masterserver1-masterserver1-masterserver1.jajetif750.workers.dev
-  port: 2083
-  password: '000123'
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: masterserver1-masterserver1-masterserver1-masterserver1.jajetif750.workers.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /?ed
-    headers:
-      Host: masterserver1-masterserver1-masterserver1-masterserver1.jajetif750.workers.dev
-- name: 'Trojan #4'
-  type: trojan
   server: nl-4.tr202507.com
   port: 443
   password: uThbm8eGmXZ7GKqnWy
@@ -130,7 +87,7 @@ proxies:
   tcp-fast-open: true
   servername: nl-4.tr202507.com
   client-fingerprint: chrome
-- name: 'Trojan #5'
+- name: 'Trojan #2'
   type: trojan
   server: 104.16.190.233
   port: 8443
@@ -145,7 +102,7 @@ proxies:
     path: /?ed
     headers:
       Host: small-morning-2668.drusavm.workers.dev
-- name: 'Trojan #6'
+- name: 'Trojan #3'
   type: trojan
   server: irancell.buzzmuzzpanel.online
   port: 443
@@ -162,7 +119,7 @@ proxies:
     path: /eyJqdW5rIjoiU2oxczB0b0tSIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==?ed=2560
     headers:
       Host: 028.eLECtRocEllco-Cf-028.worKErS.dev
-- name: 'Trojan #7'
+- name: 'Trojan #4'
   type: trojan
   server: 54.93.56.163
   port: 22222
@@ -175,7 +132,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #8'
+- name: 'Trojan #5'
   type: trojan
   server: www.multiplydose.com
   port: 443
@@ -190,7 +147,7 @@ proxies:
     path: /assignment
     headers:
       Host: www.multiplydose.com
-- name: 'Trojan #9'
+- name: 'Trojan #6'
   type: trojan
   server: 15.236.174.14
   port: 22222
@@ -203,27 +160,48 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #10'
+- name: 'Trojan #7'
   type: trojan
-  server: 195.66.25.251
+  server: irancell.buzzmuzzpanel.online
   port: 443
-  password: q2GRUM1-odJBWq_KV6xv2fuNvu8ed-
-  network: tcp
+  password: '%295%2C9FW.Kk166'
+  network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 8443.golden-cards.me
+  servername: 028.eLECtRocEllco-Cf-028.worKErS.dev
   client-fingerprint: chrome
-- name: 'Trojan #11'
+  alpn:
+  - http/1.1
+  ws-opts:
+    path: /eyJqdW5rIjoiU2oxczB0b0tSIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ
+    headers:
+      Host: 028.eLECtRocEllco-Cf-028.worKErS.dev
+- name: 'Trojan #8'
   type: trojan
-  server: cool-lioness.rooster465.autos
+  server: masterserver1-masterserver1-masterserver1-masterserver1.jajetif750.workers.dev
+  port: 2083
+  password: '000123'
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: masterserver1-masterserver1-masterserver1-masterserver1.jajetif750.workers.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed
+    headers:
+      Host: masterserver1-masterserver1-masterserver1-masterserver1.jajetif750.workers.dev
+- name: 'Trojan #9'
+  type: trojan
+  server: 104.21.40.34
   port: 443
-  password: ZY07256934
+  password: humanity
   network: tcp
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: cool-lioness.rooster465.autos
+  servername: 104.21.40.34
   client-fingerprint: chrome
 proxy-groups:
 - name: Proxy Select
@@ -239,8 +217,6 @@ proxy-groups:
   - 'Trojan #7'
   - 'Trojan #8'
   - 'Trojan #9'
-  - 'Trojan #10'
-  - 'Trojan #11'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -254,8 +230,6 @@ proxy-groups:
   - 'Trojan #7'
   - 'Trojan #8'
   - 'Trojan #9'
-  - 'Trojan #10'
-  - 'Trojan #11'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
