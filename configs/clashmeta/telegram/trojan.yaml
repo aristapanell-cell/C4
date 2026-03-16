@@ -78,41 +78,6 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: 153.121.45.139
-  port: 4937
-  password: f389ed926e512e15f382dc3804029474
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: www.nintendogames.net
-  client-fingerprint: chrome
-- name: 'Trojan #2'
-  type: trojan
-  server: 153.121.45.139
-  port: 4937
-  password: f389ed926e512e15f382dc3804029474
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: www.nintendogames.net
-  client-fingerprint: chrome
-- name: 'Trojan #3'
-  type: trojan
-  server: 18.194.236.215
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #4'
-  type: trojan
   server: 45.82.14.144
   port: 2025
   password: vpn
@@ -122,7 +87,7 @@ proxies:
   tcp-fast-open: true
   servername: 45.82.14.144
   client-fingerprint: chrome
-- name: 'Trojan #5'
+- name: 'Trojan #2'
   type: trojan
   server: irancell.buzzmuzzpanel.online
   port: 443
@@ -139,7 +104,7 @@ proxies:
     path: /eyJqdW5rIjoiU2oxczB0b0tSIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==?ed=2560
     headers:
       Host: 028.eLECtRocEllco-Cf-028.worKErS.dev
-- name: 'Trojan #6'
+- name: 'Trojan #3'
   type: trojan
   server: 54.93.56.163
   port: 22222
@@ -152,6 +117,82 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
+- name: 'Trojan #4'
+  type: trojan
+  server: 153.121.45.139
+  port: 4937
+  password: f389ed926e512e15f382dc3804029474
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.nintendogames.net
+  client-fingerprint: chrome
+- name: 'Trojan #5'
+  type: trojan
+  server: 18.194.236.215
+  port: 22222
+  password: telegram-id-privatevpns
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #6'
+  type: trojan
+  server: 15.188.40.40
+  port: 22222
+  password: telegram-id-privatevpns
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #7'
+  type: trojan
+  server: 15.236.174.14
+  port: 22222
+  password: telegram-id-privatevpns
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #8'
+  type: trojan
+  server: nl-4.tr202507.com
+  port: 443
+  password: uThbm8eGmXZ7GKqnWy
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: nl-4.tr202507.com
+  client-fingerprint: chrome
+- name: 'Trojan #9'
+  type: trojan
+  server: 104.16.190.233
+  port: 8443
+  password: Nova-Proxy
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: small-morning-2668.drusavm.workers.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /?ed
+    headers:
+      Host: small-morning-2668.drusavm.workers.dev
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -163,6 +204,9 @@ proxy-groups:
   - 'Trojan #4'
   - 'Trojan #5'
   - 'Trojan #6'
+  - 'Trojan #7'
+  - 'Trojan #8'
+  - 'Trojan #9'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -173,6 +217,9 @@ proxy-groups:
   - 'Trojan #4'
   - 'Trojan #5'
   - 'Trojan #6'
+  - 'Trojan #7'
+  - 'Trojan #8'
+  - 'Trojan #9'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
