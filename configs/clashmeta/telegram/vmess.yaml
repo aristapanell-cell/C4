@@ -78,9 +78,27 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: c32s5.portablesubmarines.com
-  port: 5755
-  uuid: 70181e68-9ec6-4007-837e-86b28746c2dc
+  server: 45.12.132.183
+  port: 80
+  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 45.12.132.183
+  client-fingerprint: ''
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: 45.12.132.183
+- name: 'ARISTA #2'
+  type: vmess
+  server: 66.163.117.58
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
   cipher: auto
   network: tcp
@@ -88,44 +106,22 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: c32s5.portablesubmarines.com
+  servername: 66.163.117.58
   client-fingerprint: chrome
-- name: 'ARISTA #2'
-  type: vmess
-  server: vbh.ae1autumn.cc.cd
-  port: 80
-  uuid: 13ad36e6-c091-43f2-8505-47d868dd544c
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: vbh.ae1autumn.cc.cd
-  client-fingerprint: ''
-  ws-opts:
-    path: /YsmRouA9ZbxgW4
-    headers:
-      Host: vbh.ae1autumn.cc.cd
 - name: 'ARISTA #3'
   type: vmess
-  server: dcvfr546.0ou.ccwu.cc
-  port: 80
-  uuid: 8ea1b89f-21d5-49b9-9bcd-1ad9ac39b4ba
+  server: 165.140.216.141
+  port: 443
+  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
   alterId: 0
   cipher: auto
-  network: ws
+  network: tcp
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: dcvfr546.0ou.ccwu.cc
+  servername: 165.140.216.141
   client-fingerprint: ''
-  ws-opts:
-    path: /y3ME81hpTJWwd4RJBAQ5Ah
-    headers:
-      Host: dcvfr546.0ou.ccwu.cc
 - name: 'ARISTA #4'
   type: vmess
   server: tr1-smart.adelping.com
@@ -192,9 +188,9 @@ proxies:
       Host: end-gfw.com
 - name: 'ARISTA #8'
   type: vmess
-  server: 45.12.132.183
+  server: fvbg.ae1autumn.cc.cd
   port: 80
-  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
+  uuid: 13ad36e6-c091-43f2-8505-47d868dd544c
   alterId: 0
   cipher: auto
   network: ws
@@ -202,31 +198,71 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 45.12.132.183
+  servername: fvbg.ae1autumn.cc.cd
   client-fingerprint: ''
   ws-opts:
-    path: /vmess/
+    path: /YsmRouA9ZbxgW4
     headers:
-      Host: 45.12.132.183
+      Host: fvbg.ae1autumn.cc.cd
 - name: 'ARISTA #9'
   type: vmess
-  server: 66.163.117.58
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  server: 18.179.9.166
+  port: 8686
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
   alterId: 0
   cipher: auto
-  network: tcp
+  network: ws
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 66.163.117.58
+  servername: baidu.com
   client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: end-gfw.com
 - name: 'ARISTA #10'
   type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
+  server: 13.231.90.73
+  port: 8686
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: baidu.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: end-gfw.com
+- name: 'ARISTA #11'
+  type: vmess
+  server: 13.115.189.46
+  port: 8686
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: baidu.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: end-gfw.com
+- name: 'ARISTA #12'
+  type: vmess
+  server: c32s4.portablesubmarines.com
+  port: 5755
+  uuid: 70181e68-9ec6-4007-837e-86b28746c2dc
   alterId: 0
   cipher: auto
   network: tcp
@@ -234,8 +270,8 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 165.140.216.141
-  client-fingerprint: ''
+  servername: c32s4.portablesubmarines.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -251,6 +287,8 @@ proxy-groups:
   - 'ARISTA #8'
   - 'ARISTA #9'
   - 'ARISTA #10'
+  - 'ARISTA #11'
+  - 'ARISTA #12'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -265,6 +303,8 @@ proxy-groups:
   - 'ARISTA #8'
   - 'ARISTA #9'
   - 'ARISTA #10'
+  - 'ARISTA #11'
+  - 'ARISTA #12'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
