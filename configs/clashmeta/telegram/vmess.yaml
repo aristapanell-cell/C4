@@ -78,6 +78,23 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
+  server: 65.21.145.122
+  port: 53442
+  uuid: cd13ae55-feca-457c-988e-8dba56fe006f
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.microsoft.com
+  client-fingerprint: chrome
+  alpn:
+  - h2
+  - http/1.1
+- name: 'ARISTA #2'
+  type: vmess
   server: kwtgm.cmvvb.online
   port: 8443
   uuid: 5017f929-00f3-4244-abb6-c7295ebf0ac3
@@ -94,7 +111,7 @@ proxies:
     path: /
     headers:
       Host: kwtgm.cmvvb.online
-- name: 'ARISTA #2'
+- name: 'ARISTA #3'
   type: vmess
   server: 45.92.70.236
   port: 22324
@@ -108,7 +125,7 @@ proxies:
   tcp-fast-open: true
   servername: 45.92.70.236
   client-fingerprint: chrome
-- name: 'ARISTA #3'
+- name: 'ARISTA #4'
   type: vmess
   server: 104.17.78.159
   port: 443
@@ -124,7 +141,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'ARISTA #4'
+- name: 'ARISTA #5'
   type: vmess
   server: 8.218.19.101
   port: 443
@@ -142,7 +159,7 @@ proxies:
     path: /
     headers:
       Host: n1761214902.wpg27.xyz
-- name: 'ARISTA #5'
+- name: 'ARISTA #6'
   type: vmess
   server: zdqbk.cmvvb.online
   port: 8443
@@ -160,7 +177,7 @@ proxies:
     path: /
     headers:
       Host: zdqbk.cmvvb.online
-- name: 'ARISTA #6'
+- name: 'ARISTA #7'
   type: vmess
   server: nhj4r.huangshang.site
   port: 443
@@ -178,7 +195,7 @@ proxies:
     path: /7sOz0p4SzU1D6XNC0BXGtJ
     headers:
       Host: nhj4r.huangshang.site
-- name: 'ARISTA #7'
+- name: 'ARISTA #8'
   type: vmess
   server: m.cnmjin.net
   port: 16616
@@ -196,7 +213,7 @@ proxies:
     path: /
     headers:
       Host: m.cnmjin.net
-- name: 'ARISTA #8'
+- name: 'ARISTA #9'
   type: vmess
   server: jnm.1x2.indevs.in
   port: 80
@@ -214,7 +231,7 @@ proxies:
     path: /iSRWSKUJKNuXvVzsYHmsMrnO
     headers:
       Host: jnm.1x2.indevs.in
-- name: 'ARISTA #9'
+- name: 'ARISTA #10'
   type: vmess
   server: 85.90.217.42
   port: 22324
@@ -228,81 +245,25 @@ proxies:
   tcp-fast-open: true
   servername: 85.90.217.42
   client-fingerprint: chrome
-- name: 'ARISTA #10'
-  type: vmess
-  server: snapp.ir.bmi.ir.mobato-mobile.com
-  port: 80
-  uuid: 820a9e42-e18d-43e4-859f-d1c2f6b8600a
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: excoino.com
-  client-fingerprint: ''
 - name: 'ARISTA #11'
   type: vmess
-  server: 94.101.185.53
-  port: 8443
-  uuid: 00cb8f74-c1ff-44ed-a3d6-f71171359d81
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 94.101.185.53
-  client-fingerprint: ''
-- name: 'ARISTA #12'
-  type: vmess
-  server: 45.12.132.183
-  port: 80
-  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
+  server: 38.55.193.78
+  port: 443
+  uuid: 462d9694-62b5-4781-a287-61a422b920e8
   alterId: 0
   cipher: auto
   network: ws
-  tls: false
+  tls: true
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 45.12.132.183
-  client-fingerprint: ''
-  ws-opts:
-    path: /vmess/
-    headers:
-      Host: 45.12.132.183
-- name: 'ARISTA #13'
-  type: vmess
-  server: 66.163.117.58
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 66.163.117.58
+  servername: mn1ray.jagoanvip.xyz
   client-fingerprint: chrome
-- name: 'ARISTA #14'
-  type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 165.140.216.141
-  client-fingerprint: ''
-- name: 'ARISTA #15'
+  ws-opts:
+    path: /vvip
+    headers:
+      Host: mn1ray.jagoanvip.xyz
+- name: 'ARISTA #12'
   type: vmess
   server: 5.202.8.228
   port: 443
@@ -322,23 +283,80 @@ proxies:
     path: /28hzxvljFN5Qx9
     headers:
       Host: java.basic-tutorial.ir
-- name: 'ARISTA #16'
+- name: 'ARISTA #13'
   type: vmess
-  server: 65.21.145.122
-  port: 53442
-  uuid: cd13ae55-feca-457c-988e-8dba56fe006f
+  server: 45.12.132.183
+  port: 80
+  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
   alterId: 0
   cipher: auto
-  network: tcp
-  tls: true
+  network: ws
+  tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: www.microsoft.com
+  servername: 45.12.132.183
+  client-fingerprint: ''
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: 45.12.132.183
+- name: 'ARISTA #14'
+  type: vmess
+  server: 66.163.117.58
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 66.163.117.58
   client-fingerprint: chrome
-  alpn:
-  - h2
-  - http/1.1
+- name: 'ARISTA #15'
+  type: vmess
+  server: 165.140.216.141
+  port: 443
+  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 165.140.216.141
+  client-fingerprint: ''
+- name: 'ARISTA #16'
+  type: vmess
+  server: snapp.ir.bmi.ir.mobato-mobile.com
+  port: 80
+  uuid: 820a9e42-e18d-43e4-859f-d1c2f6b8600a
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: excoino.com
+  client-fingerprint: ''
+- name: 'ARISTA #17'
+  type: vmess
+  server: 94.101.185.53
+  port: 8443
+  uuid: 00cb8f74-c1ff-44ed-a3d6-f71171359d81
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 94.101.185.53
+  client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -360,6 +378,7 @@ proxy-groups:
   - 'ARISTA #14'
   - 'ARISTA #15'
   - 'ARISTA #16'
+  - 'ARISTA #17'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -380,6 +399,7 @@ proxy-groups:
   - 'ARISTA #14'
   - 'ARISTA #15'
   - 'ARISTA #16'
+  - 'ARISTA #17'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
