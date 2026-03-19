@@ -78,6 +78,40 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
+  server: 5.202.8.228
+  port: 443
+  uuid: f4f997de-e68b-443b-9564-457e6af80e1c
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: java.basic-tutorial.ir
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+  ws-opts:
+    path: /28hzxvljFN5Qx9
+    headers:
+      Host: java.basic-tutorial.ir
+- name: 'ARISTA #2'
+  type: vmess
+  server: cip.1iii1.de
+  port: 443
+  uuid: 83df5028-1637-4760-858e-bbacaab4b9b1
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: cip.1iii1.de
+  client-fingerprint: ''
+- name: 'ARISTA #3'
+  type: vmess
   server: 45.12.132.183
   port: 80
   uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
@@ -94,7 +128,7 @@ proxies:
     path: /vmess/
     headers:
       Host: 45.12.132.183
-- name: 'ARISTA #2'
+- name: 'ARISTA #4'
   type: vmess
   server: 66.163.117.58
   port: 22324
@@ -108,7 +142,7 @@ proxies:
   tcp-fast-open: true
   servername: 66.163.117.58
   client-fingerprint: chrome
-- name: 'ARISTA #3'
+- name: 'ARISTA #5'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -122,7 +156,7 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
-- name: 'ARISTA #4'
+- name: 'ARISTA #6'
   type: vmess
   server: 104.26.5.57
   port: 2095
@@ -140,7 +174,7 @@ proxies:
     path: /api/v3/download.getFile
     headers:
       Host: ssrsub.v03.ssrsub.com
-- name: 'ARISTA #5'
+- name: 'ARISTA #7'
   type: vmess
   server: moi9.zem.indevs.in
   port: 80
@@ -158,7 +192,7 @@ proxies:
     path: /7sOz0p4SzU1D6XNC0BXGtJ
     headers:
       Host: moi9.zem.indevs.in
-- name: 'ARISTA #6'
+- name: 'ARISTA #8'
   type: vmess
   server: cxsfvn.uhomdex.shop
   port: 443
@@ -176,7 +210,7 @@ proxies:
     path: /
     headers:
       Host: cxsfvn.uhomdex.shop
-- name: 'ARISTA #7'
+- name: 'ARISTA #9'
   type: vmess
   server: yyynm.2nn.ccwu.cc
   port: 80
@@ -194,7 +228,7 @@ proxies:
     path: /iSRWSKUJKNuXvVzsYHmsMrnO
     headers:
       Host: yyynm.2nn.ccwu.cc
-- name: 'ARISTA #8'
+- name: 'ARISTA #10'
   type: vmess
   server: kwtgm.cmvvb.online
   port: 8443
@@ -212,7 +246,7 @@ proxies:
     path: /
     headers:
       Host: kwtgm.cmvvb.online
-- name: 'ARISTA #9'
+- name: 'ARISTA #11'
   type: vmess
   server: 45.92.70.236
   port: 22324
@@ -226,7 +260,23 @@ proxies:
   tcp-fast-open: true
   servername: 45.92.70.236
   client-fingerprint: chrome
-- name: 'ARISTA #10'
+- name: 'ARISTA #12'
+  type: vmess
+  server: 104.17.78.159
+  port: 443
+  uuid: 9880cba6-7260-4eab-a446-d9f4b02b28bd
+  alterId: 0
+  cipher: auto
+  network: httpupgrade
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: worker.shayan.cyou
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'ARISTA #13'
   type: vmess
   server: 65.21.145.122
   port: 53442
@@ -243,20 +293,6 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: 'ARISTA #11'
-  type: vmess
-  server: cip.1iii1.de
-  port: 443
-  uuid: 83df5028-1637-4760-858e-bbacaab4b9b1
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: cip.1iii1.de
-  client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -273,6 +309,8 @@ proxy-groups:
   - 'ARISTA #9'
   - 'ARISTA #10'
   - 'ARISTA #11'
+  - 'ARISTA #12'
+  - 'ARISTA #13'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -288,6 +326,8 @@ proxy-groups:
   - 'ARISTA #9'
   - 'ARISTA #10'
   - 'ARISTA #11'
+  - 'ARISTA #12'
+  - 'ARISTA #13'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
