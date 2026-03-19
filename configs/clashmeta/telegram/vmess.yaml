@@ -78,22 +78,21 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: chatgpt.com
-  port: 8443
-  uuid: 35312035-3420-4535-a031-303220353420
+  server: 65.21.145.122
+  port: 53442
+  uuid: cd13ae55-feca-457c-988e-8dba56fe006f
   alterId: 0
-  cipher: none
-  network: ws
+  cipher: auto
+  network: tcp
   tls: true
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: tr-1.stunnel.cc
-  client-fingerprint: ''
-  ws-opts:
-    path: /ws
-    headers:
-      Host: tr-1.stunnel.cc
+  servername: www.microsoft.com
+  client-fingerprint: chrome
+  alpn:
+  - h2
+  - http/1.1
 - name: 'ARISTA #2'
   type: vmess
   server: 45.12.132.183
@@ -142,40 +141,19 @@ proxies:
   client-fingerprint: ''
 - name: 'ARISTA #5'
   type: vmess
-  server: 65.21.145.122
-  port: 53442
-  uuid: cd13ae55-feca-457c-988e-8dba56fe006f
+  server: cip.1iii1.de
+  port: 443
+  uuid: 83df5028-1637-4760-858e-bbacaab4b9b1
   alterId: 0
   cipher: auto
   network: tcp
-  tls: true
+  tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: www.microsoft.com
-  client-fingerprint: chrome
-  alpn:
-  - h2
-  - http/1.1
+  servername: cip.1iii1.de
+  client-fingerprint: ''
 - name: 'ARISTA #6'
-  type: vmess
-  server: rtl.ircf.space
-  port: 2096
-  uuid: fa5a6f0e-ab9d-45bf-e3ed-102dd5fee6b2
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: dl.filmino.online
-  client-fingerprint: chrome
-  ws-opts:
-    path: /nodejs
-    headers:
-      Host: dl.filmino.online
-- name: 'ARISTA #7'
   type: vmess
   server: t.cnmjcn.cyou
   port: 16648
@@ -193,7 +171,7 @@ proxies:
     path: /
     headers:
       Host: t.cnmjcn.cyou
-- name: 'ARISTA #8'
+- name: 'ARISTA #7'
   type: vmess
   server: planb.mojcn.com
   port: 16618
@@ -211,7 +189,7 @@ proxies:
     path: /
     headers:
       Host: planb.mojcn.com
-- name: 'ARISTA #9'
+- name: 'ARISTA #8'
   type: vmess
   server: 3.34.43.22
   port: 8686
@@ -229,7 +207,7 @@ proxies:
     path: /
     headers:
       Host: end-gfw.com
-- name: 'ARISTA #10'
+- name: 'ARISTA #9'
   type: vmess
   server: 104.26.5.57
   port: 2095
@@ -247,7 +225,7 @@ proxies:
     path: /api/v3/download.getFile
     headers:
       Host: ssrsub.v03.ssrsub.com
-- name: 'ARISTA #11'
+- name: 'ARISTA #10'
   type: vmess
   server: moi9.zem.indevs.in
   port: 80
@@ -265,7 +243,7 @@ proxies:
     path: /7sOz0p4SzU1D6XNC0BXGtJ
     headers:
       Host: moi9.zem.indevs.in
-- name: 'ARISTA #12'
+- name: 'ARISTA #11'
   type: vmess
   server: cxsfvn.uhomdex.shop
   port: 443
@@ -283,34 +261,24 @@ proxies:
     path: /
     headers:
       Host: cxsfvn.uhomdex.shop
-- name: 'ARISTA #13'
+- name: 'ARISTA #12'
   type: vmess
-  server: 188.121.120.140
-  port: 21368
-  uuid: 270081d8-09e7-4b0f-a9e6-90acd2b32072
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 188.121.120.140
-  client-fingerprint: ''
-- name: 'ARISTA #14'
-  type: vmess
-  server: snapp.ir.bmi.ir.mobato-mobile.com
+  server: yyynm.2nn.ccwu.cc
   port: 80
-  uuid: 820a9e42-e18d-43e4-859f-d1c2f6b8600a
+  uuid: 4e45c1b4-9107-45dd-9995-cdf7cbb44d9d
   alterId: 0
   cipher: auto
-  network: tcp
+  network: ws
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: excoino.com
-  client-fingerprint: ''
+  servername: yyynm.2nn.ccwu.cc
+  client-fingerprint: chrome
+  ws-opts:
+    path: /iSRWSKUJKNuXvVzsYHmsMrnO
+    headers:
+      Host: yyynm.2nn.ccwu.cc
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -328,8 +296,6 @@ proxy-groups:
   - 'ARISTA #10'
   - 'ARISTA #11'
   - 'ARISTA #12'
-  - 'ARISTA #13'
-  - 'ARISTA #14'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -346,8 +312,6 @@ proxy-groups:
   - 'ARISTA #10'
   - 'ARISTA #11'
   - 'ARISTA #12'
-  - 'ARISTA #13'
-  - 'ARISTA #14'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
