@@ -78,7 +78,7 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: 35.181.123.75
+  server: 18.195.58.45
   port: 22222
   password: telegram-id-privatevpns
   network: tcp
@@ -90,6 +90,19 @@ proxies:
   alpn:
   - http/1.1
 - name: 'Trojan #2'
+  type: trojan
+  server: 35.181.123.75
+  port: 22222
+  password: telegram-id-privatevpns
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #3'
   type: trojan
   server: 104.16.190.233
   port: 8443
@@ -104,7 +117,7 @@ proxies:
     path: /?ed
     headers:
       Host: small-morning-2668.drusavm.workers.dev
-- name: 'Trojan #3'
+- name: 'Trojan #4'
   type: trojan
   server: ct.877774.xyz
   port: 443
@@ -119,19 +132,6 @@ proxies:
     path: /hot/proxyip=45.196.239.151,167.253.153.161,45.196.239.238,45.196.238.248,45.196.238.145,223.165.4.57,85.237.207.19,167.253.153.80
     headers:
       Host: cm22-bgphhh.pages.dev
-- name: 'Trojan #4'
-  type: trojan
-  server: 18.195.58.45
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
 - name: 'Trojan #5'
   type: trojan
   server: 185.143.235.5
