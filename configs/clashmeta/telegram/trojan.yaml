@@ -78,19 +78,19 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: www.host-tracker.com
+  server: 188.114.96.3
   port: 443
-  password: humanity
+  password: Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q
   network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: www.gossipglove.com
+  servername: mfyousheng.nl.eu.org
   client-fingerprint: chrome
   ws-opts:
-    path: /assignment
+    path: /tjwsLhx0SFASG4l9FERJ1g
     headers:
-      Host: www.gossipglove.com
+      Host: mfyousheng.nl.eu.org
 - name: 'Trojan #2'
   type: trojan
   server: 13.38.195.57
@@ -119,20 +119,22 @@ proxies:
   - http/1.1
 - name: 'Trojan #4'
   type: trojan
-  server: 185.143.235.5
-  port: 443
-  password: biS%28YrwB%2C3L%24
+  server: 18.159.140.89
+  port: 22222
+  password: telegram-id-privatevpns
   network: tcp
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: mydigipay.com
+  servername: trojan.burgerip.co.uk
   client-fingerprint: chrome
+  alpn:
+  - http/1.1
 - name: 'Trojan #5'
   type: trojan
-  server: 15.236.16.104
-  port: 22223
-  password: telegram-id-v2rayvpnchannel
+  server: 13.37.186.179
+  port: 22222
+  password: telegram-id-privatevpns
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -142,6 +144,17 @@ proxies:
   alpn:
   - http/1.1
 - name: 'Trojan #6'
+  type: trojan
+  server: 185.143.235.5
+  port: 443
+  password: biS%28YrwB%2C3L%24
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mydigipay.com
+  client-fingerprint: chrome
+- name: 'Trojan #7'
   type: trojan
   server: 3.123.214.232
   port: 22223
@@ -154,7 +167,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #7'
+- name: 'Trojan #8'
   type: trojan
   server: 15.188.155.30
   port: 22223
@@ -167,7 +180,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #8'
+- name: 'Trojan #9'
   type: trojan
   server: 18.194.226.217
   port: 22223
@@ -180,7 +193,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #9'
+- name: 'Trojan #10'
   type: trojan
   server: 13.36.80.221
   port: 22223
@@ -193,7 +206,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #10'
+- name: 'Trojan #11'
   type: trojan
   server: 13.38.195.57
   port: 22223
@@ -206,22 +219,9 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #11'
-  type: trojan
-  server: 18.159.140.89
-  port: 22223
-  password: telegram-id-v2rayvpnchannel
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
 - name: 'Trojan #12'
   type: trojan
-  server: 13.37.186.179
+  server: 18.159.140.89
   port: 22223
   password: telegram-id-v2rayvpnchannel
   network: tcp
@@ -234,22 +234,9 @@ proxies:
   - http/1.1
 - name: 'Trojan #13'
   type: trojan
-  server: 18.159.140.89
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #14'
-  type: trojan
   server: 13.37.186.179
-  port: 22222
-  password: telegram-id-privatevpns
+  port: 22223
+  password: telegram-id-v2rayvpnchannel
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -258,21 +245,6 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #15'
-  type: trojan
-  server: 188.114.96.3
-  port: 443
-  password: Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mfyousheng.nl.eu.org
-  client-fingerprint: chrome
-  ws-opts:
-    path: /tjwsLhx0SFASG4l9FERJ1g
-    headers:
-      Host: mfyousheng.nl.eu.org
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -291,8 +263,6 @@ proxy-groups:
   - 'Trojan #11'
   - 'Trojan #12'
   - 'Trojan #13'
-  - 'Trojan #14'
-  - 'Trojan #15'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -310,8 +280,6 @@ proxy-groups:
   - 'Trojan #11'
   - 'Trojan #12'
   - 'Trojan #13'
-  - 'Trojan #14'
-  - 'Trojan #15'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
