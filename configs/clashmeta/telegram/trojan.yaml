@@ -78,6 +78,19 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
+  server: 18.194.226.217
+  port: 22222
+  password: telegram-id-privatevpns
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #2'
+  type: trojan
   server: 188.114.96.3
   port: 443
   password: Puj01Rc8UcA9IzcFcYOs8KMOhCz6aX2Q
@@ -91,30 +104,21 @@ proxies:
     path: /tjwsLhx0SFASG4l9FERJ1g
     headers:
       Host: mfyousheng.nl.eu.org
-- name: 'Trojan #2'
-  type: trojan
-  server: 18.194.226.217
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
 - name: 'Trojan #3'
   type: trojan
-  server: 185.143.235.5
+  server: spring-tooth-7fa3.ahmadrj.workers.dev
   port: 443
-  password: biS%28YrwB%2C3L%24
-  network: tcp
+  password: Nova-Proxy
+  network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: mydigipay.com
+  servername: spring-tooth-7fa3.ahmadrj.workers.dev
   client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: spring-tooth-7fa3.ahmadrj.workers.dev
 - name: 'Trojan #4'
   type: trojan
   server: 51.45.25.205
@@ -232,6 +236,30 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
+- name: 'Trojan #13'
+  type: trojan
+  server: 18.194.226.217
+  port: 22223
+  password: telegram-id-directvpn
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #14'
+  type: trojan
+  server: 185.143.235.5
+  port: 443
+  password: biS%28YrwB%2C3L%24
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mydigipay.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -249,6 +277,8 @@ proxy-groups:
   - 'Trojan #10'
   - 'Trojan #11'
   - 'Trojan #12'
+  - 'Trojan #13'
+  - 'Trojan #14'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -265,6 +295,8 @@ proxy-groups:
   - 'Trojan #10'
   - 'Trojan #11'
   - 'Trojan #12'
+  - 'Trojan #13'
+  - 'Trojan #14'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
