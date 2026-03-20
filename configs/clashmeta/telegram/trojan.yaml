@@ -251,21 +251,6 @@ proxies:
       Host: mfyousheng.nl.eu.org
 - name: 'Trojan #14'
   type: trojan
-  server: 104.21.40.34
-  port: 443
-  password: humanity
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: www.gossipglove.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.gossipglove.com
-- name: 'Trojan #15'
-  type: trojan
   server: 188.114.98.0
   port: 443
   password: humanity
@@ -279,6 +264,36 @@ proxies:
     path: /assignment
     headers:
       Host: www.creationlong.org
+- name: 'Trojan #15'
+  type: trojan
+  server: 104.21.40.34
+  port: 443
+  password: humanity
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.gossipglove.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.gossipglove.com
+- name: 'Trojan #16'
+  type: trojan
+  server: 45.85.118.88
+  port: 2053
+  password: ZJU29smXwp
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: omid.teama.tk
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: omid.teama.tk
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -299,6 +314,7 @@ proxy-groups:
   - 'Trojan #13'
   - 'Trojan #14'
   - 'Trojan #15'
+  - 'Trojan #16'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -318,6 +334,7 @@ proxy-groups:
   - 'Trojan #13'
   - 'Trojan #14'
   - 'Trojan #15'
+  - 'Trojan #16'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
