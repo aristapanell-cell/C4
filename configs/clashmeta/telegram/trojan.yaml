@@ -78,6 +78,17 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
+  server: 185.143.235.5
+  port: 443
+  password: biS%28YrwB%2C3L%24
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mydigipay.com
+  client-fingerprint: chrome
+- name: 'Trojan #2'
+  type: trojan
   server: www.gossipglove.com
   port: 443
   password: humanity
@@ -91,7 +102,7 @@ proxies:
     path: /assignment
     headers:
       Host: www.gossipglove.com
-- name: 'Trojan #2'
+- name: 'Trojan #3'
   type: trojan
   server: spring-tooth-7fa3.ahmadrj.workers.dev
   port: 443
@@ -106,7 +117,7 @@ proxies:
     path: /
     headers:
       Host: spring-tooth-7fa3.ahmadrj.workers.dev
-- name: 'Trojan #3'
+- name: 'Trojan #4'
   type: trojan
   server: 15.188.155.30
   port: 22223
@@ -119,7 +130,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #4'
+- name: 'Trojan #5'
   type: trojan
   server: 18.194.226.217
   port: 22223
@@ -132,7 +143,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #5'
+- name: 'Trojan #6'
   type: trojan
   server: 13.36.80.221
   port: 22223
@@ -145,7 +156,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #6'
+- name: 'Trojan #7'
   type: trojan
   server: 13.38.195.57
   port: 22223
@@ -158,7 +169,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #7'
+- name: 'Trojan #8'
   type: trojan
   server: 18.159.140.89
   port: 22223
@@ -171,7 +182,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #8'
+- name: 'Trojan #9'
   type: trojan
   server: 13.37.186.179
   port: 22223
@@ -184,17 +195,6 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #9'
-  type: trojan
-  server: 185.143.235.5
-  port: 443
-  password: biS%28YrwB%2C3L%24
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mydigipay.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: Proxy Select
   type: select
