@@ -93,15 +93,19 @@ proxies:
       Host: www.gossipglove.com
 - name: 'Trojan #2'
   type: trojan
-  server: 185.143.235.5
+  server: spring-tooth-7fa3.ahmadrj.workers.dev
   port: 443
-  password: biS%28YrwB%2C3L%24
-  network: tcp
+  password: Nova-Proxy
+  network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: mydigipay.com
+  servername: spring-tooth-7fa3.ahmadrj.workers.dev
   client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: spring-tooth-7fa3.ahmadrj.workers.dev
 - name: 'Trojan #3'
   type: trojan
   server: 15.188.155.30
@@ -180,6 +184,17 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
+- name: 'Trojan #9'
+  type: trojan
+  server: 185.143.235.5
+  port: 443
+  password: biS%28YrwB%2C3L%24
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mydigipay.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -193,6 +208,7 @@ proxy-groups:
   - 'Trojan #6'
   - 'Trojan #7'
   - 'Trojan #8'
+  - 'Trojan #9'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -205,6 +221,7 @@ proxy-groups:
   - 'Trojan #6'
   - 'Trojan #7'
   - 'Trojan #8'
+  - 'Trojan #9'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
