@@ -100,58 +100,6 @@ proxies:
   client-fingerprint: chrome
 - name: 'Trojan #3'
   type: trojan
-  server: 15.224.128.206
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #4'
-  type: trojan
-  server: 3.120.169.133
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #5'
-  type: trojan
-  server: 35.181.46.125
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #6'
-  type: trojan
-  server: 3.120.169.133
-  port: 22223
-  password: telegram-id-directvpn
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #7'
-  type: trojan
   server: 13.37.186.179
   port: 22223
   password: telegram-id-v2rayvpnchannel
@@ -163,7 +111,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #8'
+- name: 'Trojan #4'
   type: trojan
   server: 3.69.114.26
   port: 22223
@@ -176,7 +124,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #9'
+- name: 'Trojan #5'
   type: trojan
   server: 35.181.241.230
   port: 22223
@@ -189,7 +137,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #10'
+- name: 'Trojan #6'
   type: trojan
   server: 15.224.128.206
   port: 22223
@@ -202,7 +150,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #11'
+- name: 'Trojan #7'
   type: trojan
   server: 3.120.169.133
   port: 22223
@@ -215,7 +163,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #12'
+- name: 'Trojan #8'
   type: trojan
   server: 35.181.46.125
   port: 22223
@@ -228,7 +176,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #13'
+- name: 'Trojan #9'
   type: trojan
   server: 83.217.9.70
   port: 443
@@ -239,6 +187,45 @@ proxies:
   tcp-fast-open: true
   servername: 83.217.9.70
   client-fingerprint: chrome
+- name: 'Trojan #10'
+  type: trojan
+  server: 15.224.128.206
+  port: 22222
+  password: telegram-id-privatevpns
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #11'
+  type: trojan
+  server: 3.120.169.133
+  port: 22222
+  password: telegram-id-privatevpns
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #12'
+  type: trojan
+  server: 35.181.46.125
+  port: 22222
+  password: telegram-id-privatevpns
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -256,7 +243,6 @@ proxy-groups:
   - 'Trojan #10'
   - 'Trojan #11'
   - 'Trojan #12'
-  - 'Trojan #13'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -273,7 +259,6 @@ proxy-groups:
   - 'Trojan #10'
   - 'Trojan #11'
   - 'Trojan #12'
-  - 'Trojan #13'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
