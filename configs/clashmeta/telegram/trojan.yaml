@@ -156,30 +156,6 @@ proxies:
   - http/1.1
 - name: 'Trojan #7'
   type: trojan
-  server: 3.69.114.26
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #8'
-  type: trojan
-  server: 185.143.235.5
-  port: 443
-  password: biS%28YrwB%2C3L%24
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mydigipay.com
-  client-fingerprint: chrome
-- name: 'Trojan #9'
-  type: trojan
   server: spring-tooth-7fa3.ahmadrj.workers.dev
   port: 443
   password: Nova-Proxy
@@ -193,6 +169,43 @@ proxies:
     path: /
     headers:
       Host: spring-tooth-7fa3.ahmadrj.workers.dev
+- name: 'Trojan #8'
+  type: trojan
+  server: 3.69.114.26
+  port: 22222
+  password: telegram-id-privatevpns
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #9'
+  type: trojan
+  server: 185.143.235.5
+  port: 443
+  password: biS%28YrwB%2C3L%24
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mydigipay.com
+  client-fingerprint: chrome
+- name: 'Trojan #10'
+  type: trojan
+  server: 35.181.241.230
+  port: 22222
+  password: telegram-id-privatevpns
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -207,6 +220,7 @@ proxy-groups:
   - 'Trojan #7'
   - 'Trojan #8'
   - 'Trojan #9'
+  - 'Trojan #10'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -220,6 +234,7 @@ proxy-groups:
   - 'Trojan #7'
   - 'Trojan #8'
   - 'Trojan #9'
+  - 'Trojan #10'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
