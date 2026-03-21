@@ -78,6 +78,17 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
+  server: 94.131.104.67
+  port: 443
+  password: 3ac6a6ca99f74941b1eaf892818e2ddb
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 94.131.104.67
+  client-fingerprint: chrome
+- name: 'Trojan #2'
+  type: trojan
   server: 185.143.235.5
   port: 443
   password: biS%28YrwB%2C3L%24
@@ -87,7 +98,7 @@ proxies:
   tcp-fast-open: true
   servername: mydigipay.com
   client-fingerprint: chrome
-- name: 'Trojan #2'
+- name: 'Trojan #3'
   type: trojan
   server: 35.181.241.230
   port: 22222
@@ -100,7 +111,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #3'
+- name: 'Trojan #4'
   type: trojan
   server: 15.224.128.206
   port: 22222
@@ -113,21 +124,6 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #4'
-  type: trojan
-  server: spring-tooth-7fa3.ahmadrj.workers.dev
-  port: 443
-  password: Nova-Proxy
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: spring-tooth-7fa3.ahmadrj.workers.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: spring-tooth-7fa3.ahmadrj.workers.dev
 - name: 'Trojan #5'
   type: trojan
   server: 13.38.195.57
@@ -208,15 +204,19 @@ proxies:
   - http/1.1
 - name: 'Trojan #11'
   type: trojan
-  server: 94.131.104.67
+  server: spring-tooth-7fa3.ahmadrj.workers.dev
   port: 443
-  password: 3ac6a6ca99f74941b1eaf892818e2ddb
-  network: tcp
+  password: Nova-Proxy
+  network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 94.131.104.67
+  servername: spring-tooth-7fa3.ahmadrj.workers.dev
   client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: spring-tooth-7fa3.ahmadrj.workers.dev
 proxy-groups:
 - name: Proxy Select
   type: select
