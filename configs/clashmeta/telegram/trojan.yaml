@@ -145,7 +145,7 @@ proxies:
       Host: www.multiplydose.com
 - name: 'Trojan #6'
   type: trojan
-  server: 3.124.150.62
+  server: 15.237.55.242
   port: 22222
   password: telegram-id-privatevpns
   network: tcp
@@ -158,19 +158,6 @@ proxies:
   - http/1.1
 - name: 'Trojan #7'
   type: trojan
-  server: 15.237.55.242
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #8'
-  type: trojan
   server: 194.33.45.157
   port: 443
   password: 3ac6a6ca99f74941b1eaf892818e2ddb
@@ -180,7 +167,7 @@ proxies:
   tcp-fast-open: true
   servername: 194.33.45.157
   client-fingerprint: chrome
-- name: 'Trojan #9'
+- name: 'Trojan #8'
   type: trojan
   server: nl-4.tr202512.com
   port: 443
@@ -191,7 +178,7 @@ proxies:
   tcp-fast-open: true
   servername: nl-4.tr202512.com
   client-fingerprint: chrome
-- name: 'Trojan #10'
+- name: 'Trojan #9'
   type: trojan
   server: 104.16.190.233
   port: 8443
@@ -206,9 +193,35 @@ proxies:
     path: /?ed
     headers:
       Host: small-morning-2668.drusavm.workers.dev
-- name: 'Trojan #11'
+- name: 'Trojan #10'
   type: trojan
   server: 51.45.15.225
+  port: 22222
+  password: telegram-id-privatevpns
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #11'
+  type: trojan
+  server: 15.237.55.242
+  port: 22223
+  password: telegram-id-directvpn
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #12'
+  type: trojan
+  server: 15.237.55.242
   port: 22222
   password: telegram-id-privatevpns
   network: tcp
@@ -235,6 +248,7 @@ proxy-groups:
   - 'Trojan #9'
   - 'Trojan #10'
   - 'Trojan #11'
+  - 'Trojan #12'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -250,6 +264,7 @@ proxy-groups:
   - 'Trojan #9'
   - 'Trojan #10'
   - 'Trojan #11'
+  - 'Trojan #12'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
