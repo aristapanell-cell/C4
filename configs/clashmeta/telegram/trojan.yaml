@@ -130,81 +130,6 @@ proxies:
   - http/1.1
 - name: 'Trojan #5'
   type: trojan
-  server: 188.114.98.0
-  port: 443
-  password: humanity
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: www.creationlong.org
-  client-fingerprint: chrome
-  ws-opts:
-    path: '%2fassignment'
-    headers:
-      Host: www.creationlong.org
-- name: 'Trojan #6'
-  type: trojan
-  server: www.multiplydose.com
-  port: 443
-  password: humanity
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: www.multiplydose.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.multiplydose.com
-- name: 'Trojan #7'
-  type: trojan
-  server: 104.21.40.34
-  port: 443
-  password: humanity
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: www.gossipglove.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.gossipglove.com
-- name: 'Trojan #8'
-  type: trojan
-  server: 172.67.180.92
-  port: 443
-  password: humanity
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: www.multiplydose.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.multiplydose.com
-- name: 'Trojan #9'
-  type: trojan
-  server: 188.114.98.0
-  port: 443
-  password: humanity
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: www.creationlong.org
-  client-fingerprint: chrome
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.creationlong.org
-- name: 'Trojan #10'
-  type: trojan
   server: nl-4.tr202512.com
   port: 443
   password: M08tvzYWtUEJNtbpHp
@@ -214,7 +139,7 @@ proxies:
   tcp-fast-open: true
   servername: nl-4.tr202512.com
   client-fingerprint: chrome
-- name: 'Trojan #11'
+- name: 'Trojan #6'
   type: trojan
   server: 104.16.190.233
   port: 8443
@@ -229,7 +154,7 @@ proxies:
     path: /?ed
     headers:
       Host: small-morning-2668.drusavm.workers.dev
-- name: 'Trojan #12'
+- name: 'Trojan #7'
   type: trojan
   server: 51.45.15.225
   port: 22222
@@ -242,7 +167,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #13'
+- name: 'Trojan #8'
   type: trojan
   server: www.multiplydose.com
   port: 443
@@ -257,19 +182,81 @@ proxies:
     path: //assignment
     headers:
       Host: www.multiplydose.com
-- name: 'Trojan #14'
+- name: 'Trojan #9'
   type: trojan
-  server: 3.124.150.62
-  port: 22223
-  password: telegram-id-directvpn
-  network: tcp
+  server: 188.114.98.0
+  port: 443
+  password: humanity
+  network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
+  servername: www.creationlong.org
   client-fingerprint: chrome
-  alpn:
-  - http/1.1
+  ws-opts:
+    path: '%2fassignment'
+    headers:
+      Host: www.creationlong.org
+- name: 'Trojan #10'
+  type: trojan
+  server: www.multiplydose.com
+  port: 443
+  password: humanity
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.multiplydose.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.multiplydose.com
+- name: 'Trojan #11'
+  type: trojan
+  server: 104.21.40.34
+  port: 443
+  password: humanity
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.gossipglove.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.gossipglove.com
+- name: 'Trojan #12'
+  type: trojan
+  server: 172.67.180.92
+  port: 443
+  password: humanity
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.multiplydose.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.multiplydose.com
+- name: 'Trojan #13'
+  type: trojan
+  server: 188.114.98.0
+  port: 443
+  password: humanity
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.creationlong.org
+  client-fingerprint: chrome
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.creationlong.org
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -288,7 +275,6 @@ proxy-groups:
   - 'Trojan #11'
   - 'Trojan #12'
   - 'Trojan #13'
-  - 'Trojan #14'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -306,7 +292,6 @@ proxy-groups:
   - 'Trojan #11'
   - 'Trojan #12'
   - 'Trojan #13'
-  - 'Trojan #14'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
