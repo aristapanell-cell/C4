@@ -78,9 +78,27 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: 162.19.248.238
-  port: 550
-  uuid: ede27a79-b039-490b-932c-495de4b68880
+  server: 45.12.132.183
+  port: 80
+  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 45.12.132.183
+  client-fingerprint: ''
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: 45.12.132.183
+- name: 'ARISTA #2'
+  type: vmess
+  server: 165.140.216.141
+  port: 443
+  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
   alterId: 0
   cipher: auto
   network: tcp
@@ -88,9 +106,9 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 162.19.248.238
+  servername: 165.140.216.141
   client-fingerprint: ''
-- name: 'ARISTA #2'
+- name: 'ARISTA #3'
   type: vmess
   server: 185.181.183.124
   port: 28094
@@ -108,71 +126,7 @@ proxies:
     path: /
     headers:
       Host: 185.181.183.124
-- name: 'ARISTA #3'
-  type: vmess
-  server: 135.181.35.169
-  port: 80
-  uuid: 2aac77de-b3e4-4017-845c-ca1380f2e8d0
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: google.com
-  client-fingerprint: ''
-  ws-opts:
-    path: /telegram-id-@privatevpns
-    headers:
-      Host: google.com
 - name: 'ARISTA #4'
-  type: vmess
-  server: 164.92.245.167
-  port: 2096
-  uuid: 4c95d617-efd8-4045-98d5-4d00e96667f9
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 164.92.245.167
-  client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: 164.92.245.167
-- name: 'ARISTA #5'
-  type: vmess
-  server: 66.163.117.58
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 66.163.117.58
-  client-fingerprint: ''
-- name: 'ARISTA #6'
-  type: vmess
-  server: 45.92.70.236
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 45.92.70.236
-  client-fingerprint: ''
-- name: 'ARISTA #7'
   type: vmess
   server: ip3.taravat.net
   port: 102
@@ -186,7 +140,7 @@ proxies:
   tcp-fast-open: true
   servername: myket.ir
   client-fingerprint: ''
-- name: 'ARISTA #8'
+- name: 'ARISTA #5'
   type: vmess
   server: n1761296877.lie5d.cyou
   port: 443
@@ -204,7 +158,7 @@ proxies:
     path: /
     headers:
       Host: n1761296877.lie5d.cyou
-- name: 'ARISTA #9'
+- name: 'ARISTA #6'
   type: vmess
   server: 217.218.52.1
   port: 10410
@@ -218,11 +172,11 @@ proxies:
   tcp-fast-open: true
   servername: 217.218.52.1
   client-fingerprint: ''
-- name: 'ARISTA #10'
+- name: 'ARISTA #7'
   type: vmess
-  server: 45.12.132.183
-  port: 80
-  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
+  server: 164.92.245.167
+  port: 2096
+  uuid: 4c95d617-efd8-4045-98d5-4d00e96667f9
   alterId: 0
   cipher: auto
   network: ws
@@ -230,17 +184,17 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 45.12.132.183
+  servername: 164.92.245.167
   client-fingerprint: ''
   ws-opts:
-    path: /vmess/
+    path: /
     headers:
-      Host: 45.12.132.183
-- name: 'ARISTA #11'
+      Host: 164.92.245.167
+- name: 'ARISTA #8'
   type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
+  server: 66.163.117.58
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
   alterId: 0
   cipher: auto
   network: tcp
@@ -248,8 +202,90 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 165.140.216.141
+  servername: 66.163.117.58
   client-fingerprint: ''
+- name: 'ARISTA #9'
+  type: vmess
+  server: 45.92.70.236
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 45.92.70.236
+  client-fingerprint: ''
+- name: 'ARISTA #10'
+  type: vmess
+  server: xuedinge.cycmpr.com
+  port: 443
+  uuid: 65a6c5f1-1bf0-4bcb-d7a6-ecae45263b40
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: xuedinge.cycmpr.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /65a6c5f1
+    headers:
+      Host: xuedinge.cycmpr.com
+- name: 'ARISTA #11'
+  type: vmess
+  server: 85.90.217.42
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 0
+  cipher: auto
+  network: raw
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 85.90.217.42
+  client-fingerprint: chrome
+- name: 'ARISTA #12'
+  type: vmess
+  server: 38.150.12.188
+  port: 52512
+  uuid: 342bacfd-2b8f-3f49-a16e-439db5b0b9d5
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: aflzzul.meiquankongjian.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /564dfa20/
+    headers:
+      Host: aflzzul.meiquankongjian.com
+- name: 'ARISTA #13'
+  type: vmess
+  server: 135.181.35.169
+  port: 80
+  uuid: 2aac77de-b3e4-4017-845c-ca1380f2e8d0
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: google.com
+  client-fingerprint: ''
+  ws-opts:
+    path: /telegram-id-@privatevpns
+    headers:
+      Host: google.com
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -266,6 +302,8 @@ proxy-groups:
   - 'ARISTA #9'
   - 'ARISTA #10'
   - 'ARISTA #11'
+  - 'ARISTA #12'
+  - 'ARISTA #13'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -281,6 +319,8 @@ proxy-groups:
   - 'ARISTA #9'
   - 'ARISTA #10'
   - 'ARISTA #11'
+  - 'ARISTA #12'
+  - 'ARISTA #13'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
