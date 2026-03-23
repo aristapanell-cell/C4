@@ -78,9 +78,27 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: cip.1iii1.de
+  server: 45.12.132.183
+  port: 80
+  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 45.12.132.183
+  client-fingerprint: ''
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: 45.12.132.183
+- name: 'ARISTA #2'
+  type: vmess
+  server: 165.140.216.141
   port: 443
-  uuid: 83df5028-1637-4760-858e-bbacaab4b9b1
+  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
   alterId: 0
   cipher: auto
   network: tcp
@@ -88,44 +106,22 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: cip.1iii1.de
+  servername: 165.140.216.141
   client-fingerprint: ''
-- name: 'ARISTA #2'
-  type: vmess
-  server: 61.245.11.60
-  port: 80
-  uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 61.245.11.60
-  client-fingerprint: ''
-  ws-opts:
-    path: /vmess/
-    headers:
-      Host: 61.245.11.60
 - name: 'ARISTA #3'
   type: vmess
-  server: 46.246.126.154
-  port: 443
-  uuid: f2fd0786-1059-4f64-d54e-3f3a568c6c68
+  server: 185.206.95.35
+  port: 43828
+  uuid: 0ab3efb7-79ee-48e8-b089-084fef1cd88c
   alterId: 0
   cipher: auto
-  network: ws
+  network: tcp
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 46.246.126.154
+  servername: filmnet.ir
   client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: 46.246.126.154
 - name: 'ARISTA #4'
   type: vmess
   server: 61.245.11.60
@@ -146,6 +142,42 @@ proxies:
       Host: 61.245.11.60
 - name: 'ARISTA #5'
   type: vmess
+  server: 46.246.126.154
+  port: 443
+  uuid: f2fd0786-1059-4f64-d54e-3f3a568c6c68
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 46.246.126.154
+  client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: 46.246.126.154
+- name: 'ARISTA #6'
+  type: vmess
+  server: 61.245.11.60
+  port: 80
+  uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 61.245.11.60
+  client-fingerprint: ''
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: 61.245.11.60
+- name: 'ARISTA #7'
+  type: vmess
   server: 185.181.183.124
   port: 28094
   uuid: a6440729-1046-4a9c-bc19-7c0ede4bf4d4
@@ -162,7 +194,7 @@ proxies:
     path: /
     headers:
       Host: 185.181.183.124
-- name: 'ARISTA #6'
+- name: 'ARISTA #8'
   type: vmess
   server: am.nftydreams.io
   port: 2002
@@ -176,25 +208,7 @@ proxies:
   tcp-fast-open: true
   servername: am.nftydreams.io
   client-fingerprint: ''
-- name: 'ARISTA #7'
-  type: vmess
-  server: mmhhj.2nn.ccwu.cc
-  port: 80
-  uuid: 4e45c1b4-9107-45dd-9995-cdf7cbb44d9d
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mmhhj.2nn.ccwu.cc
-  client-fingerprint: chrome
-  ws-opts:
-    path: /iSRWSKUJKNuXvVzsYHmsMrnO
-    headers:
-      Host: mmhhj.2nn.ccwu.cc
-- name: 'ARISTA #8'
+- name: 'ARISTA #9'
   type: vmess
   server: 66.163.117.58
   port: 22324
@@ -208,11 +222,11 @@ proxies:
   tcp-fast-open: true
   servername: 66.163.117.58
   client-fingerprint: chrome
-- name: 'ARISTA #9'
+- name: 'ARISTA #10'
   type: vmess
-  server: 45.12.132.183
-  port: 80
-  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
+  server: 54.180.136.214
+  port: 8686
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
   alterId: 0
   cipher: auto
   network: ws
@@ -220,40 +234,66 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 45.12.132.183
-  client-fingerprint: ''
+  servername: baidu.com
+  client-fingerprint: chrome
   ws-opts:
-    path: /vmess/
+    path: /
     headers:
-      Host: 45.12.132.183
-- name: 'ARISTA #10'
-  type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 165.140.216.141
-  client-fingerprint: ''
+      Host: end-gfw.com
 - name: 'ARISTA #11'
   type: vmess
-  server: 185.206.95.35
-  port: 43828
-  uuid: 0ab3efb7-79ee-48e8-b089-084fef1cd88c
+  server: 52.78.19.208
+  port: 8686
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
   alterId: 0
   cipher: auto
-  network: tcp
+  network: ws
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: filmnet.ir
+  servername: baidu.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: end-gfw.com
+- name: 'ARISTA #12'
+  type: vmess
+  server: 45.131.5.204
+  port: 8880
+  uuid: c11dde04-3dfa-48e9-8580-7b204b325370
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: h4.mcinet.sbs
   client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: h4.mcinet.sbs
+- name: 'ARISTA #13'
+  type: vmess
+  server: id-lb.vhax.net
+  port: 80
+  uuid: 6fea1649-425b-4092-bf53-29792152c925
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: zoom.us
+  client-fingerprint: chrome
+  ws-opts:
+    path: /sshkit/Arsham85231/6347d08022b91/
+    headers:
+      Host: zoom.us
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -270,6 +310,8 @@ proxy-groups:
   - 'ARISTA #9'
   - 'ARISTA #10'
   - 'ARISTA #11'
+  - 'ARISTA #12'
+  - 'ARISTA #13'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -285,6 +327,8 @@ proxy-groups:
   - 'ARISTA #9'
   - 'ARISTA #10'
   - 'ARISTA #11'
+  - 'ARISTA #12'
+  - 'ARISTA #13'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
