@@ -78,9 +78,9 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: 15.237.55.242
-  port: 22223
-  password: telegram-id-v2rayvpnchannel
+  server: 51.102.254.79
+  port: 22222
+  password: telegram-id-privatevpns
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -90,6 +90,19 @@ proxies:
   alpn:
   - http/1.1
 - name: 'Trojan #2'
+  type: trojan
+  server: 51.44.137.34
+  port: 22222
+  password: telegram-id-privatevpns
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #3'
   type: trojan
   server: 18.199.182.165
   port: 22223
@@ -102,7 +115,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #3'
+- name: 'Trojan #4'
   type: trojan
   server: 13.38.248.208
   port: 22223
@@ -115,22 +128,9 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #4'
-  type: trojan
-  server: 15.236.33.201
-  port: 22223
-  password: telegram-id-v2rayvpnchannel
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
 - name: 'Trojan #5'
   type: trojan
-  server: 51.102.254.79
+  server: 15.236.33.201
   port: 22223
   password: telegram-id-v2rayvpnchannel
   network: tcp
@@ -144,8 +144,8 @@ proxies:
 - name: 'Trojan #6'
   type: trojan
   server: 51.102.254.79
-  port: 22222
-  password: telegram-id-privatevpns
+  port: 22223
+  password: telegram-id-v2rayvpnchannel
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -156,19 +156,17 @@ proxies:
   - http/1.1
 - name: 'Trojan #7'
   type: trojan
-  server: 104.16.190.233
-  port: 8443
-  password: Nova-Proxy
-  network: ws
+  server: 51.44.137.34
+  port: 22223
+  password: telegram-id-v2rayvpnchannel
+  network: tcp
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: small-morning-2668.drusavm.workers.dev
+  servername: trojan.burgerip.co.uk
   client-fingerprint: chrome
-  ws-opts:
-    path: /?ed
-    headers:
-      Host: small-morning-2668.drusavm.workers.dev
+  alpn:
+  - http/1.1
 - name: 'Trojan #8'
   type: trojan
   server: 51.45.15.225
@@ -199,6 +197,21 @@ proxies:
       Host: www.gossipglove.com
 - name: 'Trojan #10'
   type: trojan
+  server: 188.114.96.3
+  port: 443
+  password: humanity
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.multiplydose.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.multiplydose.com
+- name: 'Trojan #11'
+  type: trojan
   server: www.multiplydose.com
   port: 443
   password: humanity
@@ -227,6 +240,7 @@ proxy-groups:
   - 'Trojan #8'
   - 'Trojan #9'
   - 'Trojan #10'
+  - 'Trojan #11'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -241,6 +255,7 @@ proxy-groups:
   - 'Trojan #8'
   - 'Trojan #9'
   - 'Trojan #10'
+  - 'Trojan #11'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
