@@ -78,9 +78,9 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: 3.124.150.62
-  port: 22223
-  password: telegram-id-v2rayvpnchannel
+  server: 13.38.248.208
+  port: 22222
+  password: telegram-id-privatevpns
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -91,9 +91,9 @@ proxies:
   - http/1.1
 - name: 'Trojan #2'
   type: trojan
-  server: 15.237.55.242
-  port: 22223
-  password: telegram-id-v2rayvpnchannel
+  server: 15.236.33.201
+  port: 22222
+  password: telegram-id-privatevpns
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -104,7 +104,7 @@ proxies:
   - http/1.1
 - name: 'Trojan #3'
   type: trojan
-  server: 18.199.182.165
+  server: 3.124.150.62
   port: 22223
   password: telegram-id-v2rayvpnchannel
   network: tcp
@@ -117,7 +117,7 @@ proxies:
   - http/1.1
 - name: 'Trojan #4'
   type: trojan
-  server: 13.38.248.208
+  server: 15.237.55.242
   port: 22223
   password: telegram-id-v2rayvpnchannel
   network: tcp
@@ -130,31 +130,44 @@ proxies:
   - http/1.1
 - name: 'Trojan #5'
   type: trojan
-  server: www.multiplydose.com
-  port: 443
-  password: humanity
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: www.multiplydose.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: //assignment
-    headers:
-      Host: www.multiplydose.com
-- name: 'Trojan #6'
-  type: trojan
-  server: nl-4.tr202512.com
-  port: 443
-  password: M08tvzYWtUEJNtbpHp
+  server: 18.199.182.165
+  port: 22223
+  password: telegram-id-v2rayvpnchannel
   network: tcp
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: nl-4.tr202512.com
+  servername: trojan.burgerip.co.uk
   client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #6'
+  type: trojan
+  server: 13.38.248.208
+  port: 22223
+  password: telegram-id-v2rayvpnchannel
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
 - name: 'Trojan #7'
+  type: trojan
+  server: 15.236.33.201
+  port: 22223
+  password: telegram-id-v2rayvpnchannel
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #8'
   type: trojan
   server: 104.16.190.233
   port: 8443
@@ -169,7 +182,7 @@ proxies:
     path: /?ed
     headers:
       Host: small-morning-2668.drusavm.workers.dev
-- name: 'Trojan #8'
+- name: 'Trojan #9'
   type: trojan
   server: 51.45.15.225
   port: 22222
@@ -182,32 +195,51 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #9'
-  type: trojan
-  server: 18.199.182.165
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
 - name: 'Trojan #10'
   type: trojan
-  server: 13.38.248.208
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
+  server: 104.21.40.34
+  port: 443
+  password: humanity
+  network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
+  servername: www.gossipglove.com
   client-fingerprint: chrome
-  alpn:
-  - http/1.1
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.gossipglove.com
+- name: 'Trojan #11'
+  type: trojan
+  server: 188.114.96.3
+  port: 443
+  password: humanity
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.multiplydose.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.multiplydose.com
+- name: 'Trojan #12'
+  type: trojan
+  server: www.multiplydose.com
+  port: 443
+  password: humanity
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.multiplydose.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: //assignment
+    headers:
+      Host: www.multiplydose.com
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -223,6 +255,8 @@ proxy-groups:
   - 'Trojan #8'
   - 'Trojan #9'
   - 'Trojan #10'
+  - 'Trojan #11'
+  - 'Trojan #12'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -237,6 +271,8 @@ proxy-groups:
   - 'Trojan #8'
   - 'Trojan #9'
   - 'Trojan #10'
+  - 'Trojan #11'
+  - 'Trojan #12'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
