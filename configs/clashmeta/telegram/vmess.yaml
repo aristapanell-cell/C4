@@ -78,6 +78,20 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
+  server: 217.218.52.1
+  port: 10410
+  uuid: f93f134f-7adb-48c3-bcd1-2532edb0b478
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 217.218.52.1
+  client-fingerprint: ''
+- name: 'ARISTA #2'
+  type: vmess
   server: xm.nftydreams.io
   port: 2003
   uuid: 0d1a9faa-272c-4050-892c-5a611a9755b9
@@ -89,20 +103,6 @@ proxies:
   skip-cert-verify: false
   tcp-fast-open: true
   servername: xm.nftydreams.io
-  client-fingerprint: ''
-- name: 'ARISTA #2'
-  type: vmess
-  server: snapp.ir.bmi.ir.mobato-mobile.com
-  port: 80
-  uuid: 820a9e42-e18d-43e4-859f-d1c2f6b8600a
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: excoino.com
   client-fingerprint: ''
 - name: 'ARISTA #3'
   type: vmess
@@ -138,24 +138,6 @@ proxies:
   client-fingerprint: ''
 - name: 'ARISTA #5'
   type: vmess
-  server: 45.131.5.204
-  port: 8880
-  uuid: 32f1eeae-5b0f-4480-dbfe-9cbbbdbbe0e7
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: h1.mcinet.sbs
-  client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: h1.mcinet.sbs
-- name: 'ARISTA #6'
-  type: vmess
   server: t.tizi001.com
   port: 9989
   uuid: e0bd847e-e4f5-4f6f-bee2-9dc4f19b9ff5
@@ -168,7 +150,7 @@ proxies:
   tcp-fast-open: true
   servername: t.tizi001.com
   client-fingerprint: chrome
-- name: 'ARISTA #7'
+- name: 'ARISTA #6'
   type: vmess
   server: 149.28.46.147
   port: 25875
@@ -182,21 +164,7 @@ proxies:
   tcp-fast-open: true
   servername: 149.28.46.147
   client-fingerprint: chrome
-- name: 'ARISTA #8'
-  type: vmess
-  server: 217.218.52.1
-  port: 10410
-  uuid: f93f134f-7adb-48c3-bcd1-2532edb0b478
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 217.218.52.1
-  client-fingerprint: ''
-- name: 'ARISTA #9'
+- name: 'ARISTA #7'
   type: vmess
   server: am.nftydreams.io
   port: 2002
@@ -209,6 +177,48 @@ proxies:
   skip-cert-verify: false
   tcp-fast-open: true
   servername: am.nftydreams.io
+  client-fingerprint: ''
+- name: 'ARISTA #8'
+  type: vmess
+  server: snapp.ir.bmi.ir.mobato-mobile.com
+  port: 80
+  uuid: 820a9e42-e18d-43e4-859f-d1c2f6b8600a
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: excoino.com
+  client-fingerprint: ''
+- name: 'ARISTA #9'
+  type: vmess
+  server: 193.151.131.146
+  port: 2086
+  uuid: 4223a522-14ab-b8b3-4349-cf38d34343dc
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 193.151.131.146
+  client-fingerprint: ''
+- name: 'ARISTA #10'
+  type: vmess
+  server: bm.nftydreams.io
+  port: 2005
+  uuid: 07545093-62f3-4f2a-8c63-318aa5a8415b
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: bm.nftydreams.io
   client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
@@ -224,6 +234,7 @@ proxy-groups:
   - 'ARISTA #7'
   - 'ARISTA #8'
   - 'ARISTA #9'
+  - 'ARISTA #10'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -237,6 +248,7 @@ proxy-groups:
   - 'ARISTA #7'
   - 'ARISTA #8'
   - 'ARISTA #9'
+  - 'ARISTA #10'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
