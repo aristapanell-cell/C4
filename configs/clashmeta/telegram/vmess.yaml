@@ -78,9 +78,9 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: cip.1iii1.de
-  port: 443
-  uuid: 83df5028-1637-4760-858e-bbacaab4b9b1
+  server: am.nftydreams.io
+  port: 2002
+  uuid: e49c6b32-d220-49c9-8bed-981248a06c5b
   alterId: 0
   cipher: auto
   network: tcp
@@ -88,9 +88,23 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: cip.1iii1.de
+  servername: am.nftydreams.io
   client-fingerprint: ''
 - name: 'ARISTA #2'
+  type: vmess
+  server: xm.nftydreams.io
+  port: 2003
+  uuid: 0d1a9faa-272c-4050-892c-5a611a9755b9
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: xm.nftydreams.io
+  client-fingerprint: ''
+- name: 'ARISTA #3'
   type: vmess
   server: 45.131.5.204
   port: 8880
@@ -108,25 +122,11 @@ proxies:
     path: /
     headers:
       Host: h1.mcinet.sbs
-- name: 'ARISTA #3'
-  type: vmess
-  server: am.nftydreams.io
-  port: 2002
-  uuid: e49c6b32-d220-49c9-8bed-981248a06c5b
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: am.nftydreams.io
-  client-fingerprint: ''
 - name: 'ARISTA #4'
   type: vmess
-  server: xm.nftydreams.io
-  port: 2003
-  uuid: 0d1a9faa-272c-4050-892c-5a611a9755b9
+  server: t.tizi001.com
+  port: 9989
+  uuid: e0bd847e-e4f5-4f6f-bee2-9dc4f19b9ff5
   alterId: 0
   cipher: auto
   network: tcp
@@ -134,26 +134,22 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: xm.nftydreams.io
-  client-fingerprint: ''
+  servername: t.tizi001.com
+  client-fingerprint: chrome
 - name: 'ARISTA #5'
   type: vmess
-  server: chatgpt.com
-  port: 8443
-  uuid: 35312035-3420-4535-a031-303220353420
+  server: 217.218.52.1
+  port: 10410
+  uuid: f93f134f-7adb-48c3-bcd1-2532edb0b478
   alterId: 0
-  cipher: none
-  network: ws
-  tls: true
+  cipher: auto
+  network: tcp
+  tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: tr-1.stunnel.cc
+  servername: 217.218.52.1
   client-fingerprint: ''
-  ws-opts:
-    path: /ws
-    headers:
-      Host: tr-1.stunnel.cc
 - name: 'ARISTA #6'
   type: vmess
   server: 45.12.132.183
