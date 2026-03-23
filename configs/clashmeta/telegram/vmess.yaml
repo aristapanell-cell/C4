@@ -78,24 +78,77 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: elma.ns.cloudflare.com
-  port: 2087
-  uuid: 2a3263e2-891c-4446-b474-a8c63acb6e25
+  server: 35.91.80.154
+  port: 8686
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
   alterId: 0
   cipher: auto
-  network: grpc
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: baidu.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: end-gfw.com
+- name: 'ARISTA #2'
+  type: vmess
+  server: 104.17.77.77
+  port: 8443
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  alterId: 0
+  cipher: none
+  network: ws
   tls: true
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 1fdSNA119228928OpS2smTaB228aAsDDsd1ea114420273180.1-senator.info
+  servername: v2ray1.dozapp.xyz
   client-fingerprint: ''
-  alpn:
-  - h2
-  - http/1.1
-  grpc-opts:
-    grpc-service-name: ''
-- name: 'ARISTA #2'
+  ws-opts:
+    path: /lMnsZUN4/
+    headers:
+      Host: v2ray1.dozapp.xyz
+- name: 'ARISTA #3'
+  type: vmess
+  server: 15.235.85.156
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: kampong.org
+  client-fingerprint: chrome
+  ws-opts:
+    path: linkvws
+    headers:
+      Host: kampong.org
+- name: 'ARISTA #4'
+  type: vmess
+  server: zdqbk.cmvvb.online
+  port: 8443
+  uuid: edb3e961-0b28-4e52-8446-399f3ef03c08
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: zdqbk.cmvvb.online
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: zdqbk.cmvvb.online
+- name: 'ARISTA #5'
   type: vmess
   server: elma.ns.cloudflare.com
   port: 2087
@@ -114,7 +167,7 @@ proxies:
   - http/1.1
   grpc-opts:
     grpc-service-name: ''
-- name: 'ARISTA #3'
+- name: 'ARISTA #6'
   type: vmess
   server: elma.ns.cloudflare.com
   port: 2087
@@ -133,61 +186,30 @@ proxies:
   - http/1.1
   grpc-opts:
     grpc-service-name: ''
-- name: 'ARISTA #4'
-  type: vmess
-  server: 45.12.132.183
-  port: 80
-  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 45.12.132.183
-  client-fingerprint: ''
-  ws-opts:
-    path: /vmess/
-    headers:
-      Host: 45.12.132.183
-- name: 'ARISTA #5'
-  type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 165.140.216.141
-  client-fingerprint: ''
-- name: 'ARISTA #6'
-  type: vmess
-  server: 3.38.251.47
-  port: 8686
-  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: baidu.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: end-gfw.com
 - name: 'ARISTA #7'
   type: vmess
-  server: bahar.cringeworld.ir
-  port: 31245
-  uuid: f19b0825-cc4f-4bf1-9b04-98e5700ef086
+  server: elma.ns.cloudflare.com
+  port: 2087
+  uuid: 2a3263e2-891c-4446-b474-a8c63acb6e25
+  alterId: 0
+  cipher: auto
+  network: grpc
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 1fdSNA119228928OpS2smTaB228aAsDDsd1ea114928251192.1-senator.info
+  client-fingerprint: ''
+  alpn:
+  - h2
+  - http/1.1
+  grpc-opts:
+    grpc-service-name: ''
+- name: 'ARISTA #8'
+  type: vmess
+  server: zz1216.tizi001.com
+  port: 56845
+  uuid: e0bd847e-e4f5-4f6f-bee2-9dc4f19b9ff5
   alterId: 0
   cipher: auto
   network: tcp
@@ -195,29 +217,11 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: nasa.gov
+  servername: zz1216.tizi001.com
   client-fingerprint: chrome
-- name: 'ARISTA #8'
-  type: vmess
-  server: haniye.zanbil-mo.cf
-  port: 2086
-  uuid: 4935e603-e875-4143-a9fb-e896815d2aeb
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: haniye.zanbil-mo.cf
-  client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: haniye.zanbil-mo.cf
 - name: 'ARISTA #9'
   type: vmess
-  server: 35.91.80.154
+  server: 52.79.253.12
   port: 8686
   uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
   alterId: 0
@@ -235,58 +239,115 @@ proxies:
       Host: end-gfw.com
 - name: 'ARISTA #10'
   type: vmess
-  server: 104.17.77.77
-  port: 8443
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  alterId: 0
-  cipher: none
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: v2ray1.dozapp.xyz
-  client-fingerprint: ''
-  ws-opts:
-    path: /lMnsZUN4/
-    headers:
-      Host: v2ray1.dozapp.xyz
-- name: 'ARISTA #11'
-  type: vmess
-  server: 15.235.85.156
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  server: 43.202.46.156
+  port: 8686
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
   alterId: 0
   cipher: auto
   network: ws
-  tls: true
+  tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: kampong.org
-  client-fingerprint: chrome
-  ws-opts:
-    path: linkvws
-    headers:
-      Host: kampong.org
-- name: 'ARISTA #12'
-  type: vmess
-  server: zdqbk.cmvvb.online
-  port: 8443
-  uuid: edb3e961-0b28-4e52-8446-399f3ef03c08
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: zdqbk.cmvvb.online
+  servername: baidu.com
   client-fingerprint: chrome
   ws-opts:
     path: /
     headers:
-      Host: zdqbk.cmvvb.online
+      Host: end-gfw.com
+- name: 'ARISTA #11'
+  type: vmess
+  server: mel.digitalldns.com
+  port: 8443
+  uuid: bc983b05-1c89-40ce-9356-82bb54dec67f
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mel.digitalldns.com
+  client-fingerprint: chrome
+- name: 'ARISTA #12'
+  type: vmess
+  server: 94.101.185.53
+  port: 8443
+  uuid: 00cb8f74-c1ff-44ed-a3d6-f71171359d81
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 94.101.185.53
+  client-fingerprint: ''
+- name: 'ARISTA #13'
+  type: vmess
+  server: 45.12.132.183
+  port: 80
+  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 45.12.132.183
+  client-fingerprint: ''
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: 45.12.132.183
+- name: 'ARISTA #14'
+  type: vmess
+  server: 165.140.216.141
+  port: 443
+  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 165.140.216.141
+  client-fingerprint: ''
+- name: 'ARISTA #15'
+  type: vmess
+  server: elma.ns.cloudflare.com
+  port: 2087
+  uuid: 2a3263e2-891c-4446-b474-a8c63acb6e25
+  alterId: 0
+  cipher: auto
+  network: grpc
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 1fdSNA119228928OpS2smTaB228aAsDDsd1ea114420273180.1-senator.info
+  client-fingerprint: ''
+  alpn:
+  - h2
+  - http/1.1
+  grpc-opts:
+    grpc-service-name: ''
+- name: 'ARISTA #16'
+  type: vmess
+  server: 178.104.67.88
+  port: 17055
+  uuid: 636e5317-0f8b-499c-9903-ca0d3d837f4a
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 178.104.67.88
+  client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -304,6 +365,10 @@ proxy-groups:
   - 'ARISTA #10'
   - 'ARISTA #11'
   - 'ARISTA #12'
+  - 'ARISTA #13'
+  - 'ARISTA #14'
+  - 'ARISTA #15'
+  - 'ARISTA #16'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -320,6 +385,10 @@ proxy-groups:
   - 'ARISTA #10'
   - 'ARISTA #11'
   - 'ARISTA #12'
+  - 'ARISTA #13'
+  - 'ARISTA #14'
+  - 'ARISTA #15'
+  - 'ARISTA #16'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
