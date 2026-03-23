@@ -78,9 +78,9 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: 217.218.52.1
-  port: 10410
-  uuid: f93f134f-7adb-48c3-bcd1-2532edb0b478
+  server: 149.28.46.147
+  port: 25875
+  uuid: 19c2e1dc-8dd7-43e3-8ad1-201d41aa605c
   alterId: 0
   cipher: auto
   network: tcp
@@ -88,13 +88,13 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 217.218.52.1
-  client-fingerprint: ''
+  servername: 149.28.46.147
+  client-fingerprint: chrome
 - name: 'ARISTA #2'
   type: vmess
-  server: xm.nftydreams.io
-  port: 2003
-  uuid: 0d1a9faa-272c-4050-892c-5a611a9755b9
+  server: am.nftydreams.io
+  port: 2002
+  uuid: e49c6b32-d220-49c9-8bed-981248a06c5b
   alterId: 0
   cipher: auto
   network: tcp
@@ -102,9 +102,37 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: xm.nftydreams.io
+  servername: am.nftydreams.io
   client-fingerprint: ''
 - name: 'ARISTA #3'
+  type: vmess
+  server: bm.nftydreams.io
+  port: 2005
+  uuid: 07545093-62f3-4f2a-8c63-318aa5a8415b
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: bm.nftydreams.io
+  client-fingerprint: ''
+- name: 'ARISTA #4'
+  type: vmess
+  server: 193.151.131.146
+  port: 2053
+  uuid: 4223a522-14ab-b8b3-4349-cf38d34343dc
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 193.151.131.146
+  client-fingerprint: ''
+- name: 'ARISTA #5'
   type: vmess
   server: 45.12.132.183
   port: 80
@@ -122,7 +150,7 @@ proxies:
     path: /vmess/
     headers:
       Host: 45.12.132.183
-- name: 'ARISTA #4'
+- name: 'ARISTA #6'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -136,39 +164,11 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
-- name: 'ARISTA #5'
-  type: vmess
-  server: t.tizi001.com
-  port: 9989
-  uuid: e0bd847e-e4f5-4f6f-bee2-9dc4f19b9ff5
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: t.tizi001.com
-  client-fingerprint: chrome
-- name: 'ARISTA #6'
-  type: vmess
-  server: 149.28.46.147
-  port: 25875
-  uuid: 19c2e1dc-8dd7-43e3-8ad1-201d41aa605c
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 149.28.46.147
-  client-fingerprint: chrome
 - name: 'ARISTA #7'
   type: vmess
-  server: am.nftydreams.io
-  port: 2002
-  uuid: e49c6b32-d220-49c9-8bed-981248a06c5b
+  server: xm.nftydreams.io
+  port: 2003
+  uuid: 0d1a9faa-272c-4050-892c-5a611a9755b9
   alterId: 0
   cipher: auto
   network: tcp
@@ -176,27 +176,31 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: am.nftydreams.io
+  servername: xm.nftydreams.io
   client-fingerprint: ''
 - name: 'ARISTA #8'
   type: vmess
-  server: snapp.ir.bmi.ir.mobato-mobile.com
-  port: 80
-  uuid: 820a9e42-e18d-43e4-859f-d1c2f6b8600a
+  server: chatgpt.com
+  port: 8443
+  uuid: 35312035-3420-4535-a031-303220353420
   alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
+  cipher: none
+  network: ws
+  tls: true
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: excoino.com
+  servername: tr-1.stunnel.cc
   client-fingerprint: ''
+  ws-opts:
+    path: /ws
+    headers:
+      Host: tr-1.stunnel.cc
 - name: 'ARISTA #9'
   type: vmess
-  server: 193.151.131.146
-  port: 2086
-  uuid: 4223a522-14ab-b8b3-4349-cf38d34343dc
+  server: 217.218.52.1
+  port: 10410
+  uuid: f93f134f-7adb-48c3-bcd1-2532edb0b478
   alterId: 0
   cipher: auto
   network: tcp
@@ -204,13 +208,13 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 193.151.131.146
+  servername: 217.218.52.1
   client-fingerprint: ''
 - name: 'ARISTA #10'
   type: vmess
-  server: bm.nftydreams.io
-  port: 2005
-  uuid: 07545093-62f3-4f2a-8c63-318aa5a8415b
+  server: mel.digitalldns.com
+  port: 8443
+  uuid: 9074efff-12c9-4641-8550-513dba860c93
   alterId: 0
   cipher: auto
   network: tcp
@@ -218,8 +222,8 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: bm.nftydreams.io
-  client-fingerprint: ''
+  servername: mel.digitalldns.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: Proxy Select
   type: select
