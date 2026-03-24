@@ -78,9 +78,9 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: mel.digitalldns.com
-  port: 8443
-  uuid: 05e5f974-142e-47d2-b01b-86f9c441b5e2
+  server: 217.218.52.1
+  port: 10410
+  uuid: f93f134f-7adb-48c3-bcd1-2532edb0b478
   alterId: 0
   cipher: auto
   network: tcp
@@ -88,13 +88,13 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: mel.digitalldns.com
+  servername: 217.218.52.1
   client-fingerprint: ''
 - name: 'ARISTA #2'
   type: vmess
-  server: mel.idbede.com
+  server: 94.101.185.53
   port: 8443
-  uuid: cfe7ba8b-7bd6-447c-b54d-564632e61d4d
+  uuid: 00cb8f74-c1ff-44ed-a3d6-f71171359d81
   alterId: 0
   cipher: auto
   network: tcp
@@ -102,8 +102,8 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: mel.idbede.com
-  client-fingerprint: chrome
+  servername: 94.101.185.53
+  client-fingerprint: ''
 - name: 'ARISTA #3'
   type: vmess
   server: jnm.1x2.indevs.in
@@ -174,6 +174,34 @@ proxies:
   client-fingerprint: ''
 - name: 'ARISTA #7'
   type: vmess
+  server: mel.digitalldns.com
+  port: 8443
+  uuid: 05e5f974-142e-47d2-b01b-86f9c441b5e2
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mel.digitalldns.com
+  client-fingerprint: ''
+- name: 'ARISTA #8'
+  type: vmess
+  server: mel.idbede.com
+  port: 8443
+  uuid: cfe7ba8b-7bd6-447c-b54d-564632e61d4d
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mel.idbede.com
+  client-fingerprint: chrome
+- name: 'ARISTA #9'
+  type: vmess
   server: 35.240.225.23
   port: 8880
   uuid: c5dd6680-64ad-4f04-9952-49d94984f9eb
@@ -190,11 +218,11 @@ proxies:
     path: /
     headers:
       Host: 35.240.225.23
-- name: 'ARISTA #8'
+- name: 'ARISTA #10'
   type: vmess
-  server: n1761214904.wpg27.xyz
+  server: udtzy.cmvvb.online
   port: 443
-  uuid: 7f6f64ae-3778-434c-adfc-95cb67ee8b73
+  uuid: eddebc92-b9f7-4019-8a11-0d733bfe665d
   alterId: 0
   cipher: auto
   network: ws
@@ -202,87 +230,13 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: n1761214904.wpg27.xyz
+  servername: udtzy.cmvvb.online
   client-fingerprint: chrome
   ws-opts:
     path: /
     headers:
-      Host: n1761214904.wpg27.xyz
-- name: 'ARISTA #9'
-  type: vmess
-  server: n1752833184.lie5d.cyou
-  port: 443
-  uuid: 6c7d09e3-9cfa-41c8-8194-e81eb21bfb88
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: n1752833184.lie5d.cyou
-  client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: n1752833184.lie5d.cyou
-- name: 'ARISTA #10'
-  type: vmess
-  server: 217.218.52.1
-  port: 10410
-  uuid: f93f134f-7adb-48c3-bcd1-2532edb0b478
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 217.218.52.1
-  client-fingerprint: ''
+      Host: udtzy.cmvvb.online
 - name: 'ARISTA #11'
-  type: vmess
-  server: cip.1iii1.de
-  port: 443
-  uuid: 83df5028-1637-4760-858e-bbacaab4b9b1
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: cip.1iii1.de
-  client-fingerprint: ''
-- name: 'ARISTA #12'
-  type: vmess
-  server: 217.218.52.1
-  port: 10410
-  uuid: f93f134f-7adb-48c3-bcd1-2532edb0b478
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 217.218.52.1
-  client-fingerprint: ''
-- name: 'ARISTA #13'
-  type: vmess
-  server: xm.nftydreams.io
-  port: 2003
-  uuid: 0d1a9faa-272c-4050-892c-5a611a9755b9
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: xm.nftydreams.io
-  client-fingerprint: ''
-- name: 'ARISTA #14'
   type: vmess
   server: usaapp1.jisuyun.top
   port: 2053
@@ -300,7 +254,7 @@ proxies:
     path: /usavm
     headers:
       Host: usaapp1.jisuyun.top
-- name: 'ARISTA #15'
+- name: 'ARISTA #12'
   type: vmess
   server: 45.12.132.183
   port: 80
@@ -318,7 +272,7 @@ proxies:
     path: /vmess/
     headers:
       Host: 45.12.132.183
-- name: 'ARISTA #16'
+- name: 'ARISTA #13'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -332,7 +286,35 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
-- name: 'ARISTA #17'
+- name: 'ARISTA #14'
+  type: vmess
+  server: bm.nftydreams.io
+  port: 2005
+  uuid: a7dd6c6b-751c-401a-a6fe-50168c63b131
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: bm.nftydreams.io
+  client-fingerprint: ''
+- name: 'ARISTA #15'
+  type: vmess
+  server: xm.nftydreams.io
+  port: 2003
+  uuid: 0d1a9faa-272c-4050-892c-5a611a9755b9
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: xm.nftydreams.io
+  client-fingerprint: ''
+- name: 'ARISTA #16'
   type: vmess
   server: 94.183.149.127
   port: 3911
@@ -345,6 +327,56 @@ proxies:
   skip-cert-verify: false
   tcp-fast-open: true
   servername: yasdl.com
+  client-fingerprint: ''
+- name: 'ARISTA #17'
+  type: vmess
+  server: n1761214904.wpg27.xyz
+  port: 443
+  uuid: 7f6f64ae-3778-434c-adfc-95cb67ee8b73
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: n1761214904.wpg27.xyz
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: n1761214904.wpg27.xyz
+- name: 'ARISTA #18'
+  type: vmess
+  server: n1752833184.lie5d.cyou
+  port: 443
+  uuid: 6c7d09e3-9cfa-41c8-8194-e81eb21bfb88
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: n1752833184.lie5d.cyou
+  client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: n1752833184.lie5d.cyou
+- name: 'ARISTA #19'
+  type: vmess
+  server: 217.218.52.1
+  port: 10410
+  uuid: f93f134f-7adb-48c3-bcd1-2532edb0b478
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 217.218.52.1
   client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
@@ -368,6 +400,8 @@ proxy-groups:
   - 'ARISTA #15'
   - 'ARISTA #16'
   - 'ARISTA #17'
+  - 'ARISTA #18'
+  - 'ARISTA #19'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -389,6 +423,8 @@ proxy-groups:
   - 'ARISTA #15'
   - 'ARISTA #16'
   - 'ARISTA #17'
+  - 'ARISTA #18'
+  - 'ARISTA #19'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150

@@ -78,20 +78,22 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: 18.199.182.165
-  port: 22223
-  password: telegram-id-v2rayvpnchannel
-  network: tcp
+  server: www.multiplydose.com
+  port: 443
+  password: humanity
+  network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
+  servername: www.multiplydose.com
   client-fingerprint: chrome
-  alpn:
-  - http/1.1
+  ws-opts:
+    path: //assignment
+    headers:
+      Host: www.multiplydose.com
 - name: 'Trojan #2'
   type: trojan
-  server: 13.38.248.208
+  server: 18.199.182.165
   port: 22223
   password: telegram-id-v2rayvpnchannel
   network: tcp
@@ -104,7 +106,7 @@ proxies:
   - http/1.1
 - name: 'Trojan #3'
   type: trojan
-  server: 15.236.33.201
+  server: 13.38.248.208
   port: 22223
   password: telegram-id-v2rayvpnchannel
   network: tcp
@@ -117,7 +119,7 @@ proxies:
   - http/1.1
 - name: 'Trojan #4'
   type: trojan
-  server: 51.102.254.79
+  server: 15.236.33.201
   port: 22223
   password: telegram-id-v2rayvpnchannel
   network: tcp
@@ -130,7 +132,7 @@ proxies:
   - http/1.1
 - name: 'Trojan #5'
   type: trojan
-  server: 51.44.137.34
+  server: 51.102.254.79
   port: 22223
   password: telegram-id-v2rayvpnchannel
   network: tcp
@@ -143,9 +145,9 @@ proxies:
   - http/1.1
 - name: 'Trojan #6'
   type: trojan
-  server: 51.45.15.225
-  port: 22222
-  password: telegram-id-privatevpns
+  server: 51.44.137.34
+  port: 22223
+  password: telegram-id-v2rayvpnchannel
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -197,19 +199,19 @@ proxies:
   client-fingerprint: chrome
 - name: 'Trojan #10'
   type: trojan
-  server: www.multiplydose.com
+  server: vpn.nnet.online
   port: 443
-  password: humanity
+  password: 4eddbd4a-ae04-49b9-9e6d-90f88eb4ef36
   network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: www.multiplydose.com
+  servername: VPN.NNET.Online
   client-fingerprint: chrome
   ws-opts:
-    path: //assignment
+    path: /trojan-tls
     headers:
-      Host: www.multiplydose.com
+      Host: VPN.NNET.Online
 proxy-groups:
 - name: Proxy Select
   type: select
