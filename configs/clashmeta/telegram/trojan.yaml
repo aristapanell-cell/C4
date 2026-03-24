@@ -156,21 +156,6 @@ proxies:
   - http/1.1
 - name: 'Trojan #7'
   type: trojan
-  server: www.multiplydose.com
-  port: 443
-  password: humanity
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: www.multiplydose.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: //assignment
-    headers:
-      Host: www.multiplydose.com
-- name: 'Trojan #8'
-  type: trojan
   server: 104.21.40.34
   port: 443
   password: humanity
@@ -184,7 +169,7 @@ proxies:
     path: /assignment
     headers:
       Host: www.gossipglove.com
-- name: 'Trojan #9'
+- name: 'Trojan #8'
   type: trojan
   server: 188.114.96.3
   port: 443
@@ -212,7 +197,6 @@ proxy-groups:
   - 'Trojan #6'
   - 'Trojan #7'
   - 'Trojan #8'
-  - 'Trojan #9'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -225,7 +209,6 @@ proxy-groups:
   - 'Trojan #6'
   - 'Trojan #7'
   - 'Trojan #8'
-  - 'Trojan #9'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
