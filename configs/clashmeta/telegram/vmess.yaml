@@ -78,9 +78,9 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: 185.226.116.195
-  port: 443
-  uuid: 901796fc-8f5d-4d1d-922e-112ec0eea4e2
+  server: 217.218.52.1
+  port: 10410
+  uuid: f93f134f-7adb-48c3-bcd1-2532edb0b478
   alterId: 0
   cipher: auto
   network: tcp
@@ -88,9 +88,23 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 185.226.116.195
+  servername: 217.218.52.1
   client-fingerprint: ''
 - name: 'ARISTA #2'
+  type: vmess
+  server: cip.1iii1.de
+  port: 443
+  uuid: 83df5028-1637-4760-858e-bbacaab4b9b1
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: cip.1iii1.de
+  client-fingerprint: ''
+- name: 'ARISTA #3'
   type: vmess
   server: mel.idbede.com
   port: 8443
@@ -104,7 +118,7 @@ proxies:
   tcp-fast-open: true
   servername: mel.idbede.com
   client-fingerprint: ''
-- name: 'ARISTA #3'
+- name: 'ARISTA #4'
   type: vmess
   server: mel.idbede.com
   port: 8443
@@ -118,7 +132,7 @@ proxies:
   tcp-fast-open: true
   servername: mel.idbede.com
   client-fingerprint: ''
-- name: 'ARISTA #4'
+- name: 'ARISTA #5'
   type: vmess
   server: mel.idbede.com
   port: 8443
@@ -132,11 +146,11 @@ proxies:
   tcp-fast-open: true
   servername: mel.idbede.com
   client-fingerprint: ''
-- name: 'ARISTA #5'
+- name: 'ARISTA #6'
   type: vmess
-  server: 217.218.52.1
-  port: 10410
-  uuid: f93f134f-7adb-48c3-bcd1-2532edb0b478
+  server: mel.idbede.com
+  port: 8443
+  uuid: e8392279-1a4b-4b30-98cc-0762020ef46f
   alterId: 0
   cipher: auto
   network: tcp
@@ -144,9 +158,93 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 217.218.52.1
+  servername: mel.idbede.com
   client-fingerprint: ''
-- name: 'ARISTA #6'
+- name: 'ARISTA #7'
+  type: vmess
+  server: cip.1iii1.de
+  port: 443
+  uuid: 83df5028-1637-4760-858e-bbacaab4b9b1
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: cip.1iii1.de
+  client-fingerprint: ''
+- name: 'ARISTA #8'
+  type: vmess
+  server: mel.digitalldns.net
+  port: 8443
+  uuid: 37d67038-a83a-4c38-ab63-bffe55489ed7
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mel.digitalldns.net
+  client-fingerprint: ''
+- name: 'ARISTA #9'
+  type: vmess
+  server: mel.idbede.com
+  port: 8443
+  uuid: 25367fd1-36bc-464f-a327-a305bfbed7f4
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mel.idbede.com
+  client-fingerprint: ''
+- name: 'ARISTA #10'
+  type: vmess
+  server: mel.digitalldns.com
+  port: 8443
+  uuid: 0353e1cb-7e39-4a3a-aada-ad25a2d5c3b9
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mel.digitalldns.com
+  client-fingerprint: chrome
+- name: 'ARISTA #11'
+  type: vmess
+  server: 129.146.46.181
+  port: 52408
+  uuid: a797ff7b-8161-40a6-d577-1b2c213b3885
+  alterId: 0
+  cipher: ''
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 129.146.46.181
+  client-fingerprint: ''
+- name: 'ARISTA #12'
+  type: vmess
+  server: mel.idbede.com
+  port: 8443
+  uuid: e60d22b9-b881-412d-8b0b-7b8dea233198
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mel.idbede.com
+  client-fingerprint: ''
+- name: 'ARISTA #13'
   type: vmess
   server: 45.12.132.183
   port: 80
@@ -164,7 +262,7 @@ proxies:
     path: /vmess/
     headers:
       Host: 45.12.132.183
-- name: 'ARISTA #7'
+- name: 'ARISTA #14'
   type: vmess
   server: 66.163.117.58
   port: 22324
@@ -178,7 +276,7 @@ proxies:
   tcp-fast-open: true
   servername: 66.163.117.58
   client-fingerprint: chrome
-- name: 'ARISTA #8'
+- name: 'ARISTA #15'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -192,109 +290,11 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
-- name: 'ARISTA #9'
-  type: vmess
-  server: mel.idbede.com
-  port: 8443
-  uuid: e8392279-1a4b-4b30-98cc-0762020ef46f
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mel.idbede.com
-  client-fingerprint: ''
-- name: 'ARISTA #10'
-  type: vmess
-  server: cip.1iii1.de
-  port: 443
-  uuid: 83df5028-1637-4760-858e-bbacaab4b9b1
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: cip.1iii1.de
-  client-fingerprint: ''
-- name: 'ARISTA #11'
-  type: vmess
-  server: 217.218.52.1
-  port: 10410
-  uuid: f93f134f-7adb-48c3-bcd1-2532edb0b478
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 217.218.52.1
-  client-fingerprint: ''
-- name: 'ARISTA #12'
-  type: vmess
-  server: xm.nftydreams.io
-  port: 2003
-  uuid: 0d1a9faa-272c-4050-892c-5a611a9755b9
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: xm.nftydreams.io
-  client-fingerprint: ''
-- name: 'ARISTA #13'
-  type: vmess
-  server: mel.digitalldns.com
-  port: 8443
-  uuid: b4e1fa54-647f-4379-b695-eb9b5c458f90
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mel.digitalldns.com
-  client-fingerprint: ''
-- name: 'ARISTA #14'
-  type: vmess
-  server: mel.digitalldns.net
-  port: 8443
-  uuid: 37d67038-a83a-4c38-ab63-bffe55489ed7
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mel.digitalldns.net
-  client-fingerprint: ''
-- name: 'ARISTA #15'
-  type: vmess
-  server: mel.idbede.com
-  port: 8443
-  uuid: 25367fd1-36bc-464f-a327-a305bfbed7f4
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mel.idbede.com
-  client-fingerprint: ''
 - name: 'ARISTA #16'
   type: vmess
-  server: mel.digitalldns.com
-  port: 8443
-  uuid: 0353e1cb-7e39-4a3a-aada-ad25a2d5c3b9
+  server: 185.226.116.195
+  port: 443
+  uuid: 901796fc-8f5d-4d1d-922e-112ec0eea4e2
   alterId: 0
   cipher: auto
   network: tcp
@@ -302,21 +302,7 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: mel.digitalldns.com
-  client-fingerprint: chrome
-- name: 'ARISTA #17'
-  type: vmess
-  server: 129.146.46.181
-  port: 52408
-  uuid: a797ff7b-8161-40a6-d577-1b2c213b3885
-  alterId: 0
-  cipher: ''
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 129.146.46.181
+  servername: 185.226.116.195
   client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
@@ -339,7 +325,6 @@ proxy-groups:
   - 'ARISTA #14'
   - 'ARISTA #15'
   - 'ARISTA #16'
-  - 'ARISTA #17'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -360,7 +345,6 @@ proxy-groups:
   - 'ARISTA #14'
   - 'ARISTA #15'
   - 'ARISTA #16'
-  - 'ARISTA #17'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
