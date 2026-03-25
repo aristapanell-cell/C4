@@ -78,24 +78,22 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: 172.64.152.23
-  port: 443
-  password: humanity
-  network: ws
+  server: 3.69.71.108
+  port: 22223
+  password: telegram-id-directvpn
+  network: tcp
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: www.calmlunch.com
+  servername: trojan.burgerip.co.uk
   client-fingerprint: chrome
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
+  alpn:
+  - http/1.1
 - name: 'Trojan #2'
   type: trojan
-  server: 63.177.162.163
-  port: 22223
-  password: telegram-id-directvpn
+  server: 3.69.71.108
+  port: 22222
+  password: telegram-id-privatevpns
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -106,9 +104,9 @@ proxies:
   - http/1.1
 - name: 'Trojan #3'
   type: trojan
-  server: 51.44.2.160
-  port: 22222
-  password: telegram-id-privatevpns
+  server: 52.47.75.88
+  port: 22223
+  password: telegram-id-directvpn
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -119,22 +117,24 @@ proxies:
   - http/1.1
 - name: 'Trojan #4'
   type: trojan
-  server: 51.44.2.160
-  port: 22223
-  password: telegram-id-directvpn
-  network: tcp
+  server: spring-tooth-7fa3.ahmadrj.workers.dev
+  port: 443
+  password: Nova-Proxy
+  network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
+  servername: spring-tooth-7fa3.ahmadrj.workers.dev
   client-fingerprint: chrome
-  alpn:
-  - http/1.1
+  ws-opts:
+    path: /
+    headers:
+      Host: spring-tooth-7fa3.ahmadrj.workers.dev
 - name: 'Trojan #5'
   type: trojan
   server: 18.195.152.136
   port: 22223
-  password: telegram-id-directvpn
+  password: telegram-id-v2rayvpnchannel
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -145,24 +145,22 @@ proxies:
   - http/1.1
 - name: 'Trojan #6'
   type: trojan
-  server: 104.16.190.233
-  port: 8443
-  password: Nova-Proxy
-  network: ws
+  server: 51.44.127.193
+  port: 22223
+  password: telegram-id-v2rayvpnchannel
+  network: tcp
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: small-morning-2668.drusavm.workers.dev
+  servername: trojan.burgerip.co.uk
   client-fingerprint: chrome
-  ws-opts:
-    path: /?ed
-    headers:
-      Host: small-morning-2668.drusavm.workers.dev
+  alpn:
+  - http/1.1
 - name: 'Trojan #7'
   type: trojan
-  server: 51.44.127.193
-  port: 22222
-  password: telegram-id-privatevpns
+  server: 3.69.71.108
+  port: 22223
+  password: telegram-id-v2rayvpnchannel
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -173,9 +171,9 @@ proxies:
   - http/1.1
 - name: 'Trojan #8'
   type: trojan
-  server: 3.69.71.108
-  port: 22222
-  password: telegram-id-privatevpns
+  server: 52.47.75.88
+  port: 22223
+  password: telegram-id-v2rayvpnchannel
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -186,48 +184,9 @@ proxies:
   - http/1.1
 - name: 'Trojan #9'
   type: trojan
-  server: 51.44.2.160
-  port: 22223
-  password: telegram-id-v2rayvpnchannel
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #10'
-  type: trojan
-  server: 18.195.152.136
-  port: 22223
-  password: telegram-id-v2rayvpnchannel
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #11'
-  type: trojan
   server: 51.44.127.193
-  port: 22223
-  password: telegram-id-v2rayvpnchannel
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #12'
-  type: trojan
-  server: 3.69.71.108
-  port: 22223
-  password: telegram-id-v2rayvpnchannel
+  port: 22222
+  password: telegram-id-privatevpns
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -250,9 +209,6 @@ proxy-groups:
   - 'Trojan #7'
   - 'Trojan #8'
   - 'Trojan #9'
-  - 'Trojan #10'
-  - 'Trojan #11'
-  - 'Trojan #12'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -266,9 +222,6 @@ proxy-groups:
   - 'Trojan #7'
   - 'Trojan #8'
   - 'Trojan #9'
-  - 'Trojan #10'
-  - 'Trojan #11'
-  - 'Trojan #12'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
