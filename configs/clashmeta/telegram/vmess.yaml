@@ -78,9 +78,9 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: cip.1iii1.de
-  port: 443
-  uuid: 83df5028-1637-4760-858e-bbacaab4b9b1
+  server: 94.101.185.53
+  port: 8443
+  uuid: 00cb8f74-c1ff-44ed-a3d6-f71171359d81
   alterId: 0
   cipher: auto
   network: tcp
@@ -88,27 +88,37 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: cip.1iii1.de
+  servername: 94.101.185.53
   client-fingerprint: ''
 - name: 'ARISTA #2'
   type: vmess
-  server: n1747624280.lie5d.cyou
-  port: 443
-  uuid: 49dcf4b4-81eb-4fe2-91d3-86dc2e27ced5
+  server: mel.idbede.com
+  port: 8443
+  uuid: 47ca7e88-e96d-44ab-98cd-cc9a8f387586
   alterId: 0
   cipher: auto
-  network: ws
-  tls: true
+  network: tcp
+  tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: n1747624280.lie5d.cyou
+  servername: mel.idbede.com
   client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: n1747624280.lie5d.cyou
 - name: 'ARISTA #3'
+  type: vmess
+  server: mel.usdtbama.com
+  port: 8443
+  uuid: 12d886aa-2392-469c-98a5-ae7ba0cf3140
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mel.usdtbama.com
+  client-fingerprint: chrome
+- name: 'ARISTA #4'
   type: vmess
   server: v30.hdacd.com
   port: 30830
@@ -122,7 +132,7 @@ proxies:
   tcp-fast-open: true
   servername: v30.hdacd.com
   client-fingerprint: ''
-- name: 'ARISTA #4'
+- name: 'ARISTA #5'
   type: vmess
   server: n1747624271.lie5d.cyou
   port: 443
@@ -140,7 +150,7 @@ proxies:
     path: /
     headers:
       Host: n1747624271.lie5d.cyou
-- name: 'ARISTA #5'
+- name: 'ARISTA #6'
   type: vmess
   server: 8.210.141.149
   port: 443
@@ -158,21 +168,25 @@ proxies:
     path: /
     headers:
       Host: n1761296897.lie5d.cyou
-- name: 'ARISTA #6'
+- name: 'ARISTA #7'
   type: vmess
-  server: 94.101.185.53
-  port: 8443
-  uuid: 00cb8f74-c1ff-44ed-a3d6-f71171359d81
+  server: n1747624280.lie5d.cyou
+  port: 443
+  uuid: 49dcf4b4-81eb-4fe2-91d3-86dc2e27ced5
   alterId: 0
   cipher: auto
-  network: tcp
-  tls: false
+  network: ws
+  tls: true
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 94.101.185.53
+  servername: n1747624280.lie5d.cyou
   client-fingerprint: ''
-- name: 'ARISTA #7'
+  ws-opts:
+    path: /
+    headers:
+      Host: n1747624280.lie5d.cyou
+- name: 'ARISTA #8'
   type: vmess
   server: 46.225.54.75
   port: 10410
@@ -186,7 +200,7 @@ proxies:
   tcp-fast-open: true
   servername: 46.225.54.75
   client-fingerprint: ''
-- name: 'ARISTA #8'
+- name: 'ARISTA #9'
   type: vmess
   server: 45.12.132.183
   port: 80
@@ -204,7 +218,7 @@ proxies:
     path: /vmess/
     headers:
       Host: 45.12.132.183
-- name: 'ARISTA #9'
+- name: 'ARISTA #10'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -232,6 +246,7 @@ proxy-groups:
   - 'ARISTA #7'
   - 'ARISTA #8'
   - 'ARISTA #9'
+  - 'ARISTA #10'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -245,6 +260,7 @@ proxy-groups:
   - 'ARISTA #7'
   - 'ARISTA #8'
   - 'ARISTA #9'
+  - 'ARISTA #10'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
