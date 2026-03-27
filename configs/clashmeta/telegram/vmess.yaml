@@ -124,6 +124,20 @@ proxies:
   client-fingerprint: ''
 - name: 'ARISTA #4'
   type: vmess
+  server: mel.usdtbama.com
+  port: 8443
+  uuid: 12d886aa-2392-469c-98a5-ae7ba0cf3140
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mel.usdtbama.com
+  client-fingerprint: chrome
+- name: 'ARISTA #5'
+  type: vmess
   server: 35.240.225.23
   port: 8880
   uuid: c5dd6680-64ad-4f04-9952-49d94984f9eb
@@ -140,7 +154,7 @@ proxies:
     path: /
     headers:
       Host: 35.240.225.23
-- name: 'ARISTA #5'
+- name: 'ARISTA #6'
   type: vmess
   server: 87.107.187.210
   port: 2001
@@ -154,7 +168,7 @@ proxies:
   tcp-fast-open: true
   servername: 87.107.187.210
   client-fingerprint: ''
-- name: 'ARISTA #6'
+- name: 'ARISTA #7'
   type: vmess
   server: v30.hdacd.com
   port: 30830
@@ -168,11 +182,11 @@ proxies:
   tcp-fast-open: true
   servername: v30.hdacd.com
   client-fingerprint: ''
-- name: 'ARISTA #7'
+- name: 'ARISTA #8'
   type: vmess
-  server: ip3.taravat.net
-  port: 102
-  uuid: ceb9b687-772b-4569-b5fa-1be84345d6c7
+  server: 156.238.250.91
+  port: 18811
+  uuid: 4a1b829b-8394-42c1-a068-04cd8e6bcb3c
   alterId: 0
   cipher: auto
   network: tcp
@@ -180,13 +194,49 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: myket.ir
-  client-fingerprint: ''
-- name: 'ARISTA #8'
+  servername: 156.238.250.91
+  client-fingerprint: chrome
+- name: 'ARISTA #9'
+  type: vmess
+  server: chuncheon02.zgjok.com
+  port: 443
+  uuid: d1a1cb91-0f1f-41eb-a307-631bba00f1bb
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: chuncheon02.zgjok.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: chuncheon02.zgjok.com
+- name: 'ARISTA #10'
+  type: vmess
+  server: 13.124.195.36
+  port: 8686
+  uuid: 1a17b19d-4896-4531-af79-6e91d8ef8228
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: baidu.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: end-gfw.com
+- name: 'ARISTA #11'
   type: vmess
   server: mel.usdtbama.com
   port: 8443
-  uuid: 12d886aa-2392-469c-98a5-ae7ba0cf3140
+  uuid: 3b8749bf-e4b9-48e1-8f6e-297c695ea6b8
   alterId: 0
   cipher: auto
   network: tcp
@@ -195,7 +245,7 @@ proxies:
   skip-cert-verify: false
   tcp-fast-open: true
   servername: mel.usdtbama.com
-  client-fingerprint: chrome
+  client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -209,6 +259,9 @@ proxy-groups:
   - 'ARISTA #6'
   - 'ARISTA #7'
   - 'ARISTA #8'
+  - 'ARISTA #9'
+  - 'ARISTA #10'
+  - 'ARISTA #11'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -221,6 +274,9 @@ proxy-groups:
   - 'ARISTA #6'
   - 'ARISTA #7'
   - 'ARISTA #8'
+  - 'ARISTA #9'
+  - 'ARISTA #10'
+  - 'ARISTA #11'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
