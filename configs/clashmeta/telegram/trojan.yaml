@@ -78,6 +78,17 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
+  server: 85.234.65.58
+  port: 443
+  password: WF42809561
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: touching-pigeon.rooster465.autos
+  client-fingerprint: chrome
+- name: 'Trojan #2'
+  type: trojan
   server: 104.21.40.34
   port: 443
   password: humanity
@@ -91,7 +102,7 @@ proxies:
     path: /assignment
     headers:
       Host: www.gossipglove.com
-- name: 'Trojan #2'
+- name: 'Trojan #3'
   type: trojan
   server: 52.47.75.88
   port: 22223
@@ -104,7 +115,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #3'
+- name: 'Trojan #4'
   type: trojan
   server: 18.195.15.58
   port: 22223
@@ -117,7 +128,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #4'
+- name: 'Trojan #5'
   type: trojan
   server: 13.36.214.151
   port: 22223
@@ -130,7 +141,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #5'
+- name: 'Trojan #6'
   type: trojan
   server: 13.36.51.154
   port: 22223
@@ -143,7 +154,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #6'
+- name: 'Trojan #7'
   type: trojan
   server: 52.58.26.183
   port: 22223
@@ -156,35 +167,11 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #7'
+- name: 'Trojan #8'
   type: trojan
   server: 13.37.25.182
   port: 22223
   password: telegram-id-v2rayvpnchannel
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #8'
-  type: trojan
-  server: 85.234.65.58
-  port: 443
-  password: WF42809561
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: touching-pigeon.rooster465.autos
-  client-fingerprint: chrome
-- name: 'Trojan #9'
-  type: trojan
-  server: 13.37.25.182
-  port: 22222
-  password: telegram-id-privatevpns
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -206,7 +193,6 @@ proxy-groups:
   - 'Trojan #6'
   - 'Trojan #7'
   - 'Trojan #8'
-  - 'Trojan #9'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -219,7 +205,6 @@ proxy-groups:
   - 'Trojan #6'
   - 'Trojan #7'
   - 'Trojan #8'
-  - 'Trojan #9'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
