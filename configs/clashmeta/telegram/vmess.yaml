@@ -78,6 +78,20 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
+  server: mel.usdtbama.com
+  port: 8443
+  uuid: 12d886aa-2392-469c-98a5-ae7ba0cf3140
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mel.usdtbama.com
+  client-fingerprint: chrome
+- name: 'ARISTA #2'
+  type: vmess
   server: ip3.taravat.net
   port: 102
   uuid: ceb9b687-772b-4569-b5fa-1be84345d6c7
@@ -90,7 +104,7 @@ proxies:
   tcp-fast-open: true
   servername: myket.ir
   client-fingerprint: ''
-- name: 'ARISTA #2'
+- name: 'ARISTA #3'
   type: vmess
   server: 45.15.185.17
   port: 80
@@ -108,7 +122,7 @@ proxies:
     path: /vmess/
     headers:
       Host: 45.15.185.17
-- name: 'ARISTA #3'
+- name: 'ARISTA #4'
   type: vmess
   server: 45.12.132.183
   port: 80
@@ -126,7 +140,7 @@ proxies:
     path: /vmess/
     headers:
       Host: 45.12.132.183
-- name: 'ARISTA #4'
+- name: 'ARISTA #5'
   type: vmess
   server: 66.163.117.58
   port: 22324
@@ -140,7 +154,7 @@ proxies:
   tcp-fast-open: true
   servername: 66.163.117.58
   client-fingerprint: chrome
-- name: 'ARISTA #5'
+- name: 'ARISTA #6'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -154,24 +168,6 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
-- name: 'ARISTA #6'
-  type: vmess
-  server: '[2001:bc8:32d7:302::10]'
-  port: 44579
-  uuid: 8e34e170-13ae-4892-9d20-05962acc9f84
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 2001:bc8:32d7:302::10
-  client-fingerprint: chrome
-  ws-opts:
-    path: /?ed=2048@V2Ray_hiddify10--https://t.me/V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--V2Ray_hiddify10--https://t.me/V2Ray_hiddify10
-    headers:
-      Host: 2001:bc8:32d7:302::10
 - name: 'ARISTA #7'
   type: vmess
   server: 208.167.242.162
@@ -232,34 +228,6 @@ proxies:
     path: /link
     headers:
       Host: 108.61.158.122
-- name: 'ARISTA #11'
-  type: vmess
-  server: 65.21.145.122
-  port: 22352
-  uuid: e29364b2-ba9a-4975-85ca-7ebc3981c9ca
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 65.21.145.122
-  client-fingerprint: ''
-- name: 'ARISTA #12'
-  type: vmess
-  server: mel.usdtbama.com
-  port: 8443
-  uuid: 12d886aa-2392-469c-98a5-ae7ba0cf3140
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mel.usdtbama.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -275,8 +243,6 @@ proxy-groups:
   - 'ARISTA #8'
   - 'ARISTA #9'
   - 'ARISTA #10'
-  - 'ARISTA #11'
-  - 'ARISTA #12'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -291,8 +257,6 @@ proxy-groups:
   - 'ARISTA #8'
   - 'ARISTA #9'
   - 'ARISTA #10'
-  - 'ARISTA #11'
-  - 'ARISTA #12'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
