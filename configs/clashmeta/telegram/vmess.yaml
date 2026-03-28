@@ -78,20 +78,6 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: mel.usdtbama.com
-  port: 8443
-  uuid: 12d886aa-2392-469c-98a5-ae7ba0cf3140
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mel.usdtbama.com
-  client-fingerprint: chrome
-- name: 'ARISTA #2'
-  type: vmess
   server: 87.107.187.210
   port: 2001
   uuid: 64c73489-e741-9bd2-86ca-5e90a23760ae
@@ -104,6 +90,20 @@ proxies:
   tcp-fast-open: true
   servername: 87.107.187.210
   client-fingerprint: ''
+- name: 'ARISTA #2'
+  type: vmess
+  server: mel.usdtbama.com
+  port: 8443
+  uuid: 12d886aa-2392-469c-98a5-ae7ba0cf3140
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mel.usdtbama.com
+  client-fingerprint: chrome
 - name: 'ARISTA #3'
   type: vmess
   server: 156.238.250.91
@@ -274,38 +274,6 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
-- name: 'ARISTA #14'
-  type: vmess
-  server: chatgpt.com
-  port: 8443
-  uuid: 35312035-3420-4535-a031-303220353420
-  alterId: 0
-  cipher: none
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: tr-1.stunnel.cc
-  client-fingerprint: ''
-  ws-opts:
-    path: /ws
-    headers:
-      Host: tr-1.stunnel.cc
-- name: 'ARISTA #15'
-  type: vmess
-  server: 94.101.185.53
-  port: 8443
-  uuid: 00cb8f74-c1ff-44ed-a3d6-f71171359d81
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 94.101.185.53
-  client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -324,8 +292,6 @@ proxy-groups:
   - 'ARISTA #11'
   - 'ARISTA #12'
   - 'ARISTA #13'
-  - 'ARISTA #14'
-  - 'ARISTA #15'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -343,8 +309,6 @@ proxy-groups:
   - 'ARISTA #11'
   - 'ARISTA #12'
   - 'ARISTA #13'
-  - 'ARISTA #14'
-  - 'ARISTA #15'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
