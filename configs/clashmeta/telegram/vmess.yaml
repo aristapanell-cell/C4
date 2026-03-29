@@ -78,27 +78,6 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: i-love-iran.amlakayuni.ir
-  port: 2053
-  uuid: f2fe0d70-1cb1-ae84-4585-ec96d450da80
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: i-love-iran.amlakayuni.ir
-  client-fingerprint: randomized
-  alpn:
-  - h2
-  - http/1.1
-  ws-opts:
-    path: ?ed=2053
-    headers:
-      Host: i-love-iran.amlakayuni.ir
-- name: 'ARISTA #2'
-  type: vmess
   server: 45.12.132.183
   port: 80
   uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
@@ -115,7 +94,7 @@ proxies:
     path: /vmess/
     headers:
       Host: 45.12.132.183
-- name: 'ARISTA #3'
+- name: 'ARISTA #2'
   type: vmess
   server: v30.hdacd.com
   port: 30830
@@ -129,7 +108,7 @@ proxies:
   tcp-fast-open: true
   servername: v30.hdacd.com
   client-fingerprint: chrome
-- name: 'ARISTA #4'
+- name: 'ARISTA #3'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -143,7 +122,7 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
-- name: 'ARISTA #5'
+- name: 'ARISTA #4'
   type: vmess
   server: 185.181.183.124
   port: 28094
@@ -161,6 +140,20 @@ proxies:
     path: /
     headers:
       Host: 185.181.183.124
+- name: 'ARISTA #5'
+  type: vmess
+  server: gsmvpn.gsmvx.com
+  port: 5006
+  uuid: b17345b9-6266-47f2-a473-8c57cbfe9ef9
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: gsmvpn.gsmvx.com
+  client-fingerprint: ''
 - name: 'ARISTA #6'
   type: vmess
   server: i-love-iran.amlakayuni.ir
@@ -205,6 +198,27 @@ proxies:
       Host: i-love-iran.amlakayuni.ir
 - name: 'ARISTA #8'
   type: vmess
+  server: i-love-iran.amlakayuni.ir
+  port: 2053
+  uuid: f2fe0d70-1cb1-ae84-4585-ec96d450da80
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: i-love-iran.amlakayuni.ir
+  client-fingerprint: randomized
+  alpn:
+  - h2
+  - http/1.1
+  ws-opts:
+    path: ?ed=2053
+    headers:
+      Host: i-love-iran.amlakayuni.ir
+- name: 'ARISTA #9'
+  type: vmess
   server: v36.hdacd.com
   port: 30836
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
@@ -217,7 +231,7 @@ proxies:
   tcp-fast-open: true
   servername: v36.hdacd.com
   client-fingerprint: chrome
-- name: 'ARISTA #9'
+- name: 'ARISTA #10'
   type: vmess
   server: hopev2ray.ddns.net
   port: 443
@@ -235,6 +249,20 @@ proxies:
     path: /@sina_tec
     headers:
       Host: fr-1.0rd.net
+- name: 'ARISTA #11'
+  type: vmess
+  server: mel.usdtbama.com
+  port: 8443
+  uuid: 593d9634-8c9d-4292-80e6-3f2981f6652f
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mel.usdtbama.com
+  client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -249,6 +277,8 @@ proxy-groups:
   - 'ARISTA #7'
   - 'ARISTA #8'
   - 'ARISTA #9'
+  - 'ARISTA #10'
+  - 'ARISTA #11'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -262,6 +292,8 @@ proxy-groups:
   - 'ARISTA #7'
   - 'ARISTA #8'
   - 'ARISTA #9'
+  - 'ARISTA #10'
+  - 'ARISTA #11'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
