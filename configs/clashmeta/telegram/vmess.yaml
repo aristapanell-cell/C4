@@ -78,34 +78,6 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: mel.usdtbama.com
-  port: 8443
-  uuid: 18824d4e-e622-49f7-b082-c99e51f08bd3
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mel.usdtbama.com
-  client-fingerprint: ''
-- name: 'ARISTA #2'
-  type: vmess
-  server: mel.usdtbama.com
-  port: 8443
-  uuid: 7acbbabb-e5f8-48b8-8c86-5296250f4c66
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mel.usdtbama.com
-  client-fingerprint: chrome
-- name: 'ARISTA #3'
-  type: vmess
   server: usaapp1.jisuyun.top
   port: 2053
   uuid: 4b80aa86-4354-40bb-d2a3-47126cff0bea
@@ -122,7 +94,7 @@ proxies:
     path: /usavm
     headers:
       Host: usaapp1.jisuyun.top
-- name: 'ARISTA #4'
+- name: 'ARISTA #2'
   type: vmess
   server: 45.12.132.183
   port: 80
@@ -140,7 +112,7 @@ proxies:
     path: /vmess/
     headers:
       Host: 45.12.132.183
-- name: 'ARISTA #5'
+- name: 'ARISTA #3'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -154,7 +126,53 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
+- name: 'ARISTA #4'
+  type: vmess
+  server: mel.usdtbama.com
+  port: 8443
+  uuid: 7acbbabb-e5f8-48b8-8c86-5296250f4c66
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mel.usdtbama.com
+  client-fingerprint: chrome
+- name: 'ARISTA #5'
+  type: vmess
+  server: mel.usdtbama.com
+  port: 8443
+  uuid: 61ff51ea-402b-4901-a514-dd2ad9cbc335
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mel.usdtbama.com
+  client-fingerprint: ''
 - name: 'ARISTA #6'
+  type: vmess
+  server: n1747624271.lie5d.cyou
+  port: 443
+  uuid: a231ba8b-8871-416c-813b-e2240bc66bb2
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: n1747624271.lie5d.cyou
+  client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: n1747624271.lie5d.cyou
+- name: 'ARISTA #7'
   type: vmess
   server: 185.174.138.34
   port: 2082
@@ -172,7 +190,7 @@ proxies:
     path: /
     headers:
       Host: ee.v2jey.fun
-- name: 'ARISTA #7'
+- name: 'ARISTA #8'
   type: vmess
   server: 37.48.102.95
   port: 42066
@@ -190,20 +208,6 @@ proxies:
     path: /dgfdrg5GB5t5er
     headers:
       Host: 37.48.102.95
-- name: 'ARISTA #8'
-  type: vmess
-  server: mel.usdtbama.com
-  port: 8443
-  uuid: e6cb45a4-4e4e-4254-924b-9eee847191e3
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mel.usdtbama.com
-  client-fingerprint: ''
 - name: 'ARISTA #9'
   type: vmess
   server: mel.usdtbama.com
@@ -250,7 +254,7 @@ proxies:
   type: vmess
   server: mel.usdtbama.com
   port: 8443
-  uuid: 61ff51ea-402b-4901-a514-dd2ad9cbc335
+  uuid: 18824d4e-e622-49f7-b082-c99e51f08bd3
   alterId: 0
   cipher: auto
   network: tcp
@@ -260,24 +264,6 @@ proxies:
   tcp-fast-open: true
   servername: mel.usdtbama.com
   client-fingerprint: ''
-- name: 'ARISTA #13'
-  type: vmess
-  server: n1747624271.lie5d.cyou
-  port: 443
-  uuid: a231ba8b-8871-416c-813b-e2240bc66bb2
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: n1747624271.lie5d.cyou
-  client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: n1747624271.lie5d.cyou
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -295,7 +281,6 @@ proxy-groups:
   - 'ARISTA #10'
   - 'ARISTA #11'
   - 'ARISTA #12'
-  - 'ARISTA #13'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -312,7 +297,6 @@ proxy-groups:
   - 'ARISTA #10'
   - 'ARISTA #11'
   - 'ARISTA #12'
-  - 'ARISTA #13'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
