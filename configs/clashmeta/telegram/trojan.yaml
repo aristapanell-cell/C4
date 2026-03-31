@@ -78,15 +78,17 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: 15.204.234.166
-  port: 443
-  password: ed9c8ec0-ea24-11ef-a520-1239d0255272
+  server: 63.179.68.209
+  port: 22222
+  password: telegram-id-privatevpns
   network: tcp
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 15.204.234.166
+  servername: trojan.burgerip.co.uk
   client-fingerprint: chrome
+  alpn:
+  - http/1.1
 - name: 'Trojan #2'
   type: trojan
   server: 3.78.2.6
@@ -193,44 +195,16 @@ proxies:
   - http/1.1
 - name: 'Trojan #10'
   type: trojan
-  server: 63.179.68.209
-  port: 22222
-  password: telegram-id-privatevpns
+  server: 15.204.234.166
+  port: 443
+  password: ed9c8ec0-ea24-11ef-a520-1239d0255272
   network: tcp
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
+  servername: 15.204.234.166
   client-fingerprint: chrome
-  alpn:
-  - http/1.1
 - name: 'Trojan #11'
-  type: trojan
-  server: excited-squirrel.rooster465.autos
-  port: 443
-  password: WF42809561
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: excited-squirrel.rooster465.autos
-  client-fingerprint: chrome
-- name: 'Trojan #12'
-  type: trojan
-  server: spring-tooth-7fa3.ahmadrj.workers.dev
-  port: 443
-  password: Nova-Proxy
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: spring-tooth-7fa3.ahmadrj.workers.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: spring-tooth-7fa3.ahmadrj.workers.dev
-- name: 'Trojan #13'
   type: trojan
   server: 166.88.197.189
   port: 26650
@@ -241,7 +215,7 @@ proxies:
   tcp-fast-open: true
   servername: sea8.firewallcontract.click
   client-fingerprint: chrome
-- name: 'Trojan #14'
+- name: 'Trojan #12'
   type: trojan
   server: 8443.golden-cards.me
   port: 443
@@ -252,6 +226,21 @@ proxies:
   tcp-fast-open: true
   servername: 8443.golden-cards.me
   client-fingerprint: chrome
+- name: 'Trojan #13'
+  type: trojan
+  server: 104.18.32.47
+  port: 443
+  password: humanity
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.calmlunch.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -270,7 +259,6 @@ proxy-groups:
   - 'Trojan #11'
   - 'Trojan #12'
   - 'Trojan #13'
-  - 'Trojan #14'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -288,7 +276,6 @@ proxy-groups:
   - 'Trojan #11'
   - 'Trojan #12'
   - 'Trojan #13'
-  - 'Trojan #14'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
