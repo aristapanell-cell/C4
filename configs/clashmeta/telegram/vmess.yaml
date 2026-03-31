@@ -78,6 +78,34 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
+  server: am.nftydreams.io
+  port: 2002
+  uuid: e49c6b32-d220-49c9-8bed-981248a06c5b
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: am.nftydreams.io
+  client-fingerprint: ''
+- name: 'ARISTA #2'
+  type: vmess
+  server: 94.183.149.127
+  port: 3911
+  uuid: 4d48dc13-7c9d-45b4-b9ed-7ecbf15066c1
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: yasdl.com
+  client-fingerprint: ''
+- name: 'ARISTA #3'
+  type: vmess
   server: mel.usdtbama.com
   port: 8443
   uuid: 397ba0d4-d9f4-46f4-b8af-063fbd5f35fd
@@ -90,7 +118,7 @@ proxies:
   tcp-fast-open: true
   servername: mel.usdtbama.com
   client-fingerprint: ''
-- name: 'ARISTA #2'
+- name: 'ARISTA #4'
   type: vmess
   server: mel.usdtbama.com
   port: 8443
@@ -104,7 +132,7 @@ proxies:
   tcp-fast-open: true
   servername: mel.usdtbama.com
   client-fingerprint: ''
-- name: 'ARISTA #3'
+- name: 'ARISTA #5'
   type: vmess
   server: mel.usdtbama.com
   port: 8443
@@ -118,7 +146,7 @@ proxies:
   tcp-fast-open: true
   servername: mel.usdtbama.com
   client-fingerprint: ''
-- name: 'ARISTA #4'
+- name: 'ARISTA #6'
   type: vmess
   server: 45.12.132.183
   port: 80
@@ -136,7 +164,7 @@ proxies:
     path: /vmess/
     headers:
       Host: 45.12.132.183
-- name: 'ARISTA #5'
+- name: 'ARISTA #7'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -150,25 +178,7 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
-- name: 'ARISTA #6'
-  type: vmess
-  server: chatgpt.com
-  port: 8443
-  uuid: 35312035-3420-4535-a031-303220353420
-  alterId: 0
-  cipher: none
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: tr-1.stunnel.cc
-  client-fingerprint: ''
-  ws-opts:
-    path: /ws
-    headers:
-      Host: tr-1.stunnel.cc
-- name: 'ARISTA #7'
+- name: 'ARISTA #8'
   type: vmess
   server: mel.usdtbama.com
   port: 8443
@@ -182,7 +192,7 @@ proxies:
   tcp-fast-open: true
   servername: mel.usdtbama.com
   client-fingerprint: ''
-- name: 'ARISTA #8'
+- name: 'ARISTA #9'
   type: vmess
   server: mel.usdtbama.com
   port: 8443
@@ -195,34 +205,6 @@ proxies:
   skip-cert-verify: false
   tcp-fast-open: true
   servername: mel.usdtbama.com
-  client-fingerprint: ''
-- name: 'ARISTA #9'
-  type: vmess
-  server: am.nftydreams.io
-  port: 2002
-  uuid: e49c6b32-d220-49c9-8bed-981248a06c5b
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: am.nftydreams.io
-  client-fingerprint: ''
-- name: 'ARISTA #10'
-  type: vmess
-  server: 94.183.149.127
-  port: 3911
-  uuid: 4d48dc13-7c9d-45b4-b9ed-7ecbf15066c1
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: yasdl.com
   client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
@@ -238,7 +220,6 @@ proxy-groups:
   - 'ARISTA #7'
   - 'ARISTA #8'
   - 'ARISTA #9'
-  - 'ARISTA #10'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -252,7 +233,6 @@ proxy-groups:
   - 'ARISTA #7'
   - 'ARISTA #8'
   - 'ARISTA #9'
-  - 'ARISTA #10'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
