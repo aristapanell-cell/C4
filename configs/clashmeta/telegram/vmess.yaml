@@ -78,20 +78,6 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: mel.usdtbama.com
-  port: 8443
-  uuid: 3def5411-e802-454f-84b1-1cc0244494f7
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mel.usdtbama.com
-  client-fingerprint: ''
-- name: 'ARISTA #2'
-  type: vmess
   server: 94.183.149.127
   port: 3911
   uuid: 4d48dc13-7c9d-45b4-b9ed-7ecbf15066c1
@@ -104,7 +90,7 @@ proxies:
   tcp-fast-open: true
   servername: yasdl.com
   client-fingerprint: ''
-- name: 'ARISTA #3'
+- name: 'ARISTA #2'
   type: vmess
   server: 167.235.28.242
   port: 443
@@ -118,7 +104,7 @@ proxies:
   tcp-fast-open: true
   servername: 167.235.28.242
   client-fingerprint: chrome
-- name: 'ARISTA #4'
+- name: 'ARISTA #3'
   type: vmess
   server: 198.41.208.172
   port: 443
@@ -136,11 +122,11 @@ proxies:
     path: /shirker
     headers:
       Host: sg-gcore-2.sharecentre.online
-- name: 'ARISTA #5'
+- name: 'ARISTA #4'
   type: vmess
-  server: snapp.ir.bmi.ir.mobato-mobile.com
-  port: 80
-  uuid: 820a9e42-e18d-43e4-859f-d1c2f6b8600a
+  server: mel.usdtbama.com
+  port: 8443
+  uuid: 3def5411-e802-454f-84b1-1cc0244494f7
   alterId: 0
   cipher: auto
   network: tcp
@@ -148,27 +134,9 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: excoino.com
+  servername: mel.usdtbama.com
   client-fingerprint: ''
-- name: 'ARISTA #6'
-  type: vmess
-  server: 185.143.233.66
-  port: 80
-  uuid: bdf882c9-b90c-41d1-a825-8a01b1155dfb
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: s1.gill-offroad.ir
-  client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: s1.gill-offroad.ir
-- name: 'ARISTA #7'
+- name: 'ARISTA #5'
   type: vmess
   server: 45.12.132.183
   port: 80
@@ -186,7 +154,7 @@ proxies:
     path: /vmess/
     headers:
       Host: 45.12.132.183
-- name: 'ARISTA #8'
+- name: 'ARISTA #6'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -200,6 +168,24 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
+- name: 'ARISTA #7'
+  type: vmess
+  server: 185.143.233.66
+  port: 80
+  uuid: bdf882c9-b90c-41d1-a825-8a01b1155dfb
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: s1.gill-offroad.ir
+  client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: s1.gill-offroad.ir
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -212,7 +198,6 @@ proxy-groups:
   - 'ARISTA #5'
   - 'ARISTA #6'
   - 'ARISTA #7'
-  - 'ARISTA #8'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -224,7 +209,6 @@ proxy-groups:
   - 'ARISTA #5'
   - 'ARISTA #6'
   - 'ARISTA #7'
-  - 'ARISTA #8'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
