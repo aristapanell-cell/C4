@@ -78,17 +78,22 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: 3.79.124.110
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
+  server: newfood.ifasthost.ir
+  port: 443
+  password: MooFgZQPgn
+  network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
+  servername: newfood.ifasthost.ir
   client-fingerprint: chrome
   alpn:
+  - h2
   - http/1.1
+  ws-opts:
+    path: /food2
+    headers:
+      Host: newfood.ifasthost.ir
 - name: 'Trojan #2'
   type: trojan
   server: 63.179.68.209
@@ -221,27 +226,22 @@ proxies:
       Host: sweden.vmaxpanel.com
 - name: 'Trojan #12'
   type: trojan
-  server: newfood.ifasthost.ir
-  port: 443
-  password: MooFgZQPgn
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: newfood.ifasthost.ir
-  client-fingerprint: chrome
-  alpn:
-  - h2
-  - http/1.1
-  ws-opts:
-    path: /food2
-    headers:
-      Host: newfood.ifasthost.ir
-- name: 'Trojan #13'
-  type: trojan
   server: 15.237.136.31
   port: 22223
   password: telegram-id-directvpn
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #13'
+  type: trojan
+  server: 3.79.124.110
+  port: 22222
+  password: telegram-id-privatevpns
   network: tcp
   udp: true
   skip-cert-verify: false
