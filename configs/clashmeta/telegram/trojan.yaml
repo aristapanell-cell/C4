@@ -169,19 +169,6 @@ proxies:
   - http/1.1
 - name: 'Trojan #8'
   type: trojan
-  server: 35.181.231.212
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #9'
-  type: trojan
   server: n1.chateditimage.com
   port: 443
   password: de7d6444-a7a8-4b3a-bf26-bc6939bb0279
@@ -191,7 +178,7 @@ proxies:
   tcp-fast-open: true
   servername: n1.chateditimage.com
   client-fingerprint: chrome
-- name: 'Trojan #10'
+- name: 'Trojan #9'
   type: trojan
   server: sweden.vmaxpanel.com
   port: 8443
@@ -206,7 +193,7 @@ proxies:
     path: /amd
     headers:
       Host: sweden.vmaxpanel.com
-- name: 'Trojan #11'
+- name: 'Trojan #10'
   type: trojan
   server: 104.18.32.47
   port: 443
@@ -221,7 +208,7 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: 'Trojan #12'
+- name: 'Trojan #11'
   type: trojan
   server: n2.chateditimage.com
   port: 443
@@ -232,11 +219,11 @@ proxies:
   tcp-fast-open: true
   servername: n2.chateditimage.com
   client-fingerprint: chrome
-- name: 'Trojan #13'
+- name: 'Trojan #12'
   type: trojan
-  server: 13.39.95.237
-  port: 22223
-  password: telegram-id-directvpn
+  server: 35.181.231.212
+  port: 22222
+  password: telegram-id-privatevpns
   network: tcp
   udp: true
   skip-cert-verify: false
@@ -245,7 +232,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #14'
+- name: 'Trojan #13'
   type: trojan
   server: 13.39.95.237
   port: 22222
@@ -276,7 +263,6 @@ proxy-groups:
   - 'Trojan #11'
   - 'Trojan #12'
   - 'Trojan #13'
-  - 'Trojan #14'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -294,7 +280,6 @@ proxy-groups:
   - 'Trojan #11'
   - 'Trojan #12'
   - 'Trojan #13'
-  - 'Trojan #14'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
