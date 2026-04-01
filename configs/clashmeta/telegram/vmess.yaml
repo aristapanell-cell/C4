@@ -78,9 +78,9 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: www.iran-ar.ir
+  server: 61.245.11.60
   port: 80
-  uuid: ad569965-517e-4440-a208-4e4b258c2338
+  uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197
   alterId: 0
   cipher: auto
   network: ws
@@ -88,12 +88,12 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: www.iran-ar.ir
+  servername: 61.245.11.60
   client-fingerprint: ''
   ws-opts:
-    path: /
+    path: /vmess/
     headers:
-      Host: www.iran-ar.ir
+      Host: 61.245.11.60
 - name: 'ARISTA #2'
   type: vmess
   server: 61.245.11.60
@@ -114,24 +114,6 @@ proxies:
       Host: 61.245.11.60
 - name: 'ARISTA #3'
   type: vmess
-  server: 61.245.11.60
-  port: 80
-  uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 61.245.11.60
-  client-fingerprint: ''
-  ws-opts:
-    path: /vmess/
-    headers:
-      Host: 61.245.11.60
-- name: 'ARISTA #4'
-  type: vmess
   server: mel.usdtbama.com
   port: 8443
   uuid: b4a513cd-bedc-4b72-9af0-aee1827e1de0
@@ -144,6 +126,24 @@ proxies:
   tcp-fast-open: true
   servername: mel.usdtbama.com
   client-fingerprint: ''
+- name: 'ARISTA #4'
+  type: vmess
+  server: 185.143.233.66
+  port: 80
+  uuid: bdf882c9-b90c-41d1-a825-8a01b1155dfb
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: s1.gill-offroad.ir
+  client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: s1.gill-offroad.ir
 - name: 'ARISTA #5'
   type: vmess
   server: 45.12.132.183
@@ -178,18 +178,22 @@ proxies:
   client-fingerprint: ''
 - name: 'ARISTA #7'
   type: vmess
-  server: am.nftydreams.io
-  port: 2002
-  uuid: e49c6b32-d220-49c9-8bed-981248a06c5b
+  server: www.iran-ar.ir
+  port: 80
+  uuid: ad569965-517e-4440-a208-4e4b258c2338
   alterId: 0
   cipher: auto
-  network: tcp
+  network: ws
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: am.nftydreams.io
+  servername: www.iran-ar.ir
   client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: www.iran-ar.ir
 - name: 'ARISTA #8'
   type: vmess
   server: 94.183.149.127
