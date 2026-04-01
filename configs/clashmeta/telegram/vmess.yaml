@@ -78,27 +78,27 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: 198.41.208.172
-  port: 443
-  uuid: 20e92881-5fb4-4b05-bc77-57929476dc69
+  server: 45.12.132.183
+  port: 80
+  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
   alterId: 0
   cipher: auto
   network: ws
-  tls: true
+  tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: sg-gcore-2.sharecentre.online
-  client-fingerprint: chrome
+  servername: 45.12.132.183
+  client-fingerprint: ''
   ws-opts:
-    path: /shirker
+    path: /vmess/
     headers:
-      Host: sg-gcore-2.sharecentre.online
+      Host: 45.12.132.183
 - name: 'ARISTA #2'
   type: vmess
-  server: 167.235.28.242
+  server: 165.140.216.141
   port: 443
-  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
   alterId: 0
   cipher: auto
   network: tcp
@@ -106,8 +106,8 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 167.235.28.242
-  client-fingerprint: chrome
+  servername: 165.140.216.141
+  client-fingerprint: ''
 - name: 'ARISTA #3'
   type: vmess
   server: 185.143.233.66
@@ -142,6 +142,38 @@ proxies:
   client-fingerprint: ''
 - name: 'ARISTA #5'
   type: vmess
+  server: 167.235.28.242
+  port: 443
+  uuid: 6b7cbc41-fb80-41a8-8eb6-b5bdb0e86147
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 167.235.28.242
+  client-fingerprint: chrome
+- name: 'ARISTA #6'
+  type: vmess
+  server: 198.41.208.172
+  port: 443
+  uuid: 20e92881-5fb4-4b05-bc77-57929476dc69
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: sg-gcore-2.sharecentre.online
+  client-fingerprint: chrome
+  ws-opts:
+    path: /shirker
+    headers:
+      Host: sg-gcore-2.sharecentre.online
+- name: 'ARISTA #7'
+  type: vmess
   server: mel.usdtbama.com
   port: 8443
   uuid: 3def5411-e802-454f-84b1-1cc0244494f7
@@ -154,7 +186,7 @@ proxies:
   tcp-fast-open: true
   servername: mel.usdtbama.com
   client-fingerprint: ''
-- name: 'ARISTA #6'
+- name: 'ARISTA #8'
   type: vmess
   server: mel.usdtbama.com
   port: 8443
@@ -167,38 +199,6 @@ proxies:
   skip-cert-verify: false
   tcp-fast-open: true
   servername: mel.usdtbama.com
-  client-fingerprint: ''
-- name: 'ARISTA #7'
-  type: vmess
-  server: 45.12.132.183
-  port: 80
-  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 45.12.132.183
-  client-fingerprint: ''
-  ws-opts:
-    path: /vmess/
-    headers:
-      Host: 45.12.132.183
-- name: 'ARISTA #8'
-  type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 165.140.216.141
   client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
