@@ -128,6 +128,20 @@ proxies:
       Host: 185.181.183.124
 - name: 'ARISTA #4'
   type: vmess
+  server: mel.usdtbama.com
+  port: 8443
+  uuid: 3def5411-e802-454f-84b1-1cc0244494f7
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mel.usdtbama.com
+  client-fingerprint: ''
+- name: 'ARISTA #5'
+  type: vmess
   server: 45.12.132.183
   port: 80
   uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
@@ -144,7 +158,7 @@ proxies:
     path: /vmess/
     headers:
       Host: 45.12.132.183
-- name: 'ARISTA #5'
+- name: 'ARISTA #6'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -157,20 +171,6 @@ proxies:
   skip-cert-verify: false
   tcp-fast-open: true
   servername: 165.140.216.141
-  client-fingerprint: ''
-- name: 'ARISTA #6'
-  type: vmess
-  server: mel.usdtbama.com
-  port: 8443
-  uuid: 3def5411-e802-454f-84b1-1cc0244494f7
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mel.usdtbama.com
   client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
