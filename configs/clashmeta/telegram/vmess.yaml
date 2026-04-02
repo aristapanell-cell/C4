@@ -138,6 +138,38 @@ proxies:
   client-fingerprint: ''
 - name: 'ARISTA #5'
   type: vmess
+  server: snapp.ir.bmi.ir.mobato-mobile.com
+  port: 80
+  uuid: 820a9e42-e18d-43e4-859f-d1c2f6b8600a
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: excoino.com
+  client-fingerprint: ''
+- name: 'ARISTA #6'
+  type: vmess
+  server: 185.181.183.124
+  port: 28094
+  uuid: a6440729-1046-4a9c-bc19-7c0ede4bf4d4
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 185.181.183.124
+  client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: 185.181.183.124
+- name: 'ARISTA #7'
+  type: vmess
   server: 45.12.132.183
   port: 80
   uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
@@ -154,7 +186,7 @@ proxies:
     path: /vmess/
     headers:
       Host: 45.12.132.183
-- name: 'ARISTA #6'
+- name: 'ARISTA #8'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -168,24 +200,20 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
-- name: 'ARISTA #7'
+- name: 'ARISTA #9'
   type: vmess
-  server: 185.143.233.66
-  port: 80
-  uuid: bdf882c9-b90c-41d1-a825-8a01b1155dfb
+  server: 217.218.52.1
+  port: 10410
+  uuid: f93f134f-7adb-48c3-bcd1-2532edb0b478
   alterId: 0
   cipher: auto
-  network: ws
+  network: tcp
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: s1.gill-offroad.ir
+  servername: 217.218.52.1
   client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: s1.gill-offroad.ir
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -198,6 +226,8 @@ proxy-groups:
   - 'ARISTA #5'
   - 'ARISTA #6'
   - 'ARISTA #7'
+  - 'ARISTA #8'
+  - 'ARISTA #9'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -209,6 +239,8 @@ proxy-groups:
   - 'ARISTA #5'
   - 'ARISTA #6'
   - 'ARISTA #7'
+  - 'ARISTA #8'
+  - 'ARISTA #9'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
