@@ -78,18 +78,22 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: mel.usdtbama.com
-  port: 8443
-  uuid: 3def5411-e802-454f-84b1-1cc0244494f7
+  server: 185.239.2.171
+  port: 2093
+  uuid: 448f64c8-33eb-4089-b112-cc58e80ff833
   alterId: 0
   cipher: auto
-  network: tcp
+  network: ws
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: mel.usdtbama.com
+  servername: nice.ceerror.shop
   client-fingerprint: ''
+  ws-opts:
+    path: /index.html
+    headers:
+      Host: nice.ceerror.shop
 - name: 'ARISTA #2'
   type: vmess
   server: 94.183.149.127
@@ -138,6 +142,20 @@ proxies:
       Host: sg-gcore-2.sharecentre.online
 - name: 'ARISTA #5'
   type: vmess
+  server: mel.usdtbama.com
+  port: 8443
+  uuid: 3def5411-e802-454f-84b1-1cc0244494f7
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mel.usdtbama.com
+  client-fingerprint: ''
+- name: 'ARISTA #6'
+  type: vmess
   server: 185.181.183.124
   port: 28094
   uuid: a6440729-1046-4a9c-bc19-7c0ede4bf4d4
@@ -154,7 +172,7 @@ proxies:
     path: /
     headers:
       Host: 185.181.183.124
-- name: 'ARISTA #6'
+- name: 'ARISTA #7'
   type: vmess
   server: 217.218.52.1
   port: 10410
@@ -167,20 +185,6 @@ proxies:
   skip-cert-verify: false
   tcp-fast-open: true
   servername: 217.218.52.1
-  client-fingerprint: ''
-- name: 'ARISTA #7'
-  type: vmess
-  server: mel.usdtbama.com
-  port: 8443
-  uuid: 171d57b2-3538-497e-9dfe-90a526012b1d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mel.usdtbama.com
   client-fingerprint: ''
 - name: 'ARISTA #8'
   type: vmess
