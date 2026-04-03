@@ -92,9 +92,9 @@ proxies:
   client-fingerprint: ''
 - name: 'ARISTA #2'
   type: vmess
-  server: 94.183.149.127
-  port: 3911
-  uuid: 4d48dc13-7c9d-45b4-b9ed-7ecbf15066c1
+  server: 82.198.246.250
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
   alterId: 0
   cipher: auto
   network: tcp
@@ -102,9 +102,30 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: yasdl.com
-  client-fingerprint: ''
+  servername: 82.198.246.250
+  client-fingerprint: chrome
 - name: 'ARISTA #3'
+  type: vmess
+  server: snapp.ir
+  port: 2053
+  uuid: e378ad65-f224-4c92-b3a8-074dd13c817a
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: cdn.havenet.ir
+  client-fingerprint: chrome
+  alpn:
+  - h2
+  - http/1.1
+  ws-opts:
+    path: /
+    headers:
+      Host: cdn.havenet.ir
+- name: 'ARISTA #4'
   type: vmess
   server: n1.b760plus.shop
   port: 58455
@@ -118,7 +139,7 @@ proxies:
   tcp-fast-open: true
   servername: n1.b760plus.shop
   client-fingerprint: ''
-- name: 'ARISTA #4'
+- name: 'ARISTA #5'
   type: vmess
   server: 45.12.132.183
   port: 80
@@ -136,7 +157,7 @@ proxies:
     path: /vmess/
     headers:
       Host: 45.12.132.183
-- name: 'ARISTA #5'
+- name: 'ARISTA #6'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -150,7 +171,21 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
-- name: 'ARISTA #6'
+- name: 'ARISTA #7'
+  type: vmess
+  server: mel.usdtbama.com
+  port: 8443
+  uuid: 171d57b2-3538-497e-9dfe-90a526012b1d
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mel.usdtbama.com
+  client-fingerprint: ''
+- name: 'ARISTA #8'
   type: vmess
   server: mel.usdtbama.com
   port: 8443
@@ -164,6 +199,20 @@ proxies:
   tcp-fast-open: true
   servername: mel.usdtbama.com
   client-fingerprint: ''
+- name: 'ARISTA #9'
+  type: vmess
+  server: 94.183.149.127
+  port: 3911
+  uuid: 4d48dc13-7c9d-45b4-b9ed-7ecbf15066c1
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: yasdl.com
+  client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -175,6 +224,9 @@ proxy-groups:
   - 'ARISTA #4'
   - 'ARISTA #5'
   - 'ARISTA #6'
+  - 'ARISTA #7'
+  - 'ARISTA #8'
+  - 'ARISTA #9'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -185,6 +237,9 @@ proxy-groups:
   - 'ARISTA #4'
   - 'ARISTA #5'
   - 'ARISTA #6'
+  - 'ARISTA #7'
+  - 'ARISTA #8'
+  - 'ARISTA #9'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
