@@ -78,6 +78,34 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
+  server: n1.b760plus.shop
+  port: 58455
+  uuid: b553125c-888a-4c57-99e9-0b8ea9a28444
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: n1.b760plus.shop
+  client-fingerprint: ''
+- name: 'ARISTA #2'
+  type: vmess
+  server: mel.usdtbama.com
+  port: 8443
+  uuid: 171d57b2-3538-497e-9dfe-90a526012b1d
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mel.usdtbama.com
+  client-fingerprint: ''
+- name: 'ARISTA #3'
+  type: vmess
   server: mel.usdtbama.com
   port: 8443
   uuid: b4a513cd-bedc-4b72-9af0-aee1827e1de0
@@ -90,46 +118,11 @@ proxies:
   tcp-fast-open: true
   servername: mel.usdtbama.com
   client-fingerprint: ''
-- name: 'ARISTA #2'
-  type: vmess
-  server: 82.198.246.250
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 82.198.246.250
-  client-fingerprint: chrome
-- name: 'ARISTA #3'
-  type: vmess
-  server: snapp.ir
-  port: 2053
-  uuid: e378ad65-f224-4c92-b3a8-074dd13c817a
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: cdn.havenet.ir
-  client-fingerprint: chrome
-  alpn:
-  - h2
-  - http/1.1
-  ws-opts:
-    path: /
-    headers:
-      Host: cdn.havenet.ir
 - name: 'ARISTA #4'
   type: vmess
-  server: n1.b760plus.shop
-  port: 58455
-  uuid: b553125c-888a-4c57-99e9-0b8ea9a28444
+  server: 94.183.149.127
+  port: 3911
+  uuid: 4d48dc13-7c9d-45b4-b9ed-7ecbf15066c1
   alterId: 0
   cipher: auto
   network: tcp
@@ -137,7 +130,7 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: n1.b760plus.shop
+  servername: yasdl.com
   client-fingerprint: ''
 - name: 'ARISTA #5'
   type: vmess
@@ -175,7 +168,7 @@ proxies:
   type: vmess
   server: mel.usdtbama.com
   port: 8443
-  uuid: 171d57b2-3538-497e-9dfe-90a526012b1d
+  uuid: b4a513cd-bedc-4b72-9af0-aee1827e1de0
   alterId: 0
   cipher: auto
   network: tcp
@@ -187,9 +180,9 @@ proxies:
   client-fingerprint: ''
 - name: 'ARISTA #8'
   type: vmess
-  server: mel.usdtbama.com
-  port: 8443
-  uuid: b4a513cd-bedc-4b72-9af0-aee1827e1de0
+  server: 82.198.246.250
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
   alterId: 0
   cipher: auto
   network: tcp
@@ -197,22 +190,29 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: mel.usdtbama.com
-  client-fingerprint: ''
+  servername: 82.198.246.250
+  client-fingerprint: chrome
 - name: 'ARISTA #9'
   type: vmess
-  server: 94.183.149.127
-  port: 3911
-  uuid: 4d48dc13-7c9d-45b4-b9ed-7ecbf15066c1
+  server: snapp.ir
+  port: 2053
+  uuid: e378ad65-f224-4c92-b3a8-074dd13c817a
   alterId: 0
   cipher: auto
-  network: tcp
-  tls: false
+  network: ws
+  tls: true
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: yasdl.com
-  client-fingerprint: ''
+  servername: cdn.havenet.ir
+  client-fingerprint: chrome
+  alpn:
+  - h2
+  - http/1.1
+  ws-opts:
+    path: /
+    headers:
+      Host: cdn.havenet.ir
 proxy-groups:
 - name: Proxy Select
   type: select
