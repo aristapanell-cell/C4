@@ -76,119 +76,28 @@ sniffer:
       - 2087
       - 2096
 proxies:
-- name: 'ARISTA #1'
-  type: vmess
-  server: 94.183.149.127
-  port: 3911
-  uuid: 4d48dc13-7c9d-45b4-b9ed-7ecbf15066c1
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
+- name: 'Hysteria2 #1'
+  type: hysteria2
+  server: 2a14:3f87:f001:9::a
+  port: 45000
+  password: Telegram--%3E%40Ln2Ray
+  sni: gavazn.55994421.xyz
   skip-cert-verify: false
-  tcp-fast-open: true
-  servername: yasdl.com
-  client-fingerprint: ''
-- name: 'ARISTA #2'
-  type: vmess
-  server: 185.181.183.124
-  port: 28094
-  uuid: a6440729-1046-4a9c-bc19-7c0ede4bf4d4
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 185.181.183.124
-  client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: 185.181.183.124
-- name: 'ARISTA #3'
-  type: vmess
-  server: mel.usdtbama.com
-  port: 8443
-  uuid: b4a513cd-bedc-4b72-9af0-aee1827e1de0
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mel.usdtbama.com
-  client-fingerprint: ''
-- name: 'ARISTA #4'
-  type: vmess
-  server: n1.b760plus.shop
-  port: 58455
-  uuid: b553125c-888a-4c57-99e9-0b8ea9a28444
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: n1.b760plus.shop
-  client-fingerprint: ''
-- name: 'ARISTA #5'
-  type: vmess
-  server: 45.12.132.183
-  port: 80
-  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 45.12.132.183
-  client-fingerprint: ''
-  ws-opts:
-    path: /vmess/
-    headers:
-      Host: 45.12.132.183
-- name: 'ARISTA #6'
-  type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 165.140.216.141
-  client-fingerprint: ''
+  fast-open: true
+  client-fingerprint: chrome
+  obfs: salamander
+  obfs-password: Telegram-->@Ln2Ray
 proxy-groups:
 - name: Proxy Select
   type: select
   proxies:
   - Auto Select
-  - 'ARISTA #1'
-  - 'ARISTA #2'
-  - 'ARISTA #3'
-  - 'ARISTA #4'
-  - 'ARISTA #5'
-  - 'ARISTA #6'
+  - 'Hysteria2 #1'
   - DIRECT
 - name: Auto Select
   type: url-test
   proxies:
-  - 'ARISTA #1'
-  - 'ARISTA #2'
-  - 'ARISTA #3'
-  - 'ARISTA #4'
-  - 'ARISTA #5'
-  - 'ARISTA #6'
+  - 'Hysteria2 #1'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
