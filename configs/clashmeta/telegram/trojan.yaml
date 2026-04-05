@@ -180,34 +180,6 @@ proxies:
   - http/1.1
 - name: 'Trojan #9'
   type: trojan
-  server: 38.180.219.80
-  port: 2083
-  password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: xo.e0f.cx
-  client-fingerprint: chrome
-  ws-opts:
-    path: /trojan-ws
-    headers:
-      Host: xo.e0f.cx
-- name: 'Trojan #10'
-  type: trojan
-  server: 3.77.109.217
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #11'
-  type: trojan
   server: irancell.buzzmuzzpanel.online
   port: 443
   password: A4u%5Ep%28_UR%2AF6
@@ -223,7 +195,7 @@ proxies:
     path: /eyJqdW5rIjoidDJ0UDljR2ZIaVBQakg2byIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
     headers:
       Host: 027.eLECTROcelLCO-cf-027.WorKerS.Dev
-- name: 'Trojan #12'
+- name: 'Trojan #10'
   type: trojan
   server: irancell.buzzmuzzpanel.online
   port: 443
@@ -240,7 +212,7 @@ proxies:
     path: /eyJqdW5rIjoiU2oxczB0b0tSIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==
     headers:
       Host: 028.eLECtRocEllco-Cf-028.worKErS.dev
-- name: 'Trojan #13'
+- name: 'Trojan #11'
   type: trojan
   server: irancell.buzzmuzzpanel.online
   port: 443
@@ -257,6 +229,21 @@ proxies:
     path: /eyJqdW5rIjoiU2oxczB0b0tSIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ
     headers:
       Host: 028.eLECtRocEllco-Cf-028.worKErS.dev
+- name: 'Trojan #12'
+  type: trojan
+  server: 87.251.69.71
+  port: 2083
+  password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: xo.e0f.cx
+  client-fingerprint: chrome
+  ws-opts:
+    path: /trojan-ws
+    headers:
+      Host: xo.e0f.cx
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -274,7 +261,6 @@ proxy-groups:
   - 'Trojan #10'
   - 'Trojan #11'
   - 'Trojan #12'
-  - 'Trojan #13'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -291,7 +277,6 @@ proxy-groups:
   - 'Trojan #10'
   - 'Trojan #11'
   - 'Trojan #12'
-  - 'Trojan #13'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150

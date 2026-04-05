@@ -78,6 +78,24 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
+  server: xcf037.facai2024.com
+  port: 443
+  uuid: d9863037-0463-4615-e972-36ba9662d1e9
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: xcf037.facai2024.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /d9863037
+    headers:
+      Host: xcf037.facai2024.com
+- name: 'ARISTA #2'
+  type: vmess
   server: 45.92.70.236
   port: 22324
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
@@ -90,7 +108,7 @@ proxies:
   tcp-fast-open: true
   servername: 45.92.70.236
   client-fingerprint: chrome
-- name: 'ARISTA #2'
+- name: 'ARISTA #3'
   type: vmess
   server: www.iran-ar.ir
   port: 80
@@ -108,7 +126,7 @@ proxies:
     path: /
     headers:
       Host: www.iran-ar.ir
-- name: 'ARISTA #3'
+- name: 'ARISTA #4'
   type: vmess
   server: 167.235.28.242
   port: 443
@@ -122,7 +140,7 @@ proxies:
   tcp-fast-open: true
   servername: 167.235.28.242
   client-fingerprint: chrome
-- name: 'ARISTA #4'
+- name: 'ARISTA #5'
   type: vmess
   server: 198.41.208.172
   port: 443
@@ -140,7 +158,7 @@ proxies:
     path: /shirker
     headers:
       Host: sg-gcore-2.sharecentre.online
-- name: 'ARISTA #5'
+- name: 'ARISTA #6'
   type: vmess
   server: 45.12.132.183
   port: 80
@@ -158,7 +176,7 @@ proxies:
     path: /vmess/
     headers:
       Host: 45.12.132.183
-- name: 'ARISTA #6'
+- name: 'ARISTA #7'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -183,6 +201,7 @@ proxy-groups:
   - 'ARISTA #4'
   - 'ARISTA #5'
   - 'ARISTA #6'
+  - 'ARISTA #7'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -193,6 +212,7 @@ proxy-groups:
   - 'ARISTA #4'
   - 'ARISTA #5'
   - 'ARISTA #6'
+  - 'ARISTA #7'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
