@@ -78,22 +78,18 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: 185.181.183.124
-  port: 28094
-  uuid: a6440729-1046-4a9c-bc19-7c0ede4bf4d4
+  server: v30.hdacd.com
+  port: 30830
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   alterId: 0
   cipher: auto
-  network: ws
+  network: tcp
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 185.181.183.124
-  client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: 185.181.183.124
+  servername: v30.hdacd.com
+  client-fingerprint: chrome
 - name: 'ARISTA #2'
   type: vmess
   server: 45.12.132.183
@@ -128,6 +124,24 @@ proxies:
   client-fingerprint: ''
 - name: 'ARISTA #4'
   type: vmess
+  server: 185.181.183.124
+  port: 28094
+  uuid: a6440729-1046-4a9c-bc19-7c0ede4bf4d4
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 185.181.183.124
+  client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: 185.181.183.124
+- name: 'ARISTA #5'
+  type: vmess
   server: 45.92.70.236
   port: 22324
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
@@ -140,7 +154,7 @@ proxies:
   tcp-fast-open: true
   servername: 45.92.70.236
   client-fingerprint: chrome
-- name: 'ARISTA #5'
+- name: 'ARISTA #6'
   type: vmess
   server: www.iran-ar.ir
   port: 80
@@ -158,7 +172,7 @@ proxies:
     path: /
     headers:
       Host: www.iran-ar.ir
-- name: 'ARISTA #6'
+- name: 'ARISTA #7'
   type: vmess
   server: 167.235.28.242
   port: 443
@@ -172,7 +186,7 @@ proxies:
   tcp-fast-open: true
   servername: 167.235.28.242
   client-fingerprint: chrome
-- name: 'ARISTA #7'
+- name: 'ARISTA #8'
   type: vmess
   server: 198.41.208.172
   port: 443
@@ -202,6 +216,7 @@ proxy-groups:
   - 'ARISTA #5'
   - 'ARISTA #6'
   - 'ARISTA #7'
+  - 'ARISTA #8'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -213,6 +228,7 @@ proxy-groups:
   - 'ARISTA #5'
   - 'ARISTA #6'
   - 'ARISTA #7'
+  - 'ARISTA #8'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
