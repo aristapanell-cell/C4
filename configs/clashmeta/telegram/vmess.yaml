@@ -78,66 +78,6 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: 66.163.117.58
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 66.163.117.58
-  client-fingerprint: chrome
-- name: 'ARISTA #2'
-  type: vmess
-  server: snapp.ir.bmi.ir.mobato-mobile.com
-  port: 80
-  uuid: 820a9e42-e18d-43e4-859f-d1c2f6b8600a
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: excoino.com
-  client-fingerprint: ''
-- name: 'ARISTA #3'
-  type: vmess
-  server: dn.brwakhanbarin.ir
-  port: 8080
-  uuid: 8cb26dce-0b58-432c-99b2-06371a1803bc
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: dn.brwakhanbarin.ir
-  client-fingerprint: ''
-- name: 'ARISTA #4'
-  type: vmess
-  server: 46.17.41.31
-  port: 443
-  uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
-  alterId: 16
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: soft98.ir
-  client-fingerprint: chrome
-  ws-opts:
-    path: /opentunnel?user=opentunnel.net-rusye98
-    headers:
-      Host: soft98.ir
-- name: 'ARISTA #5'
-  type: vmess
   server: 45.92.70.236
   port: 22324
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
@@ -150,7 +90,7 @@ proxies:
   tcp-fast-open: true
   servername: 45.92.70.236
   client-fingerprint: chrome
-- name: 'ARISTA #6'
+- name: 'ARISTA #2'
   type: vmess
   server: www.iran-ar.ir
   port: 80
@@ -168,7 +108,7 @@ proxies:
     path: /
     headers:
       Host: www.iran-ar.ir
-- name: 'ARISTA #7'
+- name: 'ARISTA #3'
   type: vmess
   server: 167.235.28.242
   port: 443
@@ -182,7 +122,7 @@ proxies:
   tcp-fast-open: true
   servername: 167.235.28.242
   client-fingerprint: chrome
-- name: 'ARISTA #8'
+- name: 'ARISTA #4'
   type: vmess
   server: 198.41.208.172
   port: 443
@@ -200,7 +140,7 @@ proxies:
     path: /shirker
     headers:
       Host: sg-gcore-2.sharecentre.online
-- name: 'ARISTA #9'
+- name: 'ARISTA #5'
   type: vmess
   server: 45.12.132.183
   port: 80
@@ -218,7 +158,7 @@ proxies:
     path: /vmess/
     headers:
       Host: 45.12.132.183
-- name: 'ARISTA #10'
+- name: 'ARISTA #6'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -243,10 +183,6 @@ proxy-groups:
   - 'ARISTA #4'
   - 'ARISTA #5'
   - 'ARISTA #6'
-  - 'ARISTA #7'
-  - 'ARISTA #8'
-  - 'ARISTA #9'
-  - 'ARISTA #10'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -257,10 +193,6 @@ proxy-groups:
   - 'ARISTA #4'
   - 'ARISTA #5'
   - 'ARISTA #6'
-  - 'ARISTA #7'
-  - 'ARISTA #8'
-  - 'ARISTA #9'
-  - 'ARISTA #10'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
