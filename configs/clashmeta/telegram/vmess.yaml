@@ -78,70 +78,6 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: v30.hdacd.com
-  port: 30830
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: v30.hdacd.com
-  client-fingerprint: chrome
-- name: 'ARISTA #2'
-  type: vmess
-  server: 45.12.132.183
-  port: 80
-  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 45.12.132.183
-  client-fingerprint: ''
-  ws-opts:
-    path: /vmess/
-    headers:
-      Host: 45.12.132.183
-- name: 'ARISTA #3'
-  type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 165.140.216.141
-  client-fingerprint: ''
-- name: 'ARISTA #4'
-  type: vmess
-  server: 185.181.183.124
-  port: 28094
-  uuid: a6440729-1046-4a9c-bc19-7c0ede4bf4d4
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 185.181.183.124
-  client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: 185.181.183.124
-- name: 'ARISTA #5'
-  type: vmess
   server: 45.92.70.236
   port: 22324
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
@@ -154,7 +90,7 @@ proxies:
   tcp-fast-open: true
   servername: 45.92.70.236
   client-fingerprint: chrome
-- name: 'ARISTA #6'
+- name: 'ARISTA #2'
   type: vmess
   server: www.iran-ar.ir
   port: 80
@@ -172,7 +108,7 @@ proxies:
     path: /
     headers:
       Host: www.iran-ar.ir
-- name: 'ARISTA #7'
+- name: 'ARISTA #3'
   type: vmess
   server: 167.235.28.242
   port: 443
@@ -186,7 +122,7 @@ proxies:
   tcp-fast-open: true
   servername: 167.235.28.242
   client-fingerprint: chrome
-- name: 'ARISTA #8'
+- name: 'ARISTA #4'
   type: vmess
   server: 198.41.208.172
   port: 443
@@ -204,6 +140,55 @@ proxies:
     path: /shirker
     headers:
       Host: sg-gcore-2.sharecentre.online
+- name: 'ARISTA #5'
+  type: vmess
+  server: 45.12.132.183
+  port: 80
+  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 45.12.132.183
+  client-fingerprint: ''
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: 45.12.132.183
+- name: 'ARISTA #6'
+  type: vmess
+  server: 165.140.216.141
+  port: 443
+  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 165.140.216.141
+  client-fingerprint: ''
+- name: 'ARISTA #7'
+  type: vmess
+  server: node-uk.connectsuite.org
+  port: 2053
+  uuid: c4ea2391-095d-407a-9dab-85fc7104b681
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: node-uk.connectsuite.org
+  client-fingerprint: chrome
+  alpn:
+  - h2
+  - http/1.1
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -216,7 +201,6 @@ proxy-groups:
   - 'ARISTA #5'
   - 'ARISTA #6'
   - 'ARISTA #7'
-  - 'ARISTA #8'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -228,7 +212,6 @@ proxy-groups:
   - 'ARISTA #5'
   - 'ARISTA #6'
   - 'ARISTA #7'
-  - 'ARISTA #8'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
