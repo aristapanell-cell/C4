@@ -78,23 +78,9 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: 94.183.149.127
-  port: 3911
-  uuid: 4d48dc13-7c9d-45b4-b9ed-7ecbf15066c1
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: yasdl.com
-  client-fingerprint: ''
-- name: 'ARISTA #2'
-  type: vmess
-  server: 185.181.183.124
-  port: 28094
-  uuid: a6440729-1046-4a9c-bc19-7c0ede4bf4d4
+  server: 127.0.0.1
+  port: 8080
+  uuid: 9f92b8e3-3ae8-4a19-8c65-3135cb2018b9
   alterId: 0
   cipher: auto
   network: ws
@@ -102,13 +88,13 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 185.181.183.124
+  servername: soft98.ir
   client-fingerprint: ''
   ws-opts:
-    path: /
+    path: /snapp.ir
     headers:
-      Host: 185.181.183.124
-- name: 'ARISTA #3'
+      Host: soft98.ir
+- name: 'ARISTA #2'
   type: vmess
   server: 45.12.132.183
   port: 80
@@ -126,7 +112,7 @@ proxies:
     path: /vmess/
     headers:
       Host: 45.12.132.183
-- name: 'ARISTA #4'
+- name: 'ARISTA #3'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -140,6 +126,38 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
+- name: 'ARISTA #4'
+  type: vmess
+  server: 94.183.149.127
+  port: 3911
+  uuid: 4d48dc13-7c9d-45b4-b9ed-7ecbf15066c1
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: yasdl.com
+  client-fingerprint: ''
+- name: 'ARISTA #5'
+  type: vmess
+  server: 185.181.183.124
+  port: 28094
+  uuid: a6440729-1046-4a9c-bc19-7c0ede4bf4d4
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 185.181.183.124
+  client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: 185.181.183.124
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -149,6 +167,7 @@ proxy-groups:
   - 'ARISTA #2'
   - 'ARISTA #3'
   - 'ARISTA #4'
+  - 'ARISTA #5'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -157,6 +176,7 @@ proxy-groups:
   - 'ARISTA #2'
   - 'ARISTA #3'
   - 'ARISTA #4'
+  - 'ARISTA #5'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
