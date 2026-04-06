@@ -78,56 +78,6 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: 127.0.0.1
-  port: 8080
-  uuid: 9f92b8e3-3ae8-4a19-8c65-3135cb2018b9
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: soft98.ir
-  client-fingerprint: ''
-  ws-opts:
-    path: /snapp.ir
-    headers:
-      Host: soft98.ir
-- name: 'ARISTA #2'
-  type: vmess
-  server: 45.12.132.183
-  port: 80
-  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 45.12.132.183
-  client-fingerprint: ''
-  ws-opts:
-    path: /vmess/
-    headers:
-      Host: 45.12.132.183
-- name: 'ARISTA #3'
-  type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 165.140.216.141
-  client-fingerprint: ''
-- name: 'ARISTA #4'
-  type: vmess
   server: 94.183.149.127
   port: 3911
   uuid: 4d48dc13-7c9d-45b4-b9ed-7ecbf15066c1
@@ -140,7 +90,7 @@ proxies:
   tcp-fast-open: true
   servername: yasdl.com
   client-fingerprint: ''
-- name: 'ARISTA #5'
+- name: 'ARISTA #2'
   type: vmess
   server: 185.181.183.124
   port: 28094
@@ -158,7 +108,7 @@ proxies:
     path: /
     headers:
       Host: 185.181.183.124
-- name: 'ARISTA #6'
+- name: 'ARISTA #3'
   type: vmess
   server: star.reata.ir
   port: 22573
@@ -172,6 +122,74 @@ proxies:
   tcp-fast-open: true
   servername: star.reata.ir
   client-fingerprint: ''
+- name: 'ARISTA #4'
+  type: vmess
+  server: 45.12.132.183
+  port: 80
+  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 45.12.132.183
+  client-fingerprint: ''
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: 45.12.132.183
+- name: 'ARISTA #5'
+  type: vmess
+  server: 165.140.216.141
+  port: 443
+  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 165.140.216.141
+  client-fingerprint: ''
+- name: 'ARISTA #6'
+  type: vmess
+  server: 152.67.8.205
+  port: 80
+  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 152.67.8.205
+  client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: 152.67.8.205
+- name: 'ARISTA #7'
+  type: vmess
+  server: 127.0.0.1
+  port: 8080
+  uuid: 9f92b8e3-3ae8-4a19-8c65-3135cb2018b9
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: soft98.ir
+  client-fingerprint: ''
+  ws-opts:
+    path: /snapp.ir
+    headers:
+      Host: soft98.ir
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -183,6 +201,7 @@ proxy-groups:
   - 'ARISTA #4'
   - 'ARISTA #5'
   - 'ARISTA #6'
+  - 'ARISTA #7'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -193,6 +212,7 @@ proxy-groups:
   - 'ARISTA #4'
   - 'ARISTA #5'
   - 'ARISTA #6'
+  - 'ARISTA #7'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
