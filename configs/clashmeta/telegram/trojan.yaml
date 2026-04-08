@@ -78,30 +78,6 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: 82.26.155.105
-  port: 10369
-  password: n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: fra32.chasem2026sud.com
-  client-fingerprint: chrome
-- name: 'Trojan #2'
-  type: trojan
-  server: 13.36.197.1
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #3'
-  type: trojan
   server: 18.156.97.29
   port: 22222
   password: telegram-id-privatevpns
@@ -113,7 +89,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #4'
+- name: 'Trojan #2'
   type: trojan
   server: 18.157.121.169
   port: 22223
@@ -126,7 +102,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #5'
+- name: 'Trojan #3'
   type: trojan
   server: 13.38.177.145
   port: 22223
@@ -139,7 +115,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #6'
+- name: 'Trojan #4'
   type: trojan
   server: 3.121.164.51
   port: 22223
@@ -152,7 +128,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #7'
+- name: 'Trojan #5'
   type: trojan
   server: 13.36.197.1
   port: 22223
@@ -165,7 +141,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #8'
+- name: 'Trojan #6'
   type: trojan
   server: 52.47.115.113
   port: 22223
@@ -178,7 +154,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #9'
+- name: 'Trojan #7'
   type: trojan
   server: 18.156.124.169
   port: 22223
@@ -191,7 +167,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #10'
+- name: 'Trojan #8'
   type: trojan
   server: 13.39.166.165
   port: 22223
@@ -204,7 +180,42 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
+- name: 'Trojan #9'
+  type: trojan
+  server: 82.26.155.105
+  port: 10369
+  password: n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: fra32.chasem2026sud.com
+  client-fingerprint: chrome
+- name: 'Trojan #10'
+  type: trojan
+  server: 82.26.155.199
+  port: 10369
+  password: n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: fra4.chasem2026sud.com
+  client-fingerprint: chrome
 - name: 'Trojan #11'
+  type: trojan
+  server: 13.36.197.1
+  port: 22222
+  password: telegram-id-privatevpns
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: 'Trojan #12'
   type: trojan
   server: 94.140.0.1
   port: 443
@@ -235,6 +246,7 @@ proxy-groups:
   - 'Trojan #9'
   - 'Trojan #10'
   - 'Trojan #11'
+  - 'Trojan #12'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -250,6 +262,7 @@ proxy-groups:
   - 'Trojan #9'
   - 'Trojan #10'
   - 'Trojan #11'
+  - 'Trojan #12'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
