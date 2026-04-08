@@ -78,6 +78,20 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
+  server: mehi.iammehrab.sbs
+  port: 3680
+  uuid: 4377ef22-c7e4-4242-a652-ecae1c73362c
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mehi.iammehrab.sbs
+  client-fingerprint: ''
+- name: 'ARISTA #2'
+  type: vmess
   server: 94.232.247.165
   port: 45653
   uuid: 9e91d19a-c73f-4276-adbc-b337c374259c
@@ -90,7 +104,7 @@ proxies:
   tcp-fast-open: true
   servername: 94.232.247.165
   client-fingerprint: ''
-- name: 'ARISTA #2'
+- name: 'ARISTA #3'
   type: vmess
   server: 45.12.132.183
   port: 80
@@ -108,7 +122,7 @@ proxies:
     path: /vmess/
     headers:
       Host: 45.12.132.183
-- name: 'ARISTA #3'
+- name: 'ARISTA #4'
   type: vmess
   server: v12.hdacd.com
   port: 30812
@@ -122,7 +136,7 @@ proxies:
   tcp-fast-open: true
   servername: v12.hdacd.com
   client-fingerprint: chrome
-- name: 'ARISTA #4'
+- name: 'ARISTA #5'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -136,35 +150,7 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
-- name: 'ARISTA #5'
-  type: vmess
-  server: star.reata.ir
-  port: 22573
-  uuid: 915fe7d5-1feb-4e42-ac19-55d959526f78
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: star.reata.ir
-  client-fingerprint: ''
 - name: 'ARISTA #6'
-  type: vmess
-  server: mehi.iammehrab.sbs
-  port: 3680
-  uuid: 4377ef22-c7e4-4242-a652-ecae1c73362c
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mehi.iammehrab.sbs
-  client-fingerprint: ''
-- name: 'ARISTA #7'
   type: vmess
   server: mehi.iammehrab.sbs
   port: 3680
@@ -178,7 +164,7 @@ proxies:
   tcp-fast-open: true
   servername: mehi.iammehrab.sbs
   client-fingerprint: ''
-- name: 'ARISTA #8'
+- name: 'ARISTA #7'
   type: vmess
   server: cf.090227.xyz
   port: 443
@@ -196,24 +182,34 @@ proxies:
     path: /
     headers:
       Host: sgal.dagrate.eu.org
-- name: 'ARISTA #9'
+- name: 'ARISTA #8'
   type: vmess
-  server: snapp.ir
-  port: 2082
-  uuid: a6c46db3-198f-4364-ab72-3bd8bfcb74d0
+  server: star.reata.ir
+  port: 22573
+  uuid: 915fe7d5-1feb-4e42-ac19-55d959526f78
   alterId: 0
   cipher: auto
-  network: ws
+  network: tcp
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: cdn1.hexmcloudi.ir
-  client-fingerprint: chrome
-  ws-opts:
-    path: /snapp.ir
-    headers:
-      Host: cdn1.hexmcloudi.ir
+  servername: star.reata.ir
+  client-fingerprint: ''
+- name: 'ARISTA #9'
+  type: vmess
+  server: 37.202.246.169
+  port: 15517
+  uuid: c65b547a-04e1-4411-a16f-439e53c28c2d
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 37.202.246.169
+  client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
   type: select
