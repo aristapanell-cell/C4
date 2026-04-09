@@ -78,45 +78,43 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: 82.26.155.199
-  port: 10369
-  password: n5ix4FcMQYENMQPL+YKbvyJ8nZ84+bNTsj
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: fra4.chasem2026sud.com
-  client-fingerprint: chrome
-- name: 'Trojan #2'
-  type: trojan
-  server: 172.64.147.106
-  port: 2096
-  password: 8r%3C%5B9%27l6hAO%238ZQi
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: Koma-YT.PAGeS.Dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /tr
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-- name: 'Trojan #3'
-  type: trojan
-  server: www.gossipglove.com
+  server: 188.114.98.0
   port: 443
   password: humanity
   network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: www.gossipglove.com
+  servername: www.creationlong.org
   client-fingerprint: chrome
   ws-opts:
     path: /assignment
     headers:
-      Host: www.gossipglove.com
+      Host: www.creationlong.org
+- name: 'Trojan #2'
+  type: trojan
+  server: vip4.srvtg.com
+  port: 2585
+  password: Xh-7ctiKWe95VbDKYB50TQ
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: vip4.srvtg.com
+  client-fingerprint: chrome
+- name: 'Trojan #3'
+  type: trojan
+  server: 51.102.234.18
+  port: 22223
+  password: telegram-id-directvpn
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: trojan.burgerip.co.uk
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
 - name: 'Trojan #4'
   type: trojan
   server: 18.156.124.169
@@ -221,9 +219,6 @@ proxies:
   tcp-fast-open: true
   servername: www.creationlong.org
   client-fingerprint: chrome
-  alpn:
-  - h2
-  - http/1.1
   ws-opts:
     path: /assignment
     headers:
@@ -239,50 +234,14 @@ proxies:
   tcp-fast-open: true
   servername: www.creationlong.org
   client-fingerprint: chrome
+  alpn:
+  - h2
+  - http/1.1
   ws-opts:
     path: /assignment
     headers:
       Host: www.creationlong.org
 - name: 'Trojan #13'
-  type: trojan
-  server: 188.114.98.0
-  port: 443
-  password: humanity
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: www.creationlong.org
-  client-fingerprint: chrome
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.creationlong.org
-- name: 'Trojan #14'
-  type: trojan
-  server: vip4.srvtg.com
-  port: 2585
-  password: Xh-7ctiKWe95VbDKYB50TQ
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: vip4.srvtg.com
-  client-fingerprint: chrome
-- name: 'Trojan #15'
-  type: trojan
-  server: 51.102.234.18
-  port: 22223
-  password: telegram-id-directvpn
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #16'
   type: trojan
   server: 188.114.98.0
   port: 8443
@@ -315,9 +274,6 @@ proxy-groups:
   - 'Trojan #11'
   - 'Trojan #12'
   - 'Trojan #13'
-  - 'Trojan #14'
-  - 'Trojan #15'
-  - 'Trojan #16'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -335,9 +291,6 @@ proxy-groups:
   - 'Trojan #11'
   - 'Trojan #12'
   - 'Trojan #13'
-  - 'Trojan #14'
-  - 'Trojan #15'
-  - 'Trojan #16'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150

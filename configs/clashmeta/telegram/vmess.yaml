@@ -138,18 +138,22 @@ proxies:
   client-fingerprint: ''
 - name: 'ARISTA #5'
   type: vmess
-  server: dn.brwakhanbarin.ir
-  port: 8080
-  uuid: aef2782e-3707-45c9-a941-5a7bf9ffe2db
+  server: cf.090227.xyz
+  port: 443
+  uuid: 290cc691-3ac6-4387-98a1-25c8eb8ca2ea
   alterId: 0
   cipher: auto
-  network: tcp
-  tls: false
+  network: ws
+  tls: true
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: dn.brwakhanbarin.ir
+  servername: sgal.dagrate.eu.org
   client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: sgal.dagrate.eu.org
 - name: 'ARISTA #6'
   type: vmess
   server: usaapp1.jisuyun.top
@@ -184,37 +188,9 @@ proxies:
   client-fingerprint: ''
 - name: 'ARISTA #8'
   type: vmess
-  server: mehi.iammehrab.sbs
-  port: 3680
-  uuid: 4377ef22-c7e4-4242-a652-ecae1c73362c
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mehi.iammehrab.sbs
-  client-fingerprint: ''
-- name: 'ARISTA #9'
-  type: vmess
-  server: mehi.iammehrab.sbs
-  port: 3680
-  uuid: 74609b0f-6ce0-4efb-a9a9-c00a825e3565
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mehi.iammehrab.sbs
-  client-fingerprint: ''
-- name: 'ARISTA #10'
-  type: vmess
-  server: cf.090227.xyz
-  port: 443
-  uuid: 290cc691-3ac6-4387-98a1-25c8eb8ca2ea
+  server: base-cdn.igetmac.ir
+  port: 2087
+  uuid: f09efeab-9bac-4e2e-b3a4-da1128fc2140
   alterId: 0
   cipher: auto
   network: ws
@@ -222,12 +198,26 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: sgal.dagrate.eu.org
+  servername: de-tun-h1.i-hubshell-dl.com
   client-fingerprint: ''
   ws-opts:
     path: /
     headers:
-      Host: sgal.dagrate.eu.org
+      Host: de-tun-h1.i-hubshell-dl.com
+- name: 'ARISTA #9'
+  type: vmess
+  server: dn.brwakhanbarin.ir
+  port: 8080
+  uuid: aef2782e-3707-45c9-a941-5a7bf9ffe2db
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: dn.brwakhanbarin.ir
+  client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -242,7 +232,6 @@ proxy-groups:
   - 'ARISTA #7'
   - 'ARISTA #8'
   - 'ARISTA #9'
-  - 'ARISTA #10'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -256,7 +245,6 @@ proxy-groups:
   - 'ARISTA #7'
   - 'ARISTA #8'
   - 'ARISTA #9'
-  - 'ARISTA #10'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
