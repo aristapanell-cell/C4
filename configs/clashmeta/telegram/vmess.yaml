@@ -124,9 +124,9 @@ proxies:
       Host: 185.173.104.236
 - name: 'ARISTA #4'
   type: vmess
-  server: 212.80.29.132
-  port: 39483
-  uuid: 7e51d63b-4a32-4ba1-b1d3-34dae7866cd2
+  server: star.diiginet.ir
+  port: 24396
+  uuid: 430a1ee9-55e6-472f-95a8-fad288c8a4f4
   alterId: 0
   cipher: auto
   network: tcp
@@ -134,41 +134,9 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 212.80.29.132
+  servername: star.diiginet.ir
   client-fingerprint: ''
 - name: 'ARISTA #5'
-  type: vmess
-  server: 212.80.29.132
-  port: 39483
-  uuid: 7e51d63b-4a32-4ba1-b1d3-34dae7866cd2
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 212.80.29.132
-  client-fingerprint: ''
-- name: 'ARISTA #6'
-  type: vmess
-  server: emergency.r41d3rsh4d0w.com
-  port: 15227
-  uuid: 1736e6bc-9571-437f-b822-679a638c5cfd
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: emergency.r41d3rsh4d0w.com
-  client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: emergency.r41d3rsh4d0w.com
-- name: 'ARISTA #7'
   type: vmess
   server: 94.232.247.165
   port: 45653
@@ -182,7 +150,7 @@ proxies:
   tcp-fast-open: true
   servername: 94.232.247.165
   client-fingerprint: ''
-- name: 'ARISTA #8'
+- name: 'ARISTA #6'
   type: vmess
   server: 45.12.132.183
   port: 80
@@ -200,7 +168,7 @@ proxies:
     path: /vmess/
     headers:
       Host: 45.12.132.183
-- name: 'ARISTA #9'
+- name: 'ARISTA #7'
   type: vmess
   server: v12.hdacd.com
   port: 30812
@@ -214,7 +182,7 @@ proxies:
   tcp-fast-open: true
   servername: v12.hdacd.com
   client-fingerprint: chrome
-- name: 'ARISTA #10'
+- name: 'ARISTA #8'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -228,6 +196,24 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
+- name: 'ARISTA #9'
+  type: vmess
+  server: emergency.r41d3rsh4d0w.com
+  port: 15227
+  uuid: 1736e6bc-9571-437f-b822-679a638c5cfd
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: emergency.r41d3rsh4d0w.com
+  client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: emergency.r41d3rsh4d0w.com
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -242,7 +228,6 @@ proxy-groups:
   - 'ARISTA #7'
   - 'ARISTA #8'
   - 'ARISTA #9'
-  - 'ARISTA #10'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -256,7 +241,6 @@ proxy-groups:
   - 'ARISTA #7'
   - 'ARISTA #8'
   - 'ARISTA #9'
-  - 'ARISTA #10'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
