@@ -78,9 +78,9 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: 94.232.247.165
-  port: 45653
-  uuid: 9e91d19a-c73f-4276-adbc-b337c374259c
+  server: 37.202.246.169
+  port: 15517
+  uuid: c65b547a-04e1-4411-a16f-439e53c28c2d
   alterId: 0
   cipher: auto
   network: tcp
@@ -88,69 +88,9 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 94.232.247.165
+  servername: 37.202.246.169
   client-fingerprint: ''
 - name: 'ARISTA #2'
-  type: vmess
-  server: 45.12.132.183
-  port: 80
-  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 45.12.132.183
-  client-fingerprint: ''
-  ws-opts:
-    path: /vmess/
-    headers:
-      Host: 45.12.132.183
-- name: 'ARISTA #3'
-  type: vmess
-  server: v12.hdacd.com
-  port: 30812
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: v12.hdacd.com
-  client-fingerprint: chrome
-- name: 'ARISTA #4'
-  type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 165.140.216.141
-  client-fingerprint: ''
-- name: 'ARISTA #5'
-  type: vmess
-  server: dn.brwakhanbarin.ir
-  port: 8080
-  uuid: aef2782e-3707-45c9-a941-5a7bf9ffe2db
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: dn.brwakhanbarin.ir
-  client-fingerprint: ''
-- name: 'ARISTA #6'
   type: vmess
   server: emergency.r41d3rsh4d0w.com
   port: 15227
@@ -168,21 +108,7 @@ proxies:
     path: /
     headers:
       Host: emergency.r41d3rsh4d0w.com
-- name: 'ARISTA #7'
-  type: vmess
-  server: 37.202.246.169
-  port: 15517
-  uuid: c65b547a-04e1-4411-a16f-439e53c28c2d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 37.202.246.169
-  client-fingerprint: ''
-- name: 'ARISTA #8'
+- name: 'ARISTA #3'
   type: vmess
   server: dn.brwakhanbarin.ir
   port: 8080
@@ -196,25 +122,21 @@ proxies:
   tcp-fast-open: true
   servername: dn.brwakhanbarin.ir
   client-fingerprint: ''
-- name: 'ARISTA #9'
+- name: 'ARISTA #4'
   type: vmess
-  server: usaapp1.jisuyun.top
-  port: 2053
-  uuid: 4b80aa86-4354-40bb-d2a3-47126cff0bea
+  server: dn.brwakhanbarin.ir
+  port: 8080
+  uuid: aef2782e-3707-45c9-a941-5a7bf9ffe2db
   alterId: 0
   cipher: auto
-  network: ws
-  tls: true
+  network: tcp
+  tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: usaapp1.jisuyun.top
+  servername: dn.brwakhanbarin.ir
   client-fingerprint: ''
-  ws-opts:
-    path: /usavm
-    headers:
-      Host: usaapp1.jisuyun.top
-- name: 'ARISTA #10'
+- name: 'ARISTA #5'
   type: vmess
   server: base-cdn.igetmac.ir
   port: 2087
@@ -232,11 +154,11 @@ proxies:
     path: /
     headers:
       Host: de-tun-h1.i-hubshell-dl.com
-- name: 'ARISTA #11'
+- name: 'ARISTA #6'
   type: vmess
-  server: dn.brwakhanbarin.ir
-  port: 8080
-  uuid: aef2782e-3707-45c9-a941-5a7bf9ffe2db
+  server: 94.232.247.165
+  port: 45653
+  uuid: 9e91d19a-c73f-4276-adbc-b337c374259c
   alterId: 0
   cipher: auto
   network: tcp
@@ -244,8 +166,72 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: dn.brwakhanbarin.ir
+  servername: 94.232.247.165
   client-fingerprint: ''
+- name: 'ARISTA #7'
+  type: vmess
+  server: 45.12.132.183
+  port: 80
+  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 45.12.132.183
+  client-fingerprint: ''
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: 45.12.132.183
+- name: 'ARISTA #8'
+  type: vmess
+  server: v12.hdacd.com
+  port: 30812
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: v12.hdacd.com
+  client-fingerprint: chrome
+- name: 'ARISTA #9'
+  type: vmess
+  server: 165.140.216.141
+  port: 443
+  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 165.140.216.141
+  client-fingerprint: ''
+- name: 'ARISTA #10'
+  type: vmess
+  server: usaapp1.jisuyun.top
+  port: 2053
+  uuid: 4b80aa86-4354-40bb-d2a3-47126cff0bea
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: usaapp1.jisuyun.top
+  client-fingerprint: ''
+  ws-opts:
+    path: /usavm
+    headers:
+      Host: usaapp1.jisuyun.top
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -261,7 +247,6 @@ proxy-groups:
   - 'ARISTA #8'
   - 'ARISTA #9'
   - 'ARISTA #10'
-  - 'ARISTA #11'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -276,7 +261,6 @@ proxy-groups:
   - 'ARISTA #8'
   - 'ARISTA #9'
   - 'ARISTA #10'
-  - 'ARISTA #11'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
