@@ -78,6 +78,20 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
+  server: mehi.iammehrab.sbs
+  port: 3680
+  uuid: 74609b0f-6ce0-4efb-a9a9-c00a825e3565
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mehi.iammehrab.sbs
+  client-fingerprint: ''
+- name: 'ARISTA #2'
+  type: vmess
   server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
   port: 443
   uuid: 8c748b5d-20a5-458f-8256-4b78bb5ebdc4
@@ -94,20 +108,6 @@ proxies:
     path: /api/direct
     headers:
       Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-- name: 'ARISTA #2'
-  type: vmess
-  server: mehi.iammehrab.sbs
-  port: 3680
-  uuid: 74609b0f-6ce0-4efb-a9a9-c00a825e3565
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mehi.iammehrab.sbs
-  client-fingerprint: ''
 - name: 'ARISTA #3'
   type: vmess
   server: 45.12.132.183
