@@ -93,6 +93,21 @@ proxies:
       Host: www.creationlong.org
 - name: 'Trojan #2'
   type: trojan
+  server: 188.114.98.0
+  port: 443
+  password: humanity
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.creationlong.org
+  client-fingerprint: chrome
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.creationlong.org
+- name: 'Trojan #3'
+  type: trojan
   server: 172.64.147.106
   port: 2096
   password: 8r%3C%5B9%27l6hAO%238ZQi
@@ -106,7 +121,7 @@ proxies:
     path: /tr
     headers:
       Host: Koma-YT.PAGeS.Dev
-- name: 'Trojan #3'
+- name: 'Trojan #4'
   type: trojan
   server: 82.26.155.121
   port: 10369
@@ -117,7 +132,7 @@ proxies:
   tcp-fast-open: true
   servername: fra33.chasem2026sud.com
   client-fingerprint: chrome
-- name: 'Trojan #4'
+- name: 'Trojan #5'
   type: trojan
   server: v1.dabache.top
   port: 443
@@ -132,7 +147,7 @@ proxies:
     path: /assignment
     headers:
       Host: www.multiplydose.com
-- name: 'Trojan #5'
+- name: 'Trojan #6'
   type: trojan
   server: 194.87.240.185
   port: 2083
@@ -147,7 +162,7 @@ proxies:
     path: /trojan-ws
     headers:
       Host: xo.e0f.cx
-- name: 'Trojan #6'
+- name: 'Trojan #7'
   type: trojan
   server: 18.193.18.163
   port: 22223
@@ -160,7 +175,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #7'
+- name: 'Trojan #8'
   type: trojan
   server: 13.37.214.83
   port: 22223
@@ -173,7 +188,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #8'
+- name: 'Trojan #9'
   type: trojan
   server: 13.37.25.98
   port: 22223
@@ -186,7 +201,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #9'
+- name: 'Trojan #10'
   type: trojan
   server: 52.58.102.35
   port: 22223
@@ -199,7 +214,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #10'
+- name: 'Trojan #11'
   type: trojan
   server: 51.44.87.80
   port: 22223
@@ -227,6 +242,7 @@ proxy-groups:
   - 'Trojan #8'
   - 'Trojan #9'
   - 'Trojan #10'
+  - 'Trojan #11'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -241,6 +257,7 @@ proxy-groups:
   - 'Trojan #8'
   - 'Trojan #9'
   - 'Trojan #10'
+  - 'Trojan #11'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
