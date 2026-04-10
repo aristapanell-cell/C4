@@ -78,72 +78,6 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: verso.nahidapp.com
-  port: 443
-  uuid: b2fcd365-2a0c-4503-a581-452d43be380c
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: verso.nahidapp.com
-  client-fingerprint: ''
-  alpn:
-  - http/1.1
-  ws-opts:
-    path: /vm/
-    headers:
-      Host: verso.nahidapp.com
-- name: 'ARISTA #2'
-  type: vmess
-  server: 45.12.132.183
-  port: 80
-  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 45.12.132.183
-  client-fingerprint: ''
-  ws-opts:
-    path: /vmess/
-    headers:
-      Host: 45.12.132.183
-- name: 'ARISTA #3'
-  type: vmess
-  server: v12.hdacd.com
-  port: 30812
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: v12.hdacd.com
-  client-fingerprint: chrome
-- name: 'ARISTA #4'
-  type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 165.140.216.141
-  client-fingerprint: ''
-- name: 'ARISTA #5'
-  type: vmess
   server: mehi.iammehrab.sbs
   port: 3680
   uuid: 74609b0f-6ce0-4efb-a9a9-c00a825e3565
@@ -156,7 +90,7 @@ proxies:
   tcp-fast-open: true
   servername: mehi.iammehrab.sbs
   client-fingerprint: ''
-- name: 'ARISTA #6'
+- name: 'ARISTA #2'
   type: vmess
   server: verso.legion-bot.site
   port: 443
@@ -176,7 +110,7 @@ proxies:
     path: /vm/
     headers:
       Host: verso.legion-bot.site
-- name: 'ARISTA #7'
+- name: 'ARISTA #3'
   type: vmess
   server: verso.legion-bot.site
   port: 443
@@ -196,7 +130,7 @@ proxies:
     path: /vm/
     headers:
       Host: verso.legion-bot.site
-- name: 'ARISTA #8'
+- name: 'ARISTA #4'
   type: vmess
   server: verso.legion-bot.site
   port: 443
@@ -216,11 +150,49 @@ proxies:
     path: /vm/
     headers:
       Host: verso.legion-bot.site
-- name: 'ARISTA #9'
+- name: 'ARISTA #5'
   type: vmess
-  server: dn.brwakhanbarin.ir
-  port: 8080
-  uuid: aef2782e-3707-45c9-a941-5a7bf9ffe2db
+  server: verso.nahidapp.com
+  port: 443
+  uuid: b2fcd365-2a0c-4503-a581-452d43be380c
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: verso.nahidapp.com
+  client-fingerprint: ''
+  alpn:
+  - http/1.1
+  ws-opts:
+    path: /vm/
+    headers:
+      Host: verso.nahidapp.com
+- name: 'ARISTA #6'
+  type: vmess
+  server: 45.12.132.183
+  port: 80
+  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 45.12.132.183
+  client-fingerprint: ''
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: 45.12.132.183
+- name: 'ARISTA #7'
+  type: vmess
+  server: v12.hdacd.com
+  port: 30812
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   alterId: 0
   cipher: auto
   network: tcp
@@ -228,7 +200,21 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: dn.brwakhanbarin.ir
+  servername: v12.hdacd.com
+  client-fingerprint: chrome
+- name: 'ARISTA #8'
+  type: vmess
+  server: 165.140.216.141
+  port: 443
+  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 165.140.216.141
   client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
@@ -243,7 +229,6 @@ proxy-groups:
   - 'ARISTA #6'
   - 'ARISTA #7'
   - 'ARISTA #8'
-  - 'ARISTA #9'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -256,7 +241,6 @@ proxy-groups:
   - 'ARISTA #6'
   - 'ARISTA #7'
   - 'ARISTA #8'
-  - 'ARISTA #9'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
