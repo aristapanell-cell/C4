@@ -124,9 +124,9 @@ proxies:
   client-fingerprint: ''
 - name: 'ARISTA #4'
   type: vmess
-  server: 217.218.52.1
-  port: 10410
-  uuid: f93f134f-7adb-48c3-bcd1-2532edb0b478
+  server: dn.brwakhanbarin.ir
+  port: 8080
+  uuid: aef2782e-3707-45c9-a941-5a7bf9ffe2db
   alterId: 0
   cipher: auto
   network: tcp
@@ -134,23 +134,9 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 217.218.52.1
+  servername: dn.brwakhanbarin.ir
   client-fingerprint: ''
 - name: 'ARISTA #5'
-  type: vmess
-  server: mehi.iammehrab.sbs
-  port: 3680
-  uuid: 74609b0f-6ce0-4efb-a9a9-c00a825e3565
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mehi.iammehrab.sbs
-  client-fingerprint: ''
-- name: 'ARISTA #6'
   type: vmess
   server: verso.legion-bot.site
   port: 443
@@ -170,7 +156,35 @@ proxies:
     path: /vm/
     headers:
       Host: verso.legion-bot.site
+- name: 'ARISTA #6'
+  type: vmess
+  server: 217.218.52.1
+  port: 10410
+  uuid: f93f134f-7adb-48c3-bcd1-2532edb0b478
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 217.218.52.1
+  client-fingerprint: ''
 - name: 'ARISTA #7'
+  type: vmess
+  server: mehi.iammehrab.sbs
+  port: 3680
+  uuid: 74609b0f-6ce0-4efb-a9a9-c00a825e3565
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mehi.iammehrab.sbs
+  client-fingerprint: ''
+- name: 'ARISTA #8'
   type: vmess
   server: verso.legion-bot.site
   port: 443
@@ -190,7 +204,7 @@ proxies:
     path: /vm/
     headers:
       Host: verso.legion-bot.site
-- name: 'ARISTA #8'
+- name: 'ARISTA #9'
   type: vmess
   server: verso.nahidapp.com
   port: 443
@@ -210,20 +224,6 @@ proxies:
     path: /vm/
     headers:
       Host: verso.nahidapp.com
-- name: 'ARISTA #9'
-  type: vmess
-  server: star.diiginet.ir
-  port: 24396
-  uuid: 430a1ee9-55e6-472f-95a8-fad288c8a4f4
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: star.diiginet.ir
-  client-fingerprint: ''
 - name: 'ARISTA #10'
   type: vmess
   server: verso.legion-bot.site
@@ -244,34 +244,6 @@ proxies:
     path: /vm/
     headers:
       Host: verso.legion-bot.site
-- name: 'ARISTA #11'
-  type: vmess
-  server: mehi.iammehrab.sbs
-  port: 3680
-  uuid: 74609b0f-6ce0-4efb-a9a9-c00a825e3565
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mehi.iammehrab.sbs
-  client-fingerprint: ''
-- name: 'ARISTA #12'
-  type: vmess
-  server: dn.brwakhanbarin.ir
-  port: 8080
-  uuid: aef2782e-3707-45c9-a941-5a7bf9ffe2db
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: dn.brwakhanbarin.ir
-  client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -287,8 +259,6 @@ proxy-groups:
   - 'ARISTA #8'
   - 'ARISTA #9'
   - 'ARISTA #10'
-  - 'ARISTA #11'
-  - 'ARISTA #12'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -303,8 +273,6 @@ proxy-groups:
   - 'ARISTA #8'
   - 'ARISTA #9'
   - 'ARISTA #10'
-  - 'ARISTA #11'
-  - 'ARISTA #12'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
