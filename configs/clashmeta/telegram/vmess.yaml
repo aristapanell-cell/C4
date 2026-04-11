@@ -78,6 +78,24 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
+  server: 185.239.2.171
+  port: 2093
+  uuid: 7e39bb03-237b-46b0-886b-6b5bf2abf7cb
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: nice.ceerror.shop
+  client-fingerprint: ''
+  ws-opts:
+    path: /index.html
+    headers:
+      Host: nice.ceerror.shop
+- name: 'ARISTA #2'
+  type: vmess
   server: 45.12.132.183
   port: 80
   uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
@@ -94,7 +112,7 @@ proxies:
     path: /vmess/
     headers:
       Host: 45.12.132.183
-- name: 'ARISTA #2'
+- name: 'ARISTA #3'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -108,7 +126,7 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
-- name: 'ARISTA #3'
+- name: 'ARISTA #4'
   type: vmess
   server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
   port: 443
@@ -126,7 +144,7 @@ proxies:
     path: /api/direct
     headers:
       Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-- name: 'ARISTA #4'
+- name: 'ARISTA #5'
   type: vmess
   server: 82.198.246.97
   port: 180
@@ -140,7 +158,7 @@ proxies:
   tcp-fast-open: true
   servername: 82.198.246.97
   client-fingerprint: chrome
-- name: 'ARISTA #5'
+- name: 'ARISTA #6'
   type: vmess
   server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
   port: 443
@@ -158,7 +176,7 @@ proxies:
     path: /api/direct
     headers:
       Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-- name: 'ARISTA #6'
+- name: 'ARISTA #7'
   type: vmess
   server: mehi.iammehrab.sbs
   port: 3680
@@ -171,20 +189,6 @@ proxies:
   skip-cert-verify: false
   tcp-fast-open: true
   servername: mehi.iammehrab.sbs
-  client-fingerprint: ''
-- name: 'ARISTA #7'
-  type: vmess
-  server: dn.torontomovie.com
-  port: 8080
-  uuid: 539be8ea-28d1-4f59-8cfb-fd4d71427007
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: dn.torontomovie.com
   client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
