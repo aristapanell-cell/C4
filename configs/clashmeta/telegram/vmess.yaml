@@ -78,6 +78,38 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
+  server: 45.12.132.183
+  port: 80
+  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 45.12.132.183
+  client-fingerprint: ''
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: 45.12.132.183
+- name: 'ARISTA #2'
+  type: vmess
+  server: 165.140.216.141
+  port: 443
+  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 165.140.216.141
+  client-fingerprint: ''
+- name: 'ARISTA #3'
+  type: vmess
   server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
   port: 443
   uuid: 8c748b5d-20a5-458f-8256-4b78bb5ebdc4
@@ -94,7 +126,43 @@ proxies:
     path: /api/direct
     headers:
       Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-- name: 'ARISTA #2'
+- name: 'ARISTA #4'
+  type: vmess
+  server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
+  port: 443
+  uuid: 8c748b5d-20a5-458f-8256-4b78bb5ebdc4
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
+  client-fingerprint: ''
+  ws-opts:
+    path: /api/direct
+    headers:
+      Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
+- name: 'ARISTA #5'
+  type: vmess
+  server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
+  port: 443
+  uuid: 8c748b5d-20a5-458f-8256-4b78bb5ebdc4
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
+  client-fingerprint: ''
+  ws-opts:
+    path: /api/direct
+    headers:
+      Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
+- name: 'ARISTA #6'
   type: vmess
   server: mehi.iammehrab.sbs
   port: 3680
@@ -108,7 +176,7 @@ proxies:
   tcp-fast-open: true
   servername: mehi.iammehrab.sbs
   client-fingerprint: ''
-- name: 'ARISTA #3'
+- name: 'ARISTA #7'
   type: vmess
   server: verso.legion-bot.site
   port: 443
@@ -128,7 +196,21 @@ proxies:
     path: /vm/
     headers:
       Host: verso.legion-bot.site
-- name: 'ARISTA #4'
+- name: 'ARISTA #8'
+  type: vmess
+  server: mehi.iammehrab.sbs
+  port: 3680
+  uuid: 74609b0f-6ce0-4efb-a9a9-c00a825e3565
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mehi.iammehrab.sbs
+  client-fingerprint: ''
+- name: 'ARISTA #9'
   type: vmess
   server: verso.legion-bot.site
   port: 443
@@ -148,7 +230,7 @@ proxies:
     path: /vm/
     headers:
       Host: verso.legion-bot.site
-- name: 'ARISTA #5'
+- name: 'ARISTA #10'
   type: vmess
   server: verso.legion-bot.site
   port: 443
@@ -168,7 +250,7 @@ proxies:
     path: /vm/
     headers:
       Host: verso.legion-bot.site
-- name: 'ARISTA #6'
+- name: 'ARISTA #11'
   type: vmess
   server: verso.nahidapp.com
   port: 443
@@ -188,106 +270,24 @@ proxies:
     path: /vm/
     headers:
       Host: verso.nahidapp.com
-- name: 'ARISTA #7'
-  type: vmess
-  server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-  port: 443
-  uuid: 8c748b5d-20a5-458f-8256-4b78bb5ebdc4
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-  client-fingerprint: ''
-  ws-opts:
-    path: /api/direct
-    headers:
-      Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-- name: 'ARISTA #8'
-  type: vmess
-  server: 45.12.132.183
-  port: 80
-  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 45.12.132.183
-  client-fingerprint: ''
-  ws-opts:
-    path: /vmess/
-    headers:
-      Host: 45.12.132.183
-- name: 'ARISTA #9'
-  type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 165.140.216.141
-  client-fingerprint: ''
-- name: 'ARISTA #10'
-  type: vmess
-  server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-  port: 443
-  uuid: 8c748b5d-20a5-458f-8256-4b78bb5ebdc4
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-  client-fingerprint: ''
-  ws-opts:
-    path: /api/direct
-    headers:
-      Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-- name: 'ARISTA #11'
-  type: vmess
-  server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-  port: 443
-  uuid: 8c748b5d-20a5-458f-8256-4b78bb5ebdc4
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-  client-fingerprint: ''
-  ws-opts:
-    path: /api/direct
-    headers:
-      Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
 - name: 'ARISTA #12'
   type: vmess
-  server: mehi.iammehrab.sbs
-  port: 3680
-  uuid: 74609b0f-6ce0-4efb-a9a9-c00a825e3565
+  server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
+  port: 443
+  uuid: 8c748b5d-20a5-458f-8256-4b78bb5ebdc4
   alterId: 0
   cipher: auto
-  network: tcp
-  tls: false
+  network: ws
+  tls: true
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: mehi.iammehrab.sbs
+  servername: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
   client-fingerprint: ''
+  ws-opts:
+    path: /api/direct
+    headers:
+      Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
 proxy-groups:
 - name: Proxy Select
   type: select
