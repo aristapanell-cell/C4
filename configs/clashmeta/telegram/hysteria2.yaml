@@ -76,125 +76,39 @@ sniffer:
       - 2087
       - 2096
 proxies:
-- name: 'ARISTA🔥 #1'
-  type: ss
-  server: 114.41.66.120
-  port: 50099
-  cipher: chacha20-ietf-poly1305
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #2'
-  type: ss
-  server: 104.192.227.162
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: 91LFVJhY6a7f8KeJPeuYln
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #3'
-  type: ss
-  server: 193.29.139.141
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #4'
-  type: ss
-  server: 154.46.31.106
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: QFWzCw2uX9B9i6qAYeFBIE
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #5'
-  type: ss
-  server: 62.146.171.57
-  port: 443
-  cipher: aes-256-gcm
-  password: jd9FR12wprKPNJHg
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #6'
-  type: ss
-  server: 203.202.232.78
-  port: 60299
-  cipher: chacha20-ietf-poly1305
-  password: AVLbEUEtBD59FsRqcNyEib
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #7'
-  type: ss
-  server: 1.161.247.55
-  port: 50099
-  cipher: chacha20-ietf-poly1305
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #8'
-  type: ss
-  server: 111.248.106.149
-  port: 50099
-  cipher: chacha20-ietf-poly1305
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #9'
-  type: ss
-  server: 216.105.168.18
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: bQZl7HDxSabr1FurTYQHFU
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #10'
-  type: ss
-  server: 103.57.251.240
-  port: 990
-  cipher: chacha20-ietf-poly1305
-  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #11'
-  type: ss
-  server: 147.78.1.230
-  port: 989
-  cipher: aes-256-cfb
-  password: f8f7aCzcPKbsF8p3
-  udp: true
-  tcp-fast-open: true
+- name: 'Hysteria2 #1'
+  type: hysteria2
+  server: reddeadfan.rd-team.ru
+  port: 2026
+  password: rstnnl%3AhrQVPjgUr9HTgKyTj0oFCr6j4EpRzXTQ
+  sni: reddeadfan.rd-team.ru
+  skip-cert-verify: false
+  fast-open: true
+  client-fingerprint: chrome
+  obfs: salamander
+  obfs-password: FxZylbqClUqVqAs2nezW9kPyFb2edZ2
+- name: 'Hysteria2 #2'
+  type: hysteria2
+  server: 5.181.21.132
+  port: 1935
+  password: hysteria2_fastlane_jwiedq1o6%3AgJ4QaCJfdNQffhf2p4YkDqwSwj588q7D
+  sni: at1.h.smartaisupport.ru
+  skip-cert-verify: false
+  fast-open: true
+  client-fingerprint: chrome
 proxy-groups:
 - name: Proxy Select
   type: select
   proxies:
   - Auto Select
-  - 'ARISTA🔥 #1'
-  - 'ARISTA🔥 #2'
-  - 'ARISTA🔥 #3'
-  - 'ARISTA🔥 #4'
-  - 'ARISTA🔥 #5'
-  - 'ARISTA🔥 #6'
-  - 'ARISTA🔥 #7'
-  - 'ARISTA🔥 #8'
-  - 'ARISTA🔥 #9'
-  - 'ARISTA🔥 #10'
-  - 'ARISTA🔥 #11'
+  - 'Hysteria2 #1'
+  - 'Hysteria2 #2'
   - DIRECT
 - name: Auto Select
   type: url-test
   proxies:
-  - 'ARISTA🔥 #1'
-  - 'ARISTA🔥 #2'
-  - 'ARISTA🔥 #3'
-  - 'ARISTA🔥 #4'
-  - 'ARISTA🔥 #5'
-  - 'ARISTA🔥 #6'
-  - 'ARISTA🔥 #7'
-  - 'ARISTA🔥 #8'
-  - 'ARISTA🔥 #9'
-  - 'ARISTA🔥 #10'
-  - 'ARISTA🔥 #11'
+  - 'Hysteria2 #1'
+  - 'Hysteria2 #2'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
