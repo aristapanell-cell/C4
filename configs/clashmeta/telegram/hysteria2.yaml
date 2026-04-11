@@ -87,28 +87,17 @@ proxies:
   client-fingerprint: chrome
   obfs: salamander
   obfs-password: FxZylbqClUqVqAs2nezW9kPyFb2edZ2
-- name: 'Hysteria2 #2'
-  type: hysteria2
-  server: 5.181.21.132
-  port: 1935
-  password: hysteria2_fastlane_jwiedq1o6%3AgJ4QaCJfdNQffhf2p4YkDqwSwj588q7D
-  sni: at1.h.smartaisupport.ru
-  skip-cert-verify: false
-  fast-open: true
-  client-fingerprint: chrome
 proxy-groups:
 - name: Proxy Select
   type: select
   proxies:
   - Auto Select
   - 'Hysteria2 #1'
-  - 'Hysteria2 #2'
   - DIRECT
 - name: Auto Select
   type: url-test
   proxies:
   - 'Hysteria2 #1'
-  - 'Hysteria2 #2'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
