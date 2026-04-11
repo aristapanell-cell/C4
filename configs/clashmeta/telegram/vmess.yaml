@@ -78,6 +78,20 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
+  server: 82.198.246.97
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 82.198.246.97
+  client-fingerprint: chrome
+- name: 'ARISTA #2'
+  type: vmess
   server: i-love-iran.amlakayuni.ir
   port: 2053
   uuid: f2fe0d70-1cb1-ae84-4585-ec96d450da80
@@ -97,7 +111,7 @@ proxies:
     path: ?ed=2053
     headers:
       Host: i-love-iran.amlakayuni.ir
-- name: 'ARISTA #2'
+- name: 'ARISTA #3'
   type: vmess
   server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
   port: 443
@@ -115,7 +129,7 @@ proxies:
     path: /api/direct
     headers:
       Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-- name: 'ARISTA #3'
+- name: 'ARISTA #4'
   type: vmess
   server: 185.239.2.171
   port: 2093
@@ -133,39 +147,7 @@ proxies:
     path: /index.html
     headers:
       Host: nice.ceerror.shop
-- name: 'ARISTA #4'
-  type: vmess
-  server: 45.15.185.17
-  port: 80
-  uuid: c503a96a-a2f5-4847-a31f-20c17ecf3be4
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 45.15.185.17
-  client-fingerprint: ''
-  ws-opts:
-    path: /vmess/
-    headers:
-      Host: 45.15.185.17
 - name: 'ARISTA #5'
-  type: vmess
-  server: 82.198.246.97
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 82.198.246.97
-  client-fingerprint: chrome
-- name: 'ARISTA #6'
   type: vmess
   server: 45.12.132.183
   port: 80
@@ -183,7 +165,7 @@ proxies:
     path: /vmess/
     headers:
       Host: 45.12.132.183
-- name: 'ARISTA #7'
+- name: 'ARISTA #6'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -208,7 +190,6 @@ proxy-groups:
   - 'ARISTA #4'
   - 'ARISTA #5'
   - 'ARISTA #6'
-  - 'ARISTA #7'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -219,7 +200,6 @@ proxy-groups:
   - 'ARISTA #4'
   - 'ARISTA #5'
   - 'ARISTA #6'
-  - 'ARISTA #7'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
