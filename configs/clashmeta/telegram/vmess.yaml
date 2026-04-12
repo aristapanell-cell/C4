@@ -92,6 +92,20 @@ proxies:
   client-fingerprint: chrome
 - name: 'ARISTA #2'
   type: vmess
+  server: star.diiginet.ir
+  port: 47718
+  uuid: 7a5f71ce-be48-4c6d-91f4-08f64231e135
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: star.diiginet.ir
+  client-fingerprint: ''
+- name: 'ARISTA #3'
+  type: vmess
   server: i-love-iran.amlakayuni.ir
   port: 2053
   uuid: f2fe0d70-1cb1-ae84-4585-ec96d450da80
@@ -111,7 +125,7 @@ proxies:
     path: ?ed=2053
     headers:
       Host: i-love-iran.amlakayuni.ir
-- name: 'ARISTA #3'
+- name: 'ARISTA #4'
   type: vmess
   server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
   port: 443
@@ -129,7 +143,7 @@ proxies:
     path: /api/direct
     headers:
       Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-- name: 'ARISTA #4'
+- name: 'ARISTA #5'
   type: vmess
   server: 185.239.2.171
   port: 2093
@@ -147,25 +161,21 @@ proxies:
     path: /index.html
     headers:
       Host: nice.ceerror.shop
-- name: 'ARISTA #5'
+- name: 'ARISTA #6'
   type: vmess
-  server: 45.12.132.183
-  port: 80
-  uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74
+  server: 94.232.247.165
+  port: 45653
+  uuid: 9e91d19a-c73f-4276-adbc-b337c374259c
   alterId: 0
   cipher: auto
-  network: ws
+  network: tcp
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 45.12.132.183
+  servername: 94.232.247.165
   client-fingerprint: ''
-  ws-opts:
-    path: /vmess/
-    headers:
-      Host: 45.12.132.183
-- name: 'ARISTA #6'
+- name: 'ARISTA #7'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -190,6 +200,7 @@ proxy-groups:
   - 'ARISTA #4'
   - 'ARISTA #5'
   - 'ARISTA #6'
+  - 'ARISTA #7'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -200,6 +211,7 @@ proxy-groups:
   - 'ARISTA #4'
   - 'ARISTA #5'
   - 'ARISTA #6'
+  - 'ARISTA #7'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
