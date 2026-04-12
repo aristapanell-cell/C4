@@ -78,17 +78,6 @@ sniffer:
 proxies:
 - name: 'Hysteria2 #1'
   type: hysteria2
-  server: 45.15.171.80
-  port: 444
-  password: strong-secret-pass-777
-  sni: www.microsoft.com
-  skip-cert-verify: false
-  fast-open: true
-  client-fingerprint: chrome
-  obfs: salamander
-  obfs-password: cry_me_a_r1ver_2026
-- name: 'Hysteria2 #2'
-  type: hysteria2
   server: 94.131.105.125
   port: 444
   password: strong-secret-pass-777
@@ -98,7 +87,7 @@ proxies:
   client-fingerprint: chrome
   obfs: salamander
   obfs-password: cry_me_a_r1ver_2026
-- name: 'Hysteria2 #3'
+- name: 'Hysteria2 #2'
   type: hysteria2
   server: 103.231.73.181
   port: 444
@@ -116,14 +105,12 @@ proxy-groups:
   - Auto Select
   - 'Hysteria2 #1'
   - 'Hysteria2 #2'
-  - 'Hysteria2 #3'
   - DIRECT
 - name: Auto Select
   type: url-test
   proxies:
   - 'Hysteria2 #1'
   - 'Hysteria2 #2'
-  - 'Hysteria2 #3'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
