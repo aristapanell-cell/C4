@@ -228,6 +228,20 @@ proxies:
       Host: backfall.azadiconfig.top
 - name: 'ARISTA #10'
   type: vmess
+  server: 104.18.12.149
+  port: 80
+  uuid: 75e03526-8387-4d10-a129-b512563b31b6
+  alterId: 0
+  cipher: auto
+  network: xhttp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.soonteam.top.
+  client-fingerprint: ''
+- name: 'ARISTA #11'
+  type: vmess
   server: 94.232.247.165
   port: 45653
   uuid: 9e91d19a-c73f-4276-adbc-b337c374259c
@@ -240,7 +254,7 @@ proxies:
   tcp-fast-open: true
   servername: 94.232.247.165
   client-fingerprint: ''
-- name: 'ARISTA #11'
+- name: 'ARISTA #12'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -254,7 +268,7 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
-- name: 'ARISTA #12'
+- name: 'ARISTA #13'
   type: vmess
   server: 104.18.12.149
   port: 443
@@ -272,19 +286,19 @@ proxies:
     path: /store
     headers:
       Host: backfall.azadiconfig.top
-- name: 'ARISTA #13'
+- name: 'ARISTA #14'
   type: vmess
-  server: 104.18.12.149
-  port: 80
-  uuid: 75e03526-8387-4d10-a129-b512563b31b6
+  server: mehi.iammehrab.sbs
+  port: 3680
+  uuid: 74609b0f-6ce0-4efb-a9a9-c00a825e3565
   alterId: 0
   cipher: auto
-  network: xhttp
+  network: tcp
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: www.soonteam.top.
+  servername: mehi.iammehrab.sbs
   client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
@@ -304,6 +318,7 @@ proxy-groups:
   - 'ARISTA #11'
   - 'ARISTA #12'
   - 'ARISTA #13'
+  - 'ARISTA #14'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -321,6 +336,7 @@ proxy-groups:
   - 'ARISTA #11'
   - 'ARISTA #12'
   - 'ARISTA #13'
+  - 'ARISTA #14'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
