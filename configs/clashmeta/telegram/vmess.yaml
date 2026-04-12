@@ -192,34 +192,6 @@ proxies:
   client-fingerprint: ''
 - name: 'ARISTA #8'
   type: vmess
-  server: 82.198.246.97
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 82.198.246.97
-  client-fingerprint: chrome
-- name: 'ARISTA #9'
-  type: vmess
-  server: snapp.ir.bmi.ir.mobato-mobile.com
-  port: 80
-  uuid: 820a9e42-e18d-43e4-859f-d1c2f6b8600a
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: excoino.com
-  client-fingerprint: ''
-- name: 'ARISTA #10'
-  type: vmess
   server: 94.232.247.165
   port: 45653
   uuid: 9e91d19a-c73f-4276-adbc-b337c374259c
@@ -232,7 +204,7 @@ proxies:
   tcp-fast-open: true
   servername: 94.232.247.165
   client-fingerprint: ''
-- name: 'ARISTA #11'
+- name: 'ARISTA #9'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -246,6 +218,20 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
+- name: 'ARISTA #10'
+  type: vmess
+  server: 82.198.246.97
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 82.198.246.97
+  client-fingerprint: chrome
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -261,7 +247,6 @@ proxy-groups:
   - 'ARISTA #8'
   - 'ARISTA #9'
   - 'ARISTA #10'
-  - 'ARISTA #11'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -276,7 +261,6 @@ proxy-groups:
   - 'ARISTA #8'
   - 'ARISTA #9'
   - 'ARISTA #10'
-  - 'ARISTA #11'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
