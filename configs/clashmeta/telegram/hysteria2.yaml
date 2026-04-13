@@ -87,28 +87,17 @@ proxies:
   client-fingerprint: chrome
   obfs: salamander
   obfs-password: cry_me_a_r1ver_2026
-- name: 'Hysteria2 #2'
-  type: hysteria2
-  server: 89.23.107.251
-  port: 4433
-  password: 7151e6b8-0d8e-4548-a9f2-af52ccc2cdfe
-  sni: nl1.xiaoliyu.cyou
-  skip-cert-verify: false
-  fast-open: true
-  client-fingerprint: chrome
 proxy-groups:
 - name: Proxy Select
   type: select
   proxies:
   - Auto Select
   - 'Hysteria2 #1'
-  - 'Hysteria2 #2'
   - DIRECT
 - name: Auto Select
   type: url-test
   proxies:
   - 'Hysteria2 #1'
-  - 'Hysteria2 #2'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
