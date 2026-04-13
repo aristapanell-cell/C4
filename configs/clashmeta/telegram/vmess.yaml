@@ -78,22 +78,18 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: 104.18.12.149
-  port: 8443
-  uuid: 516d8a7a-3f0b-41d3-bad0-246116381516
+  server: star.p40.site
+  port: 5678
+  uuid: 5c32145c-22c6-4472-9d36-b564e4a33da5
   alterId: 0
   cipher: auto
-  network: ws
-  tls: true
+  network: tcp
+  tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: t1.620720.xyz
+  servername: Aparat.com
   client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: t1.620720.xyz
 - name: 'ARISTA #2'
   type: vmess
   server: 165.140.216.141
@@ -108,20 +104,6 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
-- name: 'ARISTA #3'
-  type: vmess
-  server: star.p40.site
-  port: 5678
-  uuid: 5c32145c-22c6-4472-9d36-b564e4a33da5
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: Aparat.com
-  client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -129,14 +111,12 @@ proxy-groups:
   - Auto Select
   - 'ARISTA #1'
   - 'ARISTA #2'
-  - 'ARISTA #3'
   - DIRECT
 - name: Auto Select
   type: url-test
   proxies:
   - 'ARISTA #1'
   - 'ARISTA #2'
-  - 'ARISTA #3'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
