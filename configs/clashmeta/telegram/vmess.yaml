@@ -78,9 +78,9 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: star.diiginet.ir
-  port: 47718
-  uuid: 74af9172-6259-4dd6-86c8-0139b4d27c6b
+  server: star.p40.site
+  port: 5678
+  uuid: 5c32145c-22c6-4472-9d36-b564e4a33da5
   alterId: 0
   cipher: auto
   network: tcp
@@ -88,13 +88,13 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: star.diiginet.ir
+  servername: Aparat.com
   client-fingerprint: ''
 - name: 'ARISTA #2'
   type: vmess
-  server: labayk.ya.khamenei.soft98ver2.azumiral.top
-  port: 2086
-  uuid: 7337f94f-1cc4-47bd-a0ad-1227572fb181
+  server: 165.140.216.141
+  port: 443
+  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
   alterId: 0
   cipher: auto
   network: tcp
@@ -102,22 +102,26 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: labayk.ya.khamenei.soft98ver2.azumiral.top
+  servername: 165.140.216.141
   client-fingerprint: ''
 - name: 'ARISTA #3'
   type: vmess
-  server: star.diiginet.ir
-  port: 47718
-  uuid: 121792a0-fa9b-4481-b1e7-7f8c9f4076b8
+  server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
+  port: 443
+  uuid: 8c748b5d-20a5-458f-8256-4b78bb5ebdc4
   alterId: 0
   cipher: auto
-  network: tcp
-  tls: false
+  network: ws
+  tls: true
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: star.diiginet.ir
+  servername: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
   client-fingerprint: ''
+  ws-opts:
+    path: /api/direct
+    headers:
+      Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
 - name: 'ARISTA #4'
   type: vmess
   server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
@@ -138,24 +142,6 @@ proxies:
       Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
 - name: 'ARISTA #5'
   type: vmess
-  server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-  port: 443
-  uuid: 8c748b5d-20a5-458f-8256-4b78bb5ebdc4
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-  client-fingerprint: ''
-  ws-opts:
-    path: /api/direct
-    headers:
-      Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-- name: 'ARISTA #6'
-  type: vmess
   server: Str.xQFactoR.IR
   port: 8880
   uuid: 8db5eb84-cada-4f03-89fb-a2ad919b1b19
@@ -168,6 +154,24 @@ proxies:
   tcp-fast-open: true
   servername: anten.ir
   client-fingerprint: ''
+- name: 'ARISTA #6'
+  type: vmess
+  server: 104.18.12.149
+  port: 443
+  uuid: 6cc103a1-3e49-4c8e-a2c1-f70d24b19c65
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: backfall.azadiconfig.top
+  client-fingerprint: firefox
+  ws-opts:
+    path: /store
+    headers:
+      Host: backfall.azadiconfig.top
 - name: 'ARISTA #7'
   type: vmess
   server: 104.18.12.149
@@ -189,52 +193,6 @@ proxies:
 - name: 'ARISTA #8'
   type: vmess
   server: 104.18.12.149
-  port: 443
-  uuid: 6cc103a1-3e49-4c8e-a2c1-f70d24b19c65
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: backfall.azadiconfig.top
-  client-fingerprint: firefox
-  ws-opts:
-    path: /store
-    headers:
-      Host: backfall.azadiconfig.top
-- name: 'ARISTA #9'
-  type: vmess
-  server: 94.232.247.165
-  port: 45653
-  uuid: 9e91d19a-c73f-4276-adbc-b337c374259c
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 94.232.247.165
-  client-fingerprint: ''
-- name: 'ARISTA #10'
-  type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 165.140.216.141
-  client-fingerprint: ''
-- name: 'ARISTA #11'
-  type: vmess
-  server: 104.18.12.149
   port: 80
   uuid: 75e03526-8387-4d10-a129-b512563b31b6
   alterId: 0
@@ -245,6 +203,62 @@ proxies:
   skip-cert-verify: false
   tcp-fast-open: true
   servername: www.soonteam.top.
+  client-fingerprint: ''
+- name: 'ARISTA #9'
+  type: vmess
+  server: star.diiginet.ir
+  port: 47718
+  uuid: 74af9172-6259-4dd6-86c8-0139b4d27c6b
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: star.diiginet.ir
+  client-fingerprint: ''
+- name: 'ARISTA #10'
+  type: vmess
+  server: labayk.ya.khamenei.soft98ver2.azumiral.top
+  port: 2086
+  uuid: 7337f94f-1cc4-47bd-a0ad-1227572fb181
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: labayk.ya.khamenei.soft98ver2.azumiral.top
+  client-fingerprint: ''
+- name: 'ARISTA #11'
+  type: vmess
+  server: star.diiginet.ir
+  port: 47718
+  uuid: 121792a0-fa9b-4481-b1e7-7f8c9f4076b8
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: star.diiginet.ir
+  client-fingerprint: ''
+- name: 'ARISTA #12'
+  type: vmess
+  server: dn.torontomovie.com
+  port: 8080
+  uuid: 6ec07a03-fcde-4c4e-952a-b269688e81ee
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: dn.torontomovie.com
   client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
@@ -262,6 +276,7 @@ proxy-groups:
   - 'ARISTA #9'
   - 'ARISTA #10'
   - 'ARISTA #11'
+  - 'ARISTA #12'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -277,6 +292,7 @@ proxy-groups:
   - 'ARISTA #9'
   - 'ARISTA #10'
   - 'ARISTA #11'
+  - 'ARISTA #12'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
