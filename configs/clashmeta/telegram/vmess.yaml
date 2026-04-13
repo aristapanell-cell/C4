@@ -78,9 +78,9 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: star.reata.ir
-  port: 29390
-  uuid: 257bb4d1-b2ce-4d2b-b930-16343158d725
+  server: star.p40.site
+  port: 5678
+  uuid: 5c32145c-22c6-4472-9d36-b564e4a33da5
   alterId: 0
   cipher: auto
   network: tcp
@@ -88,9 +88,23 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: star.reata.ir
+  servername: Aparat.com
   client-fingerprint: ''
 - name: 'ARISTA #2'
+  type: vmess
+  server: 165.140.216.141
+  port: 443
+  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 165.140.216.141
+  client-fingerprint: ''
+- name: 'ARISTA #3'
   type: vmess
   server: 104.18.12.149
   port: 443
@@ -108,7 +122,7 @@ proxies:
     path: /store
     headers:
       Host: backfall.azadiconfig.top
-- name: 'ARISTA #3'
+- name: 'ARISTA #4'
   type: vmess
   server: 104.18.12.149
   port: 80
@@ -122,35 +136,7 @@ proxies:
   tcp-fast-open: true
   servername: www.soonteam.top.
   client-fingerprint: ''
-- name: 'ARISTA #4'
-  type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 165.140.216.141
-  client-fingerprint: ''
 - name: 'ARISTA #5'
-  type: vmess
-  server: star.diiginet.ir
-  port: 47718
-  uuid: 74af9172-6259-4dd6-86c8-0139b4d27c6b
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: star.diiginet.ir
-  client-fingerprint: ''
-- name: 'ARISTA #6'
   type: vmess
   server: star.diiginet.ir
   port: 47718
@@ -164,21 +150,7 @@ proxies:
   tcp-fast-open: true
   servername: star.diiginet.ir
   client-fingerprint: ''
-- name: 'ARISTA #7'
-  type: vmess
-  server: dn.torontomovie.com
-  port: 8080
-  uuid: 6ec07a03-fcde-4c4e-952a-b269688e81ee
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: dn.torontomovie.com
-  client-fingerprint: ''
-- name: 'ARISTA #8'
+- name: 'ARISTA #6'
   type: vmess
   server: star.diiginet.ir
   port: 47718
@@ -192,20 +164,6 @@ proxies:
   tcp-fast-open: true
   servername: star.diiginet.ir
   client-fingerprint: ''
-- name: 'ARISTA #9'
-  type: vmess
-  server: star.p40.site
-  port: 5678
-  uuid: 5c32145c-22c6-4472-9d36-b564e4a33da5
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: Aparat.com
-  client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -217,9 +175,6 @@ proxy-groups:
   - 'ARISTA #4'
   - 'ARISTA #5'
   - 'ARISTA #6'
-  - 'ARISTA #7'
-  - 'ARISTA #8'
-  - 'ARISTA #9'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -230,9 +185,6 @@ proxy-groups:
   - 'ARISTA #4'
   - 'ARISTA #5'
   - 'ARISTA #6'
-  - 'ARISTA #7'
-  - 'ARISTA #8'
-  - 'ARISTA #9'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
