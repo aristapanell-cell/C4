@@ -78,6 +78,38 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
+  server: 47.90.244.153
+  port: 8443
+  uuid: 65e2a985-ad20-4486-a7ec-b67b20ee56af
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 47.90.244.153
+  client-fingerprint: chrome
+  ws-opts:
+    path: /ws
+    headers:
+      Host: 47.90.244.153
+- name: 'ARISTA #2'
+  type: vmess
+  server: 165.140.216.141
+  port: 443
+  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 165.140.216.141
+  client-fingerprint: ''
+- name: 'ARISTA #3'
+  type: vmess
   server: 104.18.12.149
   port: 80
   uuid: 75e03526-8387-4d10-a129-b512563b31b6
@@ -90,11 +122,11 @@ proxies:
   tcp-fast-open: true
   servername: www.soonteam.top.
   client-fingerprint: ''
-- name: 'ARISTA #2'
+- name: 'ARISTA #4'
   type: vmess
-  server: 104.18.12.149
-  port: 80
-  uuid: 75e03526-8387-4d10-a129-b512563b31b6
+  server: mehi.iammehrab.sbs
+  port: 3680
+  uuid: 74609b0f-6ce0-4efb-a9a9-c00a825e3565
   alterId: 0
   cipher: auto
   network: tcp
@@ -102,9 +134,9 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 104.18.12.149
+  servername: mehi.iammehrab.sbs
   client-fingerprint: ''
-- name: 'ARISTA #3'
+- name: 'ARISTA #5'
   type: vmess
   server: 188.114.98.0
   port: 8443
@@ -122,29 +154,11 @@ proxies:
     path: /ws
     headers:
       Host: tr-1.stunnel.cc
-- name: 'ARISTA #4'
+- name: 'ARISTA #6'
   type: vmess
-  server: 47.90.244.153
-  port: 8443
-  uuid: 65e2a985-ad20-4486-a7ec-b67b20ee56af
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 47.90.244.153
-  client-fingerprint: chrome
-  ws-opts:
-    path: /ws
-    headers:
-      Host: 47.90.244.153
-- name: 'ARISTA #5'
-  type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
+  server: 104.18.12.149
+  port: 80
+  uuid: 75e03526-8387-4d10-a129-b512563b31b6
   alterId: 0
   cipher: auto
   network: tcp
@@ -152,26 +166,8 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 165.140.216.141
+  servername: 104.18.12.149
   client-fingerprint: ''
-- name: 'ARISTA #6'
-  type: vmess
-  server: arisping.arisping-ir.xyz
-  port: 443
-  uuid: b29c60eb-6ae2-4083-9a5e-780461b77914
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: az2.arisping-ir.store
-  client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: az2.arisping-ir.store
 - name: 'ARISTA #7'
   type: vmess
   server: snapp.ir
