@@ -78,52 +78,6 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: 188.114.98.0
-  port: 8443
-  uuid: 39382035-3420-4937-a031-303220393820
-  alterId: 0
-  cipher: none
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: tr-1.stunnel.cc
-  client-fingerprint: ''
-  ws-opts:
-    path: /ws
-    headers:
-      Host: tr-1.stunnel.cc
-- name: 'ARISTA #2'
-  type: vmess
-  server: mehi.iammehrab.sbs
-  port: 3680
-  uuid: 74609b0f-6ce0-4efb-a9a9-c00a825e3565
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mehi.iammehrab.sbs
-  client-fingerprint: ''
-- name: 'ARISTA #3'
-  type: vmess
-  server: 104.18.12.149
-  port: 80
-  uuid: 75e03526-8387-4d10-a129-b512563b31b6
-  alterId: 0
-  cipher: auto
-  network: xhttp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: www.soonteam.top.
-  client-fingerprint: ''
-- name: 'ARISTA #4'
-  type: vmess
   server: snapp.ir
   port: 2095
   uuid: a12ebb73-56db-4c64-81b4-ba4291a2930e
@@ -140,25 +94,7 @@ proxies:
     path: /tak
     headers:
       Host: vip2.ariatakpoyan.ir
-- name: 'ARISTA #5'
-  type: vmess
-  server: cdn1.whitepol4.ir
-  port: 80
-  uuid: 2548c33a-71dc-4407-9b87-bf238518341c
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: cdn1.whitepol4.ir
-  client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: cdn1.whitepol4.ir
-- name: 'ARISTA #6'
+- name: 'ARISTA #2'
   type: vmess
   server: app.streamd2.ir
   port: 443
@@ -172,7 +108,7 @@ proxies:
   tcp-fast-open: true
   servername: app.streamd2.ir
   client-fingerprint: ''
-- name: 'ARISTA #7'
+- name: 'ARISTA #3'
   type: vmess
   server: 78.109.199.55
   port: 11072
@@ -186,7 +122,53 @@ proxies:
   tcp-fast-open: true
   servername: 78.109.199.55
   client-fingerprint: ''
-- name: 'ARISTA #8'
+- name: 'ARISTA #4'
+  type: vmess
+  server: uk1.iranishops.com
+  port: 443
+  uuid: 4bb91b6c-be3d-5462-30ed-d127f8dd61aa
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: myket.ir
+  client-fingerprint: ''
+- name: 'ARISTA #5'
+  type: vmess
+  server: labayk.ya.khamenei.soft98ver2.azumiral.top
+  port: 2086
+  uuid: b11090b3-d09b-4e40-bdbd-b576f3051e3d
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: labayk.ya.khamenei.soft98ver2.azumiral.top
+  client-fingerprint: ''
+- name: 'ARISTA #6'
+  type: vmess
+  server: 188.114.98.0
+  port: 8443
+  uuid: 39382035-3420-4937-a031-303220393820
+  alterId: 0
+  cipher: none
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: tr-1.stunnel.cc
+  client-fingerprint: ''
+  ws-opts:
+    path: /ws
+    headers:
+      Host: tr-1.stunnel.cc
+- name: 'ARISTA #7'
   type: vmess
   server: 47.90.244.153
   port: 8443
@@ -204,7 +186,7 @@ proxies:
     path: /ws
     headers:
       Host: 47.90.244.153
-- name: 'ARISTA #9'
+- name: 'ARISTA #8'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -218,7 +200,7 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
-- name: 'ARISTA #10'
+- name: 'ARISTA #9'
   type: vmess
   server: 104.18.12.149
   port: 80
@@ -246,7 +228,6 @@ proxy-groups:
   - 'ARISTA #7'
   - 'ARISTA #8'
   - 'ARISTA #9'
-  - 'ARISTA #10'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -260,7 +241,6 @@ proxy-groups:
   - 'ARISTA #7'
   - 'ARISTA #8'
   - 'ARISTA #9'
-  - 'ARISTA #10'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
