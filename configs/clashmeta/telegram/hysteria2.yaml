@@ -76,115 +76,37 @@ sniffer:
       - 2087
       - 2096
 proxies:
-- name: 'ARISTA🔥 #1'
-  type: ss
-  server: 104.192.226.106
-  port: 989
-  cipher: aes-256-cfb
-  password: f8f7aCzcPKbsF8p3
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #2'
-  type: ss
-  server: 109.234.38.168
-  port: 33139
-  cipher: chacha20-ietf-poly1305
-  password: 2fl7RxpdiT0UuywadLp8zd
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #3'
-  type: ss
-  server: 163.171.137.76
-  port: 47394
-  cipher: chacha20-ietf-poly1305
-  password: eafad96826c79ddd
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #4'
-  type: ss
-  server: 193.29.139.202
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #5'
-  type: ss
-  server: 185.167.116.241
-  port: 801
-  cipher: chacha20-ietf-poly1305
-  password: G!yBwPWH3Vao
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #6'
-  type: ss
-  server: 216.105.168.18
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: bQZl7HDxSabr1FurTYQHFU
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #7'
-  type: ss
-  server: 195.93.253.240
-  port: 14130
-  cipher: chacha20-ietf-poly1305
-  password: Y66N7eDMqbn5uPWEu5Vpy1
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #8'
-  type: ss
-  server: 1.161.245.168
-  port: 50099
-  cipher: chacha20-ietf-poly1305
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #9'
-  type: ss
-  server: 141.164.45.187
-  port: 7001
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #10'
-  type: ss
-  server: 150.95.85.12
-  port: 22867
-  cipher: chacha20-ietf-poly1305
-  password: 7yjfj65mySQ2wnOkB6El3D
-  udp: true
-  tcp-fast-open: true
+- name: 'Hysteria2 #1'
+  type: hysteria2
+  server: 89.23.107.251
+  port: 4433
+  password: 7151e6b8-0d8e-4548-a9f2-af52ccc2cdfe
+  sni: nl1.xiaoliyu.cyou
+  skip-cert-verify: false
+  fast-open: true
+  client-fingerprint: chrome
+- name: 'Hysteria2 #2'
+  type: hysteria2
+  server: 144.31.134.98
+  port: 1935
+  password: hysteria2_fastlane_qszb6rkh0%3A6Yk5GwoZmszsRaxmLJGqJGo2SIuXeNr5
+  sni: nl1.h.smartaisupport.ru
+  skip-cert-verify: false
+  fast-open: true
+  client-fingerprint: chrome
 proxy-groups:
 - name: Proxy Select
   type: select
   proxies:
   - Auto Select
-  - 'ARISTA🔥 #1'
-  - 'ARISTA🔥 #2'
-  - 'ARISTA🔥 #3'
-  - 'ARISTA🔥 #4'
-  - 'ARISTA🔥 #5'
-  - 'ARISTA🔥 #6'
-  - 'ARISTA🔥 #7'
-  - 'ARISTA🔥 #8'
-  - 'ARISTA🔥 #9'
-  - 'ARISTA🔥 #10'
+  - 'Hysteria2 #1'
+  - 'Hysteria2 #2'
   - DIRECT
 - name: Auto Select
   type: url-test
   proxies:
-  - 'ARISTA🔥 #1'
-  - 'ARISTA🔥 #2'
-  - 'ARISTA🔥 #3'
-  - 'ARISTA🔥 #4'
-  - 'ARISTA🔥 #5'
-  - 'ARISTA🔥 #6'
-  - 'ARISTA🔥 #7'
-  - 'ARISTA🔥 #8'
-  - 'ARISTA🔥 #9'
-  - 'ARISTA🔥 #10'
+  - 'Hysteria2 #1'
+  - 'Hysteria2 #2'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
