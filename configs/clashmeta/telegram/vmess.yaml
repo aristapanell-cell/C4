@@ -78,6 +78,34 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
+  server: app.streamd2.ir
+  port: 443
+  uuid: 2c485c99-41c4-4c49-9180-61533321c255
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: app.streamd2.ir
+  client-fingerprint: ''
+- name: 'ARISTA #2'
+  type: vmess
+  server: 78.109.199.55
+  port: 11072
+  uuid: 9bf1b227-8b96-4705-929e-23a36703c9a9
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 78.109.199.55
+  client-fingerprint: ''
+- name: 'ARISTA #3'
+  type: vmess
   server: 104.18.12.149
   port: 80
   uuid: 75e03526-8387-4d10-a129-b512563b31b6
@@ -90,43 +118,25 @@ proxies:
   tcp-fast-open: true
   servername: 104.18.12.149
   client-fingerprint: ''
-- name: 'ARISTA #2'
-  type: vmess
-  server: 188.114.98.0
-  port: 8443
-  uuid: 39382035-3420-4937-a031-303220393820
-  alterId: 0
-  cipher: none
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: tr-1.stunnel.cc
-  client-fingerprint: ''
-  ws-opts:
-    path: /ws
-    headers:
-      Host: tr-1.stunnel.cc
-- name: 'ARISTA #3'
-  type: vmess
-  server: chatgpt.com
-  port: 8443
-  uuid: 34392034-3920-4438-a039-392035362035
-  alterId: 0
-  cipher: none
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: tr-1.stunnel.cc
-  client-fingerprint: ''
-  ws-opts:
-    path: /ws
-    headers:
-      Host: tr-1.stunnel.cc
 - name: 'ARISTA #4'
+  type: vmess
+  server: t13.a22y.ir
+  port: 80
+  uuid: b409cad0-d3b7-4b19-91fa-eae60f8c18fc
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: t13.a22y.ir
+  client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: t13.a22y.ir
+- name: 'ARISTA #5'
   type: vmess
   server: hl112.cowvpn.space
   port: 11617
@@ -144,7 +154,7 @@ proxies:
     path: /
     headers:
       Host: ws112.baidu.com
-- name: 'ARISTA #5'
+- name: 'ARISTA #6'
   type: vmess
   server: t13.a22y.ir
   port: 80
@@ -162,7 +172,7 @@ proxies:
     path: /
     headers:
       Host: t13.a22y.ir
-- name: 'ARISTA #6'
+- name: 'ARISTA #7'
   type: vmess
   server: v12.hdacd.com
   port: 30812
@@ -176,67 +186,7 @@ proxies:
   tcp-fast-open: true
   servername: v12.hdacd.com
   client-fingerprint: chrome
-- name: 'ARISTA #7'
-  type: vmess
-  server: t13.a22y.ir
-  port: 80
-  uuid: b409cad0-d3b7-4b19-91fa-eae60f8c18fc
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: t13.a22y.ir
-  client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: t13.a22y.ir
 - name: 'ARISTA #8'
-  type: vmess
-  server: app.streamd2.ir
-  port: 443
-  uuid: 2c485c99-41c4-4c49-9180-61533321c255
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: app.streamd2.ir
-  client-fingerprint: ''
-- name: 'ARISTA #9'
-  type: vmess
-  server: 78.109.199.55
-  port: 11072
-  uuid: 9bf1b227-8b96-4705-929e-23a36703c9a9
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 78.109.199.55
-  client-fingerprint: ''
-- name: 'ARISTA #10'
-  type: vmess
-  server: star.p40.site
-  port: 5678
-  uuid: 65db58b6-7932-4578-8241-937e58cc139a
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: Aparat.com
-  client-fingerprint: ''
-- name: 'ARISTA #11'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -250,6 +200,42 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
+- name: 'ARISTA #9'
+  type: vmess
+  server: chatgpt.com
+  port: 8443
+  uuid: 34392034-3920-4438-a039-392035362035
+  alterId: 0
+  cipher: none
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: tr-1.stunnel.cc
+  client-fingerprint: ''
+  ws-opts:
+    path: /ws
+    headers:
+      Host: tr-1.stunnel.cc
+- name: 'ARISTA #10'
+  type: vmess
+  server: 188.114.98.0
+  port: 8443
+  uuid: 39382035-3420-4937-a031-303220393820
+  alterId: 0
+  cipher: none
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: tr-1.stunnel.cc
+  client-fingerprint: ''
+  ws-opts:
+    path: /ws
+    headers:
+      Host: tr-1.stunnel.cc
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -265,7 +251,6 @@ proxy-groups:
   - 'ARISTA #8'
   - 'ARISTA #9'
   - 'ARISTA #10'
-  - 'ARISTA #11'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -280,7 +265,6 @@ proxy-groups:
   - 'ARISTA #8'
   - 'ARISTA #9'
   - 'ARISTA #10'
-  - 'ARISTA #11'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
