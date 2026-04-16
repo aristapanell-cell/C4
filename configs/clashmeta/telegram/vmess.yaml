@@ -78,20 +78,6 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: 67.220.72.237
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 1
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 67.220.72.237
-  client-fingerprint: ''
-- name: 'ARISTA #2'
-  type: vmess
   server: dn.torontomovie.com
   port: 8080
   uuid: 4dc6d48a-6a7d-44ac-90eb-f38dd2be6132
@@ -104,7 +90,7 @@ proxies:
   tcp-fast-open: true
   servername: dn.torontomovie.com
   client-fingerprint: ''
-- name: 'ARISTA #3'
+- name: 'ARISTA #2'
   type: vmess
   server: xosr.marzxox.biz
   port: 8080
@@ -118,7 +104,7 @@ proxies:
   tcp-fast-open: true
   servername: aparat.com
   client-fingerprint: ''
-- name: 'ARISTA #4'
+- name: 'ARISTA #3'
   type: vmess
   server: zula.ir
   port: 443
@@ -136,7 +122,7 @@ proxies:
     path: /vmess
     headers:
       Host: no1.xv2ray.net
-- name: 'ARISTA #5'
+- name: 'ARISTA #4'
   type: vmess
   server: 185.218.139.180
   port: 2096
@@ -150,7 +136,7 @@ proxies:
   tcp-fast-open: true
   servername: 185.218.139.180
   client-fingerprint: ''
-- name: 'ARISTA #6'
+- name: 'ARISTA #5'
   type: vmess
   server: 94.232.247.165
   port: 45653
@@ -164,7 +150,7 @@ proxies:
   tcp-fast-open: true
   servername: 94.232.247.165
   client-fingerprint: ''
-- name: 'ARISTA #7'
+- name: 'ARISTA #6'
   type: vmess
   server: 5.188.190.252
   port: 22324
@@ -178,7 +164,7 @@ proxies:
   tcp-fast-open: true
   servername: 5.188.190.252
   client-fingerprint: chrome
-- name: 'ARISTA #8'
+- name: 'ARISTA #7'
   type: vmess
   server: 216.167.43.29
   port: 3438
@@ -196,7 +182,7 @@ proxies:
     path: /
     headers:
       Host: 216.167.43.29
-- name: 'ARISTA #9'
+- name: 'ARISTA #8'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -223,7 +209,6 @@ proxy-groups:
   - 'ARISTA #6'
   - 'ARISTA #7'
   - 'ARISTA #8'
-  - 'ARISTA #9'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -236,7 +221,6 @@ proxy-groups:
   - 'ARISTA #6'
   - 'ARISTA #7'
   - 'ARISTA #8'
-  - 'ARISTA #9'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
