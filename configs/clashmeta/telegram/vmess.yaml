@@ -92,9 +92,9 @@ proxies:
   client-fingerprint: ''
 - name: 'ARISTA #2'
   type: vmess
-  server: star.p40.site
-  port: 5678
-  uuid: 4b22767a-51fe-410d-b929-13ba4a7c036a
+  server: 94.232.247.165
+  port: 45653
+  uuid: 9e91d19a-c73f-4276-adbc-b337c374259c
   alterId: 0
   cipher: auto
   network: tcp
@@ -102,9 +102,41 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: Aparat.com
+  servername: 94.232.247.165
   client-fingerprint: ''
 - name: 'ARISTA #3'
+  type: vmess
+  server: 5.188.190.252
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 1
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 5.188.190.252
+  client-fingerprint: chrome
+- name: 'ARISTA #4'
+  type: vmess
+  server: 216.167.43.29
+  port: 3438
+  uuid: 01d3482e-27f5-4eac-ab5e-906787bb32ef
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 216.167.43.29
+  client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: 216.167.43.29
+- name: 'ARISTA #5'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -118,7 +150,7 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
-- name: 'ARISTA #4'
+- name: 'ARISTA #6'
   type: vmess
   server: 45.39.241.51
   port: 27167
@@ -139,7 +171,7 @@ proxies:
     path: /ws
     headers:
       Host: 45.39.241.51
-- name: 'ARISTA #5'
+- name: 'ARISTA #7'
   type: vmess
   server: v10.hdacd.com
   port: 30807
@@ -153,29 +185,32 @@ proxies:
   tcp-fast-open: true
   servername: v10.hdacd.com
   client-fingerprint: chrome
-- name: 'ARISTA #6'
+- name: 'ARISTA #8'
   type: vmess
-  server: 216.167.43.29
-  port: 3438
-  uuid: 01d3482e-27f5-4eac-ab5e-906787bb32ef
+  server: 199.195.254.136
+  port: 24751
+  uuid: ace6f375-c842-4d8d-ad5c-39a72884d624
   alterId: 0
   cipher: auto
   network: ws
-  tls: false
+  tls: true
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 216.167.43.29
-  client-fingerprint: ''
+  servername: 199.195.254.136
+  client-fingerprint: chrome
+  alpn:
+  - h2
+  - http/1.1
   ws-opts:
-    path: /
+    path: /ws
     headers:
-      Host: 216.167.43.29
-- name: 'ARISTA #7'
+      Host: 199.195.254.136
+- name: 'ARISTA #9'
   type: vmess
-  server: zorf.marzxox.biz
-  port: 14298
-  uuid: 9e3ba37f-1811-462b-8996-4b782efbd1eb
+  server: star.p40.site
+  port: 5678
+  uuid: 4b22767a-51fe-410d-b929-13ba4a7c036a
   alterId: 0
   cipher: auto
   network: tcp
@@ -183,7 +218,7 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: aparat.com
+  servername: Aparat.com
   client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
@@ -197,6 +232,8 @@ proxy-groups:
   - 'ARISTA #5'
   - 'ARISTA #6'
   - 'ARISTA #7'
+  - 'ARISTA #8'
+  - 'ARISTA #9'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -208,6 +245,8 @@ proxy-groups:
   - 'ARISTA #5'
   - 'ARISTA #6'
   - 'ARISTA #7'
+  - 'ARISTA #8'
+  - 'ARISTA #9'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
