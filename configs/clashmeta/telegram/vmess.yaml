@@ -78,23 +78,9 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: dn.torontomovie.com
-  port: 8080
-  uuid: 6eca5f64-0ff7-4e88-bbcb-4bc7244388f3
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: dn.torontomovie.com
-  client-fingerprint: ''
-- name: 'ARISTA #2'
-  type: vmess
   server: xosr.marzxox.biz
   port: 8080
-  uuid: 707f9233-2856-41ea-b627-876c9f595036
+  uuid: bddc683c-676e-4d9b-acf8-0e26c10b617d
   alterId: 0
   cipher: auto
   network: tcp
@@ -104,7 +90,7 @@ proxies:
   tcp-fast-open: true
   servername: aparat.com
   client-fingerprint: ''
-- name: 'ARISTA #3'
+- name: 'ARISTA #2'
   type: vmess
   server: 5.188.190.252
   port: 22324
@@ -118,7 +104,7 @@ proxies:
   tcp-fast-open: true
   servername: 5.188.190.252
   client-fingerprint: chrome
-- name: 'ARISTA #4'
+- name: 'ARISTA #3'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -140,7 +126,6 @@ proxy-groups:
   - 'ARISTA #1'
   - 'ARISTA #2'
   - 'ARISTA #3'
-  - 'ARISTA #4'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -148,7 +133,6 @@ proxy-groups:
   - 'ARISTA #1'
   - 'ARISTA #2'
   - 'ARISTA #3'
-  - 'ARISTA #4'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
