@@ -78,23 +78,9 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: 5.188.190.252
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 1
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 5.188.190.252
-  client-fingerprint: chrome
-- name: 'ARISTA #2'
-  type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
+  server: 103.181.164.145
+  port: 54022
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   alterId: 0
   cipher: auto
   network: tcp
@@ -102,9 +88,9 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 165.140.216.141
-  client-fingerprint: ''
-- name: 'ARISTA #3'
+  servername: 103.181.164.145
+  client-fingerprint: chrome
+- name: 'ARISTA #2'
   type: vmess
   server: 185.206.95.35
   port: 35556
@@ -118,7 +104,7 @@ proxies:
   tcp-fast-open: true
   servername: 185.206.95.35
   client-fingerprint: ''
-- name: 'ARISTA #4'
+- name: 'ARISTA #3'
   type: vmess
   server: telegram.nexoraservre1.top
   port: 21533
@@ -132,25 +118,69 @@ proxies:
   tcp-fast-open: true
   servername: telegram.nexoraservre1.top
   client-fingerprint: ''
-- name: 'ARISTA #5'
+- name: 'ARISTA #4'
   type: vmess
-  server: snapp.ir
-  port: 80
-  uuid: 54855a12-a550-46c2-90da-2a1c782d94a2
+  server: verso.nahidapp.com
+  port: 443
+  uuid: a006027c-67dc-4ceb-b8dd-7ef99483531d
   alterId: 0
   cipher: auto
   network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: verso.nahidapp.com
+  client-fingerprint: ''
+  alpn:
+  - http/1.1
+  ws-opts:
+    path: /vm/
+    headers:
+      Host: verso.nahidapp.com
+- name: 'ARISTA #5'
+  type: vmess
+  server: telegram.nexoraservre1.top
+  port: 21533
+  uuid: a84aa00d-7abd-4c4a-a2e2-4f723bbab3fb
+  alterId: 0
+  cipher: auto
+  network: tcp
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: darxhinteam.bravo-six.ir
+  servername: telegram.nexoraservre1.top
   client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: darxhinteam.bravo-six.ir
 - name: 'ARISTA #6'
+  type: vmess
+  server: 5.188.190.252
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 1
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 5.188.190.252
+  client-fingerprint: chrome
+- name: 'ARISTA #7'
+  type: vmess
+  server: 165.140.216.141
+  port: 443
+  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 165.140.216.141
+  client-fingerprint: ''
+- name: 'ARISTA #8'
   type: vmess
   server: snapp.ir
   port: 80
@@ -168,7 +198,7 @@ proxies:
     path: /
     headers:
       Host: darxhinteam.bravo-six.ir
-- name: 'ARISTA #7'
+- name: 'ARISTA #9'
   type: vmess
   server: telegram.nexoraservre1.top
   port: 21533
@@ -182,7 +212,7 @@ proxies:
   tcp-fast-open: true
   servername: telegram.nexoraservre1.top
   client-fingerprint: ''
-- name: 'ARISTA #8'
+- name: 'ARISTA #10'
   type: vmess
   server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
   port: 443
@@ -200,20 +230,6 @@ proxies:
     path: /api/direct
     headers:
       Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-- name: 'ARISTA #9'
-  type: vmess
-  server: telegram.nexoraservre1.top
-  port: 21533
-  uuid: a84aa00d-7abd-4c4a-a2e2-4f723bbab3fb
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: telegram.nexoraservre1.top
-  client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -228,6 +244,7 @@ proxy-groups:
   - 'ARISTA #7'
   - 'ARISTA #8'
   - 'ARISTA #9'
+  - 'ARISTA #10'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -241,6 +258,7 @@ proxy-groups:
   - 'ARISTA #7'
   - 'ARISTA #8'
   - 'ARISTA #9'
+  - 'ARISTA #10'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
