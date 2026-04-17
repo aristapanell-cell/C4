@@ -78,29 +78,9 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: verso.nahidapp.com
-  port: 443
-  uuid: a006027c-67dc-4ceb-b8dd-7ef99483531d
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: verso.nahidapp.com
-  client-fingerprint: ''
-  alpn:
-  - http/1.1
-  ws-opts:
-    path: /vm/
-    headers:
-      Host: verso.nahidapp.com
-- name: 'ARISTA #2'
-  type: vmess
-  server: 103.181.164.145
-  port: 54022
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  server: dn.torontomovie.com
+  port: 8080
+  uuid: 6eca5f64-0ff7-4e88-bbcb-4bc7244388f3
   alterId: 0
   cipher: auto
   network: tcp
@@ -108,9 +88,9 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 103.181.164.145
-  client-fingerprint: chrome
-- name: 'ARISTA #3'
+  servername: dn.torontomovie.com
+  client-fingerprint: ''
+- name: 'ARISTA #2'
   type: vmess
   server: xosr.marzxox.biz
   port: 8080
@@ -124,7 +104,7 @@ proxies:
   tcp-fast-open: true
   servername: aparat.com
   client-fingerprint: ''
-- name: 'ARISTA #4'
+- name: 'ARISTA #3'
   type: vmess
   server: 5.188.190.252
   port: 22324
@@ -138,7 +118,7 @@ proxies:
   tcp-fast-open: true
   servername: 5.188.190.252
   client-fingerprint: chrome
-- name: 'ARISTA #5'
+- name: 'ARISTA #4'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -152,34 +132,6 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
-- name: 'ARISTA #6'
-  type: vmess
-  server: dn.torontomovie.com
-  port: 8080
-  uuid: 6eca5f64-0ff7-4e88-bbcb-4bc7244388f3
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: dn.torontomovie.com
-  client-fingerprint: ''
-- name: 'ARISTA #7'
-  type: vmess
-  server: telegram.nexoraservre1.top
-  port: 21533
-  uuid: 5a19f410-62b6-4db4-9a13-25e211d5ba46
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: telegram.nexoraservre1.top
-  client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -189,9 +141,6 @@ proxy-groups:
   - 'ARISTA #2'
   - 'ARISTA #3'
   - 'ARISTA #4'
-  - 'ARISTA #5'
-  - 'ARISTA #6'
-  - 'ARISTA #7'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -200,9 +149,6 @@ proxy-groups:
   - 'ARISTA #2'
   - 'ARISTA #3'
   - 'ARISTA #4'
-  - 'ARISTA #5'
-  - 'ARISTA #6'
-  - 'ARISTA #7'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
