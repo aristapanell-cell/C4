@@ -78,20 +78,6 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: 67.220.72.237
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 1
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 67.220.72.237
-  client-fingerprint: ''
-- name: 'ARISTA #2'
-  type: vmess
   server: 5.188.190.252
   port: 22324
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
@@ -104,7 +90,7 @@ proxies:
   tcp-fast-open: true
   servername: 5.188.190.252
   client-fingerprint: chrome
-- name: 'ARISTA #3'
+- name: 'ARISTA #2'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -118,11 +104,25 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
+- name: 'ARISTA #3'
+  type: vmess
+  server: 67.220.72.237
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 1
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 67.220.72.237
+  client-fingerprint: ''
 - name: 'ARISTA #4'
   type: vmess
-  server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-  port: 443
-  uuid: 1bddb5ba-d8d3-445f-d8d1-95eb6e501fa5
+  server: 127.0.0.1
+  port: 40443
+  uuid: 33ec260e-c2f7-418c-9287-2ea00044cc30
   alterId: 0
   cipher: auto
   network: ws
@@ -130,12 +130,15 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-  client-fingerprint: ''
+  servername: out.rocky-license-91.ir
+  client-fingerprint: chrome
+  alpn:
+  - h2
+  - http/1.1
   ws-opts:
-    path: /api/direct
+    path: /
     headers:
-      Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
+      Host: out.rocky-license-91.ir
 - name: 'ARISTA #5'
   type: vmess
   server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
