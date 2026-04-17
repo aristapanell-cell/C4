@@ -106,20 +106,6 @@ proxies:
   client-fingerprint: ''
 - name: 'ARISTA #3'
   type: vmess
-  server: 67.220.72.237
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 1
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 67.220.72.237
-  client-fingerprint: ''
-- name: 'ARISTA #4'
-  type: vmess
   server: 127.0.0.1
   port: 40443
   uuid: 33ec260e-c2f7-418c-9287-2ea00044cc30
@@ -139,42 +125,56 @@ proxies:
     path: /
     headers:
       Host: out.rocky-license-91.ir
+- name: 'ARISTA #4'
+  type: vmess
+  server: snapp.ir
+  port: 80
+  uuid: 54855a12-a550-46c2-90da-2a1c782d94a2
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: darxhinteam.bravo-six.ir
+  client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: darxhinteam.bravo-six.ir
 - name: 'ARISTA #5'
   type: vmess
-  server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-  port: 443
-  uuid: 1bddb5ba-d8d3-445f-d8d1-95eb6e501fa5
+  server: snapp.ir
+  port: 80
+  uuid: ca6dbc99-6125-427c-8b12-5f2ef9141036
   alterId: 0
   cipher: auto
   network: ws
-  tls: true
+  tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
+  servername: darxhinteam.bravo-six.ir
   client-fingerprint: ''
   ws-opts:
-    path: /api/direct
+    path: /
     headers:
-      Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
+      Host: darxhinteam.bravo-six.ir
 - name: 'ARISTA #6'
   type: vmess
-  server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-  port: 443
-  uuid: 1bddb5ba-d8d3-445f-d8d1-95eb6e501fa5
-  alterId: 0
+  server: 67.220.72.237
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 1
   cipher: auto
-  network: ws
-  tls: true
+  network: tcp
+  tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
+  servername: 67.220.72.237
   client-fingerprint: ''
-  ws-opts:
-    path: /api/direct
-    headers:
-      Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
 proxy-groups:
 - name: Proxy Select
   type: select
