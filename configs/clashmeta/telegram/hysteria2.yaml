@@ -76,101 +76,28 @@ sniffer:
       - 2087
       - 2096
 proxies:
-- name: 'ARISTA #1'
-  type: vmess
-  server: 5.188.190.252
-  port: 22324
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
-  alterId: 1
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
+- name: 'Hysteria2 #1'
+  type: hysteria2
+  server: 5.175.249.174
+  port: 35000
+  password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
+  sni: api.kermanshahi.org
   skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 5.188.190.252
+  fast-open: true
   client-fingerprint: chrome
-- name: 'ARISTA #2'
-  type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 165.140.216.141
-  client-fingerprint: ''
-- name: 'ARISTA #3'
-  type: vmess
-  server: ::ffff:ac40:9bd1
-  port: 443
-  uuid: ffece2a9-0296-46a9-8db8-742d29d240ff
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: bedrid.denizhosting.me
-  client-fingerprint: chrome
-  alpn:
-  - h2
-  ws-opts:
-    path: ISwpYVR8SjxXcUZEUzVfNURTUC8lV29DXSgsKH1SN0g1JVpDHU1cWigKAC8QRltMCi86ABw4JV14HVMn
-    headers:
-      Host: bedrid.denizhosting.me
-- name: 'ARISTA #4'
-  type: vmess
-  server: 154.31.114.164
-  port: 10270
-  uuid: 3df6bbda-75e3-49ac-e6e0-cbdd058ea10e
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 154.31.114.164
-  client-fingerprint: chrome
-- name: 'ARISTA #5'
-  type: vmess
-  server: v10.hdacd.com
-  port: 30807
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: v10.hdacd.com
-  client-fingerprint: chrome
+  obfs: salamander
+  obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
 proxy-groups:
 - name: Proxy Select
   type: select
   proxies:
   - Auto Select
-  - 'ARISTA #1'
-  - 'ARISTA #2'
-  - 'ARISTA #3'
-  - 'ARISTA #4'
-  - 'ARISTA #5'
+  - 'Hysteria2 #1'
   - DIRECT
 - name: Auto Select
   type: url-test
   proxies:
-  - 'ARISTA #1'
-  - 'ARISTA #2'
-  - 'ARISTA #3'
-  - 'ARISTA #4'
-  - 'ARISTA #5'
+  - 'Hysteria2 #1'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
