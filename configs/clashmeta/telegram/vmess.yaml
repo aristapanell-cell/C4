@@ -78,9 +78,9 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-  port: 443
-  uuid: 1bddb5ba-d8d3-445f-d8d1-95eb6e501fa5
+  server: dota.go2game.top
+  port: 29835
+  uuid: 12b048cd-71ad-47e1-8928-f4f0e3486f1d
   alterId: 0
   cipher: auto
   network: ws
@@ -88,12 +88,15 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-  client-fingerprint: ''
+  servername: dota.go2game.top
+  client-fingerprint: chrome
+  alpn:
+  - h2
+  - http/1.1
   ws-opts:
-    path: /api/direct
+    path: /wer
     headers:
-      Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
+      Host: dota.go2game.top
 - name: 'ARISTA #2'
   type: vmess
   server: www.arvancloud.ir
@@ -132,66 +135,6 @@ proxies:
       Host: 47.90.244.153
 - name: 'ARISTA #4'
   type: vmess
-  server: snapp.ir
-  port: 80
-  uuid: 2257d4b1-82c5-4089-a44c-8c08ab03e515
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: darxhinteam.bravo-six.ir
-  client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: darxhinteam.bravo-six.ir
-- name: 'ARISTA #5'
-  type: vmess
-  server: 94.232.247.165
-  port: 45653
-  uuid: 9e91d19a-c73f-4276-adbc-b337c374259c
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 94.232.247.165
-  client-fingerprint: ''
-- name: 'ARISTA #6'
-  type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 165.140.216.141
-  client-fingerprint: ''
-- name: 'ARISTA #7'
-  type: vmess
-  server: 188.213.199.47
-  port: 43828
-  uuid: 067ae20f-7bd9-4cd6-b0c3-2fea677755ff
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: filmnet.ir
-  client-fingerprint: ''
-- name: 'ARISTA #8'
-  type: vmess
   server: 47.90.244.153
   port: 8443
   uuid: 65e2a985-ad20-4486-a7ec-b67b20ee56af
@@ -208,6 +151,70 @@ proxies:
     path: /ws
     headers:
       Host: 47.90.244.153
+- name: 'ARISTA #5'
+  type: vmess
+  server: snapp.ir
+  port: 80
+  uuid: 2257d4b1-82c5-4089-a44c-8c08ab03e515
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: darxhinteam.bravo-six.ir
+  client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: darxhinteam.bravo-six.ir
+- name: 'ARISTA #6'
+  type: vmess
+  server: snapp.ir
+  port: 80
+  uuid: 60a33cac-d167-4fca-bd88-c4aa1ca1fd8c
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: darxhinteam.bravo-six.ir
+  client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: darxhinteam.bravo-six.ir
+- name: 'ARISTA #7'
+  type: vmess
+  server: 94.232.247.165
+  port: 45653
+  uuid: 9e91d19a-c73f-4276-adbc-b337c374259c
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 94.232.247.165
+  client-fingerprint: ''
+- name: 'ARISTA #8'
+  type: vmess
+  server: 165.140.216.141
+  port: 443
+  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 165.140.216.141
+  client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
   type: select
