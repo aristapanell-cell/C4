@@ -78,6 +78,34 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
+  server: 94.232.247.165
+  port: 45653
+  uuid: 9e91d19a-c73f-4276-adbc-b337c374259c
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 94.232.247.165
+  client-fingerprint: ''
+- name: 'ARISTA #2'
+  type: vmess
+  server: 165.140.216.141
+  port: 443
+  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 165.140.216.141
+  client-fingerprint: ''
+- name: 'ARISTA #3'
+  type: vmess
   server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
   port: 443
   uuid: 1bddb5ba-d8d3-445f-d8d1-95eb6e501fa5
@@ -94,42 +122,6 @@ proxies:
     path: /api/direct
     headers:
       Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-- name: 'ARISTA #2'
-  type: vmess
-  server: planb.mojcn.com
-  port: 16617
-  uuid: b49af8c9-0cf1-4212-8ed8-35b70d9f2cf4
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 3416cbe57b7c52733721859d4e23be39.mobgslb.tbcache.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: 3416cbe57b7c52733721859d4e23be39.mobgslb.tbcache.com
-- name: 'ARISTA #3'
-  type: vmess
-  server: dl.saft89.ir
-  port: 80
-  uuid: da840de5-dbf1-48dd-81a8-37f132162b20
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: dulphin333-90331252af-viv.apps.ir-central1.arvancaas.ir
-  client-fingerprint: ''
-  ws-opts:
-    path: /graphql?ed=30
-    headers:
-      Host: dulphin333-90331252af-viv.apps.ir-central1.arvancaas.ir
 - name: 'ARISTA #4'
   type: vmess
   server: www.arvancloud.ir
@@ -150,9 +142,9 @@ proxies:
       Host: doyouundestand-whatis-myproducttorunotthinkaboutme.reserp.ir
 - name: 'ARISTA #5'
   type: vmess
-  server: jp111cf.885397.xyz
-  port: 8080
-  uuid: 37eaa80f-a1d9-43bd-b1d9-5003f04c19d8
+  server: dl.saft89.ir
+  port: 80
+  uuid: da840de5-dbf1-48dd-81a8-37f132162b20
   alterId: 0
   cipher: auto
   network: ws
@@ -160,27 +152,13 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: us1.885397.xyz
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: us1.885397.xyz
-- name: 'ARISTA #6'
-  type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 165.140.216.141
+  servername: dulphin333-90331252af-viv.apps.ir-central1.arvancaas.ir
   client-fingerprint: ''
-- name: 'ARISTA #7'
+  ws-opts:
+    path: /graphql?ed=30
+    headers:
+      Host: dulphin333-90331252af-viv.apps.ir-central1.arvancaas.ir
+- name: 'ARISTA #6'
   type: vmess
   server: www.arvancloud.ir
   port: 8080
@@ -198,34 +176,24 @@ proxies:
     path: /varzesh3
     headers:
       Host: doyouundestand-whatis-myproducttorunotthinkaboutme.reserp.ir
-- name: 'ARISTA #8'
+- name: 'ARISTA #7'
   type: vmess
-  server: 94.232.247.165
-  port: 45653
-  uuid: 9e91d19a-c73f-4276-adbc-b337c374259c
+  server: jp111cf.885397.xyz
+  port: 8080
+  uuid: 37eaa80f-a1d9-43bd-b1d9-5003f04c19d8
   alterId: 0
   cipher: auto
-  network: tcp
+  network: ws
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 94.232.247.165
-  client-fingerprint: ''
-- name: 'ARISTA #9'
-  type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 165.140.216.141
-  client-fingerprint: ''
+  servername: us1.885397.xyz
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: us1.885397.xyz
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -238,8 +206,6 @@ proxy-groups:
   - 'ARISTA #5'
   - 'ARISTA #6'
   - 'ARISTA #7'
-  - 'ARISTA #8'
-  - 'ARISTA #9'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -251,8 +217,6 @@ proxy-groups:
   - 'ARISTA #5'
   - 'ARISTA #6'
   - 'ARISTA #7'
-  - 'ARISTA #8'
-  - 'ARISTA #9'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
