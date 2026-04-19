@@ -78,17 +78,19 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: 13.36.75.195
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
+  server: 8.6.112.0
+  port: 2096
+  password: 8r%3C%5B9%27l6hAO%238ZQi
+  network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
+  servername: Koma-YT.PAGeS.Dev
   client-fingerprint: chrome
-  alpn:
-  - http/1.1
+  ws-opts:
+    path: /tr
+    headers:
+      Host: Koma-YT.PAGeS.Dev
 - name: 'Trojan #2'
   type: trojan
   server: 13.38.210.223
@@ -165,19 +167,17 @@ proxies:
   - http/1.1
 - name: 'Trojan #8'
   type: trojan
-  server: 127.0.0.1
-  port: 40443
-  password: humanity
-  network: ws
+  server: 13.36.75.195
+  port: 22222
+  password: telegram-id-privatevpns
+  network: tcp
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: www.creationlong.org
+  servername: trojan.burgerip.co.uk
   client-fingerprint: chrome
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.creationlong.org
+  alpn:
+  - http/1.1
 - name: 'Trojan #9'
   type: trojan
   server: 8.6.112.0
@@ -236,124 +236,19 @@ proxies:
       Host: sni.111000.dynv6.net
 - name: 'Trojan #13'
   type: trojan
-  server: 8.6.112.0
-  port: 2096
-  password: 8r%3C%5B9%27l6hAO%238ZQi
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: Koma-YT.PAGeS.Dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /tr
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-- name: 'Trojan #14'
-  type: trojan
-  server: 152.53.200.98
-  port: 8444
-  password: trojan
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: jflsjlaf.pages.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: //
-    headers:
-      Host: jflsjlaf.pages.dev
-- name: 'Trojan #15'
-  type: trojan
-  server: 152.53.60.198
-  port: 8444
-  password: trojan
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: jflsjlaf.pages.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: jflsjlaf.pages.dev
-- name: 'Trojan #16'
-  type: trojan
-  server: 152.53.200.98
-  port: 8444
-  password: trojan
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: jflsjlaf.pages.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: jflsjlaf.pages.dev
-- name: 'Trojan #17'
-  type: trojan
-  server: 152.53.200.98
-  port: 8444
-  password: trojan
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: jflsjlaf.pages.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: jflsjlaf.pages.dev
-- name: 'Trojan #18'
-  type: trojan
-  server: 152.53.200.167
-  port: 8444
-  password: trojan
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: jflsjlaf.pages.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: jflsjlaf.pages.dev
-- name: 'Trojan #19'
-  type: trojan
-  server: 152.53.45.251
-  port: 8888
-  password: trojan
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: jflsjlaf.pages.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: jflsjlaf.pages.dev
-- name: 'Trojan #20'
-  type: trojan
-  server: 8.6.112.0
-  port: 443
+  server: 127.0.0.1
+  port: 40443
   password: humanity
   network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: www.multiplydose.com
+  servername: www.creationlong.org
   client-fingerprint: chrome
   ws-opts:
     path: /assignment
     headers:
-      Host: www.multiplydose.com
+      Host: www.creationlong.org
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -372,13 +267,6 @@ proxy-groups:
   - 'Trojan #11'
   - 'Trojan #12'
   - 'Trojan #13'
-  - 'Trojan #14'
-  - 'Trojan #15'
-  - 'Trojan #16'
-  - 'Trojan #17'
-  - 'Trojan #18'
-  - 'Trojan #19'
-  - 'Trojan #20'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -396,13 +284,6 @@ proxy-groups:
   - 'Trojan #11'
   - 'Trojan #12'
   - 'Trojan #13'
-  - 'Trojan #14'
-  - 'Trojan #15'
-  - 'Trojan #16'
-  - 'Trojan #17'
-  - 'Trojan #18'
-  - 'Trojan #19'
-  - 'Trojan #20'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
