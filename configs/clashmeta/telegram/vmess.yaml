@@ -78,42 +78,6 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: cdn.midasnet.work
-  port: 80
-  uuid: 9b78392c-c709-4c4f-a7f0-c2ac8d78d030
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: test.midasnet.work
-  client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: test.midasnet.work
-- name: 'ARISTA #2'
-  type: vmess
-  server: 47.243.135.74
-  port: 55185
-  uuid: 1375985e-334a-4c25-8f64-52a182bc8037
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 47.243.135.74
-  client-fingerprint: ''
-  ws-opts:
-    path: /Notif_Chat
-    headers:
-      Host: 47.243.135.74
-- name: 'ARISTA #3'
-  type: vmess
   server: 66.163.117.58
   port: 22324
   uuid: 04621bae-ab36-11ec-b909-0242ac120002
@@ -126,7 +90,7 @@ proxies:
   tcp-fast-open: true
   servername: 66.163.117.58
   client-fingerprint: chrome
-- name: 'ARISTA #4'
+- name: 'ARISTA #2'
   type: vmess
   server: 165.140.216.141
   port: 443
@@ -140,25 +104,7 @@ proxies:
   tcp-fast-open: true
   servername: 165.140.216.141
   client-fingerprint: ''
-- name: 'ARISTA #5'
-  type: vmess
-  server: www.arvancloud.ir
-  port: 8080
-  uuid: 72906a55-9f0a-4aff-83b9-3385677a7495
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: doyouundestand-whatis-myproducttorunotthinkaboutme.reserp.ir
-  client-fingerprint: ''
-  ws-opts:
-    path: /varzesh3
-    headers:
-      Host: doyouundestand-whatis-myproducttorunotthinkaboutme.reserp.ir
-- name: 'ARISTA #6'
+- name: 'ARISTA #3'
   type: vmess
   server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
   port: 443
@@ -176,25 +122,11 @@ proxies:
     path: /api/direct
     headers:
       Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
-- name: 'ARISTA #7'
+- name: 'ARISTA #4'
   type: vmess
-  server: 193.151.146.232
-  port: 17356
-  uuid: f95cb5ae-1b06-4a57-aba0-30afe12d23ed
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 193.151.146.232
-  client-fingerprint: ''
-- name: 'ARISTA #8'
-  type: vmess
-  server: sg111cf.885397.xyz
-  port: 8080
-  uuid: 638239ae-5ec4-44f6-9b89-1bd69bb5ee74
+  server: cdn.midasnet.work
+  port: 80
+  uuid: 9b78392c-c709-4c4f-a7f0-c2ac8d78d030
   alterId: 0
   cipher: auto
   network: ws
@@ -202,40 +134,66 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: de.885397.xyz
-  client-fingerprint: chrome
+  servername: test.midasnet.work
+  client-fingerprint: ''
   ws-opts:
     path: /
     headers:
-      Host: de.885397.xyz
-- name: 'ARISTA #9'
+      Host: test.midasnet.work
+- name: 'ARISTA #5'
   type: vmess
-  server: mehi.iammehrab.sbs
-  port: 3680
-  uuid: 1b561ad4-f0c1-409d-ae16-735e88cc2c1a
+  server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
+  port: 443
+  uuid: 1bddb5ba-d8d3-445f-d8d1-95eb6e501fa5
   alterId: 0
   cipher: auto
-  network: tcp
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
+  client-fingerprint: ''
+  ws-opts:
+    path: /api/direct
+    headers:
+      Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir
+- name: 'ARISTA #6'
+  type: vmess
+  server: www.arvancloud.ir
+  port: 8080
+  uuid: 72906a55-9f0a-4aff-83b9-3385677a7495
+  alterId: 0
+  cipher: auto
+  network: ws
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: mehi.iammehrab.sbs
+  servername: doyouundestand-whatis-myproducttorunotthinkaboutme.reserp.ir
   client-fingerprint: ''
-- name: 'ARISTA #10'
+  ws-opts:
+    path: /varzesh3
+    headers:
+      Host: doyouundestand-whatis-myproducttorunotthinkaboutme.reserp.ir
+- name: 'ARISTA #7'
   type: vmess
-  server: mehi.iammehrab.sbs
-  port: 3680
-  uuid: a47db311-d9a0-4354-ad1c-62ef634e9a1f
+  server: 47.243.135.74
+  port: 55185
+  uuid: 1375985e-334a-4c25-8f64-52a182bc8037
   alterId: 0
   cipher: auto
-  network: tcp
+  network: ws
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: mehi.iammehrab.sbs
+  servername: 47.243.135.74
   client-fingerprint: ''
+  ws-opts:
+    path: /Notif_Chat
+    headers:
+      Host: 47.243.135.74
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -248,9 +206,6 @@ proxy-groups:
   - 'ARISTA #5'
   - 'ARISTA #6'
   - 'ARISTA #7'
-  - 'ARISTA #8'
-  - 'ARISTA #9'
-  - 'ARISTA #10'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -262,9 +217,6 @@ proxy-groups:
   - 'ARISTA #5'
   - 'ARISTA #6'
   - 'ARISTA #7'
-  - 'ARISTA #8'
-  - 'ARISTA #9'
-  - 'ARISTA #10'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
