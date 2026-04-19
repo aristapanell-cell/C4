@@ -78,18 +78,18 @@ sniffer:
 proxies:
 - name: 'ARISTA🔥 #1'
   type: ss
-  server: 3.145.201.93
-  port: 80
-  cipher: aes-256-gcm
-  password: dada1203
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #2'
-  type: ss
   server: 185.141.219.158
   port: 30312
   cipher: aes-256-gcm
   password: 99394cfebe6c0906
+  udp: true
+  tcp-fast-open: true
+- name: 'ARISTA🔥 #2'
+  type: ss
+  server: 3.145.201.93
+  port: 80
+  cipher: aes-256-gcm
+  password: dada1203
   udp: true
   tcp-fast-open: true
 - name: 'ARISTA🔥 #3'
@@ -158,14 +158,6 @@ proxies:
   tcp-fast-open: true
 - name: 'ARISTA🔥 #11'
   type: ss
-  server: 185.117.91.27
-  port: 21836
-  cipher: chacha20-ietf-poly1305
-  password: PDNcrHbGmb5u76Og8NatjZ
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #12'
-  type: ss
   server: 61.231.153.242
   port: 50099
   cipher: chacha20-ietf-poly1305
@@ -188,7 +180,6 @@ proxy-groups:
   - 'ARISTA🔥 #9'
   - 'ARISTA🔥 #10'
   - 'ARISTA🔥 #11'
-  - 'ARISTA🔥 #12'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -204,7 +195,6 @@ proxy-groups:
   - 'ARISTA🔥 #9'
   - 'ARISTA🔥 #10'
   - 'ARISTA🔥 #11'
-  - 'ARISTA🔥 #12'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
