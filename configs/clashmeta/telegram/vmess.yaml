@@ -78,21 +78,51 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: 172.66.213.38
-  port: 443
-  uuid: dfbbc8de-8a4f-407d-8069-6de38d83c4e1
+  server: snapp.ir
+  port: 80
+  uuid: 60a33cac-d167-4fca-bd88-c4aa1ca1fd8c
   alterId: 0
-  cipher: chacha20-poly1305
-  network: grpc
-  tls: true
+  cipher: auto
+  network: ws
+  tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: hdfy4c1.iraniancpi.uk
+  servername: darxhinteam.bravo-six.ir
   client-fingerprint: ''
-  grpc-opts:
-    grpc-service-name: WgCmp8p80KDzo64uHE
+  ws-opts:
+    path: /
+    headers:
+      Host: darxhinteam.bravo-six.ir
 - name: 'ARISTA #2'
+  type: vmess
+  server: mehi.iammehrab.sbs
+  port: 3680
+  uuid: 1b561ad4-f0c1-409d-ae16-735e88cc2c1a
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mehi.iammehrab.sbs
+  client-fingerprint: ''
+- name: 'ARISTA #3'
+  type: vmess
+  server: mehi.iammehrab.sbs
+  port: 3680
+  uuid: a47db311-d9a0-4354-ad1c-62ef634e9a1f
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mehi.iammehrab.sbs
+  client-fingerprint: ''
+- name: 'ARISTA #4'
   type: vmess
   server: 5.188.190.252
   port: 22324
@@ -106,7 +136,7 @@ proxies:
   tcp-fast-open: true
   servername: 5.188.190.252
   client-fingerprint: chrome
-- name: 'ARISTA #3'
+- name: 'ARISTA #5'
   type: vmess
   server: sg111cf.885397.xyz
   port: 8080
@@ -124,38 +154,6 @@ proxies:
     path: /
     headers:
       Host: de.885397.xyz
-- name: 'ARISTA #4'
-  type: vmess
-  server: snapp.ir
-  port: 80
-  uuid: b7213ade-0ba3-4910-8b7b-e2ac0df89a04
-  alterId: 0
-  cipher: auto
-  network: httpupgrade
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: starlinck.parszone2.ir
-  client-fingerprint: ''
-- name: 'ARISTA #5'
-  type: vmess
-  server: snapp.ir
-  port: 80
-  uuid: 60a33cac-d167-4fca-bd88-c4aa1ca1fd8c
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: darxhinteam.bravo-six.ir
-  client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: darxhinteam.bravo-six.ir
 proxy-groups:
 - name: Proxy Select
   type: select
