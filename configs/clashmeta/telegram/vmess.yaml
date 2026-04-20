@@ -78,22 +78,18 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: snapp.ir
-  port: 80
-  uuid: 60a33cac-d167-4fca-bd88-c4aa1ca1fd8c
+  server: mehi.iammehrab.sbs
+  port: 3680
+  uuid: 74609b0f-6ce0-4efb-a9a9-c00a825e3565
   alterId: 0
   cipher: auto
-  network: ws
+  network: tcp
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: darxhinteam.bravo-six.ir
+  servername: mehi.iammehrab.sbs
   client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: darxhinteam.bravo-six.ir
 - name: 'ARISTA #2'
   type: vmess
   server: 94.232.247.165
@@ -124,27 +120,41 @@ proxies:
   client-fingerprint: ''
 - name: 'ARISTA #4'
   type: vmess
-  server: 47.90.244.153
-  port: 8443
-  uuid: 65e2a985-ad20-4486-a7ec-b67b20ee56af
+  server: 188.213.199.47
+  port: 43828
+  uuid: 067ae20f-7bd9-4cd6-b0c3-2fea677755ff
   alterId: 0
   cipher: auto
-  network: ws
+  network: tcp
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 47.90.244.153
+  servername: filmnet.ir
   client-fingerprint: ''
-  ws-opts:
-    path: /ws
-    headers:
-      Host: 47.90.244.153
 - name: 'ARISTA #5'
+  type: vmess
+  server: 185.143.233.235
+  port: 443
+  uuid: d459349f-b66a-457d-a9bf-089509691551
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: nobitex.ir.cdnlx1u.shahramcloud.com
+  client-fingerprint: firefox
+  ws-opts:
+    path: /
+    headers:
+      Host: nobitex.ir.cdnlx1u.shahramcloud.com
+- name: 'ARISTA #6'
   type: vmess
   server: snapp.ir
   port: 80
-  uuid: 2257d4b1-82c5-4089-a44c-8c08ab03e515
+  uuid: 60a33cac-d167-4fca-bd88-c4aa1ca1fd8c
   alterId: 0
   cipher: auto
   network: ws
@@ -158,7 +168,7 @@ proxies:
     path: /
     headers:
       Host: darxhinteam.bravo-six.ir
-- name: 'ARISTA #6'
+- name: 'ARISTA #7'
   type: vmess
   server: dota.go2game.top
   port: 29835
@@ -179,6 +189,41 @@ proxies:
     path: /wer
     headers:
       Host: dota.go2game.top
+- name: 'ARISTA #8'
+  type: vmess
+  server: 217.114.40.130
+  port: 5050
+  uuid: faaadda1-3584-479b-a3aa-88ca5ebe7bb7
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 217.114.40.130
+  client-fingerprint: ''
+- name: 'ARISTA #9'
+  type: vmess
+  server: black.camelproxy.sbs
+  port: 25876
+  uuid: e7ff8866-2b68-45c2-813e-5c15a9f4724d
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: black.camelproxy.sbs
+  client-fingerprint: chrome
+  alpn:
+  - h2
+  - http/1.1
+  ws-opts:
+    path: /sanjab1
+    headers:
+      Host: black.camelproxy.sbs
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -190,6 +235,9 @@ proxy-groups:
   - 'ARISTA #4'
   - 'ARISTA #5'
   - 'ARISTA #6'
+  - 'ARISTA #7'
+  - 'ARISTA #8'
+  - 'ARISTA #9'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -200,6 +248,9 @@ proxy-groups:
   - 'ARISTA #4'
   - 'ARISTA #5'
   - 'ARISTA #6'
+  - 'ARISTA #7'
+  - 'ARISTA #8'
+  - 'ARISTA #9'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
