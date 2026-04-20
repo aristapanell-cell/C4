@@ -78,29 +78,13 @@ sniffer:
 proxies:
 - name: 'ARISTA🔥 #1'
   type: ss
-  server: 45.129.3.254
-  port: 60290
-  cipher: aes-256-gcm
-  password: f34579d0148b2581
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #2'
-  type: ss
-  server: 45.55.40.127
-  port: 49726
-  cipher: chacha20-ietf-poly1305
-  password: elTuo73FsQwO90EbLo96Ve
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #3'
-  type: ss
   server: 154.26.155.172
   port: 443
   cipher: aes-256-gcm
   password: SL4vzcvhBHhTWivD
   udp: true
   tcp-fast-open: true
-- name: 'ARISTA🔥 #4'
+- name: 'ARISTA🔥 #2'
   type: ss
   server: 159.223.236.36
   port: 19582
@@ -108,7 +92,7 @@ proxies:
   password: WC0GbiCk67K8nHDaDHmYIX
   udp: true
   tcp-fast-open: true
-- name: 'ARISTA🔥 #5'
+- name: 'ARISTA🔥 #3'
   type: ss
   server: 57.129.95.45
   port: 11201
@@ -116,7 +100,7 @@ proxies:
   password: 6675cbf62d6a3a4f
   udp: true
   tcp-fast-open: true
-- name: 'ARISTA🔥 #6'
+- name: 'ARISTA🔥 #4'
   type: ss
   server: 194.87.69.143
   port: 12091
@@ -124,7 +108,7 @@ proxies:
   password: 83acf69edb4e5453
   udp: true
   tcp-fast-open: true
-- name: 'ARISTA🔥 #7'
+- name: 'ARISTA🔥 #5'
   type: ss
   server: 46.101.196.138
   port: 23243
@@ -132,12 +116,28 @@ proxies:
   password: Q7cjiVD0oKNE2o9sUnZKQg
   udp: true
   tcp-fast-open: true
-- name: 'ARISTA🔥 #8'
+- name: 'ARISTA🔥 #6'
   type: ss
   server: 139.59.87.22
   port: 16970
   cipher: chacha20-ietf-poly1305
   password: 6ThD1AgwXc8Stpp7hEohLa
+  udp: true
+  tcp-fast-open: true
+- name: 'ARISTA🔥 #7'
+  type: ss
+  server: 45.55.40.127
+  port: 49726
+  cipher: chacha20-ietf-poly1305
+  password: elTuo73FsQwO90EbLo96Ve
+  udp: true
+  tcp-fast-open: true
+- name: 'ARISTA🔥 #8'
+  type: ss
+  server: 45.129.3.254
+  port: 60290
+  cipher: aes-256-gcm
+  password: f34579d0148b2581
   udp: true
   tcp-fast-open: true
 - name: 'ARISTA🔥 #9'
@@ -164,46 +164,6 @@ proxies:
   password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
   tcp-fast-open: true
-- name: 'ARISTA🔥 #12'
-  type: ss
-  server: 36.230.6.242
-  port: 50099
-  cipher: chacha20-ietf-poly1305
-  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #13'
-  type: ss
-  server: 173.234.29.2
-  port: 990
-  cipher: chacha20-ietf-poly1305
-  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #14'
-  type: ss
-  server: 15.135.165.225
-  port: 80
-  cipher: aes-256-gcm
-  password: dada1203
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #15'
-  type: ss
-  server: 92.112.126.90
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: 9tqhMdIrTkgQ46PvhyAtMH
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #16'
-  type: ss
-  server: 173.244.56.6
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  udp: true
-  tcp-fast-open: true
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -220,11 +180,6 @@ proxy-groups:
   - 'ARISTA🔥 #9'
   - 'ARISTA🔥 #10'
   - 'ARISTA🔥 #11'
-  - 'ARISTA🔥 #12'
-  - 'ARISTA🔥 #13'
-  - 'ARISTA🔥 #14'
-  - 'ARISTA🔥 #15'
-  - 'ARISTA🔥 #16'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -240,11 +195,6 @@ proxy-groups:
   - 'ARISTA🔥 #9'
   - 'ARISTA🔥 #10'
   - 'ARISTA🔥 #11'
-  - 'ARISTA🔥 #12'
-  - 'ARISTA🔥 #13'
-  - 'ARISTA🔥 #14'
-  - 'ARISTA🔥 #15'
-  - 'ARISTA🔥 #16'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
