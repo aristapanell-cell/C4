@@ -96,33 +96,23 @@ proxies:
       Host: darxhinteam.bravo-six.ir
 - name: 'ARISTA #2'
   type: vmess
-  server: mehi.iammehrab.sbs
-  port: 3680
-  uuid: 1b561ad4-f0c1-409d-ae16-735e88cc2c1a
+  server: 185.143.233.235
+  port: 80
+  uuid: 820091c5-fc6a-4c2e-9d05-e73b3154b531
   alterId: 0
   cipher: auto
-  network: tcp
+  network: ws
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: mehi.iammehrab.sbs
+  servername: n3.multiservers.ir
   client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: n3.multiservers.ir
 - name: 'ARISTA #3'
-  type: vmess
-  server: mehi.iammehrab.sbs
-  port: 3680
-  uuid: a47db311-d9a0-4354-ad1c-62ef634e9a1f
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mehi.iammehrab.sbs
-  client-fingerprint: ''
-- name: 'ARISTA #4'
   type: vmess
   server: 5.188.190.252
   port: 22324
@@ -136,7 +126,7 @@ proxies:
   tcp-fast-open: true
   servername: 5.188.190.252
   client-fingerprint: chrome
-- name: 'ARISTA #5'
+- name: 'ARISTA #4'
   type: vmess
   server: sg111cf.885397.xyz
   port: 8080
@@ -154,6 +144,34 @@ proxies:
     path: /
     headers:
       Host: de.885397.xyz
+- name: 'ARISTA #5'
+  type: vmess
+  server: mehi.iammehrab.sbs
+  port: 3680
+  uuid: 1b561ad4-f0c1-409d-ae16-735e88cc2c1a
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mehi.iammehrab.sbs
+  client-fingerprint: ''
+- name: 'ARISTA #6'
+  type: vmess
+  server: mehi.iammehrab.sbs
+  port: 3680
+  uuid: a47db311-d9a0-4354-ad1c-62ef634e9a1f
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mehi.iammehrab.sbs
+  client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -164,6 +182,7 @@ proxy-groups:
   - 'ARISTA #3'
   - 'ARISTA #4'
   - 'ARISTA #5'
+  - 'ARISTA #6'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -173,6 +192,7 @@ proxy-groups:
   - 'ARISTA #3'
   - 'ARISTA #4'
   - 'ARISTA #5'
+  - 'ARISTA #6'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
