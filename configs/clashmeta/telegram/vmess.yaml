@@ -78,20 +78,6 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: eco.swagvip.sbs
-  port: 9020
-  uuid: a745521f-4145-499e-af30-ff38bd80a89f
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: eco.swagvip.sbs
-  client-fingerprint: ''
-- name: 'ARISTA #2'
-  type: vmess
   server: 78.109.199.55
   port: 11072
   uuid: 9bf1b227-8b96-4705-929e-23a36703c9a9
@@ -104,7 +90,7 @@ proxies:
   tcp-fast-open: true
   servername: 78.109.199.55
   client-fingerprint: ''
-- name: 'ARISTA #3'
+- name: 'ARISTA #2'
   type: vmess
   server: 185.218.139.180
   port: 2096
@@ -122,7 +108,7 @@ proxies:
     path: /
     headers:
       Host: 185.218.139.180
-- name: 'ARISTA #4'
+- name: 'ARISTA #3'
   type: vmess
   server: 82.198.246.37
   port: 180
@@ -136,7 +122,7 @@ proxies:
   tcp-fast-open: true
   servername: 82.198.246.37
   client-fingerprint: chrome
-- name: 'ARISTA #5'
+- name: 'ARISTA #4'
   type: vmess
   server: 82.198.246.9
   port: 180
@@ -150,7 +136,7 @@ proxies:
   tcp-fast-open: true
   servername: 82.198.246.9
   client-fingerprint: chrome
-- name: 'ARISTA #6'
+- name: 'ARISTA #5'
   type: vmess
   server: us-340.star-kurd.net
   port: 80
@@ -164,7 +150,7 @@ proxies:
   tcp-fast-open: true
   servername: us-340.star-kurd.net
   client-fingerprint: chrome
-- name: 'ARISTA #7'
+- name: 'ARISTA #6'
   type: vmess
   server: stream.azadrah22.com
   port: 80
@@ -182,35 +168,21 @@ proxies:
     path: /user
     headers:
       Host: stream.azadrah22.com
+- name: 'ARISTA #7'
+  type: vmess
+  server: 185.236.38.44
+  port: 19946
+  uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 185.236.38.44
+  client-fingerprint: ''
 - name: 'ARISTA #8'
-  type: vmess
-  server: 185.236.38.44
-  port: 19946
-  uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 185.236.38.44
-  client-fingerprint: ''
-- name: 'ARISTA #9'
-  type: vmess
-  server: 185.236.38.44
-  port: 19946
-  uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 185.236.38.44
-  client-fingerprint: ''
-- name: 'ARISTA #10'
   type: vmess
   server: 185.236.38.44
   port: 19946
@@ -237,8 +209,6 @@ proxy-groups:
   - 'ARISTA #6'
   - 'ARISTA #7'
   - 'ARISTA #8'
-  - 'ARISTA #9'
-  - 'ARISTA #10'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -251,8 +221,6 @@ proxy-groups:
   - 'ARISTA #6'
   - 'ARISTA #7'
   - 'ARISTA #8'
-  - 'ARISTA #9'
-  - 'ARISTA #10'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
