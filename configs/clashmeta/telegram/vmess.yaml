@@ -92,41 +92,61 @@ proxies:
   client-fingerprint: ''
 - name: 'ARISTA #2'
   type: vmess
-  server: www.arvancloud.ir
-  port: 8080
-  uuid: 357bf70e-bbb7-4268-a3e0-2015ba63ba99
+  server: 82.198.246.9
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
   alterId: 0
   cipher: auto
-  network: ws
+  network: tcp
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: doyouundestand-whatis-myproducttorunotthinkaboutme.reserp.ir
-  client-fingerprint: ''
-  ws-opts:
-    path: /varzesh3
-    headers:
-      Host: doyouundestand-whatis-myproducttorunotthinkaboutme.reserp.ir
+  servername: 82.198.246.9
+  client-fingerprint: chrome
 - name: 'ARISTA #3'
   type: vmess
-  server: zol3.tbcn.ir
-  port: 8083
-  uuid: 12f2fc89-29bd-439b-8f48-29cf5bd94e47
+  server: mehi.iammehrab.sbs
+  port: 3680
+  uuid: 74609b0f-6ce0-4efb-a9a9-c00a825e3565
   alterId: 0
   cipher: auto
-  network: ws
+  network: tcp
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: google.com
+  servername: mehi.iammehrab.sbs
   client-fingerprint: ''
-  ws-opts:
-    path: /ws2
-    headers:
-      Host: google.com
 - name: 'ARISTA #4'
+  type: vmess
+  server: 62.3.42.44
+  port: 80
+  uuid: 247a80a3-a4f3-4d5d-b295-410157daeadb
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 62.3.42.44
+  client-fingerprint: ''
+- name: 'ARISTA #5'
+  type: vmess
+  server: dn.torontomovie.com
+  port: 8080
+  uuid: c177b6e9-c687-4642-b125-fc61b9edf4b9
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: dn.torontomovie.com
+  client-fingerprint: ''
+- name: 'ARISTA #6'
   type: vmess
   server: 45.15.170.237
   port: 80
@@ -144,7 +164,7 @@ proxies:
     path: /vmess/
     headers:
       Host: 45.15.170.237
-- name: 'ARISTA #5'
+- name: 'ARISTA #7'
   type: vmess
   server: 185.143.233.235
   port: 443
@@ -162,7 +182,7 @@ proxies:
     path: /
     headers:
       Host: nobitex.ir.cdnlx6u.shahramcloud.com
-- name: 'ARISTA #6'
+- name: 'ARISTA #8'
   type: vmess
   server: 47.90.244.153
   port: 8443
@@ -180,62 +200,6 @@ proxies:
     path: /ws
     headers:
       Host: 47.90.244.153
-- name: 'ARISTA #7'
-  type: vmess
-  server: 78.109.199.55
-  port: 11072
-  uuid: 9bf1b227-8b96-4705-929e-23a36703c9a9
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 78.109.199.55
-  client-fingerprint: ''
-- name: 'ARISTA #8'
-  type: vmess
-  server: 104.18.12.149
-  port: 80
-  uuid: 75e03526-8387-4d10-a129-b512563b31b6
-  alterId: 0
-  cipher: auto
-  network: xhttp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: www.soonteam.top.
-  client-fingerprint: ''
-- name: 'ARISTA #9'
-  type: vmess
-  server: 82.198.246.9
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 82.198.246.9
-  client-fingerprint: chrome
-- name: 'ARISTA #10'
-  type: vmess
-  server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  port: 443
-  uuid: 7af098f6-7f5a-4fbe-8aaf-a94fbcdb1c7b
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -249,8 +213,6 @@ proxy-groups:
   - 'ARISTA #6'
   - 'ARISTA #7'
   - 'ARISTA #8'
-  - 'ARISTA #9'
-  - 'ARISTA #10'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -263,8 +225,6 @@ proxy-groups:
   - 'ARISTA #6'
   - 'ARISTA #7'
   - 'ARISTA #8'
-  - 'ARISTA #9'
-  - 'ARISTA #10'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
