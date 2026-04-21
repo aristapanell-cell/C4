@@ -78,6 +78,20 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
+  server: 185.236.38.44
+  port: 19946
+  uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 185.236.38.44
+  client-fingerprint: ''
+- name: 'ARISTA #2'
+  type: vmess
   server: 78.109.199.55
   port: 11072
   uuid: 9bf1b227-8b96-4705-929e-23a36703c9a9
@@ -90,39 +104,7 @@ proxies:
   tcp-fast-open: true
   servername: 78.109.199.55
   client-fingerprint: ''
-- name: 'ARISTA #2'
-  type: vmess
-  server: 185.218.139.180
-  port: 2096
-  uuid: ed7246f2-9b3b-49f0-8565-46ef0912c13e
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 185.218.139.180
-  client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: 185.218.139.180
 - name: 'ARISTA #3'
-  type: vmess
-  server: 82.198.246.37
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 82.198.246.37
-  client-fingerprint: chrome
-- name: 'ARISTA #4'
   type: vmess
   server: 82.198.246.9
   port: 180
@@ -136,66 +118,27 @@ proxies:
   tcp-fast-open: true
   servername: 82.198.246.9
   client-fingerprint: chrome
-- name: 'ARISTA #5'
+- name: 'ARISTA #4'
   type: vmess
-  server: us-340.star-kurd.net
-  port: 80
-  uuid: 18f469a1-98c3-4479-aec9-11979a8a51f0
+  server: i-love-iran.amlakayuni.ir
+  port: 2053
+  uuid: 3aa682d6-5276-b947-53a1-123d1c41d6d3
   alterId: 0
   cipher: auto
-  network: tcp
+  network: ws
   tls: true
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: us-340.star-kurd.net
-  client-fingerprint: chrome
-- name: 'ARISTA #6'
-  type: vmess
-  server: stream.azadrah22.com
-  port: 80
-  uuid: 76e151a7-9980-4077-bd52-07ef4e9cb496
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: stream.azadrah22.com
-  client-fingerprint: chrome
+  servername: i-love-iran.amlakayuni.ir
+  client-fingerprint: randomized
+  alpn:
+  - h2
+  - http/1.1
   ws-opts:
-    path: /user
+    path: ?ed=2053
     headers:
-      Host: stream.azadrah22.com
-- name: 'ARISTA #7'
-  type: vmess
-  server: 185.236.38.44
-  port: 19946
-  uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 185.236.38.44
-  client-fingerprint: ''
-- name: 'ARISTA #8'
-  type: vmess
-  server: 185.236.38.44
-  port: 19946
-  uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 185.236.38.44
-  client-fingerprint: ''
+      Host: i-love-iran.amlakayuni.ir
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -205,10 +148,6 @@ proxy-groups:
   - 'ARISTA #2'
   - 'ARISTA #3'
   - 'ARISTA #4'
-  - 'ARISTA #5'
-  - 'ARISTA #6'
-  - 'ARISTA #7'
-  - 'ARISTA #8'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -217,10 +156,6 @@ proxy-groups:
   - 'ARISTA #2'
   - 'ARISTA #3'
   - 'ARISTA #4'
-  - 'ARISTA #5'
-  - 'ARISTA #6'
-  - 'ARISTA #7'
-  - 'ARISTA #8'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
