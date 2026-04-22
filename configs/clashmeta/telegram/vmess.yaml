@@ -96,9 +96,9 @@ proxies:
       Host: v11.mailiran.net
 - name: 'ARISTA #2'
   type: vmess
-  server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  port: 8093
-  uuid: 84112468-c5b3-4f98-8b2c-4cca77522990
+  server: 165.140.216.141
+  port: 443
+  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
   alterId: 0
   cipher: auto
   network: tcp
@@ -106,7 +106,7 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
+  servername: 165.140.216.141
   client-fingerprint: ''
 - name: 'ARISTA #3'
   type: vmess
@@ -184,62 +184,6 @@ proxies:
       Host: 185.218.139.180
 - name: 'ARISTA #8'
   type: vmess
-  server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  port: 8083
-  uuid: 0a8a6d5f-39e9-4a70-8099-8aa16f91d8ed
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  client-fingerprint: ''
-- name: 'ARISTA #9'
-  type: vmess
-  server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  port: 8083
-  uuid: a3c8fcbe-fe6f-4538-ba11-acafd43fdc72
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  client-fingerprint: ''
-- name: 'ARISTA #10'
-  type: vmess
-  server: 165.140.216.141
-  port: 443
-  uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 165.140.216.141
-  client-fingerprint: ''
-- name: 'ARISTA #11'
-  type: vmess
-  server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  port: 8081
-  uuid: 345835b1-87d0-441f-b022-009bc89a11c3
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  client-fingerprint: ''
-- name: 'ARISTA #12'
-  type: vmess
   server: 47.90.244.153
   port: 8443
   uuid: 65e2a985-ad20-4486-a7ec-b67b20ee56af
@@ -256,26 +200,6 @@ proxies:
     path: /ws
     headers:
       Host: 47.90.244.153
-- name: 'ARISTA #13'
-  type: vmess
-  server: verso.nahidapp.com
-  port: 443
-  uuid: 83110771-a3cf-4b59-a068-cf7487896914
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: verso.nahidapp.com
-  client-fingerprint: ''
-  alpn:
-  - http/1.1
-  ws-opts:
-    path: /vm/
-    headers:
-      Host: verso.nahidapp.com
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -289,11 +213,6 @@ proxy-groups:
   - 'ARISTA #6'
   - 'ARISTA #7'
   - 'ARISTA #8'
-  - 'ARISTA #9'
-  - 'ARISTA #10'
-  - 'ARISTA #11'
-  - 'ARISTA #12'
-  - 'ARISTA #13'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -306,11 +225,6 @@ proxy-groups:
   - 'ARISTA #6'
   - 'ARISTA #7'
   - 'ARISTA #8'
-  - 'ARISTA #9'
-  - 'ARISTA #10'
-  - 'ARISTA #11'
-  - 'ARISTA #12'
-  - 'ARISTA #13'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
