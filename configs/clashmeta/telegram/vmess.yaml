@@ -78,119 +78,23 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: 104.18.12.149
-  port: 80
-  uuid: 75e03526-8387-4d10-a129-b512563b31b6
+  server: v11.mailiran.net
+  port: 11999
+  uuid: 8257b31e-0805-4f28-9209-251b72b9a593
   alterId: 0
   cipher: auto
-  network: xhttp
+  network: ws
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: www.soonteam.top.
+  servername: v11.mailiran.net
   client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: v11.mailiran.net
 - name: 'ARISTA #2'
-  type: vmess
-  server: 47.90.244.153
-  port: 8443
-  uuid: 65e2a985-ad20-4486-a7ec-b67b20ee56af
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 47.90.244.153
-  client-fingerprint: ''
-  ws-opts:
-    path: /ws
-    headers:
-      Host: 47.90.244.153
-- name: 'ARISTA #3'
-  type: vmess
-  server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  port: 8082
-  uuid: 0907ead7-ad2f-4082-b90f-4dd3cb06f4c6
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  client-fingerprint: ''
-- name: 'ARISTA #4'
-  type: vmess
-  server: kr01.a0a.xyz
-  port: 19568
-  uuid: 641500bf-92f9-4720-e2e7-579a8f7dbb04
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: kr01.a0a.xyz
-  client-fingerprint: chrome
-  ws-opts:
-    path: /cctv13.m3u8
-    headers:
-      Host: kr01.a0a.xyz
-- name: 'ARISTA #5'
-  type: vmess
-  server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  port: 8081
-  uuid: a6cdb28e-add0-40f9-8d69-f46babd85df1
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  client-fingerprint: ''
-- name: 'ARISTA #6'
-  type: vmess
-  server: snapp.ir
-  port: 80
-  uuid: 594c2949-39cc-4d77-9d58-8f1abe635c70
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: darxhinteam.bravo-six.ir
-  client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: darxhinteam.bravo-six.ir
-- name: 'ARISTA #7'
-  type: vmess
-  server: snapp.ir
-  port: 80
-  uuid: f5b4c593-0e4e-444a-a1fc-affc9ef578d4
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: darxhinteam.bravo-six.ir
-  client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: darxhinteam.bravo-six.ir
-- name: 'ARISTA #8'
   type: vmess
   server: verso.nahidapp.com
   port: 443
@@ -210,7 +114,39 @@ proxies:
     path: /vm/
     headers:
       Host: verso.nahidapp.com
-- name: 'ARISTA #9'
+- name: 'ARISTA #3'
+  type: vmess
+  server: shop.onlinesite.top
+  port: 2131
+  uuid: c6e88e2b-be7a-4cae-9fcc-2f635402ad53
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: shop.onlinesite.top
+  client-fingerprint: ''
+- name: 'ARISTA #4'
+  type: vmess
+  server: 47.90.244.153
+  port: 8443
+  uuid: 65e2a985-ad20-4486-a7ec-b67b20ee56af
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 47.90.244.153
+  client-fingerprint: ''
+  ws-opts:
+    path: /ws
+    headers:
+      Host: 47.90.244.153
+- name: 'ARISTA #5'
   type: vmess
   server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
   port: 443
@@ -224,11 +160,25 @@ proxies:
   tcp-fast-open: true
   servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
   client-fingerprint: ''
-- name: 'ARISTA #10'
+- name: 'ARISTA #6'
   type: vmess
-  server: v11.mailiran.net
-  port: 11999
-  uuid: 8257b31e-0805-4f28-9209-251b72b9a593
+  server: 104.18.12.149
+  port: 80
+  uuid: 75e03526-8387-4d10-a129-b512563b31b6
+  alterId: 0
+  cipher: auto
+  network: xhttp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.soonteam.top.
+  client-fingerprint: ''
+- name: 'ARISTA #7'
+  type: vmess
+  server: kr01.a0a.xyz
+  port: 19568
+  uuid: 641500bf-92f9-4720-e2e7-579a8f7dbb04
   alterId: 0
   cipher: auto
   network: ws
@@ -236,13 +186,77 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: v11.mailiran.net
+  servername: kr01.a0a.xyz
+  client-fingerprint: chrome
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: kr01.a0a.xyz
+- name: 'ARISTA #8'
+  type: vmess
+  server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
+  port: 8081
+  uuid: a6cdb28e-add0-40f9-8d69-f46babd85df1
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
+  client-fingerprint: ''
+- name: 'ARISTA #9'
+  type: vmess
+  server: snapp.ir
+  port: 80
+  uuid: 594c2949-39cc-4d77-9d58-8f1abe635c70
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: darxhinteam.bravo-six.ir
   client-fingerprint: ''
   ws-opts:
     path: /
     headers:
-      Host: v11.mailiran.net
+      Host: darxhinteam.bravo-six.ir
+- name: 'ARISTA #10'
+  type: vmess
+  server: snapp.ir
+  port: 80
+  uuid: f5b4c593-0e4e-444a-a1fc-affc9ef578d4
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: darxhinteam.bravo-six.ir
+  client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: darxhinteam.bravo-six.ir
 - name: 'ARISTA #11'
+  type: vmess
+  server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
+  port: 8088
+  uuid: 29ed9858-c0e6-4a08-a5c2-52123bc3fd91
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
+  client-fingerprint: ''
+- name: 'ARISTA #12'
   type: vmess
   server: 82.198.246.9
   port: 180
@@ -272,6 +286,7 @@ proxy-groups:
   - 'ARISTA #9'
   - 'ARISTA #10'
   - 'ARISTA #11'
+  - 'ARISTA #12'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -287,6 +302,7 @@ proxy-groups:
   - 'ARISTA #9'
   - 'ARISTA #10'
   - 'ARISTA #11'
+  - 'ARISTA #12'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
