@@ -76,14 +76,6 @@ sniffer:
       - 2087
       - 2096
 proxies:
-- name: 'ARISTA🔥 #1'
-  type: ss
-  server: 66.94.125.178
-  port: 80
-  cipher: aes-256-gcm
-  password: 14CLBaFBqwqxBJy6
-  udp: true
-  tcp-fast-open: true
 - name: 'ARISTA🔥 #2'
   type: ss
   server: 65.0.104.223
@@ -150,10 +142,10 @@ proxies:
   tcp-fast-open: true
 - name: 'ARISTA🔥 #10'
   type: ss
-  server: 46.101.196.138
-  port: 23243
+  server: 159.223.236.36
+  port: 19582
   cipher: chacha20-ietf-poly1305
-  password: Q7cjiVD0oKNE2o9sUnZKQg
+  password: WC0GbiCk67K8nHDaDHmYIX
   udp: true
   tcp-fast-open: true
 - name: 'ARISTA🔥 #11'
@@ -166,10 +158,34 @@ proxies:
   tcp-fast-open: true
 - name: 'ARISTA🔥 #12'
   type: ss
-  server: 159.223.236.36
-  port: 19582
+  server: 46.101.196.138
+  port: 23243
   cipher: chacha20-ietf-poly1305
-  password: WC0GbiCk67K8nHDaDHmYIX
+  password: Q7cjiVD0oKNE2o9sUnZKQg
+  udp: true
+  tcp-fast-open: true
+- name: 'ARISTA🔥 #13'
+  type: ss
+  server: 71.19.148.143
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: p78naCf2EfOlRSLTX0wFVx
+  udp: true
+  tcp-fast-open: true
+- name: 'ARISTA🔥 #14'
+  type: ss
+  server: 147.78.0.182
+  port: 990
+  cipher: chacha20-ietf-poly1305
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  udp: true
+  tcp-fast-open: true
+- name: 'ARISTA🔥 #15'
+  type: ss
+  server: 172.236.152.96
+  port: 62443
+  cipher: chacha20-ietf-poly1305
+  password: Waw_fWHe1N88K7MolnyU_Q
   udp: true
   tcp-fast-open: true
 proxy-groups:
@@ -177,7 +193,6 @@ proxy-groups:
   type: select
   proxies:
   - Auto Select
-  - 'ARISTA🔥 #1'
   - 'ARISTA🔥 #2'
   - 'ARISTA🔥 #3'
   - 'ARISTA🔥 #4'
@@ -189,11 +204,13 @@ proxy-groups:
   - 'ARISTA🔥 #10'
   - 'ARISTA🔥 #11'
   - 'ARISTA🔥 #12'
+  - 'ARISTA🔥 #13'
+  - 'ARISTA🔥 #14'
+  - 'ARISTA🔥 #15'
   - DIRECT
 - name: Auto Select
   type: url-test
   proxies:
-  - 'ARISTA🔥 #1'
   - 'ARISTA🔥 #2'
   - 'ARISTA🔥 #3'
   - 'ARISTA🔥 #4'
@@ -205,6 +222,9 @@ proxy-groups:
   - 'ARISTA🔥 #10'
   - 'ARISTA🔥 #11'
   - 'ARISTA🔥 #12'
+  - 'ARISTA🔥 #13'
+  - 'ARISTA🔥 #14'
+  - 'ARISTA🔥 #15'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
