@@ -78,20 +78,6 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: 185.236.38.44
-  port: 19946
-  uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 185.236.38.44
-  client-fingerprint: ''
-- name: 'ARISTA #2'
-  type: vmess
   server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
   port: 20305
   uuid: c1b4774f-7b43-4c2e-adc9-c02ab0750495
@@ -104,21 +90,7 @@ proxies:
   tcp-fast-open: true
   servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
   client-fingerprint: ''
-- name: 'ARISTA #3'
-  type: vmess
-  server: 185.11.89.38
-  port: 12809
-  uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 185.11.89.38
-  client-fingerprint: ''
-- name: 'ARISTA #4'
+- name: 'ARISTA #2'
   type: vmess
   server: 217.218.52.1
   port: 10841
@@ -132,25 +104,61 @@ proxies:
   tcp-fast-open: true
   servername: 217.218.52.1
   client-fingerprint: ''
+- name: 'ARISTA #3'
+  type: vmess
+  server: creativecommons.org
+  port: 8443
+  uuid: 39382034-3920-4130-b220-393820353120
+  alterId: 0
+  cipher: none
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: tr-1.stunnel.cc
+  client-fingerprint: ''
+  ws-opts:
+    path: /ws
+    headers:
+      Host: tr-1.stunnel.cc
+- name: 'ARISTA #4'
+  type: vmess
+  server: 185.11.89.38
+  port: 12809
+  uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 185.11.89.38
+  client-fingerprint: ''
 - name: 'ARISTA #5'
   type: vmess
-  server: dn.torontomovie.com
-  port: 8080
-  uuid: 2206de3b-53ed-405a-893f-f9a83c96fe93
+  server: 185.143.233.235
+  port: 80
+  uuid: 9cdc1649-4762-40c8-85f7-ee65ef08f16e
   alterId: 0
   cipher: auto
-  network: tcp
+  network: ws
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: dn.torontomovie.com
+  servername: GBR005.midasnet.work
   client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: GBR005.midasnet.work
 - name: 'ARISTA #6'
   type: vmess
-  server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  port: 20314
-  uuid: 7017023c-883c-4642-b36b-7b9f5ab37199
+  server: 185.236.38.44
+  port: 19946
+  uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88
   alterId: 0
   cipher: auto
   network: tcp
@@ -158,7 +166,7 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
+  servername: 185.236.38.44
   client-fingerprint: ''
 - name: 'ARISTA #7'
   type: vmess
@@ -190,27 +198,9 @@ proxies:
   client-fingerprint: ''
 - name: 'ARISTA #9'
   type: vmess
-  server: 10.a400.top
-  port: 44742
-  uuid: 691ebfe7-756a-4b7d-836a-f292ef3b2146
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 10.a400.top
-  client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: 10.a400.top
-- name: 'ARISTA #10'
-  type: vmess
-  server: 165.154.195.38
-  port: 35034
-  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
+  server: dn.torontomovie.com
+  port: 8080
+  uuid: 2206de3b-53ed-405a-893f-f9a83c96fe93
   alterId: 0
   cipher: auto
   network: tcp
@@ -218,9 +208,9 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 165.154.195.38
+  servername: dn.torontomovie.com
   client-fingerprint: ''
-- name: 'ARISTA #11'
+- name: 'ARISTA #10'
   type: vmess
   server: 185.143.233.122
   port: 80
@@ -238,7 +228,7 @@ proxies:
     path: /?ed=2048
     headers:
       Host: acha3.battledns.ir
-- name: 'ARISTA #12'
+- name: 'ARISTA #11'
   type: vmess
   server: snapp.ir
   port: 8080
@@ -256,7 +246,7 @@ proxies:
     path: /
     headers:
       Host: stitchify.bravo-six.ir
-- name: 'ARISTA #13'
+- name: 'ARISTA #12'
   type: vmess
   server: snapp.ir
   port: 80
@@ -274,7 +264,7 @@ proxies:
     path: /
     headers:
       Host: darxhinteam.bravo-six.ir
-- name: 'ARISTA #14'
+- name: 'ARISTA #13'
   type: vmess
   server: snapp.ir
   port: 8080
@@ -292,7 +282,7 @@ proxies:
     path: /
     headers:
       Host: s1.yazdfa3.ir
-- name: 'ARISTA #15'
+- name: 'ARISTA #14'
   type: vmess
   server: 81.12.33.180
   port: 2024
@@ -306,7 +296,53 @@ proxies:
   tcp-fast-open: true
   servername: parsabr.com
   client-fingerprint: ''
+- name: 'ARISTA #15'
+  type: vmess
+  server: 10.a400.top
+  port: 44742
+  uuid: 691ebfe7-756a-4b7d-836a-f292ef3b2146
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 10.a400.top
+  client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: 10.a400.top
 - name: 'ARISTA #16'
+  type: vmess
+  server: 165.154.195.38
+  port: 35034
+  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 165.154.195.38
+  client-fingerprint: ''
+- name: 'ARISTA #17'
+  type: vmess
+  server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
+  port: 20314
+  uuid: 7017023c-883c-4642-b36b-7b9f5ab37199
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
+  client-fingerprint: ''
+- name: 'ARISTA #18'
   type: vmess
   server: 185.11.89.38
   port: 12809
@@ -320,25 +356,7 @@ proxies:
   tcp-fast-open: true
   servername: 185.11.89.38
   client-fingerprint: ''
-- name: 'ARISTA #17'
-  type: vmess
-  server: creativecommons.org
-  port: 8443
-  uuid: 39382034-3920-4130-b220-393820353120
-  alterId: 0
-  cipher: none
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: tr-1.stunnel.cc
-  client-fingerprint: ''
-  ws-opts:
-    path: /ws
-    headers:
-      Host: tr-1.stunnel.cc
-- name: 'ARISTA #18'
+- name: 'ARISTA #19'
   type: vmess
   server: dn.torontomovie.com
   port: 8080
@@ -352,7 +370,7 @@ proxies:
   tcp-fast-open: true
   servername: dn.torontomovie.com
   client-fingerprint: ''
-- name: 'ARISTA #19'
+- name: 'ARISTA #20'
   type: vmess
   server: player.onlinehostco.top
   port: 2081
@@ -366,7 +384,7 @@ proxies:
   tcp-fast-open: true
   servername: player.onlinehostco.top
   client-fingerprint: ''
-- name: 'ARISTA #20'
+- name: 'ARISTA #21'
   type: vmess
   server: 217.218.52.1
   port: 10841
@@ -379,34 +397,6 @@ proxies:
   skip-cert-verify: false
   tcp-fast-open: true
   servername: 217.218.52.1
-  client-fingerprint: ''
-- name: 'ARISTA #21'
-  type: vmess
-  server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  port: 20320
-  uuid: 9e2c435c-05a7-44a3-bae9-b86e270236da
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  client-fingerprint: ''
-- name: 'ARISTA #22'
-  type: vmess
-  server: dn.torontomovie.com
-  port: 8080
-  uuid: 2206de3b-53ed-405a-893f-f9a83c96fe93
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: dn.torontomovie.com
   client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
@@ -434,7 +424,6 @@ proxy-groups:
   - 'ARISTA #19'
   - 'ARISTA #20'
   - 'ARISTA #21'
-  - 'ARISTA #22'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -460,7 +449,6 @@ proxy-groups:
   - 'ARISTA #19'
   - 'ARISTA #20'
   - 'ARISTA #21'
-  - 'ARISTA #22'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
