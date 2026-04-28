@@ -96,9 +96,9 @@ proxies:
       Host: mig-sin.darkube.ir
 - name: 'ARISTA #2'
   type: vmess
-  server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  port: 20406
-  uuid: 6d98997c-54b1-4fa1-b157-b3244263cae7
+  server: 185.11.89.38
+  port: 12809
+  uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117
   alterId: 0
   cipher: auto
   network: tcp
@@ -106,13 +106,13 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
+  servername: 185.11.89.38
   client-fingerprint: ''
 - name: 'ARISTA #3'
   type: vmess
-  server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  port: 20406
-  uuid: f68577b6-ec8c-44e9-9757-9f4c0ff07fdf
+  server: 185.11.89.38
+  port: 12809
+  uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117
   alterId: 0
   cipher: auto
   network: tcp
@@ -120,23 +120,9 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
+  servername: 185.11.89.38
   client-fingerprint: ''
 - name: 'ARISTA #4'
-  type: vmess
-  server: 5.57.37.64
-  port: 10808
-  uuid: 00000000-0000-0000-0000-000000000000
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 5.57.37.64
-  client-fingerprint: ''
-- name: 'ARISTA #5'
   type: vmess
   server: i-love-iran.amlakayuni.ir
   port: 2053
@@ -150,14 +136,85 @@ proxies:
   tcp-fast-open: true
   servername: i-love-iran.amlakayuni.ir
   client-fingerprint: randomized
-  alpn:
-  - h2
-  - http/1.1
   ws-opts:
     path: ?ed=2053
     headers:
       Host: i-love-iran.amlakayuni.ir
+- name: 'ARISTA #5'
+  type: vmess
+  server: mig-sin.darkube.ir
+  port: 443
+  uuid: 254721a9-5739-4baf-b35d-9bc950e346db
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mig-sin.darkube.ir
+  client-fingerprint: ''
+  ws-opts:
+    path: /api/direct
+    headers:
+      Host: mig-sin.darkube.ir
 - name: 'ARISTA #6'
+  type: vmess
+  server: 35.212.177.67
+  port: 40029
+  uuid: e8ab37c7-2b1d-4776-c062-2cac8fc066e1
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 35.212.177.67
+  client-fingerprint: ''
+- name: 'ARISTA #7'
+  type: vmess
+  server: 35.212.177.67
+  port: 40029
+  uuid: e8ab37c7-2b1d-4776-c062-2cac8fc066e1
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 35.212.177.67
+  client-fingerprint: chrome
+- name: 'ARISTA #8'
+  type: vmess
+  server: 67.220.72.237
+  port: 22324
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+  alterId: 1
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 67.220.72.237
+  client-fingerprint: ''
+- name: 'ARISTA #9'
+  type: vmess
+  server: 185.236.38.44
+  port: 19946
+  uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 185.236.38.44
+  client-fingerprint: ''
+- name: 'ARISTA #10'
   type: vmess
   server: snapp.ir
   port: 8080
@@ -175,21 +232,7 @@ proxies:
     path: /
     headers:
       Host: rxs.bravo-six.ir
-- name: 'ARISTA #7'
-  type: vmess
-  server: 185.11.89.38
-  port: 12809
-  uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 185.11.89.38
-  client-fingerprint: ''
-- name: 'ARISTA #8'
+- name: 'ARISTA #11'
   type: vmess
   server: 185.222.210.50
   port: 80
@@ -203,7 +246,7 @@ proxies:
   tcp-fast-open: true
   servername: 185.222.210.50
   client-fingerprint: ''
-- name: 'ARISTA #9'
+- name: 'ARISTA #12'
   type: vmess
   server: snapp.ir
   port: 8880
@@ -221,7 +264,7 @@ proxies:
     path: /
     headers:
       Host: dl600tobi.sudoserver.ir
-- name: 'ARISTA #10'
+- name: 'ARISTA #13'
   type: vmess
   server: snapp.ir
   port: 80
@@ -235,7 +278,7 @@ proxies:
   tcp-fast-open: true
   servername: starlinck.parszone2.ir
   client-fingerprint: ''
-- name: 'ARISTA #11'
+- name: 'ARISTA #14'
   type: vmess
   server: v11.mailiran.net
   port: 11999
@@ -253,7 +296,7 @@ proxies:
     path: /
     headers:
       Host: v11.mailiran.net
-- name: 'ARISTA #12'
+- name: 'ARISTA #15'
   type: vmess
   server: client.afraserverc3.top
   port: 4166
@@ -267,89 +310,7 @@ proxies:
   tcp-fast-open: true
   servername: client.afraserverc3.top
   client-fingerprint: ''
-- name: 'ARISTA #13'
-  type: vmess
-  server: 185.236.38.44
-  port: 19946
-  uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 185.236.38.44
-  client-fingerprint: ''
-- name: 'ARISTA #14'
-  type: vmess
-  server: mig-sin.darkube.ir
-  port: 443
-  uuid: 254721a9-5739-4baf-b35d-9bc950e346db
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mig-sin.darkube.ir
-  client-fingerprint: chrome
-  ws-opts:
-    path: /api/direct
-    headers:
-      Host: mig-sin.darkube.ir
-- name: 'ARISTA #15'
-  type: vmess
-  server: dn.torontomovie.com
-  port: 8080
-  uuid: 2206de3b-53ed-405a-893f-f9a83c96fe93
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: dn.torontomovie.com
-  client-fingerprint: ''
 - name: 'ARISTA #16'
-  type: vmess
-  server: mig-sin.darkube.ir
-  port: 443
-  uuid: 254721a9-5739-4baf-b35d-9bc950e346db
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mig-sin.darkube.ir
-  client-fingerprint: ''
-  ws-opts:
-    path: /api/direct
-    headers:
-      Host: mig-sin.darkube.ir
-- name: 'ARISTA #17'
-  type: vmess
-  server: mig-sin.darkube.ir
-  port: 443
-  uuid: 254721a9-5739-4baf-b35d-9bc950e346db
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mig-sin.darkube.ir
-  client-fingerprint: chrome
-  ws-opts:
-    path: /api/direct
-    headers:
-      Host: mig-sin.darkube.ir
-- name: 'ARISTA #18'
   type: vmess
   server: 10.a400.top
   port: 44742
@@ -367,7 +328,7 @@ proxies:
     path: /
     headers:
       Host: 10.a400.top
-- name: 'ARISTA #19'
+- name: 'ARISTA #17'
   type: vmess
   server: 165.154.195.38
   port: 35034
@@ -381,7 +342,7 @@ proxies:
   tcp-fast-open: true
   servername: 165.154.195.38
   client-fingerprint: ''
-- name: 'ARISTA #20'
+- name: 'ARISTA #18'
   type: vmess
   server: mig-sin.darkube.ir
   port: 443
@@ -399,6 +360,38 @@ proxies:
     path: /api/direct
     headers:
       Host: mig-sin.darkube.ir
+- name: 'ARISTA #19'
+  type: vmess
+  server: mig-sin.darkube.ir
+  port: 443
+  uuid: 254721a9-5739-4baf-b35d-9bc950e346db
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mig-sin.darkube.ir
+  client-fingerprint: chrome
+  ws-opts:
+    path: /api/direct
+    headers:
+      Host: mig-sin.darkube.ir
+- name: 'ARISTA #20'
+  type: vmess
+  server: dn.torontomovie.com
+  port: 8080
+  uuid: 2206de3b-53ed-405a-893f-f9a83c96fe93
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: dn.torontomovie.com
+  client-fingerprint: ''
 - name: 'ARISTA #21'
   type: vmess
   server: mig-sin.darkube.ir
@@ -431,70 +424,6 @@ proxies:
   tcp-fast-open: true
   servername: 185.236.38.44
   client-fingerprint: ''
-- name: 'ARISTA #23'
-  type: vmess
-  server: 185.11.89.38
-  port: 12809
-  uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 185.11.89.38
-  client-fingerprint: ''
-- name: 'ARISTA #24'
-  type: vmess
-  server: i-love-iran.amlakayuni.ir
-  port: 2053
-  uuid: a0b58d55-b29b-7c0e-d774-3fe04fc375d8
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: i-love-iran.amlakayuni.ir
-  client-fingerprint: randomized
-  ws-opts:
-    path: ?ed=2053
-    headers:
-      Host: i-love-iran.amlakayuni.ir
-- name: 'ARISTA #25'
-  type: vmess
-  server: dn.torontomovie.com
-  port: 8080
-  uuid: 2206de3b-53ed-405a-893f-f9a83c96fe93
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: dn.torontomovie.com
-  client-fingerprint: ''
-- name: 'ARISTA #26'
-  type: vmess
-  server: 148.113.176.192
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: fapeng.org
-  client-fingerprint: ''
-  ws-opts:
-    path: linkvws
-    headers:
-      Host: fapeng.org
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -522,10 +451,6 @@ proxy-groups:
   - 'ARISTA #20'
   - 'ARISTA #21'
   - 'ARISTA #22'
-  - 'ARISTA #23'
-  - 'ARISTA #24'
-  - 'ARISTA #25'
-  - 'ARISTA #26'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -552,10 +477,6 @@ proxy-groups:
   - 'ARISTA #20'
   - 'ARISTA #21'
   - 'ARISTA #22'
-  - 'ARISTA #23'
-  - 'ARISTA #24'
-  - 'ARISTA #25'
-  - 'ARISTA #26'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
