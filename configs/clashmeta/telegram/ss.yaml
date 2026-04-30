@@ -78,21 +78,13 @@ sniffer:
 proxies:
 - name: 'ARISTA🔥 #1'
   type: ss
-  server: 142.93.183.235
-  port: 20683
-  cipher: chacha20-ietf-poly1305
-  password: 5vldsNMbQ8B4cKDK0sROwj
-  udp: true
-  tcp-fast-open: true
-- name: 'ARISTA🔥 #2'
-  type: ss
   server: 13.36.173.59
   port: 80
   cipher: aes-256-gcm
   password: dada1203
   udp: true
   tcp-fast-open: true
-- name: 'ARISTA🔥 #3'
+- name: 'ARISTA🔥 #2'
   type: ss
   server: 163.171.137.76
   port: 47394
@@ -100,7 +92,7 @@ proxies:
   password: eafad96826c79ddd
   udp: true
   tcp-fast-open: true
-- name: 'ARISTA🔥 #4'
+- name: 'ARISTA🔥 #3'
   type: ss
   server: 46.246.93.107
   port: 12138
@@ -108,12 +100,20 @@ proxies:
   password: tOLciW2sQHU2YCKPZJPVIH
   udp: true
   tcp-fast-open: true
-- name: 'ARISTA🔥 #5'
+- name: 'ARISTA🔥 #4'
   type: ss
   server: 216.105.168.18
   port: 443
   cipher: chacha20-ietf-poly1305
   password: bQZl7HDxSabr1FurTYQHFU
+  udp: true
+  tcp-fast-open: true
+- name: 'ARISTA🔥 #5'
+  type: ss
+  server: 142.93.183.235
+  port: 20683
+  cipher: chacha20-ietf-poly1305
+  password: 5vldsNMbQ8B4cKDK0sROwj
   udp: true
   tcp-fast-open: true
 - name: 'ARISTA🔥 #6'
@@ -140,12 +140,28 @@ proxies:
   password: Y66N7eDMqbn5uPWEu5Vpy1
   udp: true
   tcp-fast-open: true
+- name: 'ARISTA🔥 #9'
+  type: ss
+  server: 107.172.250.161
+  port: 59556
+  cipher: chacha20-ietf-poly1305
+  password: QTmLViU4VEmuwbOxUw4IXd
+  udp: true
+  tcp-fast-open: true
 - name: 'ARISTA🔥 #10'
   type: ss
   server: 20.87.107.99
   port: 443
   cipher: chacha20-ietf-poly1305
   password: akMKO9KXowxFcx5A
+  udp: true
+  tcp-fast-open: true
+- name: 'ARISTA🔥 #11'
+  type: ss
+  server: 103.57.251.240
+  port: 990
+  cipher: chacha20-ietf-poly1305
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
   udp: true
   tcp-fast-open: true
 proxy-groups:
@@ -161,7 +177,9 @@ proxy-groups:
   - 'ARISTA🔥 #6'
   - 'ARISTA🔥 #7'
   - 'ARISTA🔥 #8'
+  - 'ARISTA🔥 #9'
   - 'ARISTA🔥 #10'
+  - 'ARISTA🔥 #11'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -174,7 +192,9 @@ proxy-groups:
   - 'ARISTA🔥 #6'
   - 'ARISTA🔥 #7'
   - 'ARISTA🔥 #8'
+  - 'ARISTA🔥 #9'
   - 'ARISTA🔥 #10'
+  - 'ARISTA🔥 #11'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
