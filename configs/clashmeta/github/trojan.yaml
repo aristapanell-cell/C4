@@ -1656,20 +1656,44 @@ proxies:
   client-fingerprint: chrome
 - name: 'T.ME: @aristapnel #104'
   type: trojan
-  server: www.multiplydose.com
+  server: 216.234.140.55
+  port: 47574
+  password: 3PfyPiLUGm
+  network: grpc
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: aws.amazon.com
+  client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: GunService
+- name: 'T.ME: @aristapnel #105'
+  type: trojan
+  server: www.calmlunch.com
   port: 443
   password: humanity
   network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: www.multiplydose.com
+  servername: www.calmlunch.com
   client-fingerprint: chrome
   ws-opts:
     path: /assignment
     headers:
-      Host: www.multiplydose.com
-- name: 'T.ME: @aristapnel #105'
+      Host: www.calmlunch.com
+- name: 'T.ME: @aristapnel #106'
+  type: trojan
+  server: jp2-8sb.6121999.dpdns.org
+  port: 24534
+  password: e136d465-0558-43b9-b50c-b1f45d4cb2c2
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: jp2-8sb.6121999.dpdns.org
+  client-fingerprint: chrome
+- name: 'T.ME: @aristapnel #107'
   type: trojan
   server: 188.114.98.0
   port: 443
@@ -1684,7 +1708,7 @@ proxies:
     path: /assignment
     headers:
       Host: www.creationlong.org
-- name: 'T.ME: @aristapnel #106'
+- name: 'T.ME: @aristapnel #108'
   type: trojan
   server: 172.67.180.92
   port: 443
@@ -1699,7 +1723,7 @@ proxies:
     path: /assignment
     headers:
       Host: www.multiplydose.com
-- name: 'T.ME: @aristapnel #107'
+- name: 'T.ME: @aristapnel #109'
   type: trojan
   server: 172.64.152.23
   port: 443
@@ -1714,7 +1738,7 @@ proxies:
     path: /assignment
     headers:
       Host: www.gossipglove.com
-- name: 'T.ME: @aristapnel #108'
+- name: 'T.ME: @aristapnel #110'
   type: trojan
   server: 104.21.40.34
   port: 443
@@ -1842,6 +1866,8 @@ proxy-groups:
   - 'T.ME: @aristapnel #106'
   - 'T.ME: @aristapnel #107'
   - 'T.ME: @aristapnel #108'
+  - 'T.ME: @aristapnel #109'
+  - 'T.ME: @aristapnel #110'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -1954,6 +1980,8 @@ proxy-groups:
   - 'T.ME: @aristapnel #106'
   - 'T.ME: @aristapnel #107'
   - 'T.ME: @aristapnel #108'
+  - 'T.ME: @aristapnel #109'
+  - 'T.ME: @aristapnel #110'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
