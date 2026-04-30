@@ -78,6 +78,24 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
+  server: mig-sin.darkube.ir
+  port: 443
+  uuid: 254721a9-5739-4baf-b35d-9bc950e346db
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mig-sin.darkube.ir
+  client-fingerprint: ''
+  ws-opts:
+    path: /api/direct
+    headers:
+      Host: mig-sin.darkube.ir
+- name: 'ARISTA #2'
+  type: vmess
   server: 188.121.108.90
   port: 46742
   uuid: 221ed633-838f-4110-bf41-86936c1bc8fc
@@ -89,26 +107,12 @@ proxies:
   skip-cert-verify: false
   tcp-fast-open: true
   servername: 188.121.108.90
-  client-fingerprint: ''
-- name: 'ARISTA #2'
-  type: vmess
-  server: client.afracloud.top
-  port: 4260
-  uuid: 778aab00-7cd2-4e83-b9da-414e1cbcd47d
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: client.afracloud.top
   client-fingerprint: ''
 - name: 'ARISTA #3'
   type: vmess
   server: cdn.ip-static.com
   port: 80
-  uuid: d749e814-c75b-416e-8aed-f744903d0eec
+  uuid: 47f7daef-2abc-4e8d-9bf1-cb22eacddcb2
   alterId: 0
   cipher: auto
   network: ws
@@ -116,155 +120,41 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: POL001.midasnet.work
+  servername: AUS006.midasnet.work
   client-fingerprint: ''
   ws-opts:
     path: /
     headers:
-      Host: POL001.midasnet.work
+      Host: AUS006.midasnet.work
 - name: 'ARISTA #4'
   type: vmess
-  server: cdn.ip-static.com
-  port: 80
-  uuid: ba8d6f8f-b70b-4ada-a76a-8df6b1f67a8c
+  server: 185.11.89.38
+  port: 12809
+  uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117
   alterId: 0
   cipher: auto
-  network: ws
+  network: tcp
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: CAN008.midasnet.work
+  servername: 185.11.89.38
   client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: CAN008.midasnet.work
 - name: 'ARISTA #5'
   type: vmess
-  server: mig-sin.darkube.ir
-  port: 443
-  uuid: 254721a9-5739-4baf-b35d-9bc950e346db
+  server: 185.236.38.44
+  port: 19946
+  uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88
   alterId: 0
   cipher: auto
-  network: ws
-  tls: true
+  network: tcp
+  tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: mig-sin.darkube.ir
+  servername: 185.236.38.44
   client-fingerprint: ''
-  ws-opts:
-    path: /api/direct
-    headers:
-      Host: mig-sin.darkube.ir
 - name: 'ARISTA #6'
-  type: vmess
-  server: 165.154.195.38
-  port: 35034
-  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 165.154.195.38
-  client-fingerprint: ''
-- name: 'ARISTA #7'
-  type: vmess
-  server: 188.121.108.90
-  port: 46742
-  uuid: 221ed633-838f-4110-bf41-86936c1bc8fc
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 188.121.108.90
-  client-fingerprint: ''
-- name: 'ARISTA #8'
-  type: vmess
-  server: mig-sin.darkube.ir
-  port: 443
-  uuid: 254721a9-5739-4baf-b35d-9bc950e346db
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mig-sin.darkube.ir
-  client-fingerprint: ''
-  ws-opts:
-    path: /api/direct
-    headers:
-      Host: mig-sin.darkube.ir
-- name: 'ARISTA #9'
-  type: vmess
-  server: 185.236.38.44
-  port: 19946
-  uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 185.236.38.44
-  client-fingerprint: ''
-- name: 'ARISTA #10'
-  type: vmess
-  server: 185.236.38.44
-  port: 19946
-  uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 185.236.38.44
-  client-fingerprint: ''
-- name: 'ARISTA #11'
-  type: vmess
-  server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  port: 20659
-  uuid: c7a4d6f9-8bc1-4932-a215-a539299ebcaf
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  client-fingerprint: ''
-- name: 'ARISTA #12'
-  type: vmess
-  server: cdn.ip-static.com
-  port: 80
-  uuid: 120d4fe6-97aa-4b7a-a6d0-acee6c7d74fc
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: FRA004.midasnet.work
-  client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: FRA004.midasnet.work
-- name: 'ARISTA #13'
   type: vmess
   server: 159.89.29.136
   port: 80
@@ -282,34 +172,164 @@ proxies:
     path: /vmess
     headers:
       Host: cx.com
+- name: 'ARISTA #7'
+  type: vmess
+  server: 188.121.108.90
+  port: 46742
+  uuid: 221ed633-838f-4110-bf41-86936c1bc8fc
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 188.121.108.90
+  client-fingerprint: ''
+- name: 'ARISTA #8'
+  type: vmess
+  server: cdn.ip-static.com
+  port: 80
+  uuid: ba8d6f8f-b70b-4ada-a76a-8df6b1f67a8c
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: CAN008.midasnet.work
+  client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: CAN008.midasnet.work
+- name: 'ARISTA #9'
+  type: vmess
+  server: mig-sin.darkube.ir
+  port: 443
+  uuid: 254721a9-5739-4baf-b35d-9bc950e346db
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mig-sin.darkube.ir
+  client-fingerprint: ''
+  ws-opts:
+    path: /api/direct
+    headers:
+      Host: mig-sin.darkube.ir
+- name: 'ARISTA #10'
+  type: vmess
+  server: cdn.ip-static.com
+  port: 80
+  uuid: d749e814-c75b-416e-8aed-f744903d0eec
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: POL001.midasnet.work
+  client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: POL001.midasnet.work
+- name: 'ARISTA #11'
+  type: vmess
+  server: cdn.ip-static.com
+  port: 80
+  uuid: 120d4fe6-97aa-4b7a-a6d0-acee6c7d74fc
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: FRA004.midasnet.work
+  client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: FRA004.midasnet.work
+- name: 'ARISTA #12'
+  type: vmess
+  server: snapp.ir
+  port: 8880
+  uuid: 679eaa64-b59d-4c01-940a-78a3bc7b6964
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: dl600tobi.sudoserver.ir
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: dl600tobi.sudoserver.ir
+- name: 'ARISTA #13'
+  type: vmess
+  server: snapp.ir
+  port: 8880
+  uuid: 35da6a50-2392-489c-b554-a3dba7c64146
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: dl600tobi.sudoserver.ir
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: dl600tobi.sudoserver.ir
 - name: 'ARISTA #14'
   type: vmess
-  server: 185.11.89.38
-  port: 12809
-  uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117
+  server: snapp.ir
+  port: 80
+  uuid: 691e5b5c-b02f-4c1b-bf96-4240bf93b4f0
   alterId: 0
   cipher: auto
-  network: tcp
+  network: ws
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 185.11.89.38
+  servername: darxhinteam.bravo-six.ir
   client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: darxhinteam.bravo-six.ir
 - name: 'ARISTA #15'
   type: vmess
-  server: 185.11.89.38
-  port: 12809
-  uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117
+  server: snapp.ir
+  port: 80
+  uuid: c2723947-ed06-4560-abe7-4120dc188b55
   alterId: 0
   cipher: auto
-  network: tcp
+  network: ws
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 185.11.89.38
+  servername: darxhinteam.bravo-six.ir
   client-fingerprint: ''
+  ws-opts:
+    path: /
+    headers:
+      Host: darxhinteam.bravo-six.ir
 - name: 'ARISTA #16'
   type: vmess
   server: 185.11.89.38
@@ -326,27 +346,9 @@ proxies:
   client-fingerprint: ''
 - name: 'ARISTA #17'
   type: vmess
-  server: snapp.ir
-  port: 80
-  uuid: 74a91083-e0aa-4012-8a3a-1822e6e1a397
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: rxm.bravo-six.ir
-  client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: rxm.bravo-six.ir
-- name: 'ARISTA #18'
-  type: vmess
-  server: 185.11.89.38
-  port: 12809
-  uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117
+  server: 185.236.38.44
+  port: 19946
+  uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88
   alterId: 0
   cipher: auto
   network: tcp
@@ -354,7 +356,21 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 185.11.89.38
+  servername: 185.236.38.44
+  client-fingerprint: ''
+- name: 'ARISTA #18'
+  type: vmess
+  server: 165.154.195.38
+  port: 35034
+  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 165.154.195.38
   client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
