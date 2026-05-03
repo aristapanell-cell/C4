@@ -130,6 +130,96 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
+- name: 'Trojan #5'
+  type: trojan
+  server: 188.114.96.3
+  port: 443
+  password: humanity
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.gossipglove.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.gossipglove.com
+- name: 'Trojan #6'
+  type: trojan
+  server: 172.64.147.106
+  port: 2096
+  password: 8r%3C%5B9%27l6hAO%238ZQi
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: Koma-YT.PAGeS.Dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /tr
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+- name: 'Trojan #7'
+  type: trojan
+  server: 166.62.115.253
+  port: 443
+  password: 8r%3C%5B9%27l6hAO%238ZQi
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: Koma-YT.PAGeS.Dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: '/tr | 免费机场TG@proxyshareCN | '
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+- name: 'Trojan #8'
+  type: trojan
+  server: 184.174.80.253
+  port: 443
+  password: 8r%3C%5B9%27l6hAO%238ZQi
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: Koma-YT.PAGeS.Dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: '/tr | 免费机场TG@proxyshareCN | '
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+- name: 'Trojan #9'
+  type: trojan
+  server: 199.181.197.253
+  port: 443
+  password: 8r%3C%5B9%27l6hAO%238ZQi
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: Koma-YT.PAGeS.Dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: '/tr | 免费机场TG@proxyshareCN | '
+    headers:
+      Host: Koma-YT.PAGeS.Dev
+- name: 'Trojan #10'
+  type: trojan
+  server: 72.167.25.253
+  port: 443
+  password: 8r%3C%5B9%27l6hAO%238ZQi
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: Koma-YT.PAGeS.Dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: '/tr | 免费机场TG@proxyshareCN | '
+    headers:
+      Host: Koma-YT.PAGeS.Dev
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -139,6 +229,12 @@ proxy-groups:
   - 'Trojan #2'
   - 'Trojan #3'
   - 'Trojan #4'
+  - 'Trojan #5'
+  - 'Trojan #6'
+  - 'Trojan #7'
+  - 'Trojan #8'
+  - 'Trojan #9'
+  - 'Trojan #10'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -147,6 +243,12 @@ proxy-groups:
   - 'Trojan #2'
   - 'Trojan #3'
   - 'Trojan #4'
+  - 'Trojan #5'
+  - 'Trojan #6'
+  - 'Trojan #7'
+  - 'Trojan #8'
+  - 'Trojan #9'
+  - 'Trojan #10'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
