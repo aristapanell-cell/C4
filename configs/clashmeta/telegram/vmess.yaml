@@ -92,6 +92,24 @@ proxies:
   client-fingerprint: ''
 - name: 'ARISTA #2'
   type: vmess
+  server: usaapp1.jisuyun.top
+  port: 2053
+  uuid: 4b80aa86-4354-40bb-d2a3-47126cff0bea
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: usaapp1.jisuyun.top
+  client-fingerprint: ''
+  ws-opts:
+    path: /usavm
+    headers:
+      Host: usaapp1.jisuyun.top
+- name: 'ARISTA #3'
+  type: vmess
   server: snapp.ir
   port: 80
   uuid: 4c6423be-f717-44bf-b4aa-fced503cb7a0
@@ -104,7 +122,7 @@ proxies:
   tcp-fast-open: true
   servername: starlinck.parszone2.ir
   client-fingerprint: ''
-- name: 'ARISTA #3'
+- name: 'ARISTA #4'
   type: vmess
   server: 185.236.38.44
   port: 19946
@@ -118,75 +136,7 @@ proxies:
   tcp-fast-open: true
   servername: 185.236.38.44
   client-fingerprint: ''
-- name: 'ARISTA #4'
-  type: vmess
-  server: www.arvancloud.ir
-  port: 2052
-  uuid: ac3e7d96-f5ac-460a-8da9-27cc50845f01
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: VIP-HostIR-ConnectingDigi-snapp-wakeUP.delvinserver.ir
-  client-fingerprint: ''
-  ws-opts:
-    path: /you
-    headers:
-      Host: VIP-HostIR-ConnectingDigi-snapp-wakeUP.delvinserver.ir
 - name: 'ARISTA #5'
-  type: vmess
-  server: arvancloud.com
-  port: 80
-  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: mahsaproxy.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /graphql
-    headers:
-      Host: mahsaproxy.com
-- name: 'ARISTA #6'
-  type: vmess
-  server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  port: 8090
-  uuid: 6434d692-78e6-4bbf-b1ca-b5c1dbb9226e
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  client-fingerprint: ''
-- name: 'ARISTA #7'
-  type: vmess
-  server: 47.244.120.197
-  port: 44867
-  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 47.244.120.197
-  client-fingerprint: ''
-  ws-opts:
-    path: /arki?ed=2048
-    headers:
-      Host: 47.244.120.197
-- name: 'ARISTA #8'
   type: vmess
   server: cip.salimore.com
   port: 443
@@ -204,25 +154,57 @@ proxies:
     path: /ws/
     headers:
       Host: cip.salimore.com
-- name: 'ARISTA #9'
+- name: 'ARISTA #6'
   type: vmess
-  server: usaapp1.jisuyun.top
-  port: 2053
-  uuid: 4b80aa86-4354-40bb-d2a3-47126cff0bea
+  server: fsdns1.ectunnelvpn.me
+  port: 80
+  uuid: 6b2d86e5-df05-4511-a79f-82d53ce99b36
   alterId: 0
   cipher: auto
   network: ws
-  tls: true
+  tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: usaapp1.jisuyun.top
+  servername: fsdns1.ectunnelvpn.me
   client-fingerprint: ''
   ws-opts:
-    path: /usavm
+    path: /vmess
     headers:
-      Host: usaapp1.jisuyun.top
-- name: 'ARISTA #10'
+      Host: fsdns1.ectunnelvpn.me
+- name: 'ARISTA #7'
+  type: vmess
+  server: arvancloud.com
+  port: 80
+  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: mahsaproxy.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /graphql
+    headers:
+      Host: mahsaproxy.com
+- name: 'ARISTA #8'
+  type: vmess
+  server: 185.11.89.38
+  port: 12809
+  uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 185.11.89.38
+  client-fingerprint: ''
+- name: 'ARISTA #9'
   type: vmess
   server: snapp.ir
   port: 2086
@@ -240,11 +222,11 @@ proxies:
     path: /DL?ed=2053
     headers:
       Host: m1.articler.ir
-- name: 'ARISTA #11'
+- name: 'ARISTA #10'
   type: vmess
-  server: 185.11.89.38
-  port: 12809
-  uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117
+  server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
+  port: 8090
+  uuid: 6434d692-78e6-4bbf-b1ca-b5c1dbb9226e
   alterId: 0
   cipher: auto
   network: tcp
@@ -252,8 +234,44 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 185.11.89.38
+  servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
   client-fingerprint: ''
+- name: 'ARISTA #11'
+  type: vmess
+  server: 47.244.120.197
+  port: 44867
+  uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 47.244.120.197
+  client-fingerprint: ''
+  ws-opts:
+    path: /arki?ed=2048
+    headers:
+      Host: 47.244.120.197
+- name: 'ARISTA #12'
+  type: vmess
+  server: www.arvancloud.ir
+  port: 2052
+  uuid: ac3e7d96-f5ac-460a-8da9-27cc50845f01
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: VIP-HostIR-ConnectingDigi-snapp-wakeUP.delvinserver.ir
+  client-fingerprint: ''
+  ws-opts:
+    path: /you
+    headers:
+      Host: VIP-HostIR-ConnectingDigi-snapp-wakeUP.delvinserver.ir
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -270,6 +288,7 @@ proxy-groups:
   - 'ARISTA #9'
   - 'ARISTA #10'
   - 'ARISTA #11'
+  - 'ARISTA #12'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -285,6 +304,7 @@ proxy-groups:
   - 'ARISTA #9'
   - 'ARISTA #10'
   - 'ARISTA #11'
+  - 'ARISTA #12'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
