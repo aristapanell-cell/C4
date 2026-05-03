@@ -78,9 +78,9 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
-  server: 82.198.246.9
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  server: 185.236.38.44
+  port: 19946
+  uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88
   alterId: 0
   cipher: auto
   network: tcp
@@ -88,59 +88,9 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 82.198.246.9
-  client-fingerprint: chrome
+  servername: 185.236.38.44
+  client-fingerprint: ''
 - name: 'ARISTA #2'
-  type: vmess
-  server: 165.154.195.38
-  port: 35034
-  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 165.154.195.38
-  client-fingerprint: ''
-- name: 'ARISTA #3'
-  type: vmess
-  server: cip.salimore.com
-  port: 443
-  uuid: 3437737a-c9b5-4dea-ab81-6b17d78ec53c
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: true
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: cip.salimore.com
-  client-fingerprint: ''
-  ws-opts:
-    path: /ws/
-    headers:
-      Host: cip.salimore.com
-- name: 'ARISTA #4'
-  type: vmess
-  server: snapp.ir
-  port: 2086
-  uuid: e10a2420-844f-4e53-847f-f3effe015dbf
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: m1.articler.ir
-  client-fingerprint: ''
-  ws-opts:
-    path: /DL?ed=2053
-    headers:
-      Host: m1.articler.ir
-- name: 'ARISTA #5'
   type: vmess
   server: snapp.ir
   port: 80
@@ -154,7 +104,7 @@ proxies:
   tcp-fast-open: true
   servername: starlinck.parszone2.ir
   client-fingerprint: ''
-- name: 'ARISTA #6'
+- name: 'ARISTA #3'
   type: vmess
   server: 185.236.38.44
   port: 19946
@@ -168,35 +118,7 @@ proxies:
   tcp-fast-open: true
   servername: 185.236.38.44
   client-fingerprint: ''
-- name: 'ARISTA #7'
-  type: vmess
-  server: dn.torontomovie.com
-  port: 8080
-  uuid: 2206de3b-53ed-405a-893f-f9a83c96fe93
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: dn.torontomovie.com
-  client-fingerprint: ''
-- name: 'ARISTA #8'
-  type: vmess
-  server: 185.236.38.44
-  port: 19946
-  uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 185.236.38.44
-  client-fingerprint: ''
-- name: 'ARISTA #9'
+- name: 'ARISTA #4'
   type: vmess
   server: www.arvancloud.ir
   port: 2052
@@ -214,21 +136,25 @@ proxies:
     path: /you
     headers:
       Host: VIP-HostIR-ConnectingDigi-snapp-wakeUP.delvinserver.ir
-- name: 'ARISTA #10'
+- name: 'ARISTA #5'
   type: vmess
-  server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  port: 20825
-  uuid: 23a34dcd-9af0-4422-b656-25f646d05e18
+  server: arvancloud.com
+  port: 80
+  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
   alterId: 0
   cipher: auto
-  network: tcp
+  network: ws
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  client-fingerprint: ''
-- name: 'ARISTA #11'
+  servername: mahsaproxy.com
+  client-fingerprint: chrome
+  ws-opts:
+    path: /graphql
+    headers:
+      Host: mahsaproxy.com
+- name: 'ARISTA #6'
   type: vmess
   server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
   port: 8090
@@ -242,7 +168,7 @@ proxies:
   tcp-fast-open: true
   servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
   client-fingerprint: ''
-- name: 'ARISTA #12'
+- name: 'ARISTA #7'
   type: vmess
   server: 47.244.120.197
   port: 44867
@@ -260,6 +186,74 @@ proxies:
     path: /arki?ed=2048
     headers:
       Host: 47.244.120.197
+- name: 'ARISTA #8'
+  type: vmess
+  server: cip.salimore.com
+  port: 443
+  uuid: 3437737a-c9b5-4dea-ab81-6b17d78ec53c
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: cip.salimore.com
+  client-fingerprint: ''
+  ws-opts:
+    path: /ws/
+    headers:
+      Host: cip.salimore.com
+- name: 'ARISTA #9'
+  type: vmess
+  server: usaapp1.jisuyun.top
+  port: 2053
+  uuid: 4b80aa86-4354-40bb-d2a3-47126cff0bea
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: usaapp1.jisuyun.top
+  client-fingerprint: ''
+  ws-opts:
+    path: /usavm
+    headers:
+      Host: usaapp1.jisuyun.top
+- name: 'ARISTA #10'
+  type: vmess
+  server: snapp.ir
+  port: 2086
+  uuid: e10a2420-844f-4e53-847f-f3effe015dbf
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: m1.articler.ir
+  client-fingerprint: ''
+  ws-opts:
+    path: /DL?ed=2053
+    headers:
+      Host: m1.articler.ir
+- name: 'ARISTA #11'
+  type: vmess
+  server: 185.11.89.38
+  port: 12809
+  uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 185.11.89.38
+  client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -276,7 +270,6 @@ proxy-groups:
   - 'ARISTA #9'
   - 'ARISTA #10'
   - 'ARISTA #11'
-  - 'ARISTA #12'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -292,7 +285,6 @@ proxy-groups:
   - 'ARISTA #9'
   - 'ARISTA #10'
   - 'ARISTA #11'
-  - 'ARISTA #12'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
