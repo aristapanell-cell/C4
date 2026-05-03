@@ -78,80 +78,20 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: 63.180.113.225
-  port: 22222
-  password: telegram-id-privatevpns
-  network: tcp
+  server: 95.85.243.216
+  port: 2083
+  password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
+  network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
+  servername: xo.e0f.cx
   client-fingerprint: chrome
-  alpn:
-  - http/1.1
+  ws-opts:
+    path: /trojan-ws
+    headers:
+      Host: xo.e0f.cx
 - name: 'Trojan #2'
-  type: trojan
-  server: 104.17.101.139
-  port: 443
-  password: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: sni.111000.dynv6.net
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-  ws-opts:
-    path: /?proxyip=ip.111000.de5.net:443
-    headers:
-      Host: sni.111000.dynv6.net
-- name: 'Trojan #3'
-  type: trojan
-  server: 162.159.36.20
-  port: 443
-  password: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: sni.111000.dynv6.net
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-  ws-opts:
-    path: /?proxyip=ip.111000.de5.net%3A443
-    headers:
-      Host: sni.111000.dynv6.net
-- name: 'Trojan #4'
-  type: trojan
-  server: 172.64.147.106
-  port: 2096
-  password: 8r%3C%5B9%27l6hAO%238ZQi
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: Koma-YT.PAGeS.Dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /tr
-    headers:
-      Host: Koma-YT.PAGeS.Dev
-- name: 'Trojan #5'
-  type: trojan
-  server: 52.47.190.65
-  port: 22223
-  password: telegram-id-v2rayvpnchannel
-  network: tcp
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: trojan.burgerip.co.uk
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: 'Trojan #6'
   type: trojan
   server: 52.57.232.245
   port: 22223
@@ -164,37 +104,20 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #7'
+- name: 'Trojan #3'
   type: trojan
-  server: 104.19.229.21
-  port: 443
-  password: humanity
-  network: ws
+  server: 63.180.113.225
+  port: 22222
+  password: telegram-id-privatevpns
+  network: tcp
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: www.creationlong.org
+  servername: trojan.burgerip.co.uk
   client-fingerprint: chrome
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.creationlong.org
-- name: 'Trojan #8'
-  type: trojan
-  server: v2ngfast-v2ngfast-v2ngfast-v2ngfast.xekak98448.workers.dev
-  port: 2083
-  password: '1111'
-  network: ws
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: v2ngfast-v2ngfast-v2ngfast-v2ngfast.xekak98448.workers.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: v2ngfast-v2ngfast-v2ngfast-v2ngfast.xekak98448.workers.dev
-- name: 'Trojan #9'
+  alpn:
+  - http/1.1
+- name: 'Trojan #4'
   type: trojan
   server: 95.85.243.216
   port: 2083
@@ -209,21 +132,21 @@ proxies:
     path: /trojan-ws
     headers:
       Host: xo.e0f.cx
-- name: 'Trojan #10'
+- name: 'Trojan #5'
   type: trojan
-  server: 199.34.229.253
+  server: 104.19.229.21
   port: 443
-  password: 8r%3C%5B9%27l6hAO%238ZQi
+  password: humanity
   network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: Koma-YT.PAGeS.Dev
+  servername: www.creationlong.org
   client-fingerprint: chrome
   ws-opts:
-    path: '/tr | 免费机场TG@proxyshareCN | '
+    path: /assignment
     headers:
-      Host: Koma-YT.PAGeS.Dev
+      Host: www.creationlong.org
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -234,11 +157,6 @@ proxy-groups:
   - 'Trojan #3'
   - 'Trojan #4'
   - 'Trojan #5'
-  - 'Trojan #6'
-  - 'Trojan #7'
-  - 'Trojan #8'
-  - 'Trojan #9'
-  - 'Trojan #10'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -248,11 +166,6 @@ proxy-groups:
   - 'Trojan #3'
   - 'Trojan #4'
   - 'Trojan #5'
-  - 'Trojan #6'
-  - 'Trojan #7'
-  - 'Trojan #8'
-  - 'Trojan #9'
-  - 'Trojan #10'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
