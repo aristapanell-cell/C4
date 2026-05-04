@@ -78,6 +78,20 @@ sniffer:
 proxies:
 - name: 'ARISTA #1'
   type: vmess
+  server: 185.11.89.38
+  port: 12809
+  uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: 185.11.89.38
+  client-fingerprint: ''
+- name: 'ARISTA #2'
+  type: vmess
   server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
   port: 20886
   uuid: 18ef73bc-96b9-4a22-9988-97bfde2bd7e0
@@ -90,7 +104,7 @@ proxies:
   tcp-fast-open: true
   servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
   client-fingerprint: ''
-- name: 'ARISTA #2'
+- name: 'ARISTA #3'
   type: vmess
   server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
   port: 20885
@@ -104,7 +118,7 @@ proxies:
   tcp-fast-open: true
   servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
   client-fingerprint: ''
-- name: 'ARISTA #3'
+- name: 'ARISTA #4'
   type: vmess
   server: 185.143.233.235
   port: 80
@@ -122,7 +136,7 @@ proxies:
     path: /
     headers:
       Host: n3.multiservers.ir
-- name: 'ARISTA #4'
+- name: 'ARISTA #5'
   type: vmess
   server: mig-sin.darkube.ir
   port: 443
@@ -140,7 +154,7 @@ proxies:
     path: /api/direct
     headers:
       Host: mig-sin.darkube.ir
-- name: 'ARISTA #5'
+- name: 'ARISTA #6'
   type: vmess
   server: s82.faststrong.sbs
   port: 38215
@@ -154,7 +168,7 @@ proxies:
   tcp-fast-open: true
   servername: s82.faststrong.sbs
   client-fingerprint: ''
-- name: 'ARISTA #6'
+- name: 'ARISTA #7'
   type: vmess
   server: 82.198.246.233
   port: 180
@@ -168,7 +182,7 @@ proxies:
   tcp-fast-open: true
   servername: 82.198.246.233
   client-fingerprint: chrome
-- name: 'ARISTA #7'
+- name: 'ARISTA #8'
   type: vmess
   server: 185.236.38.44
   port: 19946
@@ -182,7 +196,7 @@ proxies:
   tcp-fast-open: true
   servername: 185.236.38.44
   client-fingerprint: ''
-- name: 'ARISTA #8'
+- name: 'ARISTA #9'
   type: vmess
   server: v11.mailiran.net
   port: 11999
@@ -200,25 +214,29 @@ proxies:
     path: /
     headers:
       Host: v11.mailiran.net
-- name: 'ARISTA #9'
+- name: 'ARISTA #10'
   type: vmess
-  server: 185.11.89.38
-  port: 12809
-  uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117
+  server: 185.143.233.235
+  port: 80
+  uuid: ff7d52c7-6888-4a39-948b-e743d4bc5ffd
   alterId: 0
   cipher: auto
-  network: tcp
+  network: ws
   tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: 185.11.89.38
+  servername: n3.multiservers.ir
   client-fingerprint: ''
-- name: 'ARISTA #10'
+  ws-opts:
+    path: /
+    headers:
+      Host: n3.multiservers.ir
+- name: 'ARISTA #11'
   type: vmess
   server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  port: 20908
-  uuid: 5ad9cbe7-1fe7-4240-a60d-fc676e8e0acc
+  port: 20922
+  uuid: d87793cc-9d79-4fb8-a4a1-ff15d50e9fe7
   alterId: 0
   cipher: auto
   network: tcp
@@ -228,7 +246,7 @@ proxies:
   tcp-fast-open: true
   servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
   client-fingerprint: ''
-- name: 'ARISTA #11'
+- name: 'ARISTA #12'
   type: vmess
   server: sanjose01.zgjok.com
   port: 443
@@ -246,20 +264,6 @@ proxies:
     path: /
     headers:
       Host: sanjose01.zgjok.com
-- name: 'ARISTA #12'
-  type: vmess
-  server: a.bystroo.shop
-  port: 31041
-  uuid: c30921ac-82f8-44d5-be62-fd7ba02a1be2
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: a.bystroo.shop
-  client-fingerprint: ''
 - name: 'ARISTA #13'
   type: vmess
   server: portal.parrsweb.site
@@ -276,9 +280,9 @@ proxies:
   client-fingerprint: ''
 - name: 'ARISTA #14'
   type: vmess
-  server: portal.parrsweb.site
-  port: 8880
-  uuid: d52e6687-a7d9-492b-a33f-a0eef616a5e8
+  server: a.bystroo.shop
+  port: 31041
+  uuid: c30921ac-82f8-44d5-be62-fd7ba02a1be2
   alterId: 0
   cipher: auto
   network: tcp
@@ -286,27 +290,9 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: portal.parrsweb.site
+  servername: a.bystroo.shop
   client-fingerprint: ''
 - name: 'ARISTA #15'
-  type: vmess
-  server: snapp.ir
-  port: 80
-  uuid: 43cfc765-50fe-496b-91e4-e1f335c5c212
-  alterId: 0
-  cipher: auto
-  network: ws
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: rxm.bravo-six.ir
-  client-fingerprint: ''
-  ws-opts:
-    path: /
-    headers:
-      Host: rxm.bravo-six.ir
-- name: 'ARISTA #16'
   type: vmess
   server: 185.236.38.44
   port: 19946
@@ -320,11 +306,11 @@ proxies:
   tcp-fast-open: true
   servername: 185.236.38.44
   client-fingerprint: ''
-- name: 'ARISTA #17'
+- name: 'ARISTA #16'
   type: vmess
   server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
-  port: 20900
-  uuid: 0f837437-6beb-4ed7-b94a-7829a08eac89
+  port: 20908
+  uuid: 5ad9cbe7-1fe7-4240-a60d-fc676e8e0acc
   alterId: 0
   cipher: auto
   network: tcp
@@ -333,6 +319,20 @@ proxies:
   skip-cert-verify: false
   tcp-fast-open: true
   servername: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf
+  client-fingerprint: ''
+- name: 'ARISTA #17'
+  type: vmess
+  server: tik22.voaxn11.xyz
+  port: 30722
+  uuid: fe17f680-c649-4d73-ac9a-d21d3e2a61c3
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: tik22.voaxn11.xyz
   client-fingerprint: ''
 proxy-groups:
 - name: Proxy Select
