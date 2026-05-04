@@ -78,6 +78,17 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
+  server: svip-jp.xiaobaivpn.icu
+  port: 28803
+  password: 80a47c4e-33c0-49f1-a5d1-618c35fc9c92
+  network: tcp
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: svip-jp.xiaobaivpn.icu
+  client-fingerprint: chrome
+- name: 'Trojan #2'
+  type: trojan
   server: 95.85.243.216
   port: 2083
   password: q2jXRWncMA7pQren_VjQKhSQfoBWK_
@@ -91,22 +102,22 @@ proxies:
     path: /trojan-ws
     headers:
       Host: xo.e0f.cx
-- name: 'Trojan #2'
+- name: 'Trojan #3'
   type: trojan
-  server: 104.19.229.21
+  server: 172.67.180.92
   port: 443
   password: humanity
   network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: www.creationlong.org
+  servername: www.multiplydose.com
   client-fingerprint: chrome
   ws-opts:
     path: /assignment
     headers:
-      Host: www.creationlong.org
-- name: 'Trojan #3'
+      Host: www.multiplydose.com
+- name: 'Trojan #4'
   type: trojan
   server: 18.185.147.254
   port: 22222
@@ -119,20 +130,22 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: 'Trojan #4'
+- name: 'Trojan #5'
   type: trojan
-  server: svip-jp.xiaobaivpn.icu
-  port: 28803
-  password: 80a47c4e-33c0-49f1-a5d1-618c35fc9c92
+  server: 35.181.209.187
+  port: 22222
+  password: telegram-id-privatevpns
   network: tcp
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: svip-jp.xiaobaivpn.icu
+  servername: trojan.burgerip.co.uk
   client-fingerprint: chrome
-- name: 'Trojan #5'
+  alpn:
+  - http/1.1
+- name: 'Trojan #6'
   type: trojan
-  server: 35.181.209.187
+  server: 52.47.165.159
   port: 22222
   password: telegram-id-privatevpns
   network: tcp
@@ -153,6 +166,7 @@ proxy-groups:
   - 'Trojan #3'
   - 'Trojan #4'
   - 'Trojan #5'
+  - 'Trojan #6'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -162,6 +176,7 @@ proxy-groups:
   - 'Trojan #3'
   - 'Trojan #4'
   - 'Trojan #5'
+  - 'Trojan #6'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
