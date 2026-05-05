@@ -92,69 +92,33 @@ proxies:
   client-fingerprint: ''
 - name: 'ARISTA #2'
   type: vmess
-  server: 104.18.212.12
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  server: 185.11.89.38
+  port: 12809
+  uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117
   alterId: 0
   cipher: auto
-  network: ws
-  tls: true
+  network: tcp
+  tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: sub.yifenjichang.top
-  client-fingerprint: chrome
-  ws-opts:
-    path: /oliv.beauty:443/linkvws
-    headers:
-      Host: sub.yifenjichang.top
+  servername: 185.11.89.38
+  client-fingerprint: ''
 - name: 'ARISTA #3'
   type: vmess
-  server: free-v7-09.elbrusway.online
-  port: 443
-  uuid: b4bc8fcd-739e-4525-8bed-20d10e850988
+  server: 185.11.89.38
+  port: 12809
+  uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117
   alterId: 0
   cipher: auto
-  network: ws
-  tls: true
+  network: tcp
+  tls: false
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: free-v7-09.elbrusway.online
+  servername: 185.11.89.38
   client-fingerprint: ''
-  ws-opts:
-    path: /vmess-balkar
-    headers:
-      Host: free-v7-09.elbrusway.online
 - name: 'ARISTA #4'
-  type: vmess
-  server: 185.11.89.38
-  port: 12809
-  uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 185.11.89.38
-  client-fingerprint: ''
-- name: 'ARISTA #5'
-  type: vmess
-  server: 185.11.89.38
-  port: 12809
-  uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: false
-  udp: true
-  skip-cert-verify: false
-  tcp-fast-open: true
-  servername: 185.11.89.38
-  client-fingerprint: ''
-- name: 'ARISTA #6'
   type: vmess
   server: 45.15.170.237
   port: 80
@@ -172,11 +136,75 @@ proxies:
     path: /vmess/
     headers:
       Host: pelang.org
+- name: 'ARISTA #5'
+  type: vmess
+  server: free-v7-09.elbrusway.online
+  port: 443
+  uuid: b4bc8fcd-739e-4525-8bed-20d10e850988
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: free-v7-09.elbrusway.online
+  client-fingerprint: ''
+  ws-opts:
+    path: /vmess-balkar
+    headers:
+      Host: free-v7-09.elbrusway.online
+- name: 'ARISTA #6'
+  type: vmess
+  server: client.afracp.top
+  port: 4271
+  uuid: 2c19233b-8e38-492f-9c81-df5fe511db14
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: client.afracp.top
+  client-fingerprint: ''
 - name: 'ARISTA #7'
+  type: vmess
+  server: client.afracp.top
+  port: 4271
+  uuid: 2c19233b-8e38-492f-9c81-df5fe511db14
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: false
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: client.afracp.top
+  client-fingerprint: ''
+- name: 'ARISTA #8'
+  type: vmess
+  server: 104.18.212.12
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  network: ws
+  tls: true
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: sub.yifenjichang.top
+  client-fingerprint: chrome
+  ws-opts:
+    path: /oliv.beauty:443/linkvws
+    headers:
+      Host: sub.yifenjichang.top
+- name: 'ARISTA #9'
   type: vmess
   server: cdn.ip-static.com
   port: 80
-  uuid: d43298d4-71d2-4c75-ba79-9a67c47acab3
+  uuid: b1f5f8b6-1e52-464c-af7b-ce73b4244a84
   alterId: 0
   cipher: auto
   network: ws
@@ -184,12 +212,12 @@ proxies:
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: ESP007.midasnet.work
+  servername: SWE003.midasnet.work
   client-fingerprint: ''
   ws-opts:
     path: /
     headers:
-      Host: ESP007.midasnet.work
+      Host: SWE003.midasnet.work
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -202,6 +230,8 @@ proxy-groups:
   - 'ARISTA #5'
   - 'ARISTA #6'
   - 'ARISTA #7'
+  - 'ARISTA #8'
+  - 'ARISTA #9'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -213,6 +243,8 @@ proxy-groups:
   - 'ARISTA #5'
   - 'ARISTA #6'
   - 'ARISTA #7'
+  - 'ARISTA #8'
+  - 'ARISTA #9'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
