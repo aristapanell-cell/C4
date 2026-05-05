@@ -78,21 +78,15 @@ sniffer:
 proxies:
 - name: 'Trojan #1'
   type: trojan
-  server: 8.6.112.6
+  server: 172.64.152.23
   port: 443
   password: humanity
-  network: ws
+  network: tcp
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: www.calmloud.com
+  servername: 172.64.152.23
   client-fingerprint: chrome
-  alpn:
-  - http/1.1
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmloud.com
 - name: 'Trojan #2'
   type: trojan
   server: 15.188.230.176
@@ -108,22 +102,22 @@ proxies:
   - http/1.1
 - name: 'Trojan #3'
   type: trojan
-  server: 104.18.11.110
+  server: 45.196.29.253
   port: 443
-  password: humanity
+  password: 8r%3C%5B9%27l6hAO%238ZQi
   network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: www.multiplydose.com
+  servername: Koma-YT.PAGeS.Dev
   client-fingerprint: chrome
   ws-opts:
-    path: /assignment
+    path: '/tr | 免费机场TG@proxyshareCN | '
     headers:
-      Host: www.multiplydose.com
+      Host: Koma-YT.PAGeS.Dev
 - name: 'Trojan #4'
   type: trojan
-  server: 199.181.197.253
+  server: 188.164.248.253
   port: 443
   password: 8r%3C%5B9%27l6hAO%238ZQi
   network: ws
@@ -138,34 +132,53 @@ proxies:
       Host: Koma-YT.PAGeS.Dev
 - name: 'Trojan #5'
   type: trojan
-  server: 72.167.25.253
+  server: 162.159.36.5
   port: 443
-  password: 8r%3C%5B9%27l6hAO%238ZQi
+  password: 6202b230-417c-4d8e-b624-0f71afa9c75d
   network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: Koma-YT.PAGeS.Dev
+  servername: sni.111000.dynv6.net
   client-fingerprint: chrome
+  alpn:
+  - http/1.1
   ws-opts:
-    path: '/tr | 免费机场TG@proxyshareCN | '
+    path: /?proxyip=ip.111000.de5.net:443
     headers:
-      Host: Koma-YT.PAGeS.Dev
+      Host: sni.111000.dynv6.net
 - name: 'Trojan #6'
   type: trojan
-  server: 45.196.29.253
+  server: 172.64.145.202
   port: 443
-  password: 8r%3C%5B9%27l6hAO%238ZQi
+  password: 5dc15e15-f285-4a9d-959b-0e4fbdd77b63
   network: ws
   udp: true
   skip-cert-verify: false
   tcp-fast-open: true
-  servername: Koma-YT.PAGeS.Dev
-  client-fingerprint: chrome
+  servername: vless.lrdxw.club
+  client-fingerprint: firefox
   ws-opts:
-    path: '/tr | 免费机场TG@proxyshareCN | '
+    path: /
     headers:
-      Host: Koma-YT.PAGeS.Dev
+      Host: vless.lrdxw.club
+- name: 'Trojan #7'
+  type: trojan
+  server: 8.6.112.6
+  port: 443
+  password: humanity
+  network: ws
+  udp: true
+  skip-cert-verify: false
+  tcp-fast-open: true
+  servername: www.calmloud.com
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmloud.com
 proxy-groups:
 - name: Proxy Select
   type: select
@@ -177,6 +190,7 @@ proxy-groups:
   - 'Trojan #4'
   - 'Trojan #5'
   - 'Trojan #6'
+  - 'Trojan #7'
   - DIRECT
 - name: Auto Select
   type: url-test
@@ -187,6 +201,7 @@ proxy-groups:
   - 'Trojan #4'
   - 'Trojan #5'
   - 'Trojan #6'
+  - 'Trojan #7'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
