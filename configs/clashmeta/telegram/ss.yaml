@@ -76,14 +76,6 @@ sniffer:
       - 2087
       - 2096
 proxies:
-- name: 'ARISTA🔥 #1'
-  type: ss
-  server: 138.68.153.223
-  port: 46576
-  cipher: chacha20-ietf-poly1305
-  password: idMvoewrSyLLvEvP03k9zR
-  udp: true
-  tcp-fast-open: true
 - name: 'ARISTA🔥 #2'
   type: ss
   server: 83.166.250.6
@@ -164,12 +156,20 @@ proxies:
   password: shadowsocks
   udp: true
   tcp-fast-open: true
-- name: 'ARISTA🔥 #13'
+- name: 'ARISTA🔥 #12'
   type: ss
   server: 5.253.59.156
   port: 32140
   cipher: chacha20-ietf-poly1305
   password: YK127mOCu6CCihQSaYQtvq
+  udp: true
+  tcp-fast-open: true
+- name: 'ARISTA🔥 #13'
+  type: ss
+  server: 138.68.153.223
+  port: 46576
+  cipher: chacha20-ietf-poly1305
+  password: idMvoewrSyLLvEvP03k9zR
   udp: true
   tcp-fast-open: true
 - name: 'ARISTA🔥 #14'
@@ -180,12 +180,27 @@ proxies:
   password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
   udp: true
   tcp-fast-open: true
+- name: 'ARISTA🔥 #15'
+  type: ss
+  server: 31.57.56.193
+  port: 51523
+  cipher: chacha20-ietf-poly1305
+  password: R2MPY2rqL2Gf3Lb1sP5n5fdEkUJ1d-wp
+  udp: true
+  tcp-fast-open: true
+- name: 'ARISTA🔥 #16'
+  type: ss
+  server: 36.224.143.36
+  port: 50099
+  cipher: chacha20-ietf-poly1305
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+  udp: true
+  tcp-fast-open: true
 proxy-groups:
 - name: Proxy Select
   type: select
   proxies:
   - Auto Select
-  - 'ARISTA🔥 #1'
   - 'ARISTA🔥 #2'
   - 'ARISTA🔥 #3'
   - 'ARISTA🔥 #4'
@@ -196,13 +211,15 @@ proxy-groups:
   - 'ARISTA🔥 #9'
   - 'ARISTA🔥 #10'
   - 'ARISTA🔥 #11'
+  - 'ARISTA🔥 #12'
   - 'ARISTA🔥 #13'
   - 'ARISTA🔥 #14'
+  - 'ARISTA🔥 #15'
+  - 'ARISTA🔥 #16'
   - DIRECT
 - name: Auto Select
   type: url-test
   proxies:
-  - 'ARISTA🔥 #1'
   - 'ARISTA🔥 #2'
   - 'ARISTA🔥 #3'
   - 'ARISTA🔥 #4'
@@ -213,8 +230,11 @@ proxy-groups:
   - 'ARISTA🔥 #9'
   - 'ARISTA🔥 #10'
   - 'ARISTA🔥 #11'
+  - 'ARISTA🔥 #12'
   - 'ARISTA🔥 #13'
   - 'ARISTA🔥 #14'
+  - 'ARISTA🔥 #15'
+  - 'ARISTA🔥 #16'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 150
